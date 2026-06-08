@@ -5,7 +5,6 @@ book:
   bread-crumbs: false
   favicon: cover.png 
   twitter-card: true
-  site-url: https://camilotayac.com
   search: true #Activar el buscador en el sitio web
   repo-url: https://github.com/camilotayac/Nous
   repo-actions: [edit, source, issue]
