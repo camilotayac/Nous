@@ -1,0 +1,26 @@
+# Operaciones entre Conjuntos
+
+## Unión
+
+$$A \cup B = \{x \mid x \in A \lor x \in B\}$$
+
+## Intersección
+
+$$A \cap B = \{x \mid x \in A \land x \in B\}$$
+
+## Diferencia
+
+$$A - B = \{x \mid x \in A \land x \notin B\}$$
+
+## Complemento
+
+$$\overline{A} = \{x \in U \mid x \notin A\}$$
+
+## Diferencia Simétrica
+
+$$A \triangle B = (A - B) \cup (B - A)$$
+
+## Leyes de De Morgan
+
+- $\overline{A \cup B} = \overline{A} \cap \overline{B}$
+- $\overline{A \cap B} = \overline{A} \cup \overline{B}$

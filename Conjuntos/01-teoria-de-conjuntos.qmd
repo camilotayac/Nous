@@ -1,0 +1,35 @@
+# Teoría de Conjuntos
+
+## Definición
+
+Un **conjunto** es una colección bien definida de objetos, llamados **elementos**.
+
+## Notación
+
+- Por extensión: $A = \{1, 2, 3\}$
+- Por comprensión: $A = \{x \in \mathbb{N} \mid x < 4\}$
+
+## Pertenencia
+
+- $a \in A$: $a$ pertenece a $A$
+- $a \notin A$: $a$ no pertenece a $A$
+
+## Subconjuntos
+
+$$B \subseteq A \iff (x \in B \implies x \in A)$$
+
+## Conjuntos especiales
+
+- $\varnothing$ o $\{\}$: conjunto vacío
+- $\mathbb{N}$: números naturales
+- $\mathbb{Z}$: números enteros
+- $\mathbb{Q}$: números racionales
+- $\mathbb{R}$: números reales
+- $\mathbb{C}$: números complejos
+
+## Cardinalidad
+
+$|A|$ es el número de elementos de $A$.
+
+- $A = \{a, b, c\} \implies |A| = 3$
+- $|\varnothing| = 0$
