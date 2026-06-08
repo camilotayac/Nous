@@ -2,12 +2,13 @@ project:
   type: book
 
 book:
+  bread-crumbs: false
   favicon: cover.png 
   twitter-card: true
   site-url: https://camilotayac.com
   search: true #Activar el buscador en el sitio web
   repo-url: https://github.com/camilotayac/Nous
-  repo-actions: [edit]
+  repo-actions: [edit, source, issue]
   downloads: [pdf, epub]
   sharing: [twitter, facebook, linkedin]
   title: "Nous"
@@ -16,15 +17,18 @@ book:
 
 
   sidebar:
-    style: docked
-    background: light
+    collapse-level: 1
+    
+
     
 
   chapters:
     - index.qmd
-    - part: "intro"
+    - intro.qmd
+    - summary.qmd
+    - part: Conjuntos
       chapters:
-        - summary.qmd
+        - 01_conjuntos/00_proposicion_negacion.qmd
 
 comments:
   hypothesis: false #Desactivar los comentarios de Hypothesis
@@ -33,10 +37,9 @@ bibliography: references.bib
 
 format:
   html:
-    respect-user-color-scheme: true #Respeta el modo oscuro del sistema operativo
     theme:
-      light: lux
-      dark: darlux
+      light: flatly
+      dark: darkly
   pdf:
     documentclass: scrbook
     include-in-header: preamble.tex
