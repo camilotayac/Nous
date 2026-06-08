@@ -1,21 +1,25 @@
 project:
-  type: website
+  type: book
 
-website:
+book:
   title: "Nous"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  author: "Camilo Tayac"
+  date: "6/8/2026"
+  chapters:
+    - index.qmd
+    - part: "intro"
+      chapters:
+        - summary.qmd
+
+bibliography: references.bib
 
 format:
   html:
     theme:
       - cosmo
       - brand
-    css: styles.css
-    toc: true
+  pdf:
+    documentclass: scrreprt
 
 
 
