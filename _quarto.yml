@@ -6,11 +6,30 @@ execute:
 
 book:
   title: "Nous — Cuaderno de Apuntes"
+  subtitle: "Química General y Teoría de Conjuntos"
   author: "Tu Nombre"
   date: today
+
+  sidebar:
+    - id: main
+      title: "Nous"
+      contents:
+        - section: "Química General"
+          contents:
+            - Química_General/index.qmd
+            - Química_General/01-estructura-atomica.qmd
+            - Química_General/02-enlaces-quimicos.qmd
+            - Química_General/03-reacciones.qmd
+        - section: "Conjuntos"
+          contents:
+            - Conjuntos/index.qmd
+            - Conjuntos/01-teoria-de-conjuntos.qmd
+            - Conjuntos/02-operaciones.qmd
+            - Conjuntos/03-producto-cartesiano.qmd
+
   chapters:
     - index.qmd
-    - part: "Química_General"
+    - part: "Química General"
       chapters:
         - Química_General/index.qmd
         - Química_General/01-estructura-atomica.qmd
@@ -27,10 +46,11 @@ book:
 bibliography: references.bib
 
 format:
-  html:
-    theme:
-      light: flatly
-      dark: darkly
+  bookup-html:
     toc: true
-  pdf:
-    documentclass: scrreprt
+    toc-depth: 3
+    css: custom.css
+    include-after-body: sidebar-autocollapse.html
+  typst:
+    toc: true
+    papersize: us-letter

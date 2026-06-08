@@ -1,7 +1,37 @@
+---
+sidebar: main
+---
+
 # Nous {.unnumbered}
 
 ## Cuaderno de Apuntes
 
-Bienvenido a **Nous** (νοῦς), un cuaderno de apuntes donde recojo conocimiento sobre diversas materias.
+Bienvenido a **Nous** (νοῦς), un cuaderno de apuntes donde recojo conocimiento sobre diversas materias. Cada materia contiene varios capítulos con apuntes de conceptos fundamentales.
 
 > *"El conocimiento es el alimento del alma."* — Platón
+
+---
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<div class="card h-100">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Química General</h5>
+    <p class="card-text flex-grow-1">Estructura atómica, enlaces químicos, reacciones, y más conceptos fundamentales de química.</p>
+    <a href="Química_General/index.qmd" class="btn btn-primary mt-auto">Ir a Química General →</a>
+  </div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card h-100">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Conjuntos</h5>
+    <p class="card-text flex-grow-1">Teoría de conjuntos, operaciones entre conjuntos, producto cartesiano, y más.</p>
+    <a href="Conjuntos/index.qmd" class="btn btn-secondary mt-auto">Ir a Conjuntos →</a>
+  </div>
+</div>
+</div>
+
+</div>

@@ -1,3 +1,14 @@
 # Conjuntos
 
 Apuntes de teoría de conjuntos.
+
+## Capítulos
+
+### [Teoría de Conjuntos](01-teoria-de-conjuntos.qmd)
+Definición, notación, pertenencia, subconjuntos, cardinalidad.
+
+### [Operaciones entre Conjuntos](02-operaciones.qmd)
+Unión, intersección, diferencia, complemento.
+
+### [Producto Cartesiano](03-producto-cartesiano.qmd)
+Pares ordenados, producto cartesiano, relaciones.

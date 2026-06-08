@@ -1,0 +1,22 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var sections = document.querySelectorAll("#quarto-sidebar .sidebar-section");
+  if (!sections.length) return;
+
+  var activeLink = document.querySelector("#quarto-sidebar .sidebar-link.active");
+  if (!activeLink) return;
+
+  var activeSection = activeLink.closest(".sidebar-section");
+
+  sections.forEach(function (section) {
+    if (section !== activeSection) {
+      section.classList.remove("show");
+      var item = section.closest(".sidebar-item-section");
+      if (item) {
+        var toggle = item.querySelector(".sidebar-item-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+});
+</script>

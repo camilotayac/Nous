@@ -1,3 +1,7 @@
+---
+sidebar: main
+---
+
 # Referencias {.unnumbered}
 
 ::: {#refs}
