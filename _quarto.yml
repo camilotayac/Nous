@@ -49,8 +49,8 @@ format:
   bookup-html:
     toc: true
     toc-depth: 3
-    css: custom.css
-    include-after-body: sidebar-autocollapse.html
+    css: assets/css/custom.css
+    include-after-body: assets/js/sidebar-autocollapse.html
   typst:
     toc: true
     papersize: us-letter

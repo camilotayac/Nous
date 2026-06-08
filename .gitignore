@@ -2,13 +2,6 @@
 /_book/
 /docs/
 
-# Duplicated font directories (originals in _extensions/juba/bookup/fonts/)
-/fonts/
-/Química_General/fonts/
-/Conjuntos/fonts/
-
-# macOS
-.DS_Store
 *.log
 *.tex
 *.toc
@@ -19,3 +12,4 @@
 *.fdb_latexmk
 
 **/*.quarto_ipynb
+.DS_Store
