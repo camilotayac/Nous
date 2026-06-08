@@ -36,7 +36,7 @@ format:
     respect-user-color-scheme: true #Respeta el modo oscuro del sistema operativo
     theme:
       light: lux
-      dark: lux
+      dark: darlux
   pdf:
     documentclass: scrbook
     include-in-header: preamble.tex
