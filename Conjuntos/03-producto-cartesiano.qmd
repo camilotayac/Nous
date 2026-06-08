@@ -23,3 +23,11 @@ $$A \times B = \{(1, x), (1, y), (2, x), (2, y)\}$$
 Una **relación** $R$ de $A$ en $B$ es un subconjunto de $A \times B$:
 
 $$R \subseteq A \times B$$
+
+```{=typst}
+#fletcher.diagram(
+  node("A"),
+  node("B"),
+  edge("->", label: "f")
+)
+```

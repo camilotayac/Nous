@@ -6,7 +6,7 @@
 }
 
 .quarto-page-breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
-  content: "›";
+  content: "\203A";
   font-size: 1.2em;
   font-weight: 300;
   padding: 0 0.3rem;
@@ -24,4 +24,27 @@
 
 .quarto-page-breadcrumbs .breadcrumb-item:last-child {
   font-weight: 500;
+}
+
+/* Smooth sidebar section collapse/expand */
+#quarto-sidebar .sidebar-section {
+  max-height: 2000px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 350ms ease-in-out, opacity 250ms ease, padding 250ms ease, margin 250ms ease;
+}
+
+#quarto-sidebar .sidebar-section:not(.show) {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  display: block !important;
+}
+
+/* Match chevron rotation timing */
+.sidebar-item .sidebar-item-toggle .bi-chevron-right::before {
+  transition: transform 350ms ease !important;
 }

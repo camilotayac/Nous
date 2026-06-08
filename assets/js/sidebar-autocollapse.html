@@ -8,15 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var activeSection = activeLink.closest(".sidebar-section");
 
-  sections.forEach(function (section) {
-    if (section !== activeSection) {
-      section.classList.remove("show");
-      var item = section.closest(".sidebar-item-section");
-      if (item) {
-        var toggle = item.querySelector(".sidebar-item-toggle");
-        if (toggle) toggle.setAttribute("aria-expanded", "false");
+  // Defer to after first paint so page renders with all sections visible first
+  requestAnimationFrame(function () {
+    sections.forEach(function (section) {
+      if (section !== activeSection) {
+        var item = section.closest(".sidebar-item-section");
+        if (item) {
+          var toggle = item.querySelector(".sidebar-item-toggle");
+          if (toggle) {
+            try {
+              var bsCollapse = new bootstrap.Collapse(section, { toggle: false });
+              bsCollapse.hide();
+            } catch (e) {
+              section.classList.remove("show");
+            }
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        }
       }
-    }
+    });
   });
 });
 </script>

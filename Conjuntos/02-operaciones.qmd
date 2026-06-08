@@ -20,6 +20,19 @@ $$\overline{A} = \{x \in U \mid x \notin A\}$$
 
 $$A \triangle B = (A - B) \cup (B - A)$$
 
+## Diagramas de Venn
+
+```{=typst}
+#cetz.canvas({
+  import cetz.draw: *
+  cetz-venn.venn2(
+    label-A: "A", label-B: "B",
+    set-A-fill: blue.transparentize(80%),
+    set-B-fill: red.transparentize(80%),
+  )
+})
+```
+
 ## Leyes de De Morgan
 
 - $\overline{A \cup B} = \overline{A} \cap \overline{B}$

@@ -13,3 +13,9 @@
 
 **/*.quarto_ipynb
 .DS_Store
+
+# Duplicated font directories (originals in _extensions/juba/bookup/fonts/)
+/fonts/
+/Química_General/fonts/
+/Conjuntos/fonts/
+

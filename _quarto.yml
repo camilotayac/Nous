@@ -54,3 +54,5 @@ format:
   typst:
     toc: true
     papersize: us-letter
+    theorem-appearance: fancy
+    include-in-header: typst-preamble.typ
