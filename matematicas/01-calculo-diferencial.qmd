@@ -1,0 +1,15 @@
+# Cálculo Diferencial
+
+## Límites
+
+$$\lim_{x \to a} f(x) = L$$
+
+## Derivadas
+
+$$\frac{d}{dx}x^n = nx^{n-1}$$
+
+$$\frac{d}{dx}\sin x = \cos x$$
+
+## Regla de la Cadena
+
+$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$

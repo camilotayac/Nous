@@ -1,0 +1,16 @@
+# Teoría del Funcional de la Densidad (DFT)
+
+## Teoremas de Hohenberg-Kohn
+
+- HK1: El potencial externo es funcional único de la densidad.
+- HK2: Principio variacional para la energía.
+
+## Ecuaciones de Kohn-Sham
+
+$$E[\rho] = T_s[\rho] + E_{ext}[\rho] + E_H[\rho] + E_{xc}[\rho]$$
+
+## Funcionales comunes
+
+- LDA
+- GGA (PBE, BLYP)
+- Híbridos (B3LYP, PBE0)

@@ -1,0 +1,53 @@
+project:
+  type: book
+
+execute:
+  freeze: auto
+
+book:
+  title: "Nous — Cuaderno de Apuntes"
+  author: "Tu Nombre"
+  date: today
+  chapters:
+    - index.qmd
+    - part: "Química"
+      chapters:
+        - quimica/index.qmd
+        - quimica/01-estructura-atomica.qmd
+        - quimica/02-enlaces-quimicos.qmd
+        - quimica/03-reacciones.qmd
+    - part: "Química Cuántica"
+      chapters:
+        - quimica-cuantica/index.qmd
+        - quimica-cuantica/01-mecanica-ondulatoria.qmd
+        - quimica-cuantica/02-orbitales-moleculares.qmd
+        - quimica-cuantica/03-teoria-del-funcional.qmd
+    - part: "Matemáticas"
+      chapters:
+        - matematicas/index.qmd
+        - matematicas/01-calculo-diferencial.qmd
+        - matematicas/02-algebra-lineal.qmd
+        - matematicas/03-ecuaciones-diferenciales.qmd
+    - part: "Física"
+      chapters:
+        - fisica/index.qmd
+        - fisica/01-mecanica-clasica.qmd
+        - fisica/02-termodinamica.qmd
+        - fisica/03-electromagnetismo.qmd
+    - part: "Biología"
+      chapters:
+        - biologia/index.qmd
+        - biologia/01-genetica.qmd
+        - biologia/02-evolucion.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+  pdf:
+    documentclass: scrreprt

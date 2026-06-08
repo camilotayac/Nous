@@ -1,0 +1,15 @@
+# Termodinámica
+
+## Leyes de la Termodinámica
+
+1. Conservación de la energía: $\Delta U = Q - W$
+2. Entropía: $\Delta S \geq 0$
+3. Cero absoluto
+
+## Gases Ideales
+
+$$PV = nRT$$
+
+## Ciclo de Carnot
+
+$\eta = 1 - \frac{T_C}{T_H}$

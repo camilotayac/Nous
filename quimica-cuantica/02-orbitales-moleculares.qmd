@@ -1,0 +1,16 @@
+# Orbitales Moleculares
+
+## Combinación Lineal de Orbitales Atómicos (CLOA)
+
+Los orbitales atómicos se combinan para formar orbitales moleculares:
+
+- Enlazantes ($\sigma$, $\pi$)
+- Antienlazantes ($\sigma^*$, $\pi^*$)
+
+## Diagrama de OM
+
+Para moléculas diatómicas homonucleares y heteronucleares.
+
+## Orden de Enlace
+
+$$OE = \frac{\text{electrones enlazantes} - \text{electrones antienlazantes}}{2}$$

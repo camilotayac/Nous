@@ -1,0 +1,21 @@
+# Estructura Atómica
+
+## Modelo Atómico
+
+- Dalton (1808)
+- Thomson (1897)
+- Rutherford (1911)
+- Bohr (1913)
+- Mecánica Cuántica (1926)
+
+## Números Cuánticos
+
+| n | l | m~l~ | m~s~ |
+|---|---|---|---|
+| 1 | 0 | 0 | ±½ |
+| 2 | 0,1 | -1,0,+1 | ±½ |
+| 3 | 0,1,2 | -2,-1,0,+1,+2 | ±½ |
+
+## Configuración Electrónica
+
+Principio de Aufbau, regla de Hund, principio de exclusión de Pauli.

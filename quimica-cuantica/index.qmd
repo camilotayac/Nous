@@ -1,0 +1,3 @@
+# Química Cuántica
+
+Apuntes de química cuántica y métodos computacionales.

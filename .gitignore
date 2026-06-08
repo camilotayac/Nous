@@ -1,0 +1,13 @@
+/.quarto/
+/_book/
+/docs/
+*.log
+*.tex
+*.toc
+*.aux
+*.out
+*.fls
+*.synctex.gz
+*.fdb_latexmk
+
+**/*.quarto_ipynb

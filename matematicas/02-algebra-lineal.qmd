@@ -1,0 +1,17 @@
+# Álgebra Lineal
+
+## Vectores
+
+Operaciones básicas, producto punto y producto cruz.
+
+## Matrices
+
+$$A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$$
+
+## Sistemas de Ecuaciones
+
+Eliminación de Gauss-Jordan, rango, determinantes.
+
+## Valores y Vectores Propios
+
+$$A\mathbf{v} = \lambda\mathbf{v}$$

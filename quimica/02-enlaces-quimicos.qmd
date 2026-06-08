@@ -1,0 +1,17 @@
+# Enlaces Químicos
+
+## Enlace Iónico
+
+Transferencia de electrones entre un metal y un no metal.
+
+## Enlace Covalente
+
+Compartición de electrones entre no metales.
+
+- Enlace simple
+- Enlace doble
+- Enlace triple
+
+## Enlace Metálico
+
+Red de cationes inmersos en un "mar de electrones".

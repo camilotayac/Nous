@@ -1,0 +1,3 @@
+# Física
+
+Apuntes de física: mecánica, termodinámica, electromagnetismo.

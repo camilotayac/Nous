@@ -1,0 +1,23 @@
+# Genética
+
+## ADN
+
+Doble hélice compuesta de nucleótidos:
+
+- Adenina (A)
+- Timina (T)
+- Citosina (C)
+- Guanina (G)
+
+## Replicación
+
+Semiconservativa: $A\text{-}T$, $C\text{-}G$.
+
+## Transcripción y Traducción
+
+ADN $\to$ ARN $\to$ Proteína.
+
+## Leyes de Mendel
+
+- Segregación
+- Distribución independiente
