@@ -43,7 +43,7 @@ format:
     fontfamily: libertinus
   epub:
     css: epub-styles.css
-    epub-cover-image: epub-cover.png
+    epub-cover-image: cover.png
 
 
 
