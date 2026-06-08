@@ -2,24 +2,48 @@ project:
   type: book
 
 book:
+  favicon: cover.png 
+  twitter-card: true
+  site-url: https://camilotayac.com
+  search: true #Activar el buscador en el sitio web
+  repo-url: https://github.com/camilotayac/Nous
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook, linkedin]
   title: "Nous"
   author: "Camilo Tayac"
   date: "6/8/2026"
+
+
+  sidebar:
+    style: docked
+    background: light
+    
+
   chapters:
     - index.qmd
     - part: "intro"
       chapters:
         - summary.qmd
 
+comments:
+  hypothesis: false #Desactivar los comentarios de Hypothesis
+
 bibliography: references.bib
 
 format:
   html:
+    respect-user-color-scheme: true #Respeta el modo oscuro del sistema operativo
     theme:
-      - cosmo
-      - brand
+      light: lux
+      dark: lux
   pdf:
-    documentclass: scrreprt
+    documentclass: scrbook
+    include-in-header: preamble.tex
+    fontfamily: libertinus
+  epub:
+    css: epub-styles.css
+    epub-cover-image: epub-cover.png
 
 
 
