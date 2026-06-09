@@ -1,3 +1,4 @@
+\usepackage{libertinus}
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -8,3 +9,34 @@
 \usepackage{pdflscape}
 \usepackage{tabu}
 \usepackage{threeparttable}
+
+\usepackage{tikz}
+\usepackage{etoc}
+
+\definecolor{nouscolor}{HTML}{2980B9}
+
+\renewcommand*{\partformat}{}
+
+\etocsetlocaltop{part}
+\etocsettocstyle{}{}
+
+\makeatletter
+\renewcommand{\partheadstartvskip}{%
+  \null
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
+          minimum height=\paperheight, minimum width=\paperwidth]
+          at (current page.center) {};
+  \end{tikzpicture}%
+  \vfil
+}
+
+\renewcommand{\partheadendvskip}{%
+  \par\vspace{2cm}
+  {\raggedright\small\color{black!80}\localtableofcontents\par}
+  \vspace*{3cm}
+}
+
+\renewcommand{\raggedpart}{\raggedright}
+\setkomafont{part}{\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}}
+\makeatother

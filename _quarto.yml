@@ -2,25 +2,10 @@ project:
   type: book
 
 book:
-  bread-crumbs: false
-  favicon: cover.png 
-  twitter-card: true
-  search: true #Activar el buscador en el sitio web
-  repo-url: https://github.com/camilotayac/Nous
-  repo-actions: [edit, source, issue]
   downloads: [pdf, epub]
-  sharing: [twitter, facebook, linkedin]
   title: "Nous"
   author: "Camilo Tayac"
   date: "6/8/2026"
-
-
-  sidebar:
-    collapse-level: 1
-    
-
-    
-
   chapters:
     - index.qmd
     - intro.qmd
@@ -29,23 +14,13 @@ book:
       chapters:
         - 01_conjuntos/00_proposicion_negacion.qmd
 
-comments:
-  hypothesis: false #Desactivar los comentarios de Hypothesis
-
-bibliography: references.bib
-
 format:
   html:
+    lang: es
     theme:
       light: flatly
       dark: darkly
-  pdf:
-    documentclass: scrbook
-    include-in-header: preamble.tex
-    fontfamily: libertinus
-  epub:
-    css: epub-styles.css
-    epub-cover-image: cover.png
+  pdf: default
+  epub: default
 
-
-
+bibliography: references.bib
