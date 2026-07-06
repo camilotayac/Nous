@@ -30,16 +30,6 @@
     ]
   },
   {
-    "objectID": "intro.html#progreso",
-    "href": "intro.html#progreso",
-    "title": "Introducción",
-    "section": "Progreso",
-    "text": "Progreso\n\n\n\nConjuntos 50% (5/10)\n\n\n\n\nQuímica 60% (6/10)",
-    "crumbs": [
-      "Introducción"
-    ]
-  },
-  {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "Resumen",
@@ -120,7 +110,7 @@
     "href": "02_quimica/01_cinetica_quimica.html",
     "title": "Cinética química",
     "section": "",
-    "text": "Introducción a la cinética química\nCuando hablamos de una reacción química es como los reactivos cambian sus propiedades formando otro compuesto con otras propiedades determinadas. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química (Brown et al. 2014).",
+    "text": "Introducción a la cinética química\nCuando hablamos de una reacción química es como los reactivos cambian sus propiedades formando otro compuesto con otras propiedades determinadas. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química (brown2014?).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -131,7 +121,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#teoría-de-colisiones",
     "title": "Cinética química",
     "section": "Teoría de colisiones",
-    "text": "Teoría de colisiones\nPara que ocurra una reacción química debe haber determinadas colisiones o choques entre los reactivos para que haya una transferencia o una reorganización de enlaces que forme el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía (Brown et al. 2014).",
+    "text": "Teoría de colisiones\nPara que ocurra una reacción química debe haber determinadas colisiones o choques entre los reactivos para que haya una transferencia o una reorganización de enlaces que forme el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía (brown2014?).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -142,7 +132,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-del-estado-físico",
     "title": "Cinética química",
     "section": "Efecto del estado físico",
-    "text": "Efecto del estado físico\nHay varios factores que afectan la colisión entre partículas. El primero es el estado físico de los reactivos. Al estar los reactivos en una mezcla homogénea, la cantidad de colisiones es mayor y más rápida, permitiendo que los reactivos generen esa reorganización de átomos o enlaces. Pero si estamos en una mezcla heterogénea, como sólido y líquido, esto reduce los choques y la velocidad se reduce, lo que disminuye la cantidad de producto que se genera en el tiempo. Un ejemplo cotidiano que ayuda a comprender esto es el tipo de presentación de un medicamento: un medicamento sólido se va a demorar más en hacer efecto que el medicamento en presentación en polvo, dado que el sólido tiene menor área superficial comparado con el polvo (Brown et al. 2014).\nUna analogía para entender esto: imagina 10 mineros que van a picar una piedra gigante. Se van a demorar más porque tienen que ir picando de afuera hacia dentro y, al ser una sola piedra, el área que pueden picar es menor. Ahora, ¿qué pasa si esa misma piedra está partida en 10 piedras más pequeñas? Los mineros van a poder escoger cada uno una piedra, y se va a picar más rápido porque cada minero va a tener más área que picar en comparación con la piedra grande.",
+    "text": "Efecto del estado físico\nHay varios factores que afectan la colisión entre partículas. El primero es el estado físico de los reactivos. Al estar los reactivos en una mezcla homogénea, la cantidad de colisiones es mayor y más rápida, permitiendo que los reactivos generen esa reorganización de átomos o enlaces. Pero si estamos en una mezcla heterogénea, como sólido y líquido, esto reduce los choques y la velocidad se reduce, lo que disminuye la cantidad de producto que se genera en el tiempo. Un ejemplo cotidiano que ayuda a comprender esto es el tipo de presentación de un medicamento: un medicamento sólido se va a demorar más en hacer efecto que el medicamento en presentación en polvo, dado que el sólido tiene menor área superficial comparado con el polvo (brown2014?).\nUna analogía para entender esto: imagina 10 mineros que van a picar una piedra gigante. Se van a demorar más porque tienen que ir picando de afuera hacia dentro y, al ser una sola piedra, el área que pueden picar es menor. Ahora, ¿qué pasa si esa misma piedra está partida en 10 piedras más pequeñas? Los mineros van a poder escoger cada uno una piedra, y se va a picar más rápido porque cada minero va a tener más área que picar en comparación con la piedra grande.",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -153,7 +143,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-de-la-concentración",
     "title": "Cinética química",
     "section": "Efecto de la concentración",
-    "text": "Efecto de la concentración\nEl segundo factor que afecta la colisión es la concentración de los reactivos. A mayor concentración en un espacio determinado, aumentan las probabilidades de colisión, y si hay más colisiones o choques, hay mayor velocidad de reacción (Brown et al. 2014).\nImaginemos un espacio con dos partículas. Con el tiempo, estas partículas se moverán, pero como tienen tanto espacio, su probabilidad de que choquen es baja. Ahora imaginemos un espacio con un millón de partículas. Con el tiempo se moverán, pero como hay una gran cantidad de partículas, ellas van a chocar muy fácilmente con otra partícula, y ese choque aumenta la probabilidad de que se forme el producto, aumentando la velocidad de reacción.",
+    "text": "Efecto de la concentración\nEl segundo factor que afecta la colisión es la concentración de los reactivos. A mayor concentración en un espacio determinado, aumentan las probabilidades de colisión, y si hay más colisiones o choques, hay mayor velocidad de reacción (brown2014?).\nImaginemos un espacio con dos partículas. Con el tiempo, estas partículas se moverán, pero como tienen tanto espacio, su probabilidad de que choquen es baja. Ahora imaginemos un espacio con un millón de partículas. Con el tiempo se moverán, pero como hay una gran cantidad de partículas, ellas van a chocar muy fácilmente con otra partícula, y ese choque aumenta la probabilidad de que se forme el producto, aumentando la velocidad de reacción.",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -164,7 +154,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-de-la-temperatura",
     "title": "Cinética química",
     "section": "Efecto de la temperatura",
-    "text": "Efecto de la temperatura\nEl tercer factor es la temperatura, la temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen y esto está relacionado con la velocidad de reacción. A temperatura baja el movimiento es menor, por ende los choques son menores y si la temperatura es alta el movimiento de las partículas es mayor, por ende mayor choques. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar la frecuencia de choques entre partículas (Brown et al. 2014).",
+    "text": "Efecto de la temperatura\nEl tercer factor es la temperatura, la temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen y esto está relacionado con la velocidad de reacción. A temperatura baja el movimiento es menor, por ende los choques son menores y si la temperatura es alta el movimiento de las partículas es mayor, por ende mayor choques. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar la frecuencia de choques entre partículas (brown2014?).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -175,21 +165,10 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-de-los-catalizadores",
     "title": "Cinética química",
     "section": "Efecto de los catalizadores",
-    "text": "Efecto de los catalizadores\nEl cuarto factor es la utilización de catalizador. Los catalizadores son compuestos que afectan la velocidad de reacción. Sin embargo, no afectan la reacción química, lo que significa que no entra como un reactivo. El catalizador queda intacto, solo ayuda a que se den las colisiones de una manera determinada alterando los mecanismos. Al alterar los mecanismos, los catalizadores afectan la velocidad de reacción (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
+    "text": "Efecto de los catalizadores\nEl cuarto factor es la utilización de catalizador. Los catalizadores son compuestos que afectan la velocidad de reacción. Sin embargo, no afectan la reacción química, lo que significa que no entra como un reactivo. El catalizador queda intacto, solo ayuda a que se den las colisiones de una manera determinada alterando los mecanismos. Al alterar los mecanismos, los catalizadores afectan la velocidad de reacción (brown2014?).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "Bibliografía",
-    "section": "",
-    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.",
-    "crumbs": [
-      "Apéndices",
-      "Bibliografía"
     ]
   }
 ]
