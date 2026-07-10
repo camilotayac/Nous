@@ -1,0 +1,50 @@
+project:
+  type: book
+  pre-render: python3 sync.py && python3 update_book.py
+book:
+  bread-crumbs: false
+  downloads:
+  - pdf
+  - epub
+  title: Nous
+  author: Camilo Tayac
+  date: 6/8/2026
+  chapters:
+  - index.qmd
+  - intro.qmd
+  - summary.qmd
+  - part: Conjuntos
+    chapters:
+    - 01_conjuntos/00_proposicion_negacion.qmd
+  - part: Química
+    chapters:
+    - 02_quimica/01_cinetica_quimica.qmd
+  - part: Apéndices
+    chapters:
+    - references.qmd
+lang: es
+crossref:
+  fig-title: Figura
+  fig-prefix: Figura
+  tbl-title: Tabla
+  tbl-prefix: Tabla
+  exm-title: Ejemplo
+  exm-prefix: Ejemplo
+  eq-title: Ecuación
+  eq-prefix: Ecuación
+filters:
+- filters/wikilinks.lua
+- filters/responsive-tables.lua
+format:
+  html:
+    number-sections: false
+    theme:
+      light: litera
+      dark:
+      - litera
+      - theme-dark.scss
+  pdf:
+    toc-depth: 1
+    include-in-header: preamble.tex
+  epub: default
+bibliography: references.bib

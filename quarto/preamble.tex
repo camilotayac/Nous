@@ -1,0 +1,76 @@
+\usepackage{libertinus}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+
+\usepackage{tikz}
+\usepackage{etoc}
+
+\definecolor{nouscolor}{HTML}{2980B9}
+
+\renewcommand*{\partformat}{}
+
+\etocsetlocaltop{part}
+\etocsettocstyle{}{}
+
+\makeatletter
+
+% --- Estilo para páginas de \part{} ---
+\renewcommand{\partheadstartvskip}{%
+  \null
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
+          minimum height=\paperheight, minimum width=\paperwidth]
+          at (current page.center) {};
+  \end{tikzpicture}%
+  \vfil
+}
+
+\renewcommand{\partheadendvskip}{%
+  \par\vspace{2cm}
+  {\raggedright\small\color{black!80}\localtableofcontents\par}
+  \vspace*{3cm}
+}
+
+\renewcommand{\raggedpart}{\raggedright}
+\setkomafont{part}{\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}}
+
+% --- Estilo para el TOC (índice general) igual que \part{} ---
+\newif\if@tocpage
+\@tocpagefalse
+
+\let\orig@tableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{%
+  \@tocpagetrue
+  \orig@tableofcontents
+}
+
+\let\orig@makeschapterhead\@makeschapterhead
+\renewcommand{\@makeschapterhead}[1]{%
+  \if@tocpage
+    \global\@tocpagefalse
+    \null
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
+            minimum height=\paperheight, minimum width=\paperwidth]
+            at (current page.center) {};
+    \end{tikzpicture}%
+    \vskip 2cm
+    {\raggedright\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}#1\par}%
+    \vspace{1cm}
+  \else
+    \orig@makeschapterhead{#1}%
+  \fi
+}
+
+\AtBeginDocument{%
+  \renewcommand*\contentsname{Índice}
+}
+\makeatother

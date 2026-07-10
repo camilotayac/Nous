@@ -1,4 +1,15 @@
-/.quarto/
-**/*.quarto_ipynb
 .DS_Store
 _book/
+.quarto/
+*.quarto_ipynb
+__pycache__/
+*.pyc
+.es_*/
+transcripcion/
+Book_epub/
+.agents/
+.obsidian/
+02_quimica/
+*.ptc
+recent_files/
+quarto/references_files/
