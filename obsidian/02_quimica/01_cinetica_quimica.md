@@ -2,11 +2,11 @@
 
 ## Introducción a la cinética química
 
-Cuando hablamos de una reacción química es como los reactivos cambian sus propiedades formando otro compuesto con otras propiedades determinadas. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química [@brown2014].
+Cuando hablamos de una reacción química es cuando los reactivos se convierten en productos. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química [@brown2014].
 
 ## Teoría de colisiones
 
-Para que ocurra una reacción química debe haber determinadas colisiones o choques entre los reactivos para que haya una transferencia o una reorganización de enlaces que forme el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía [@brown2014].
+Para que ocurra una reacción química debe ocurrir colisiones o choques entre los reactivos para que haya una transferencia de atomos o una reorganización de enlaces formando el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía [@brown2014].
 
 ## Efecto del estado físico
 
@@ -22,9 +22,9 @@ Imaginemos un espacio con dos partículas. Con el tiempo, estas partículas se m
 
 ## Efecto de la temperatura
 
-El tercer factor es la temperatura, la temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen y esto está relacionado con la velocidad de reacción. A temperatura baja el movimiento es menor, por ende los choques son menores y si la temperatura es alta el movimiento de las partículas es mayor, por ende mayor choques. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar la frecuencia de choques entre partículas [@brown2014].
+El tercer factor es la temperatura. La temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen, y además estas colisiones tendrán mayor energía, lo que permite superar la barrera de energía necesaria para que la reacción ocurra. A temperatura baja el movimiento es menor, por ende los choques son menores y con menos energía. Si la temperatura es alta el movimiento de las partículas es mayor, por ende hay más choques y con mayor energía. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar tanto la frecuencia como la energía de los choques entre partículas [@brown2014].
 
 ## Efecto de los catalizadores
 
-El cuarto factor es la utilización de catalizador. Los catalizadores son compuestos que afectan la velocidad de reacción. Sin embargo, no afectan la reacción química, lo que significa que no entra como un reactivo. El catalizador queda intacto, solo ayuda a que se den las colisiones de una manera determinada alterando los mecanismos. Al alterar los mecanismos, los catalizadores afectan la velocidad de reacción [@brown2014].
+El cuarto factor es la utilización de catalizador. Un catalizador es un compuesto que permite acelerar una reacción química afectando los tipos de colisiones y modificando los mecanismos de reacción, sin participar en la reacción química [@brown2014].
 

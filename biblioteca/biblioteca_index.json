@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-07-09T20:21:10",
+  "entries": [
+    {
+      "id": "14_quimica_brown_cinetica",
+      "title": "Cinética química",
+      "libro": "Theodore L. Brown - Química, la ciencia central (12ed, 2014)",
+      "capitulo": 14,
+      "rama": "quimica",
+      "archivo": "biblioteca/14_quimica_brown_cinetica.md",
+      "notas_relacionadas": [
+        {
+          "nota": "obsidian/02_quimica/01_cinetica_quimica.md",
+          "coincidencia": "alta",
+          "secciones": [
+            "velocidad de reacción",
+            "teoría de colisiones",
+            "efecto de la concentración",
+            "efecto de la temperatura",
+            "efecto de catalizadores",
+            "efecto del estado físico"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11_biologia_patrones_herencia",
+      "title": "11 PATRONES DE HERENCIA",
+      "libro": "desconocido",
+      "capitulo": 11,
+      "rama": "biologia",
+      "archivo": "biblioteca/11_biologia_patrones_herencia.md",
+      "notas_relacionadas": []
+    },
+    {
+      "id": "fisica_capitulo_1_hasta_1_2",
+      "title": "Capitulo 1 Hasta 1 2",
+      "libro": "desconocido",
+      "capitulo": null,
+      "rama": "fisica",
+      "archivo": "biblioteca/fisica_capitulo_1_hasta_1_2.md",
+      "notas_relacionadas": []
+    },
+    {
+      "id": "fisica_griffiths_cap1",
+      "title": "Griffiths Cap1",
+      "libro": "desconocido",
+      "capitulo": null,
+      "rama": "fisica",
+      "archivo": "biblioteca/fisica_griffiths_cap1.md",
+      "notas_relacionadas": []
+    },
+    {
+      "id": "01_matematicas_conjuntos_desarrollo_intuitivo",
+      "title": "Desarrollo intuitivo — Capítulo 1",
+      "libro": "José M. Muñoz Quevedo - Introducción a la Teoría de Conjuntos (4ª ed., 2001)",
+      "capitulo": 1,
+      "rama": "matematicas",
+      "archivo": "biblioteca/01_matematicas_conjuntos_desarrollo_intuitivo.md",
+      "notas_relacionadas": [
+        {
+          "nota": "obsidian/01_conjuntos/00_proposicion_negacion.md",
+          "coincidencia": "alta",
+          "secciones": [
+            "proposiciones",
+            "conectivos lógicos",
+            "conjuntos",
+            "operaciones entre conjuntos",
+            "cuantificadores"
+          ]
+        }
+      ]
+    }
+  ]
+}
