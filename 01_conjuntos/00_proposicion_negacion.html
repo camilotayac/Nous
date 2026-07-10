@@ -95,40 +95,7 @@ div.csl-indent {
     "search-label": "Buscar"
   }
 }</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-</head>
-
-<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -290,7 +257,116 @@ window.Quarto = {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script>\usepackage{libertinus}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+
+\usepackage{tikz}
+\usepackage{etoc}
+
+\definecolor{nouscolor}{HTML}{2980B9}
+
+\renewcommand*{\partformat}{}
+
+\etocsetlocaltop{part}
+\etocsettocstyle{}{}
+
+\makeatletter
+
+% --- Estilo para páginas de \part{} ---
+\renewcommand{\partheadstartvskip}{%
+  \null
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
+          minimum height=\paperheight, minimum width=\paperwidth]
+          at (current page.center) {};
+  \end{tikzpicture}%
+  \vfil
+}
+
+\renewcommand{\partheadendvskip}{%
+  \par\vspace{2cm}
+  {\raggedright\small\color{black!80}\localtableofcontents\par}
+  \vspace*{3cm}
+}
+
+\renewcommand{\raggedpart}{\raggedright}
+\setkomafont{part}{\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}}
+
+% --- Estilo para el TOC (índice general) igual que \part{} ---
+\newif\if@tocpage
+\@tocpagefalse
+
+\let\orig@tableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{%
+  \@tocpagetrue
+  \orig@tableofcontents
+}
+
+\let\orig@makeschapterhead\@makeschapterhead
+\renewcommand{\@makeschapterhead}[1]{%
+  \if@tocpage
+    \global\@tocpagefalse
+    \null
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
+            minimum height=\paperheight, minimum width=\paperwidth]
+            at (current page.center) {};
+    \end{tikzpicture}%
+    \vskip 2cm
+    {\raggedright\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}#1\par}%
+    \vspace{1cm}
+  \else
+    \orig@makeschapterhead{#1}%
+  \fi
+}
+
+\AtBeginDocument{%
+  \renewcommand*\contentsname{Índice}
+}
+\makeatother
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -457,7 +533,7 @@ window.Quarto = {
 <div id="exm-sol" class="theorem example">
 <p><span class="theorem-title"><strong>Ejemplo 1.1</strong></span> <em>El sol es una estrella.</em></p>
 </div>
-<p>Un enunciado es una <strong>proposición</strong> cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>. Usando la lógica, podemos determinar si un enunciado es V o F.</p>
+<p>Un enunciado es una <strong>proposición</strong> cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>. Usando la lógica, podemos determinar si un enunciado es V o F.</p>
 </section>
 <section id="enunciados-que-no-son-proposiciones" class="level2">
 <h2 class="anchored" data-anchor-id="enunciados-que-no-son-proposiciones">Enunciados que no son proposiciones</h2>
@@ -472,14 +548,14 @@ window.Quarto = {
 </section>
 <section id="negación-de-una-proposición" class="level2">
 <h2 class="anchored" data-anchor-id="negación-de-una-proposición">Negación de una proposición</h2>
-<p>La proposición del <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> puede etiquetarse con una letra; en esta ocasión será la letra <em>P</em>. La proposición <em>P</em> puede tener su negación, como se observa en el <a href="#exm-sol-negacion" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a>. La negación se representa con el signo <span class="math inline">\(\neg\)</span>; por tanto, la negación de <em>P</em> queda como <span class="math inline">\(\neg P\)</span>. <span class="math inline">\(\neg P\)</span> se lee como “no <em>P</em>” o “la negación de <em>P</em>” <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>.</p>
+<p>La proposición del <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> puede etiquetarse con una letra; en esta ocasión será la letra <em>P</em>. La proposición <em>P</em> puede tener su negación, como se observa en el <a href="#exm-sol-negacion" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a>. La negación se representa con el signo <span class="math inline">\(\neg\)</span>; por tanto, la negación de <em>P</em> queda como <span class="math inline">\(\neg P\)</span>. <span class="math inline">\(\neg P\)</span> se lee como “no <em>P</em>” o “la negación de <em>P</em>” <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>.</p>
 <div id="exm-sol-negacion" class="theorem example">
 <p><span class="theorem-title"><strong>Ejemplo 1.4</strong></span> <em>El sol no es una estrella.</em></p>
 </div>
 </section>
 <section id="tabla-de-verdad" class="level2">
 <h2 class="anchored" data-anchor-id="tabla-de-verdad">Tabla de verdad</h2>
-<p>Las proposiciones <em>P</em> y <span class="math inline">\(\neg P\)</span> pueden valorarse como V o F. Si <em>P</em> es V, entonces <span class="math inline">\(\neg P\)</span> es F; y si <em>P</em> es F, entonces <span class="math inline">\(\neg P\)</span> es V. Esto se puede representar con una <strong>tabla de verdad</strong> <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>, como se observa en la <a href="#tbl-verdad-negacion" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>.</p>
+<p>Las proposiciones <em>P</em> y <span class="math inline">\(\neg P\)</span> pueden valorarse como V o F. Si <em>P</em> es V, entonces <span class="math inline">\(\neg P\)</span> es F; y si <em>P</em> es F, entonces <span class="math inline">\(\neg P\)</span> es V. Esto se puede representar con una <strong>tabla de verdad</strong> <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>, como se observa en la <a href="#tbl-verdad-negacion" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>.</p>
 <div id="tbl-verdad-negacion" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-verdad-negacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -513,7 +589,7 @@ Tabla&nbsp;1.1: Tabla de verdad para las proposiciones <span class="math inline"
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-munoz2001" class="csl-entry" role="listitem">
-Muñoz Quevedo, Juan. 2001. <em>Introducción a la Teoría de Conjuntos</em>. Editorial Norma.
+Muñoz, Juan Manuel. 2001. <em>Introducción a la teoría de conjuntos</em>. Recuperado de <a href="https://repositorio.unal.edu.co/handle/unal/79986" class="uri">https://repositorio.unal.edu.co/handle/unal/79986</a>.
 </div>
 </div>
 </section>

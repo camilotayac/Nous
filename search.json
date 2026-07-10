@@ -44,7 +44,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html",
     "title": "Proposición y su negación",
     "section": "",
-    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz Quevedo 2001). Usando la lógica, podemos determinar si un enunciado es V o F.",
+    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz 2001). Usando la lógica, podemos determinar si un enunciado es V o F.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -77,7 +77,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#negación-de-una-proposición",
     "title": "Proposición y su negación",
     "section": "Negación de una proposición",
-    "text": "Negación de una proposición\nLa proposición del Ejemplo 1.1 puede etiquetarse con una letra; en esta ocasión será la letra P. La proposición P puede tener su negación, como se observa en el Ejemplo 1.4. La negación se representa con el signo \\(\\neg\\); por tanto, la negación de P queda como \\(\\neg P\\). \\(\\neg P\\) se lee como “no P” o “la negación de P” (Muñoz Quevedo 2001).\n\nEjemplo 1.4 El sol no es una estrella.",
+    "text": "Negación de una proposición\nLa proposición del Ejemplo 1.1 puede etiquetarse con una letra; en esta ocasión será la letra P. La proposición P puede tener su negación, como se observa en el Ejemplo 1.4. La negación se representa con el signo \\(\\neg\\); por tanto, la negación de P queda como \\(\\neg P\\). \\(\\neg P\\) se lee como “no P” o “la negación de P” (Muñoz 2001).\n\nEjemplo 1.4 El sol no es una estrella.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -88,7 +88,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#tabla-de-verdad",
     "title": "Proposición y su negación",
     "section": "Tabla de verdad",
-    "text": "Tabla de verdad\nLas proposiciones P y \\(\\neg P\\) pueden valorarse como V o F. Si P es V, entonces \\(\\neg P\\) es F; y si P es F, entonces \\(\\neg P\\) es V. Esto se puede representar con una tabla de verdad (Muñoz Quevedo 2001), como se observa en la Tabla 1.1.\n\n\n\nTabla 1.1: Tabla de verdad para las proposiciones \\(P\\) y \\(\\neg P\\)\n\n\n\n\n\n\n\\(P\\)\n\\(\\neg P\\)\n\n\n\n\nV\nF\n\n\nF\nV\n\n\n\n\n\n\n\n\n\n\n\nMuñoz Quevedo, Juan. 2001. Introducción a la Teoría de Conjuntos. Editorial Norma.",
+    "text": "Tabla de verdad\nLas proposiciones P y \\(\\neg P\\) pueden valorarse como V o F. Si P es V, entonces \\(\\neg P\\) es F; y si P es F, entonces \\(\\neg P\\) es V. Esto se puede representar con una tabla de verdad (Muñoz 2001), como se observa en la Tabla 1.1.\n\n\n\nTabla 1.1: Tabla de verdad para las proposiciones \\(P\\) y \\(\\neg P\\)\n\n\n\n\n\n\n\\(P\\)\n\\(\\neg P\\)\n\n\n\n\nV\nF\n\n\nF\nV\n\n\n\n\n\n\n\n\n\n\n\nMuñoz, Juan Manuel. 2001. Introducción a la teoría de conjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -165,7 +165,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz Quevedo, Juan. 2001. Introducción a La Teoría de\nConjuntos. Editorial Norma.",
+    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz, Juan Manuel. 2001. Introducción a La Teoría de\nConjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
     "crumbs": [
       "Apéndices",
       "References"
