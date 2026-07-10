@@ -251,18 +251,26 @@ ul.task-list li input[type="checkbox"] {
 \usepackage{threeparttable}
 
 \usepackage{tikz}
+
+\makeatletter
+\let\orig@tableofcontents\tableofcontents
 \usepackage{etoc}
+\let\tableofcontents\orig@tableofcontents
+\makeatother
 
 \definecolor{nouscolor}{HTML}{2980B9}
+
+\DeclareTOCStyleEntry[
+  entryformat=\large\bfseries\color{nouscolor},
+  pagenumberformat=\large\bfseries\color{nouscolor}
+]{tocline}{part}
 
 \renewcommand*{\partformat}{}
 
 \etocsetlocaltop{part}
-\etocsettocstyle{}{}
 
 \makeatletter
 
-% --- Estilo para páginas de \part{} ---
 \renewcommand{\partheadstartvskip}{%
   \null
   \begin{tikzpicture}[remember picture, overlay]
@@ -275,18 +283,18 @@ ul.task-list li input[type="checkbox"] {
 
 \renewcommand{\partheadendvskip}{%
   \par\vspace{2cm}
-  {\raggedright\small\color{black!80}\localtableofcontents\par}
+  {\raggedright\small\color{black!80}
+   \etocsettocstyle{}{}
+   \localtableofcontents\par}
   \vspace*{3cm}
 }
 
 \renewcommand{\raggedpart}{\raggedright}
 \setkomafont{part}{\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}}
 
-% --- Estilo para el TOC (índice general) igual que \part{} ---
 \newif\if@tocpage
 \@tocpagefalse
 
-\let\orig@tableofcontents\tableofcontents
 \renewcommand{\tableofcontents}{%
   \@tocpagetrue
   \orig@tableofcontents
