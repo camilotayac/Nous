@@ -45,6 +45,7 @@ format:
       - theme-dark.scss
   pdf:
     toc-depth: 1
-    include-in-header: preamble.tex
   epub: default
 bibliography: references.bib
+include-in-header:
+  - preamble.tex
