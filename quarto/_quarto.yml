@@ -8,7 +8,7 @@ book:
   - epub
   title: Nous
   author: Camilo Tayac
-  date: 6/8/2026
+  date: 2026-06-08
   chapters:
   - index.qmd
   - intro.qmd
@@ -23,15 +23,6 @@ book:
     chapters:
     - references.qmd
 lang: es
-crossref:
-  fig-title: Figura
-  fig-prefix: Figura
-  tbl-title: Tabla
-  tbl-prefix: Tabla
-  exm-title: Ejemplo
-  exm-prefix: Ejemplo
-  eq-title: Ecuación
-  eq-prefix: Ecuación
 filters:
 - filters/wikilinks.lua
 - filters/responsive-tables.lua
@@ -45,7 +36,9 @@ format:
       - theme-dark.scss
   pdf:
     toc-depth: 1
+    cite-method: biblatex
+    biblio-style: authoryear
+    include-in-header:
+      - preamble.tex
   epub: default
 bibliography: references.bib
-include-in-header:
-  - preamble.tex

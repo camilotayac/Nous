@@ -7,7 +7,6 @@ los copia a biblioteca/ con nombre estandarizado, y actualiza biblioteca_index.j
 
 import hashlib
 import json
-import os
 import re
 import shutil
 from datetime import datetime

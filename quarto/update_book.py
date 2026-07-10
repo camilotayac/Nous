@@ -8,7 +8,6 @@ MOC files are grouped into a 'Mapas de contenido' part at the end.
 import re
 import yaml
 from pathlib import Path
-from collections import OrderedDict
 
 BASE_DIR = Path(__file__).resolve().parent
 QUARTO_YML = BASE_DIR / "_quarto.yml"
@@ -18,36 +17,9 @@ EXCLUDE_EXACT = {"references.qmd", "index.qmd", "intro.qmd", "summary.qmd"}
 MOC_SUFFIX = "_moc.qmd"
 
 
-def ordered_load(stream):
-    class OrderedLoader(yaml.SafeLoader):
-        pass
-
-    def construct_mapping(loader, node):
-        return OrderedDict(loader.construct_pairs(node))
-
-    OrderedLoader.add_constructor(
-        yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, construct_mapping
-    )
-    return yaml.load(stream, OrderedLoader)
-
-
-def ordered_dump(data, stream=None, **kw):
-    class OrderedDumper(yaml.SafeDumper):
-        pass
-
-    def represent_ordereddict(dumper, value):
-        return dumper.represent_mapping(
-            "tag:yaml.org,2002:map", value.items()
-        )
-
-    OrderedDumper.add_representer(OrderedDict, represent_ordereddict)
-    return yaml.dump(data, stream, Dumper=OrderedDumper, **kw)
-
-
 def extract_part_name(dirname: str) -> str:
     """Convert '02_quimica' -> 'Química'"""
-    name = dirname.split("_", 1)[-1] if "_" in dirname else dirname
-    return name.capitalize()
+    return dirname.split("_", 1)[-1].capitalize()
 
 
 def list_qmd_files(directory: Path) -> tuple[list[str], list[str]]:
@@ -73,7 +45,7 @@ def main():
         return
 
     with open(QUARTO_YML) as f:
-        config = ordered_load(f)
+        config = yaml.safe_load(f)
 
     chapters = config.get("book", {}).get("chapters", [])
     if not chapters:
@@ -129,7 +101,8 @@ def main():
         for moc in mocs:
             all_mocs.append(f"{parent}/{moc}")
 
-        print(f"  ✅ {parent}: {len(regular)} capítulos, {len(mocs)} MOC{'s' if len(mocs) != 1 else ''}")
+        plural = "s" if len(mocs) != 1 else ""
+        print(f"  ✅ {parent}: {len(regular)} capítulos, {len(mocs)} MOC{plural}")
 
     # Discover new chapter directories
     for item in sorted(BASE_DIR.iterdir()):
@@ -150,17 +123,19 @@ def main():
         for moc in mocs:
             all_mocs.append(f"{item.name}/{moc}")
 
-        print(f"  ➕ {item.name}: nueva parte '{part_name}' ({len(regular)} capítulos, {len(mocs)} MOC{'s' if len(mocs) != 1 else ''})")
+        plural = "s" if len(mocs) != 1 else ""
+        print(f"  ➕ {item.name}: nueva parte '{part_name}' ({len(regular)} capítulos, {len(mocs)} MOC{plural})")
 
     # Add Mapas de contenido part with all MOCs
     if all_mocs:
         new_parts.append({"part": MOC_PART_NAME, "chapters": sorted(all_mocs)})
-        print(f"  📍 {MOC_PART_NAME}: {len(all_mocs)} MOC{'s' if len(all_mocs) != 1 else ''}")
+        plural = "s" if len(all_mocs) != 1 else ""
+        print(f"  📍 {MOC_PART_NAME}: {len(all_mocs)} MOC{plural}")
 
     config["book"]["chapters"] = preamble + new_parts + postamble
 
     with open(QUARTO_YML, "w") as f:
-        ordered_dump(config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        yaml.dump(config, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
     print("\n✅ _quarto.yml actualizado")
 

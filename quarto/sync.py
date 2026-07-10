@@ -8,6 +8,9 @@ OBSIDIAN_DIR = BASE_DIR.parent / "obsidian"
 
 IGNORE_DIRS = {".venv", ".venv-mineru", ".agents", "output", ".obsidian", ".git", "_book", ".quarto"}
 
+def _filter_dirs(dirs):
+    return [d for d in dirs if not d.startswith(".") and d not in IGNORE_DIRS]
+
 def sync():
     print("🔄 [Sync] Sincronizando Fuente de Verdad (Obsidian -> Quarto)...")
     if not OBSIDIAN_DIR.exists():
@@ -25,7 +28,7 @@ def sync():
     # 2. Copiar y transformar archivos .md -> .qmd
     copied = set()
     for root, dirs, files in os.walk(OBSIDIAN_DIR):
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d not in IGNORE_DIRS]
+        dirs[:] = _filter_dirs(dirs)
         rel_path = Path(root).relative_to(OBSIDIAN_DIR)
 
         for file in files:
@@ -42,7 +45,7 @@ def sync():
     # 3. Limpiar archivos .qmd huérfanos (ya no existen en Obsidian)
     removed = 0
     for root, dirs, files in os.walk(BASE_DIR):
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d not in IGNORE_DIRS]
+        dirs[:] = _filter_dirs(dirs)
         for file in files:
             if not file.endswith(".qmd"):
                 continue

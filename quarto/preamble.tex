@@ -2,51 +2,65 @@
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{longtable}
-\usepackage{multirow}
-\usepackage{wrapfig}
 \usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
 
 \usepackage{tikz}
+
+\makeatletter
+\let\orig@tableofcontents\tableofcontents
 \usepackage{etoc}
+\let\tableofcontents\orig@tableofcontents
+\makeatother
 
 \definecolor{nouscolor}{HTML}{2980B9}
 
-\renewcommand*{\partformat}{}
+\AtBeginDocument{%
+  \hypersetup{
+    linkcolor=nouscolor,
+    citecolor=nouscolor,
+    urlcolor=nouscolor
+  }
+}
 
-\etocsetlocaltop{part}
-\etocsettocstyle{}{}
-
-\makeatletter
-
-% --- Estilo para páginas de \part{} ---
-\renewcommand{\partheadstartvskip}{%
-  \null
+\newcommand{\nouspagebackground}{%
   \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
           minimum height=\paperheight, minimum width=\paperwidth]
           at (current page.center) {};
   \end{tikzpicture}%
+}
+
+\DeclareTOCStyleEntry[
+  entryformat=\large\bfseries\color{nouscolor},
+  pagenumberformat=\large\bfseries\color{nouscolor}
+]{tocline}{part}
+
+\renewcommand*{\partformat}{}
+
+\etocsetlocaltop{part}
+
+\makeatletter
+
+\renewcommand{\partheadstartvskip}{%
+  \null
+  \nouspagebackground
   \vfil
 }
 
 \renewcommand{\partheadendvskip}{%
   \par\vspace{2cm}
-  {\raggedright\small\color{black!80}\localtableofcontents\par}
+  {\raggedright\small\color{black!80}
+   \etocsettocstyle{}{}
+   \localtableofcontents\par}
   \vspace*{3cm}
 }
 
 \renewcommand{\raggedpart}{\raggedright}
 \setkomafont{part}{\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}}
 
-% --- Estilo para el TOC (índice general) igual que \part{} ---
 \newif\if@tocpage
 \@tocpagefalse
 
-\let\orig@tableofcontents\tableofcontents
 \renewcommand{\tableofcontents}{%
   \@tocpagetrue
   \orig@tableofcontents
@@ -57,11 +71,7 @@
   \if@tocpage
     \global\@tocpagefalse
     \null
-    \begin{tikzpicture}[remember picture, overlay]
-      \node[anchor=center, rectangle, fill=nouscolor!20, inner sep=0pt,
-            minimum height=\paperheight, minimum width=\paperwidth]
-            at (current page.center) {};
-    \end{tikzpicture}%
+    \nouspagebackground
     \vskip 2cm
     {\raggedright\fontsize{30pt}{30pt}\selectfont\sffamily\bfseries\color{black}#1\par}%
     \vspace{1cm}
@@ -69,6 +79,13 @@
     \orig@makeschapterhead{#1}%
   \fi
 }
+
+\DeclareCiteCommand{\parencite}[\mkbibparens]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
 
 \AtBeginDocument{%
   \renewcommand*\contentsname{Índice}

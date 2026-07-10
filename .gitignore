@@ -13,3 +13,6 @@ Book_epub/
 *.ptc
 recent_files/
 quarto/references_files/
+
+/.quarto/
+**/*.quarto_ipynb
