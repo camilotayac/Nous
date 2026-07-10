@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -403,7 +422,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#definición-de-proposición" id="toc-definición-de-proposición" class="nav-link active" data-scroll-target="#definición-de-proposición">Definición de proposición</a></li>
-  <li><a href="#la-pregunta-como-prueba" id="toc-la-pregunta-como-prueba" class="nav-link" data-scroll-target="#la-pregunta-como-prueba">La pregunta como prueba</a></li>
   <li><a href="#enunciados-que-no-son-proposiciones" id="toc-enunciados-que-no-son-proposiciones" class="nav-link" data-scroll-target="#enunciados-que-no-son-proposiciones">Enunciados que no son proposiciones</a></li>
   <li><a href="#negación-de-una-proposición" id="toc-negación-de-una-proposición" class="nav-link" data-scroll-target="#negación-de-una-proposición">Negación de una proposición</a></li>
   <li><a href="#tabla-de-verdad" id="toc-tabla-de-verdad" class="nav-link" data-scroll-target="#tabla-de-verdad">Tabla de verdad</a></li>
@@ -435,44 +453,40 @@ window.Quarto = {
 
 <section id="definición-de-proposición" class="level2">
 <h2 class="anchored" data-anchor-id="definición-de-proposición">Definición de proposición</h2>
-<p>La unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el <a href="#exm-lluvia" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a>.</p>
-<div id="exm-lluvia" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.1</strong></span> <em>Está lloviendo.</em></p>
+<p>La unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a>.</p>
+<div id="exm-sol" class="theorem example">
+<p><span class="theorem-title"><strong>Ejemplo 1.1</strong></span> <em>El sol es una estrella.</em></p>
 </div>
-<p>Cuando un enunciado puede ser verdadero (V) o falso (F), obtenemos una <strong>proposición</strong> (cf.&nbsp;<em>Introducción a la teoría de conjuntos</em>). Usando la lógica, podemos determinar si un enunciado es V o F.</p>
-</section>
-<section id="la-pregunta-como-prueba" class="level2">
-<h2 class="anchored" data-anchor-id="la-pregunta-como-prueba">La pregunta como prueba</h2>
-<p>Si determinar el valor de verdad se dificulta, podemos convertir el enunciado en una pregunta. Si la pregunta puede responderse con un sí o con un no, entonces estamos ante una proposición.</p>
-<p>Convirtamos el <a href="#exm-lluvia" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> en una pregunta:</p>
-<div id="exm-lluvia-pregunta" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.2</strong></span> <em>¿Está lloviendo?</em></p>
-</div>
-<p>Al observar el <a href="#exm-lluvia-pregunta" class="quarto-xref">Ejemplo&nbsp;<span>1.2</span></a>, identificamos que puede contestarse con un sí o con un no. Esto nos indica que el <a href="#exm-lluvia" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> es una proposición.</p>
+<p>Un enunciado es una <strong>proposición</strong> cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>. Usando la lógica, podemos determinar si un enunciado es V o F.</p>
 </section>
 <section id="enunciados-que-no-son-proposiciones" class="level2">
 <h2 class="anchored" data-anchor-id="enunciados-que-no-son-proposiciones">Enunciados que no son proposiciones</h2>
-<p>Hay enunciados que no son proposiciones, como se ve en el <a href="#exm-saludo" class="quarto-xref">Ejemplo&nbsp;<span>1.3</span></a>, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.</p>
+<p>Hay enunciados que no son proposiciones, como se ve en el <a href="#exm-saludo" class="quarto-xref">Ejemplo&nbsp;<span>1.2</span></a>, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.</p>
 <div id="exm-saludo" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.3</strong></span> <em>Hola, ¿cómo estás?</em></p>
+<p><span class="theorem-title"><strong>Ejemplo 1.2</strong></span> <em>Hola, ¿cómo estás?</em></p>
+</div>
+<p>Otro caso son los enunciados con variables sin valor asignado. En el <a href="#exm-variable" class="quarto-xref">Ejemplo&nbsp;<span>1.3</span></a>, no tiene sentido preguntar si es verdadero o falso porque <em>x</em> no representa nada concreto.</p>
+<div id="exm-variable" class="theorem example">
+<p><span class="theorem-title"><strong>Ejemplo 1.3</strong></span> <em>x</em> es blanco</p>
 </div>
 </section>
 <section id="negación-de-una-proposición" class="level2">
 <h2 class="anchored" data-anchor-id="negación-de-una-proposición">Negación de una proposición</h2>
-<p>La proposición del <a href="#exm-lluvia" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> puede etiquetarse con una letra; en esta ocasión será la letra <em>P</em>. La proposición <em>P</em> puede tener su negación, como se observa en el <a href="#exm-lluvia-negacion" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a>. La negación se representa con el signo <span class="math inline">\(\neg\)</span>; por tanto, la negación de <em>P</em> queda como <span class="math inline">\(\neg P\)</span>. <span class="math inline">\(\neg P\)</span> se lee como “no <em>P</em>” o “la negación de <em>P</em>” (cf.&nbsp;<em>Introducción a la teoría de conjuntos</em>).</p>
-<div id="exm-lluvia-negacion" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.4</strong></span> <em>No está lloviendo.</em></p>
+<p>La proposición del <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> puede etiquetarse con una letra; en esta ocasión será la letra <em>P</em>. La proposición <em>P</em> puede tener su negación, como se observa en el <a href="#exm-sol-negacion" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a>. La negación se representa con el signo <span class="math inline">\(\neg\)</span>; por tanto, la negación de <em>P</em> queda como <span class="math inline">\(\neg P\)</span>. <span class="math inline">\(\neg P\)</span> se lee como “no <em>P</em>” o “la negación de <em>P</em>” <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>.</p>
+<div id="exm-sol-negacion" class="theorem example">
+<p><span class="theorem-title"><strong>Ejemplo 1.4</strong></span> <em>El sol no es una estrella.</em></p>
 </div>
 </section>
 <section id="tabla-de-verdad" class="level2">
 <h2 class="anchored" data-anchor-id="tabla-de-verdad">Tabla de verdad</h2>
-<p>Las proposiciones <em>P</em> y <span class="math inline">\(\neg P\)</span> pueden valorarse como V o F. Si <em>P</em> es V, entonces <span class="math inline">\(\neg P\)</span> es F; y si <em>P</em> es F, entonces <span class="math inline">\(\neg P\)</span> es V. Esto se puede representar con una <strong>tabla de verdad</strong> (cf.&nbsp;<em>Introducción a la teoría de conjuntos</em>), como se observa en la <a href="#tbl-verdad-negacion" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>.</p>
+<p>Las proposiciones <em>P</em> y <span class="math inline">\(\neg P\)</span> pueden valorarse como V o F. Si <em>P</em> es V, entonces <span class="math inline">\(\neg P\)</span> es F; y si <em>P</em> es F, entonces <span class="math inline">\(\neg P\)</span> es V. Esto se puede representar con una <strong>tabla de verdad</strong> <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz Quevedo 2001</a>)</span>, como se observa en la <a href="#tbl-verdad-negacion" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>.</p>
 <div id="tbl-verdad-negacion" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-verdad-negacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabla&nbsp;1.1: Tabla de verdad para las proposiciones <span class="math inline">\(P\)</span> y <span class="math inline">\(\neg P\)</span>
 </figcaption>
 <div aria-describedby="tbl-verdad-negacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="table-responsive">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -492,10 +506,16 @@ Tabla&nbsp;1.1: Tabla de verdad para las proposiciones <span class="math inline"
 </tbody>
 </table>
 </div>
+</div>
 </figure>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-munoz2001" class="csl-entry" role="listitem">
+Muñoz Quevedo, Juan. 2001. <em>Introducción a la Teoría de Conjuntos</em>. Editorial Norma.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

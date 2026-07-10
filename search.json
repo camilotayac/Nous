@@ -44,7 +44,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html",
     "title": "Proposición y su negación",
     "section": "",
-    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nCuando un enunciado puede ser verdadero (V) o falso (F), obtenemos una proposición (cf. Introducción a la teoría de conjuntos). Usando la lógica, podemos determinar si un enunciado es V o F.",
+    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz Quevedo 2001). Usando la lógica, podemos determinar si un enunciado es V o F.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -55,18 +55,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#definición-de-proposición",
     "title": "Proposición y su negación",
     "section": "",
-    "text": "Ejemplo 1.1 Está lloviendo.",
-    "crumbs": [
-      "Conjuntos",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
-    ]
-  },
-  {
-    "objectID": "01_conjuntos/00_proposicion_negacion.html#la-pregunta-como-prueba",
-    "href": "01_conjuntos/00_proposicion_negacion.html#la-pregunta-como-prueba",
-    "title": "Proposición y su negación",
-    "section": "La pregunta como prueba",
-    "text": "La pregunta como prueba\nSi determinar el valor de verdad se dificulta, podemos convertir el enunciado en una pregunta. Si la pregunta puede responderse con un sí o con un no, entonces estamos ante una proposición.\nConvirtamos el Ejemplo 1.1 en una pregunta:\n\nEjemplo 1.2 ¿Está lloviendo?\n\nAl observar el Ejemplo 1.2, identificamos que puede contestarse con un sí o con un no. Esto nos indica que el Ejemplo 1.1 es una proposición.",
+    "text": "Ejemplo 1.1 El sol es una estrella.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -77,7 +66,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#enunciados-que-no-son-proposiciones",
     "title": "Proposición y su negación",
     "section": "Enunciados que no son proposiciones",
-    "text": "Enunciados que no son proposiciones\nHay enunciados que no son proposiciones, como se ve en el Ejemplo 1.3, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.\n\nEjemplo 1.3 Hola, ¿cómo estás?",
+    "text": "Enunciados que no son proposiciones\nHay enunciados que no son proposiciones, como se ve en el Ejemplo 1.2, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.\n\nEjemplo 1.2 Hola, ¿cómo estás?\n\nOtro caso son los enunciados con variables sin valor asignado. En el Ejemplo 1.3, no tiene sentido preguntar si es verdadero o falso porque x no representa nada concreto.\n\nEjemplo 1.3 x es blanco",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -88,7 +77,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#negación-de-una-proposición",
     "title": "Proposición y su negación",
     "section": "Negación de una proposición",
-    "text": "Negación de una proposición\nLa proposición del Ejemplo 1.1 puede etiquetarse con una letra; en esta ocasión será la letra P. La proposición P puede tener su negación, como se observa en el Ejemplo 1.4. La negación se representa con el signo \\(\\neg\\); por tanto, la negación de P queda como \\(\\neg P\\). \\(\\neg P\\) se lee como “no P” o “la negación de P” (cf. Introducción a la teoría de conjuntos).\n\nEjemplo 1.4 No está lloviendo.",
+    "text": "Negación de una proposición\nLa proposición del Ejemplo 1.1 puede etiquetarse con una letra; en esta ocasión será la letra P. La proposición P puede tener su negación, como se observa en el Ejemplo 1.4. La negación se representa con el signo \\(\\neg\\); por tanto, la negación de P queda como \\(\\neg P\\). \\(\\neg P\\) se lee como “no P” o “la negación de P” (Muñoz Quevedo 2001).\n\nEjemplo 1.4 El sol no es una estrella.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -99,7 +88,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html#tabla-de-verdad",
     "title": "Proposición y su negación",
     "section": "Tabla de verdad",
-    "text": "Tabla de verdad\nLas proposiciones P y \\(\\neg P\\) pueden valorarse como V o F. Si P es V, entonces \\(\\neg P\\) es F; y si P es F, entonces \\(\\neg P\\) es V. Esto se puede representar con una tabla de verdad (cf. Introducción a la teoría de conjuntos), como se observa en la Tabla 1.1.\n\n\n\nTabla 1.1: Tabla de verdad para las proposiciones \\(P\\) y \\(\\neg P\\)\n\n\n\n\n\n\\(P\\)\n\\(\\neg P\\)\n\n\n\n\nV\nF\n\n\nF\nV",
+    "text": "Tabla de verdad\nLas proposiciones P y \\(\\neg P\\) pueden valorarse como V o F. Si P es V, entonces \\(\\neg P\\) es F; y si P es F, entonces \\(\\neg P\\) es V. Esto se puede representar con una tabla de verdad (Muñoz Quevedo 2001), como se observa en la Tabla 1.1.\n\n\n\nTabla 1.1: Tabla de verdad para las proposiciones \\(P\\) y \\(\\neg P\\)\n\n\n\n\n\n\n\\(P\\)\n\\(\\neg P\\)\n\n\n\n\nV\nF\n\n\nF\nV\n\n\n\n\n\n\n\n\n\n\n\nMuñoz Quevedo, Juan. 2001. Introducción a la Teoría de Conjuntos. Editorial Norma.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -110,7 +99,7 @@
     "href": "02_quimica/01_cinetica_quimica.html",
     "title": "Cinética química",
     "section": "",
-    "text": "Introducción a la cinética química\nCuando hablamos de una reacción química es como los reactivos cambian sus propiedades formando otro compuesto con otras propiedades determinadas. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química (Brown et al. 2014).",
+    "text": "Introducción a la cinética química\nCuando hablamos de una reacción química es cuando los reactivos se convierten en productos. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química (Brown et al. 2014).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -121,7 +110,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#teoría-de-colisiones",
     "title": "Cinética química",
     "section": "Teoría de colisiones",
-    "text": "Teoría de colisiones\nPara que ocurra una reacción química debe haber determinadas colisiones o choques entre los reactivos para que haya una transferencia o una reorganización de enlaces que forme el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía (Brown et al. 2014).",
+    "text": "Teoría de colisiones\nPara que ocurra una reacción química debe ocurrir colisiones o choques entre los reactivos para que haya una transferencia de atomos o una reorganización de enlaces formando el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía (Brown et al. 2014).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -154,7 +143,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-de-la-temperatura",
     "title": "Cinética química",
     "section": "Efecto de la temperatura",
-    "text": "Efecto de la temperatura\nEl tercer factor es la temperatura, la temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen y esto está relacionado con la velocidad de reacción. A temperatura baja el movimiento es menor, por ende los choques son menores y si la temperatura es alta el movimiento de las partículas es mayor, por ende mayor choques. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar la frecuencia de choques entre partículas (Brown et al. 2014).",
+    "text": "Efecto de la temperatura\nEl tercer factor es la temperatura. La temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen, y además estas colisiones tendrán mayor energía, lo que permite superar la barrera de energía necesaria para que la reacción ocurra. A temperatura baja el movimiento es menor, por ende los choques son menores y con menos energía. Si la temperatura es alta el movimiento de las partículas es mayor, por ende hay más choques y con mayor energía. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar tanto la frecuencia como la energía de los choques entre partículas (Brown et al. 2014).",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -165,7 +154,7 @@
     "href": "02_quimica/01_cinetica_quimica.html#efecto-de-los-catalizadores",
     "title": "Cinética química",
     "section": "Efecto de los catalizadores",
-    "text": "Efecto de los catalizadores\nEl cuarto factor es la utilización de catalizador. Los catalizadores son compuestos que afectan la velocidad de reacción. Sin embargo, no afectan la reacción química, lo que significa que no entra como un reactivo. El catalizador queda intacto, solo ayuda a que se den las colisiones de una manera determinada alterando los mecanismos. Al alterar los mecanismos, los catalizadores afectan la velocidad de reacción (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
+    "text": "Efecto de los catalizadores\nEl cuarto factor es la utilización de catalizador. Un catalizador es un compuesto que permite acelerar una reacción química afectando los tipos de colisiones y modificando los mecanismos de reacción, sin participar en la reacción química (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
@@ -176,7 +165,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.",
+    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz Quevedo, Juan. 2001. Introducción a La Teoría de\nConjuntos. Editorial Norma.",
     "crumbs": [
       "Apéndices",
       "References"
