@@ -1,0 +1,4 @@
+fsrs>=6.3,<7
+gTTS>=2.5,<3
+deep-translator>=1.11,<2
+eng-to-ipa>=0.0.2
