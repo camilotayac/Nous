@@ -96,6 +96,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -398,6 +427,8 @@ div.csl-indent {
   <li><a href="#efecto-de-la-concentración" id="toc-efecto-de-la-concentración" class="nav-link" data-scroll-target="#efecto-de-la-concentración">Efecto de la concentración</a></li>
   <li><a href="#efecto-de-la-temperatura" id="toc-efecto-de-la-temperatura" class="nav-link" data-scroll-target="#efecto-de-la-temperatura">Efecto de la temperatura</a></li>
   <li><a href="#efecto-de-los-catalizadores" id="toc-efecto-de-los-catalizadores" class="nav-link" data-scroll-target="#efecto-de-los-catalizadores">Efecto de los catalizadores</a></li>
+  <li><a href="#velocidad-de-reacción" id="toc-velocidad-de-reacción" class="nav-link" data-scroll-target="#velocidad-de-reacción">Velocidad de reacción</a></li>
+  <li><a href="#velocidad-promedio" id="toc-velocidad-promedio" class="nav-link" data-scroll-target="#velocidad-promedio">Velocidad promedio</a></li>
   </ul>
 </nav>
     </div>
@@ -449,6 +480,23 @@ div.csl-indent {
 <section id="efecto-de-los-catalizadores" class="level2">
 <h2 class="anchored" data-anchor-id="efecto-de-los-catalizadores">Efecto de los catalizadores</h2>
 <p>El cuarto factor es la utilización de catalizador. Un catalizador es un compuesto que permite acelerar una reacción química afectando los tipos de colisiones y modificando los mecanismos de reacción, sin participar en la reacción química <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
+</section>
+<section id="velocidad-de-reacción" class="level2">
+<h2 class="anchored" data-anchor-id="velocidad-de-reacción">Velocidad de reacción</h2>
+<p>Para comenzar hablar sobre velocidad de reacción debemos entender que es la velocidad. La velocidad es cuánto cambia algo en cierto tiempo. Un ejemplo de esto, cuando un jugador de fútbol va a cobrar un penalti, al analizar conocemos la distancia desde el punto penal hasta la portería, y si contamos el tiempo que se demora el balón en cambiar la posición desde que el tirador patea hasta que el balón llega a la portería puedo saber la velocidad de disparo. Para saber la velocidad siempre va a estar involucrado el tiempo cuando ocurre un cambio. En el caso de las reacciones químicas, ese cambio es la concentración, no la distancia <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
+<p>Al observar una reacción química vemos como cambia la concentración del reactivo o del producto. La velocidad de reacción mide qué tan rápido cambia esa concentración con el tiempo. La concentración la representamos con <span class="math inline">\([concentración]\)</span> que se mide en Molaridad <span class="math inline">\(M\)</span> y el tiempo en segundos <span class="math inline">\(s\)</span>, por lo que la unidad de velocidad es <span class="math inline">\(\frac{M}{s}\)</span> <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
+</section>
+<section id="velocidad-promedio" class="level2">
+<h2 class="anchored" data-anchor-id="velocidad-promedio">Velocidad promedio</h2>
+<p>Al analizar la reacción química podemos determinar dos cosas: que los reactivos desaparecen o se consumen y los productos aparecen o se forman. A partir de esto podemos organizar la velocidad en dos tipos: velocidad de desaparición y velocidad de aparición. Cuando tomamos un intervalo de tiempo en una reacción química para medir esa aparición o desaparición estamos hablando de <strong>velocidad promedio</strong> <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
+<p>Para calcular la velocidad promedio de aparición, recordemos que para que haya velocidad se necesita un cambio. En una reacción química, ese cambio es la concentración, y lo representamos con la letra griega delta <span class="math inline">\(\Delta\)</span>. Así, el cambio de concentración es <span class="math inline">\(\Delta[B]\)</span> y el cambio de tiempo es <span class="math inline">\(\Delta t\)</span>. La velocidad promedio de aparición de B queda definida como:</p>
+<p><span class="math display">\[\text{Velocidad promedio de aparición de B} = \frac{\Delta[B]}{\Delta t} \tag{1}\]</span> <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span></p>
+<p>Donde <span class="math inline">\(\Delta\)</span> se lee como “cambio en” y siempre es igual a un valor final menos un valor inicial. Es decir, <span class="math inline">\(\Delta[B] = [B]_{t_2} - [B]_{t_1}\)</span> (donde <span class="math inline">\(t_2\)</span> es el tiempo final y <span class="math inline">\(t_1\)</span> es el tiempo inicial) y <span class="math inline">\(\Delta t = t_2 - t_1\)</span>. Sustituyendo, la ecuación completa queda:</p>
+<p><span class="math display">\[\text{Velocidad promedio de aparición de B} = \frac{\Delta[B]}{\Delta t} = \frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1} \tag{2}\]</span> <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span></p>
+<p>Por otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo (<span class="math inline">\(-\)</span>). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la ecuación:</p>
+<p><span class="math display">\[\text{Velocidad promedio de desaparición de A} = -\frac{\Delta[A]}{\Delta t} = -\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1} \tag{3}\]</span> <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span></p>
+<p>El resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
+<p>Cuando se habla de la velocidad sin decir si es de un reactivo o un producto, se entiende que es la velocidad de la reacción completa <span class="citation" data-cites="brown2014">(<a href="../references.html#ref-brown2014" role="doc-biblioref">Brown et&nbsp;al. 2014</a>)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
