@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "philosophy": {
+    "principles": [
+      "Edward Tufte: data-ink ratio maximizado, eliminar chartjunk",
+      "Cognitive load theory: segmentacion, pre-entrenamiento, dual coding",
+      "Feynman: si no puedes explicarlo simple, no lo entiendes",
+      "Gestalt: proximidad, similitud, continuidad, cierre",
+      "Color accessibility: contraste WCAG AA minimum"
+    ],
+    "design_rules": [
+      "Fondo oscuro (#0a0a1a) para contraste con partículas luminosas",
+      "Paleta limitada a 3-4 colores por figura",
+      "Tipografia monospace para labels scientificos",
+      "Flechas para indicar movimiento/dirección",
+      "Resaltar zonas de interacción con glow effects",
+      "Separar explicación en panel lateral, no superpuesto"
+    ]
+  },
+  "tool_catalog": {
+    "matplotlib": {
+      "best_for": [
+        "static plots",
+        "2D/3D data",
+        "publication figures",
+        "heatmaps",
+        "statistical plots"
+      ],
+      "avoid_for": [
+        "animations",
+        "interactive web",
+        "complex vector diagrams"
+      ],
+      "style": {
+        "dark_bg": true,
+        "dpi": 200,
+        "font": "monospace"
+      },
+      "score": 8.899999999999997
+    },
+    "manim": {
+      "best_for": [
+        "mathematical animations",
+        "step-by-step explanations",
+        "transformation visualizations"
+      ],
+      "avoid_for": [
+        "static publication figures",
+        "simple plots"
+      ],
+      "style": {
+        "dark_bg": true,
+        "fps": 30,
+        "resolution": "1080p"
+      },
+      "score": 7
+    },
+    "tikz": {
+      "best_for": [
+        "LaTeX integration",
+        "commutative diagrams",
+        "circuit diagrams",
+        "vector figures"
+      ],
+      "avoid_for": [
+        "data plots",
+        "interactive content"
+      ],
+      "style": {
+        "compiled_pdf": true,
+        "font_matches_document": true
+      },
+      "score": 9
+    },
+    "plotly": {
+      "best_for": [
+        "interactive plots",
+        "3D visualization",
+        "dashboards",
+        "web content"
+      ],
+      "avoid_for": [
+        "print publication",
+        "simple static figures"
+      ],
+      "style": {
+        "template": "plotly_dark",
+        "interactive": true
+      },
+      "score": 6
+    },
+    "d3": {
+      "best_for": [
+        "web visualizations",
+        "custom interactions",
+        "data-driven diagrams",
+        "force graphs"
+      ],
+      "avoid_for": [
+        "quick static plots",
+        "LaTeX documents"
+      ],
+      "style": {
+        "svg_output": true,
+        "responsive": true
+      },
+      "score": 5
+    },
+    "pillow_pil": {
+      "best_for": [
+        "composite images",
+        "photo manipulation",
+        "simple icons"
+      ],
+      "avoid_for": [
+        "data visualization",
+        "vector graphics"
+      ],
+      "style": {
+        "format": "PNG",
+        "antialiasing": true
+      },
+      "score": 4
+    }
+  },
+  "color_schemes": {
+    "scientific_dark": {
+      "bg": "#0a0a1a",
+      "primary": "#4fc3f7",
+      "secondary": "#ef5350",
+      "accent": "#ffd54f",
+      "text": "#ffffff",
+      "muted": "#888888"
+    },
+    "nature_style": {
+      "bg": "#ffffff",
+      "primary": "#1f77b4",
+      "secondary": "#d62728",
+      "accent": "#2ca02c",
+      "text": "#000000",
+      "muted": "#7f7f7f"
+    },
+    "divulgacion": {
+      "bg": "#1a1a2e",
+      "primary": "#e94560",
+      "secondary": "#0f3460",
+      "accent": "#16213e",
+      "text": "#eee",
+      "muted": "#aaa"
+    }
+  },
+  "iterations_log": [
+    {
+      "iteration": 1,
+      "timestamp": "2026-07-13T19:51:19.865250",
+      "tool_used": "matplotlib",
+      "illustration_id": "orbital_hibridacion",
+      "score": 10,
+      "improvements": [
+        "Archivo sustancial (335 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 115 líneas",
+        "Fondo oscuro consistente",
+        "Tipografía monospace para labels científicos",
+        "Iteración temprana: exploración de estilo",
+        "Herramienta matplotlib probada por primera vez para quimica"
+      ],
+      "new_learning": "Herramienta matplotlib probada por primera vez para quimica",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/orbital_hybridization.png"
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2026-07-13T19:51:23.907942",
+      "tool_used": "matplotlib",
+      "illustration_id": "energia_niveles",
+      "score": 10,
+      "improvements": [
+        "Archivo sustancial (136 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 112 líneas",
+        "Fondo oscuro consistente",
+        "Múltiples paneles para comparación",
+        "Tipografía monospace para labels científicos",
+        "Iteración temprana: exploración de estilo"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/energy_levels.png"
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2026-07-13T19:51:25.337692",
+      "tool_used": "matplotlib",
+      "illustration_id": "cinetica_enzimatica",
+      "score": 9,
+      "improvements": [
+        "Archivo sustancial (209 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 95 líneas",
+        "Fondo oscuro consistente",
+        "Tipografía monospace para labels científicos",
+        "Iteración temprana: exploración de estilo",
+        "Herramienta matplotlib probada por primera vez para bioquimica"
+      ],
+      "new_learning": "Herramienta matplotlib probada por primera vez para bioquimica",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/michaelis_menten.png"
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2026-07-13T19:51:26.827212",
+      "tool_used": "matplotlib",
+      "illustration_id": "Ley_coulomb",
+      "score": 11,
+      "improvements": [
+        "Archivo sustancial (232 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 143 líneas",
+        "Fondo oscuro consistente",
+        "Múltiples paneles para comparación",
+        "Tipografía monospace para labels científicos",
+        "Rico en anotaciones (10 textos)",
+        "Herramienta matplotlib probada por primera vez para fisica"
+      ],
+      "new_learning": "Herramienta matplotlib probada por primera vez para fisica",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/coulomb_law.png"
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2026-07-13T19:51:28.835993",
+      "tool_used": "matplotlib",
+      "illustration_id": "estructura_atomo",
+      "score": 8,
+      "improvements": [
+        "Archivo sustancial (265 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 92 líneas",
+        "Paleta de colores coherente",
+        "Fondo oscuro consistente",
+        "Tipografía monospace para labels científicos"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/quantum_atom.png"
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2026-07-13T19:51:30.674991",
+      "tool_used": "matplotlib",
+      "illustration_id": "onda_estacionaria",
+      "score": 11,
+      "improvements": [
+        "Archivo sustancial (475 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 70 líneas",
+        "Tufte: ejes minimizados",
+        "Dual coding: texto + elementos visuales",
+        "Paleta de colores coherente",
+        "Fondo oscuro consistente",
+        "Múltiples paneles para comparación",
+        "Tipografía monospace para labels científicos"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/standing_waves.png"
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2026-07-13T19:51:32.580423",
+      "tool_used": "matplotlib",
+      "illustration_id": "circuito_rc",
+      "score": 8,
+      "improvements": [
+        "Archivo sustancial (223 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 104 líneas",
+        "Fondo oscuro consistente",
+        "Tipografía monospace para labels científicos"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/circuito_rc.png"
+    },
+    {
+      "iteration": 8,
+      "timestamp": "2026-07-13T19:51:40.847979",
+      "tool_used": "matplotlib",
+      "illustration_id": "orbital_hibridacion",
+      "score": 8,
+      "improvements": [
+        "Archivo sustancial (335 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 115 líneas",
+        "Fondo oscuro consistente",
+        "Tipografía monospace para labels científicos"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/orbital_hybridization.png"
+    },
+    {
+      "iteration": 9,
+      "timestamp": "2026-07-13T19:51:48.385422",
+      "tool_used": "matplotlib",
+      "illustration_id": "onda_estacionaria",
+      "score": 11,
+      "improvements": [
+        "Archivo sustancial (475 KB)",
+        "Exportado en PNG y PDF (vectorial)",
+        "Código: 70 líneas",
+        "Tufte: ejes minimizados",
+        "Dual coding: texto + elementos visuales",
+        "Paleta de colores coherente",
+        "Fondo oscuro consistente",
+        "Múltiples paneles para comparación",
+        "Tipografía monospace para labels científicos"
+      ],
+      "new_learning": "",
+      "file_path": "/Users/tayac/Documents/GitHub/Nous/figures/standing_waves.png"
+    }
+  ],
+  "convergence": {
+    "consecutive_no_improvement": 5,
+    "max_iterations": 15,
+    "convergence_threshold": 5,
+    "best_score_ever": 11,
+    "total_iterations": 9
+  },
+  "learning": {
+    "preferred_tools_per_subject": {
+      "quimica": {
+        "matplotlib": 4
+      },
+      "bioquimica": {
+        "matplotlib": 1
+      },
+      "fisica": {
+        "matplotlib": 4
+      }
+    },
+    "common_improvements": [
+      "Herramienta matplotlib probada por primera vez para quimica",
+      "Herramienta matplotlib probada por primera vez para bioquimica",
+      "Herramienta matplotlib probada por primera vez para fisica"
+    ],
+    "failed_approaches": []
+  }
+}

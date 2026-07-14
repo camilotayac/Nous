@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentación</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #FFFFFF;
+      --ink:       #000000;
+      --ink-mid:   #444444;
+      --ink-faint: #888888;
+      --accent:    #D98A96;
+      --ease-calm: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --dur:       900ms;
+      --dur-step:  650ms;
+
+      /* Colores pastel vibrantes — visibles pero suaves */
+      --c-red:     #D98A96; /* Rosa pastel vibrante */
+      --c-green:   #5FA87E; /* Verde salvia pastel */
+      --c-blue:    #6B8EC4; /* Azul aciano pastel */
+      --c-yellow:  #C9B865; /* Dorado pastel */
+
+      --hl-red:    rgba(217, 138, 150, 0.15);
+      --hl-green:  rgba(95, 168, 126, 0.12);
+      --hl-blue:   rgba(107, 142, 196, 0.12);
+      --hl-yellow: rgba(201, 184, 101, 0.20);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      cursor: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    #mask {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 10;
+      background: linear-gradient(to bottom,
+        var(--bg) 0%, transparent 22%,
+        transparent 78%, var(--bg) 100%);
+    }
+
+    /* Track fijo desde top:0 */
+    #track {
+      position: fixed;
+      top: 0; left: 50%;
+      width: min(1000px, 90vw);
+      padding: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(-50%);
+      transition: transform var(--dur) var(--ease-calm);
+    }
+
+    /* ── Bloque de grupo ── */
+    .paragraph-block {
+      width: 100%;
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transform-origin: center center;
+      transition: transform var(--dur) var(--ease-calm),
+                  filter  var(--dur) var(--ease-calm),
+                  opacity var(--dur) var(--ease-calm);
+    }
+
+    /* Estados de escala y blur para bloques no activos */
+    .paragraph-block.active   { opacity: 1; }
+    .paragraph-block.past-1   { transform: scale(0.82); filter: blur(0.3px); opacity: 0.3; }
+    .paragraph-block.past-2   { transform: scale(0.70); filter: blur(0.6px); opacity: 0.15; }
+    .paragraph-block.past-far { transform: scale(0.60); filter: blur(1px);   opacity: 0.05; }
+    .paragraph-block.next-1   { transform: scale(0.82); filter: blur(0.4px); opacity: 0; pointer-events: none; }
+    .paragraph-block.future   { transform: scale(0.70); filter: blur(0.5px); opacity: 0; pointer-events: none; }
+
+    /* ── Sub-paso tipo párrafo ── */
+    .sub-step {
+      font-size: 2rem;
+      line-height: 1.9;
+      color: var(--ink);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(8px);
+      text-align: center;
+      transition: max-height var(--dur-step) var(--ease-calm),
+                  opacity    var(--dur-step) var(--ease-calm),
+                  transform  var(--dur-step) var(--ease-calm),
+                  padding    var(--dur-step) var(--ease-calm);
+    }
+    .sub-step.revealed        { max-height: 600px; padding-bottom: 0.9rem; transform: translateY(0); }
+
+    /* Opacidades en bloque activo */
+    .paragraph-block.active .sub-step.revealed        { opacity: 0.35; }
+    .paragraph-block.active .sub-step.revealed.latest { opacity: 1;    }
+
+    /* Opacidades en bloques pasados/siguientes */
+    .paragraph-block.past-1   .sub-step.revealed { opacity: 0.22; }
+    .paragraph-block.past-2   .sub-step.revealed { opacity: 0.10; }
+    .paragraph-block.past-far .sub-step.revealed { opacity: 0.05; }
+    .paragraph-block.next-1   .sub-step.revealed { opacity: 0; pointer-events: none; }
+    .paragraph-block.future   .sub-step.revealed { opacity: 0; pointer-events: none; }
+
+    /* ── Tabla ── */
+    .paragraph-block table {
+      width: auto;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .paragraph-block thead th {
+      padding: 0;
+      border: none;
+      text-align: center;
+    }
+
+    .paragraph-block thead th .td-wrapper {
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--ink-faint);
+      padding: 0 1rem;
+    }
+
+    .paragraph-block thead th .td-wrapper.revealed {
+      padding: 0 1rem 0.6rem 1rem;
+    }
+
+    .paragraph-block tbody tr td {
+      font-size: 2rem;
+      color: var(--ink);
+      padding: 0;
+      vertical-align: top;
+      text-align: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .td-wrapper {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      padding: 0 1rem;
+      transform: translateX(12px);
+      transition: max-height 750ms cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity    600ms ease,
+                  padding    750ms cubic-bezier(0.16, 1, 0.3, 1),
+                  transform  750ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Primer td de cada fila actúa como "paso" (letra) */
+    .paragraph-block tbody tr td:first-child {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* Fila/celda revelada */
+    .td-wrapper.revealed {
+      max-height: 150px;
+      padding: 0.55rem 1rem;
+      opacity: 0.35;
+      transform: translateX(0);
+    }
+    .td-wrapper.revealed.latest {
+      opacity: 1;
+    }
+
+    /* Opacidad en bloques no activos */
+    .paragraph-block.past-1   .td-wrapper.revealed { opacity: 0.22; }
+    .paragraph-block.past-2   .td-wrapper.revealed { opacity: 0.10; }
+    .paragraph-block.past-far .td-wrapper.revealed { opacity: 0.05; }
+    .paragraph-block.next-1   .td-wrapper.revealed { opacity: 0; pointer-events: none; }
+    .paragraph-block.future   .td-wrapper.revealed { opacity: 0; pointer-events: none; }
+
+    @media (max-width: 768px) {
+      .paragraph-block.past-2,
+      .paragraph-block.past-far,
+      .paragraph-block.future {
+        opacity: 0 !important;
+        visibility: hidden;
+        display: none;
+      }
+      .paragraph-block.past-1 {
+        filter: blur(0.8px);
+      }
+      .paragraph-block.next-1 {
+        filter: blur(1.2px);
+      }
+      .paragraph-block.past-1 .sub-step.revealed,
+      .paragraph-block.past-1 .td-wrapper.revealed {
+        opacity: 0.20;
+      }
+      .paragraph-block.next-1 .sub-step.revealed,
+      .paragraph-block.next-1 .td-wrapper.revealed {
+        opacity: 0.05;
+      }
+    }
+
+    /* Línea separadora entre filas */
+    .paragraph-block tbody tr + tr td {
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* ── Barra de progreso ── */
+    #bottom-ui {
+      position: fixed; bottom: 0; left: 0;
+      width: 100%; z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1.6rem;
+      gap: 0.6rem;
+    }
+
+    #progress-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      transition: opacity var(--dur) var(--ease-calm);
+    }
+
+    #progress-bar-container {
+      width: min(480px, 60vw);
+      height: 3px;
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    #progress-bar {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 99px;
+      transition: width var(--dur) var(--ease-calm);
+    }
+
+    /* ── Firma del autor ── */
+    #author-tag {
+      position: fixed;
+      left: 5.5rem;
+      bottom: 12vh;
+      font-family: 'EB Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0.85;
+      transform: rotate(-90deg);
+      transform-origin: left bottom;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* ── Encabezados H1 y H2 Fijos ── */
+    .header-text {
+      position: fixed;
+      top: 2.2rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+      opacity: 0;
+      transition: opacity 400ms var(--ease-calm);
+      z-index: 20;
+      user-select: none;
+      pointer-events: none;
+    }
+    #header-h1 {
+      left: 5.5rem;
+    }
+    #header-h2 {
+      right: 5.5rem;
+    }
+    .info-text {
+      position: fixed;
+      top: calc(5.0rem + 4cm);
+      right: calc(5.5rem + 1.5cm);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.5rem;
+      color: var(--ink-mid);
+      opacity: 0;
+      transition: opacity 400ms var(--ease-calm);
+      z-index: 20;
+      user-select: none;
+      pointer-events: none;
+      text-align: right;
+    }
+
+    /* ── Clases de color para texto ── */
+    .c-red    { color: var(--c-red); font-weight: 500; transition: color 400ms var(--ease-calm); }
+    .c-green  { color: var(--c-green); font-weight: 500; transition: color 400ms var(--ease-calm); }
+    .c-blue   { color: var(--c-blue); font-weight: 500; transition: color 400ms var(--ease-calm); }
+    .c-yellow { color: var(--c-yellow); font-weight: 500; transition: color 400ms var(--ease-calm); }
+
+    /* ── Clases de resaltado ── */
+    .hl-red, .hl-green, .hl-blue, .hl-yellow {
+      display: inline-block;
+      vertical-align: baseline;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 450ms var(--ease-calm), color 450ms var(--ease-calm);
+      animation: highlight-glow 450ms var(--ease-calm) both;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .hl-red    { background: var(--hl-red);    color: var(--c-red); }
+    .hl-green  { background: var(--hl-green);  color: var(--c-green); }
+    .hl-yellow { background: var(--hl-yellow); color: var(--c-yellow); }
+    .hl-blue   { background: var(--hl-blue);   color: var(--c-blue); }
+
+    @keyframes highlight-glow {
+      from { background-color: transparent; }
+    }
+
+    /* ── Expresiones Matemáticas y Fracciones ── */
+    .math-expression {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+    }
+    .math-expression sub {
+      font-size: 0.65em;
+      vertical-align: sub;
+      line-height: 0;
+    }
+    .math-expression sup {
+      font-size: 0.65em;
+      vertical-align: super;
+      line-height: 0;
+    }
+    .fraction {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: middle;
+      padding: 0 0.25em;
+      line-height: 1.1;
+    }
+    .numerator {
+      border-bottom: 1.5px solid #000000;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 1px;
+    }
+    .denominator {
+      text-align: center;
+      padding-top: 1px;
+      width: 100%;
+    }
+    .fraction.empty-fraction {
+      min-width: 6rem;
+    }
+    .sout-cancel {
+      position: relative;
+      display: inline-block;
+      vertical-align: baseline;
+      color: var(--ink-faint); /* Atenuar texto tachado */
+      text-decoration: none;
+      padding: 0 0.1em;
+      transition: color 400ms var(--ease-calm);
+    }
+    .sout-cancel::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5%;
+      bottom: 5%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cline x1='0' y1='100' x2='100' y2='0' stroke='%23CC6677' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      transform-origin: left center;
+      animation: draw-strike 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes draw-strike {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+    /* ── Pantalla de advertencia de rotación para celulares en vertical ── */
+    #rotation-warning {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      color: var(--ink);
+      z-index: 1000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    #rotation-warning svg {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 1.5rem;
+      fill: var(--ink);
+      animation: rotate-phone 2s ease-in-out infinite;
+    }
+
+    #rotation-warning h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #rotation-warning p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      max-width: 280px;
+      line-height: 1.5;
+    }
+
+    @keyframes rotate-phone {
+      0% { transform: rotate(0deg); }
+      40% { transform: rotate(-90deg); }
+      75% { transform: rotate(-90deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Ajustar el comentario lateral en orientación vertical (evita superposiciones colocándolo bajo el H2) */
+    @media (orientation: portrait) {
+      .info-text, #header-info {
+        position: fixed !important;
+        top: 4.5rem !important;
+        right: 5.5rem !important;
+        left: 5.5rem !important;
+        font-size: 1.12rem !important;
+        text-align: right !important;
+        max-width: none !important;
+        display: block !important;
+        visibility: visible !important;
+      }
+    }
+
+    /* Mostrar advertencia en celulares en vertical (< 600px) */
+    @media (max-width: 600px) and (orientation: portrait) {
+      #rotation-warning {
+        display: flex;
+      }
+      #track, #bottom-ui, #mask, #author-tag, .header-text, .info-text, #header-info {
+        display: none !important;
+      }
+    }
+
+    /* Optimización de espacio vertical en celulares horizontal (Landscape) */
+    @media (max-height: 480px) and (orientation: landscape) {
+      #track {
+        width: 95vw;
+        padding: 0 1rem;
+      }
+      .paragraph-block {
+        padding: 0.5rem 0;
+      }
+      .sub-step {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        padding-bottom: 0.4rem;
+      }
+      .paragraph-block tbody tr td {
+        font-size: 1.15rem;
+      }
+      .header-text {
+        font-size: 0.78rem;
+        top: 0.8rem;
+      }
+      #header-h1 {
+        left: 2rem;
+      }
+      #header-h2 {
+        right: 2rem;
+      }
+      #author-tag {
+        display: none !important;
+      }
+      .info-text, #header-info {
+        position: fixed !important;
+        top: 2.2rem !important;
+        right: 2rem !important;
+        font-size: 0.92rem !important;
+        text-align: right !important;
+        display: block !important;
+        visibility: visible !important;
+      }
+      #bottom-ui {
+        padding-bottom: 0.5rem;
+        gap: 0.4rem;
+      }
+      #progress-label {
+        font-size: 0.6rem;
+      }
+    }
+
+    /* ── Puntero láser (sigue al mouse) ── */
+    #cursor-dot {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(120, 120, 120, 0.5);
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: background 0.15s, box-shadow 0.15s, width 0.15s, height 0.15s;
+    }
+    #cursor-dot.laser {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 60, 60, 0.9);
+      box-shadow: 0 0 8px 3px rgba(255, 60, 60, 0.5);
+    }
+    #cursor-dot.mode-line {
+      background: rgba(217, 138, 150, 0.7);
+    }
+    #cursor-dot.mode-rect {
+      background: rgba(107, 142, 196, 0.7);
+    }
+    #cursor-dot.mode-circle {
+      background: rgba(106, 191, 173, 0.7);
+    }
+    #cursor-dot.mode-eraser {
+      width: 20px;
+      height: 20px;
+      background: rgba(238, 136, 102, 0.7);
+      box-shadow: 0 0 4px 1px rgba(238, 136, 102, 0.4);
+    }
+
+    /* ── Indicador de modo de dibujo ── */
+    #mode-indicator {
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      z-index: 10001;
+      font: bold 14px/1.2 monospace;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(0,0,0,0.45);
+      color: #ccc;
+      pointer-events: none;
+      transition: color 0.15s, border-color 0.15s;
+      border: 1px solid transparent;
+    }
+    #mode-indicator.mode-line {
+      color: #D98A96;
+      border-color: #D98A96;
+    }
+    #mode-indicator.mode-rect {
+      color: #6B8EC4;
+      border-color: #6B8EC4;
+    }
+    #mode-indicator.mode-circle {
+      color: #6ABFAD;
+      border-color: #6ABFAD;
+    }
+    #mode-indicator.mode-eraser {
+      color: #EE8866;
+      border-color: #EE8866;
+    }
+
+    /* ── Marcadores persistentes (click derecho) ── */
+    .slide-marker {
+      position: fixed;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ff2222;
+      box-shadow: 0 0 24px 8px rgba(255, 30, 30, 0.5);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ── Lienzo de dibujo (click izquierdo) ── */
+    #draw-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    /* ── Estilos de Impresión / PDF ── */
+    .print-header, .print-info, .print-author {
+      display: none;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+      #mask, #bottom-ui, #author-tag, .header-text, .info-text, .slide-marker {
+        display: none !important;
+      }
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+        background-color: var(--bg) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .hl-red    { background: #F4D6DA !important; background-color: #F4D6DA !important; }
+      .hl-green  { background: #D2EDDE !important; background-color: #D2EDDE !important; }
+      .hl-blue   { background: #D6E4F5 !important; background-color: #D6E4F5 !important; }
+      .hl-yellow { background: #F4EDD1 !important; background-color: #F4EDD1 !important; }
+      #track {
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .paragraph-block {
+        page-break-after: always;
+        break-after: page;
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+        height: 209mm !important;
+        max-height: 209mm !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        box-sizing: border-box;
+        position: relative !important;
+      }
+      .sub-step {
+        max-height: none !important;
+        transform: none !important;
+        padding-bottom: 0.9rem !important;
+        width: min(900px, 88vw) !important;
+        max-width: calc(100% - 11rem) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .td-wrapper {
+        max-height: none !important;
+        transform: none !important;
+      }
+      /* Force all blocks to behave as active for sub-step / table opacities in PDF */
+      .paragraph-block .sub-step.revealed {
+        opacity: 0.35 !important;
+      }
+      .paragraph-block .sub-step.revealed.latest {
+        opacity: 1 !important;
+      }
+      .paragraph-block .td-wrapper.revealed {
+        opacity: 0.35 !important;
+      }
+      .paragraph-block .td-wrapper.revealed.latest {
+        opacity: 1 !important;
+      }
+      .print-header {
+        display: block !important;
+        position: absolute !important;
+        top: 2.2rem !important;
+        left: 5.5rem !important;
+        right: 5.5rem !important;
+        width: calc(100% - 11rem) !important;
+        font-family: 'EB Garamond', serif !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.22em !important;
+        font-size: 1.2rem !important;
+        color: var(--ink) !important;
+        opacity: 0.85 !important;
+      }
+      .print-h1 {
+        float: left;
+      }
+      .print-h2 {
+        float: right;
+      }
+      .print-header::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .print-info {
+        display: block !important;
+        position: absolute !important;
+        top: calc(5.0rem + 4cm) !important;
+        right: calc(5.5rem + 1.5cm) !important;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        font-size: 1.5rem !important;
+        color: var(--ink-mid) !important;
+        opacity: 0.80 !important;
+        text-align: right !important;
+        z-index: 20 !important;
+      }
+      .print-author {
+        display: block !important;
+        position: absolute !important;
+        left: 5.5rem !important;
+        bottom: 12vh !important;
+        font-family: 'EB Garamond', serif !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.22em !important;
+        text-transform: uppercase !important;
+        color: var(--ink) !important;
+        opacity: 0.85 !important;
+        transform: rotate(-90deg) !important;
+        transform-origin: left bottom !important;
+        white-space: nowrap !important;
+      }
+      .sout-cancel::after {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="rotation-warning">
+  <svg viewBox="0 0 24 24">
+    <rect x="6" y="2" width="12" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 18a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="currentColor"/>
+    <path d="M12 4h.01M9 20h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <path d="M17 9.5a5.5 5.5 0 0 1 1 3c0 2-1 4-3 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 18l-1.5-1.5m0 0L16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <h2>Gira tu dispositivo</h2>
+  <p>Esta presentación está optimizada para formato horizontal (Landscape).</p>
+</div>
+
+<div id="mask"></div>
+<div id="track"></div>
+
+<div id="header-h1" class="header-text"></div>
+<div id="header-h2" class="header-text"></div>
+<div id="header-info" class="info-text"></div>
+
+<div id="author-tag">Camilo Tayac</div>
+
+<div id="bottom-ui">
+  <span id="progress-label"></span>
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+</div>
+
+<canvas id="draw-canvas"></canvas>
+<div id="mode-indicator">—</div>
+
+<script>
+'use strict';
+(async function () {
+
+  /* ─────────────────────────────────────────────
+     Helpers: DOM morphing (in-place updates)
+     ───────────────────────────────────────────── */
+  function morph(src, dst) {
+    if (src.nodeType !== dst.nodeType || src.nodeName !== dst.nodeName) {
+      src.replaceWith(dst.cloneNode(true));
+      return;
+    }
+    if (src.nodeType === Node.TEXT_NODE) {
+      if (src.nodeValue !== dst.nodeValue) src.nodeValue = dst.nodeValue;
+      return;
+    }
+    const srcAttrs = src.attributes;
+    const dstAttrs = dst.attributes;
+    for (let i = srcAttrs.length - 1; i >= 0; i--) {
+      if (!dst.hasAttribute(srcAttrs[i].name)) src.removeAttribute(srcAttrs[i].name);
+    }
+    for (let i = 0; i < dstAttrs.length; i++) {
+      const a = dstAttrs[i];
+      if (src.getAttribute(a.name) !== a.value) src.setAttribute(a.name, a.value);
+    }
+    morphChildren(src, dst);
+  }
+
+  function morphChildren(srcP, dstP) {
+    const sc = Array.from(srcP.childNodes);
+    const dc = Array.from(dstP.childNodes);
+    const n = Math.max(sc.length, dc.length);
+    for (let i = 0; i < n; i++) {
+      if (!sc[i]) srcP.appendChild(dc[i].cloneNode(true));
+      else if (!dc[i]) sc[i].remove();
+      else morph(sc[i], dc[i]);
+    }
+  }
+
+  /* ─────────────────────────────────────────────
+     Constants
+     ───────────────────────────────────────────── */
+  const COLOR_MAP = { r: 'red', g: 'green', b: 'blue', y: 'yellow' };
+  const UNICODE_SUB = { '₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9' };
+  const markers = [];
+  let cursorDot = null;
+
+  /* ─────────────────────────────────────────────
+     Content (loaded from tema.md or fallback)
+     ───────────────────────────────────────────── */
+  let temaMarkdown = "";
+
+  /* ─────────────────────────────────────────────
+     Load tema.md from same directory or subcarpeta
+     ───────────────────────────────────────────── */
+  async function loadTemaMarkdown() {
+    temaMarkdown = `@title
+# Cinética Química
+
+@vocab
+## Vocabulario Clave
+- **Cinética química**: Rama de la química que estudia la velocidad de las reacciones
+- **Velocidad de reacción**: Rapidez con la que los reactivos se transforman en productos
+- **Catalizador**: Compuesto que acelera una reacción sin participar en ella
+- **Concentración**: Cantidad de sustancia en un volumen determinado, $[A]$ en Molaridad $M$
+
+@1
+## ¿Qué determina la velocidad?
+
+@1a
+¿Por qué {b:algunas reacciones} son rápidas y otras lentas?
+
+@1b
+El factor clave es la {b:frecuencia de colisiones} entre partículas
+
+@1c
+Cuantos más choques eficaces, {g:mayor velocidad}
+
+@2
+## Cinética Química
+
+@2a
+Estudia cómo cambia la {b:concentración} de un reactivo o producto con el {b:tiempo}
+
+@2b
+Mide la {b:velocidad}: qué tan rápido ocurre la transformación
+
+@2c
+No solo importa el inicio y el final, sino {y:cómo ocurre el proceso}
+
+@3
+## Teoría de Colisiones
+
+@3a
+Para que haya reacción, las partículas deben {b:colisionar}
+
+@3b
+El choque debe darse en la {g:posición correcta} y con suficiente {g:energía}
+
+@3c
+{r:Sin colisión eficaz} no hay reacción
+
+@4
+## Estado Físico
+
+@4a
+Mezcla {b:homogénea} → más colisiones → {g:velocidad alta}
+
+@4b
+Mezcla {b:heterogénea} → menos colisiones → {r:velocidad baja}
+
+@4c
+{y:Ejemplo:} Medicamento sólido vs polvo → el polvo hace efecto más rápido
+
+@5
+## Concentración
+
+@5a
+Más partículas en un espacio = {g:mayor probabilidad de colisión}
+
+@5b
+Pocas partículas = espacio grande = {r:baja probabilidad}
+
+@5c
+{y:Ejemplo:} 2 partículas vs 1 millón de partículas en una habitación
+
+@6
+## Temperatura
+
+@6a
+Temperatura → energía cinética → {b:movimiento}
+
+@6b
+Alta temperatura = {g:más colisiones} y con {g:mayor energía}
+
+@6c
+Baja temperatura = {r:menos colisiones} y con {r:menor energía}
+
+@7
+## Catalizadores
+
+@7a
+{b:Acelera} la reacción modificando el mecanismo
+
+@7b
+{g:No participa} en la reacción (no se consume)
+
+@7c
+Permite superar la barrera de energía con {g:menos energía}
+
+@8
+## Velocidad de Reacción
+
+@8a
+La velocidad es el {b:cambio} de algo en un {b:tiempo determinado}
+
+@8b
+{y:Analogía:} Un penalti: distancia / tiempo = velocidad del disparo
+
+@8c
+En química: el cambio es la {b:concentración}, no la distancia
+
+@9
+## Unidades de Velocidad
+
+@9a
+Concentración: $[A]$ en Molaridad \${b:M}$
+
+@9b
+Tiempo: \${b:s}$ (segundos)
+
+@9c
+Unidad de velocidad: \${y:M / s}$
+
+@10
+## Velocidad Promedio
+
+@10a
+Aparición de producto: \${g:/frac{\Delta[B]}{\Delta t}}$
+
+@10b
+Desaparición de reactivo: \${r:-/frac{\Delta[A]}{\Delta t}}$
+
+@10c
+Siempre se expresa como {b:cantidad positiva}
+
+@last
+## Resumen
+
+- La cinética química estudia la {b:velocidad} de las reacciones
+- Cuatro factores: {b:estado físico}, {b:concentración}, {b:temperatura}, {b:catalizadores}
+- La velocidad se mide en \${y:M/s}$
+- Velocidad promedio: \${y:/frac{\Delta[A]}{\Delta t}}$
+`;
+  }
+
+  /* ─────────────────────────────────────────────
+     Text formatting & colour shortcuts
+     ───────────────────────────────────────────── */
+  function formatText(html) {
+    if (!html) return '';
+    let f = html.replace(/\/\//g, '<br>');
+    f = f.replace(/\{([rgby]):([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g, (m, c, t) =>
+      `<span class="c-${COLOR_MAP[c]}">${t}</span>`);
+    f = f.replace(/\[([rgby]):([^\]]*)\]/g, (m, c, t) =>
+      `<span class="hl-${COLOR_MAP[c]}">${t}</span>`);
+    return f;
+  }
+
+  /* ─────────────────────────────────────────────
+     Markdown parser (@tag → slides)
+     ───────────────────────────────────────────── */
+  function parseTemaMarkdown(md) {
+    const slides = [];
+    let tag = null, lines = [];
+    for (const line of md.split('\n')) {
+      const t = line.trim();
+      if (t.startsWith('@')) {
+        if (tag) slides.push({ tag, text: lines.join('\n').trim() });
+        tag = t;
+        lines = [];
+      } else if (tag) {
+        lines.push(line);
+      }
+    }
+    if (tag) slides.push({ tag, text: lines.join('\n').trim() });
+    return slides;
+  }
+
+  async function loadSlides() {
+    await loadTemaMarkdown();
+    return parseTemaMarkdown(temaMarkdown);
+  }
+
+  /* ─────────────────────────────────────────────
+     Text similarity (Levenshtein)
+     ───────────────────────────────────────────── */
+  function getCleanText(text) {
+    if (!text) return '';
+    return text
+      .split('\n').filter(l => !l.trim().startsWith('%')).join('\n')
+      .replace(/\{[rgby]:(.*?)\}/g, '$1')
+      .replace(/\[[rgby]:(.*?)\]/g, '$1')
+      .replace(/\$/g, '').replace(/[\/\\]frac/g, '')
+      .replace(/\s+/g, ' ').trim()
+      .toLowerCase();
+  }
+
+  function levenshtein(a, b) {
+    const t = [];
+    for (let i = 0; i <= a.length; i++) t[i] = [i];
+    for (let j = 0; j <= b.length; j++) t[0][j] = j;
+    for (let i = 1; i <= a.length; i++)
+      for (let j = 1; j <= b.length; j++)
+        t[i][j] = Math.min(t[i-1][j] + 1, t[i][j-1] + 1, t[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+    return t[a.length][b.length];
+  }
+
+  function getSimilarity(a, b) {
+    if (a.length === 0 && b.length === 0) return 1;
+    return 1 - levenshtein(a, b) / Math.max(a.length, b.length);
+  }
+
+  /* ─────────────────────────────────────────────
+     Math / LaTeX parser
+     ───────────────────────────────────────────── */
+  function cleanUni(s) {
+    return s.replace(/[₀-₉]/g, m => UNICODE_SUB[m] || m);
+  }
+
+  function parseSubSup(s) {
+    let r = cleanUni(s);
+    r = r.replace(/_\{([^}]+)\}/g, '<sub>$1</sub>');
+    r = r.replace(/_([0-9₀-₉a-zA-Z]+)/g, (m, p) => {
+      const x = p.match(/^([0-9₀-₉]+)([A-Z].*)$/);
+      return x ? `<sub>${x[1]}</sub>${x[2]}` : `<sub>${p}</sub>`;
+    });
+    r = r.replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>');
+    r = r.replace(/\^([0-9₀-₉a-zA-Z\-+]+)/g, '<sup>$1</sup>');
+    return r;
+  }
+
+  function parseMathInner(s) {
+    let r = cleanUni(s);
+    r = r.replace(/[\/\\]sqrt\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g,
+      '&radic;<span style="border-top:1.5px solid #000;padding-top:1px;">$1</span>');
+    r = parseSubSup(r);
+    r = r.replace(/[\/\\]?sout\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g,
+      '<span class="sout-cancel">$1</span>');
+    r = r.replace(/\*/g, ' &times; ');
+    r = r.replace(/[\/\\]pm/g, ' &plusmn; ');
+    r = r.replace(/[\/\\]cdot/g, ' &middot; ');
+    r = r.replace(/[\/\\]times/g, ' &times; ');
+    r = r.replace(/[\/\\]delta/g, '&delta;');
+    r = r.replace(/[\/\\]Delta/g, '&Delta;');
+    return r;
+  }
+
+  function parseMath(text) {
+    if (!text) return '';
+    return text.trim().replace(/\r/g, '').replace(/\$([^$]+)\$/g, (m, c) => {
+      let p = cleanUni(c);
+      p = p.replace(/[\/\\]sqrt\{([^}]+)\}/g,
+        '&radic;<span style="border-top:1.5px solid #000;padding-top:1px;">$1</span>');
+      p = parseSubSup(p);
+      p = p.replace(/[\/\\]?sout\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g,
+        '<span class="sout-cancel">$1</span>');
+      p = p.replace(/[\/\\]frac\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g,
+        (_, n, d) => {
+          const empty = n.trim() === '' && d.trim() === '';
+          return `<span class="fraction${empty ? ' empty-fraction' : ''}">` +
+            `<span class="numerator">${parseMathInner(n)}</span>` +
+            `<span class="denominator">${parseMathInner(d)}</span></span>`;
+        });
+      p = parseMathInner(p);
+      return `<span class="math-expression">${p}</span>`;
+    });
+  }
+
+  /* ─────────────────────────────────────────────
+     Group / Table parsing
+     ───────────────────────────────────────────── */
+  function parseGroups(slides) {
+    const groups = [];
+    let prev = null;
+    for (const s of slides) {
+      const m = s.tag.match(/^@(\d+)([a-z]*)$/);
+      if (!m) continue;
+      if (m[1] !== prev) { groups.push({ base: m[1], steps: [s] }); prev = m[1]; }
+      else groups[groups.length - 1].steps.push(s);
+    }
+    return groups;
+  }
+
+  function isTableGroup(g) { return g.steps.some(s => s.text.trim().startsWith('|')); }
+  function parseRow(l) { return l.split('|').map(s => s.trim()).filter(Boolean); }
+
+  /* ─────────────────────────────────────────────
+     State & DOM references
+     ───────────────────────────────────────────── */
+  let groups = [];
+  let totalGroups = 0, totalSteps = 0;
+  let blockEls = [];
+  let currentGroup = 0, currentStep = 0;
+  let isPrintMode = false;
+
+  const $ = id => document.getElementById(id);
+  const track = $('track');
+  const progressBar = $('progress-bar');
+  const progressLabel = $('progress-label');
+  const h1El = $('header-h1');
+  const h2El = $('header-h2');
+  const infoEl = $('header-info');
+
+  /* ─────────────────────────────────────────────
+     Rendering
+     ───────────────────────────────────────────── */
+  function groupClass(i) {
+    const d = i - currentGroup;
+    if (d === 0) return 'active';
+    if (d === -1) return 'past-1';
+    if (d === -2) return 'past-2';
+    if (d <= -3) return 'past-far';
+    if (d === 1) return 'next-1';
+    return 'future';
+  }
+
+  function updateSubSteps(blockEl, groupIdx) {
+    const isActive = groupIdx === currentGroup;
+    const isPast   = groupIdx < currentGroup;
+    const isNext   = groupIdx === currentGroup + 1;
+    const group    = groups[groupIdx];
+    if (!group) return;
+
+    if (isTableGroup(group)) {
+      for (let si = 0; si < group.steps.length; si++) {
+        blockEl.querySelectorAll('.step-col-' + si).forEach(el => {
+          el.classList.remove('revealed', 'latest');
+          if (isPrintMode || isPast) {
+            el.classList.add('revealed');
+            if (isPrintMode && si === group.steps.length - 1) el.classList.add('latest');
+          } else if (isActive && si <= currentStep) {
+            el.classList.add('revealed');
+            if (si === currentStep) el.classList.add('latest');
+          } else if (isNext && si === 0) {
+            el.classList.add('revealed');
+          }
+        });
+      }
+      return;
+    }
+
+    const subSteps = blockEl.querySelectorAll('.sub-step');
+    const targetIdx = isPrintMode || isPast ? group.steps.length - 1 :
+                      isActive ? currentStep :
+                      isNext   ? 0 : -1;
+
+    group.slots.forEach((slot, si) => {
+      const el = subSteps[si];
+      if (!el) return;
+      const active = slot.blocks.filter(b => b.stepIdx <= targetIdx);
+      if (active.length === 0) {
+        el.classList.remove('revealed', 'latest');
+        return;
+      }
+      const last = active[active.length - 1];
+      const html = parseMath(formatText(last.text));
+      if (el.innerHTML !== html) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        morphChildren(el, tmp);
+      }
+      el.classList.add('revealed');
+      el.classList.toggle('latest', (isPrintMode || isActive) && targetIdx === last.stepIdx);
+    });
+  }
+
+  function recenter() {
+    const a = blockEls[currentGroup];
+    if (!a) return;
+    track.style.transform =
+      `translateX(-50%) translateY(${window.innerHeight / 2 - (a.offsetTop + a.offsetHeight / 2)}px)`;
+  }
+
+  function updateProgress() {
+    if (totalSteps === 0) return;
+    const done = groups.slice(0, currentGroup).reduce((s, g) => s + g.steps.length, 0) + currentStep + 1;
+    const pct = Math.round(done / totalSteps * 100);
+    progressBar.style.width = pct + '%';
+    progressLabel.textContent = pct + ' %';
+  }
+
+  function fadeHeader(el, html, visible) {
+    if (el.innerHTML !== html) {
+      if (el.innerHTML === '') { el.innerHTML = html; el.style.opacity = visible ? '0.85' : '0'; }
+      else {
+        el.style.opacity = '0';
+        setTimeout(() => { el.innerHTML = html; if (visible) el.style.opacity = '0.85'; }, 300);
+      }
+    } else {
+      el.style.opacity = visible ? '0.85' : '0';
+    }
+  }
+
+  function updateHeaders() {
+    if (!groups.length || !groups[currentGroup]) return;
+    const step = groups[currentGroup].steps[currentStep];
+    if (!step) return;
+    fadeHeader(h1El, parseMath(formatText(step.activeH1 || '')), !!step.activeH1);
+    fadeHeader(h2El, parseMath(formatText(step.activeH2 || '')), !!step.activeH2);
+    const info = parseMath(formatText(step.activeInfo || ''));
+    if (infoEl.innerHTML !== info) {
+      if (infoEl.innerHTML === '') { infoEl.innerHTML = info; infoEl.style.opacity = step.activeInfo ? '0.80' : '0'; }
+      else {
+        infoEl.style.opacity = '0';
+        setTimeout(() => { infoEl.innerHTML = info; if (step.activeInfo) infoEl.style.opacity = '0.80'; }, 300);
+      }
+    } else {
+      infoEl.style.opacity = step.activeInfo ? '0.80' : '0';
+    }
+  }
+
+  function render() {
+    blockEls.forEach((el, i) => { el.className = 'paragraph-block ' + groupClass(i); updateSubSteps(el, i); });
+    recenter();
+    updateProgress();
+    updateHeaders();
+  }
+
+  function renderStep() {
+    blockEls.forEach((el, i) => updateSubSteps(el, i));
+    requestAnimationFrame(() => requestAnimationFrame(() => recenter()));
+    updateProgress();
+    updateHeaders();
+  }
+
+  /* ─────────────────────────────────────────────
+     Navigation
+     ───────────────────────────────────────────── */
+   function next() {
+    if (!groups.length) return;
+    clearMarkers();
+    const steps = groups[currentGroup].steps.length;
+    if (currentStep < steps - 1) { currentStep++; renderStep(); }
+    else if (currentGroup < totalGroups - 1) { currentGroup++; currentStep = 0; render(); }
+  }
+
+  function prev() {
+    if (!groups.length) return;
+    clearMarkers();
+    if (currentStep > 0) { currentStep--; renderStep(); }
+    else if (currentGroup > 0) { currentGroup--; currentStep = groups[currentGroup].steps.length - 1; render(); }
+  }
+
+  function goToStart() { currentGroup = 0; currentStep = 0; render(); }
+  function goToEnd() { currentGroup = totalGroups - 1; currentStep = groups[currentGroup].steps.length - 1; render(); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Home') { e.preventDefault(); goToStart(); }
+    else if (e.key === 'End') { e.preventDefault(); goToEnd(); }
+    else if (['ArrowRight', 'ArrowDown', ' '].includes(e.key)) { e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'ArrowUp'].includes(e.key)) { e.preventDefault(); prev(); }
+  });
+
+  function addMarker(x, y) {
+    const m = document.createElement('div');
+    m.className = 'slide-marker';
+    m.style.left = x + 'px';
+    m.style.top = y + 'px';
+    document.body.appendChild(m);
+    markers.push(m);
+  }
+
+  function clearMarkers() {
+    markers.forEach(m => m.remove());
+    markers.length = 0;
+    strokes.length = 0;
+    if (committedCtx) committedCtx.clearRect(0, 0, committedCanvas.width, committedCanvas.height);
+    if (drawCtx) drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+  }
+
+  /* ─────────────────────────────────────────────
+     Dibujo con click izquierdo
+     ───────────────────────────────────────────── */
+  let drawCanvas, drawCtx, isDrawing = false;
+  let committedCanvas, committedCtx;
+  let drawMode = 'freehand';
+  const strokes = [];
+
+  let rightDown = false, rightStartX = 0, rightStartY = 0, rightStartTime = 0, rightMoved = false;
+
+  const MODE_CONFIG = {
+    freehand: { letter: '',  cursorClass: '',               indicatorColor: '#ccc' },
+    circle:   { letter: 'A', cursorClass: 'mode-circle',    indicatorColor: '#6ABFAD' },
+    line:     { letter: 'S', cursorClass: 'mode-line',      indicatorColor: '#D98A96' },
+    rect:     { letter: 'D', cursorClass: 'mode-rect',      indicatorColor: '#6B8EC4' },
+    eraser:   { letter: 'F', cursorClass: 'mode-eraser',    indicatorColor: '#EE8866' }
+  };
+
+  function setDrawMode(mode) {
+    drawMode = mode;
+    const dot = document.getElementById('cursor-dot');
+    if (dot) {
+      dot.classList.remove('mode-line', 'mode-rect', 'mode-circle', 'mode-eraser');
+      const cls = MODE_CONFIG[mode].cursorClass;
+      if (cls) dot.classList.add(cls);
+    }
+    const ind = document.getElementById('mode-indicator');
+    if (ind) {
+      const cfg = MODE_CONFIG[mode];
+      ind.textContent = cfg.letter || '—';
+      ind.className = 'mode-' + mode;
+      ind.style.color = cfg.indicatorColor;
+      ind.style.borderColor = cfg.indicatorColor;
+    }
+  }
+
+  function initCursor() {
+    cursorDot = document.createElement('div');
+    cursorDot.id = 'cursor-dot';
+    document.body.appendChild(cursorDot);
+  }
+
+  function initDrawing() {
+    drawCanvas = document.getElementById('draw-canvas');
+    if (!drawCanvas) return;
+    committedCanvas = document.createElement('canvas');
+    committedCtx = committedCanvas.getContext('2d');
+    syncCanvasSize();
+    drawCtx = drawCanvas.getContext('2d');
+  }
+
+  function syncCanvasSize() {
+    const w = window.innerWidth, h = window.innerHeight;
+    if (drawCanvas)  { drawCanvas.width = w;  drawCanvas.height = h; }
+    if (committedCanvas) { committedCanvas.width = w; committedCanvas.height = h; }
+  }
+
+  function drawSingleStroke(ctx, s) {
+    ctx.save();
+    ctx.strokeStyle = s.glowColor;
+    ctx.lineWidth = s.width * 4;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    drawShape(ctx, s);
+    ctx.stroke();
+    ctx.strokeStyle = s.color;
+    ctx.lineWidth = s.width;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    drawShape(ctx, s);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function rebuildCommitted() {
+    if (!committedCtx) return;
+    committedCtx.clearRect(0, 0, committedCanvas.width, committedCanvas.height);
+    for (const s of strokes) drawSingleStroke(committedCtx, s);
+  }
+
+  function renderDrawing() {
+    if (!drawCtx) return;
+    drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+    drawCtx.drawImage(committedCanvas, 0, 0);
+    if (isDrawing) {
+      const s = strokes[strokes.length - 1];
+      if (s) drawSingleStroke(drawCtx, s);
+    }
+  }
+
+  function commitStroke() {
+    const s = strokes[strokes.length - 1];
+    if (s) drawSingleStroke(committedCtx, s);
+  }
+
+  function fullRedraw() {
+    rebuildCommitted();
+    renderDrawing();
+  }
+
+  window.addEventListener('resize', () => {
+    syncCanvasSize();
+    fullRedraw();
+  });
+
+  function drawShape(ctx, s) {
+    if (s.type === 'freehand') {
+      ctx.moveTo(s.pts[0].x, s.pts[0].y);
+      for (let i = 1; i < s.pts.length; i++) ctx.lineTo(s.pts[i].x, s.pts[i].y);
+    } else if (s.type === 'line') {
+      ctx.moveTo(s.start.x, s.start.y);
+      ctx.lineTo(s.end.x, s.end.y);
+    } else if (s.type === 'rect') {
+      ctx.rect(
+        Math.min(s.start.x, s.end.x), Math.min(s.start.y, s.end.y),
+        Math.abs(s.end.x - s.start.x), Math.abs(s.end.y - s.start.y)
+      );
+    } else if (s.type === 'circle') {
+      const cx = (s.start.x + s.end.x) / 2;
+      const cy = (s.start.y + s.end.y) / 2;
+      const rx = Math.abs(s.end.x - s.start.x) / 2;
+      const ry = Math.abs(s.end.y - s.start.y) / 2;
+      ctx.ellipse(cx, cy, rx || 1, ry || 1, 0, 0, Math.PI * 2);
+    }
+  }
+
+  function distToLineSeg(x1, y1, x2, y2, px, py) {
+    const dx = x2 - x1, dy = y2 - y1;
+    const lenSq = dx * dx + dy * dy;
+    if (lenSq === 0) return Math.hypot(px - x1, py - y1);
+    let t = ((px - x1) * dx + (py - y1) * dy) / lenSq;
+    t = Math.max(0, Math.min(1, t));
+    return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
+  }
+
+  function distToStroke(s, px, py) {
+    if (s.type === 'freehand') {
+      let minD = Infinity;
+      for (const p of s.pts) { const d = Math.hypot(p.x - px, p.y - py); if (d < minD) minD = d; }
+      return minD;
+    }
+    if (s.type === 'line') return distToLineSeg(s.start.x, s.start.y, s.end.x, s.end.y, px, py);
+    if (s.type === 'rect') {
+      const x1 = Math.min(s.start.x, s.end.x), y1 = Math.min(s.start.y, s.end.y);
+      const x2 = Math.max(s.start.x, s.end.x), y2 = Math.max(s.start.y, s.end.y);
+      return Math.min(
+        distToLineSeg(x1, y1, x2, y1, px, py),
+        distToLineSeg(x2, y1, x2, y2, px, py),
+        distToLineSeg(x2, y2, x1, y2, px, py),
+        distToLineSeg(x1, y2, x1, y1, px, py)
+      );
+    }
+    if (s.type === 'circle') {
+      const cx = (s.start.x + s.end.x) / 2, cy = (s.start.y + s.end.y) / 2;
+      const rx = Math.abs(s.end.x - s.start.x) / 2, ry = Math.abs(s.end.y - s.start.y) / 2;
+      const dx = (px - cx) / (rx || 1), dy = (py - cy) / (ry || 1);
+      return Math.abs(Math.hypot(dx, dy) - 1) * Math.min(rx || 1, ry || 1);
+    }
+    return Infinity;
+  }
+
+  const COLORS = {
+    freehand: { color: 'rgba(238, 51, 85, 0.95)', glow: 'rgba(238, 51, 85, 0.35)' },
+    circle:   { color: 'rgba(0, 187, 136, 0.95)', glow: 'rgba(0, 187, 136, 0.35)' },
+    line:     { color: 'rgba(238, 51, 85, 0.95)', glow: 'rgba(238, 51, 85, 0.35)' },
+    rect:     { color: 'rgba(51, 119, 238, 0.95)', glow: 'rgba(51, 119, 238, 0.35)' }
+  };
+  const WIDTH = 4;
+
+  document.addEventListener('keydown', e => {
+    const key = e.key.toLowerCase();
+    if (key === 'a' || key === 's' || key === 'd' || key === 'f') {
+      e.preventDefault();
+      if (key === 'a') setDrawMode('circle');
+      else if (key === 's') setDrawMode('line');
+      else if (key === 'd') setDrawMode('rect');
+      else if (key === 'f') setDrawMode('eraser');
+    } else if (e.ctrlKey && key === 'z') {
+      e.preventDefault();
+      if (strokes.length) { strokes.pop(); fullRedraw(); }
+    } else if (key === 'c' && !e.ctrlKey) {
+      e.preventDefault();
+      strokes.length = 0;
+      if (drawCtx) { drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height); }
+      if (committedCtx) committedCtx.clearRect(0, 0, committedCanvas.width, committedCanvas.height);
+    } else if (key === 'g' && !e.ctrlKey) {
+      e.preventDefault();
+      if (drawCanvas) drawCanvas.style.display = drawCanvas.style.display === 'none' ? '' : 'none';
+      if (cursorDot) cursorDot.style.display = cursorDot.style.display === 'none' ? '' : 'none';
+    }
+  });
+
+  document.addEventListener('keyup', e => {
+    const key = e.key.toLowerCase();
+    if (['a', 's', 'd', 'f'].includes(key)) setDrawMode('freehand');
+  });
+
+  document.addEventListener('mousedown', e => {
+    if (e.button === 0) {
+      const x = e.clientX, y = e.clientY;
+      if (drawMode === 'eraser') {
+        isDrawing = true;
+        return;
+      }
+      isDrawing = true;
+      if (!drawCtx) return;
+      const pts = [{ x, y }];
+      const start = { x, y }, end = { x, y };
+      if (drawMode === 'freehand') {
+        strokes.push({ type: 'freehand', pts, color: COLORS.freehand.color, glowColor: COLORS.freehand.glow, width: WIDTH });
+      } else if (drawMode === 'circle') {
+        strokes.push({ type: 'circle', start, end, color: COLORS.circle.color, glowColor: COLORS.circle.glow, width: WIDTH });
+      } else if (drawMode === 'line') {
+        strokes.push({ type: 'line', start, end, color: COLORS.line.color, glowColor: COLORS.line.glow, width: WIDTH });
+      } else if (drawMode === 'rect') {
+        strokes.push({ type: 'rect', start, end, color: COLORS.rect.color, glowColor: COLORS.rect.glow, width: WIDTH });
+      }
+    }
+    if (e.button === 2) {
+      e.preventDefault();
+      rightDown = true;
+      rightStartX = e.clientX;
+      rightStartY = e.clientY;
+      rightStartTime = Date.now();
+      rightMoved = false;
+      if (cursorDot) cursorDot.classList.add('laser');
+    }
+  });
+
+  document.addEventListener('mousemove', e => {
+    const x = e.clientX, y = e.clientY;
+    if (cursorDot) {
+      cursorDot.style.left = x + 'px';
+      cursorDot.style.top = y + 'px';
+    }
+    if (rightDown && Math.hypot(x - rightStartX, y - rightStartY) > 10) {
+      rightMoved = true;
+    }
+    if (!isDrawing || !drawCtx) return;
+    if (drawMode === 'eraser') {
+      const ERASER_RADIUS = 15;
+      let removed = false;
+      for (let i = strokes.length - 1; i >= 0; i--) {
+        if (distToStroke(strokes[i], x, y) < ERASER_RADIUS) {
+          strokes.splice(i, 1);
+          removed = true;
+        }
+      }
+      if (removed) fullRedraw();
+      return;
+    }
+    const s = strokes[strokes.length - 1];
+    if (!s) return;
+    if (s.type === 'freehand') {
+      s.pts.push({ x, y });
+    } else {
+      s.end = { x, y };
+    }
+    renderDrawing();
+  });
+
+  document.addEventListener('mouseup', e => {
+    if (e.button === 0) {
+      if (isDrawing && drawMode !== 'eraser') commitStroke();
+      isDrawing = false;
+    }
+    if (e.button === 2) {
+      if (!rightMoved && Date.now() - rightStartTime < 400) {
+        addMarker(e.clientX, e.clientY);
+      }
+      rightDown = false;
+      if (cursorDot) cursorDot.classList.remove('laser');
+    }
+  });
+
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  /* ─────────────────────────────────────────────
+     Initialisation
+     ───────────────────────────────────────────── */
+  async function init() {
+    initCursor();
+    initDrawing();
+    const raw = await loadSlides();
+    const processed = raw.map(s => {
+      let t = s.text, h1 = null, h2 = null, info = null;
+      const m1 = t.match(/^# (.*?)(?:\r?\n|$)/m);
+      if (m1) { h1 = m1[1].trim(); t = t.replace(m1[0], ''); }
+      const m2 = t.match(/^## (.*?)(?:\r?\n|$)/m);
+      if (m2) { h2 = m2[1].trim(); t = t.replace(m2[0], ''); }
+      const mi = t.match(/^% ?(.*?)(?:\r?\n|$)/m);
+      if (mi) { info = mi[1].trim().toLowerCase() === 'fin' ? '' : mi[1].trim(); t = t.replace(mi[0], ''); }
+      return { tag: s.tag, text: t.trim(), h1, h2, info };
+    });
+
+    groups = parseGroups(processed);
+
+    groups.forEach(g => {
+      if (isTableGroup(g)) return;
+      const slots = [];
+      g.steps.forEach((step, si) => {
+        step.stepIdx = si;
+        const blocks = step.text.split(/\s*\/\/\s*(?:\n\s*)*\/\/\s*/).map(x => x.trim()).filter(Boolean);
+        const used = new Set();
+        blocks.forEach(block => {
+          const clean = getCleanText(block);
+          let best = null, bestSim = -1, subset = null;
+          slots.forEach(slot => {
+            if (used.has(slot.id)) return;
+            const last = getCleanText(slot.blocks[slot.blocks.length - 1].text);
+            const sim = getSimilarity(clean, last);
+            if (sim > bestSim) { bestSim = sim; best = slot; }
+            if (clean.length && last.length && (last.includes(clean) || clean.includes(last))) subset = slot;
+          });
+          const target = subset || (bestSim >= 0.5 ? best : null);
+          if (target) { target.blocks.push({ stepIdx: si, text: block }); used.add(target.id); }
+          else { const id = slots.length; slots.push({ id, blocks: [{ stepIdx: si, text: block }] }); used.add(id); }
+        });
+      });
+      g.slots = slots;
+    });
+
+    totalGroups = groups.length;
+    totalSteps  = groups.reduce((s, g) => s + g.steps.length, 0);
+
+    let h1 = '', h2 = '', info = '';
+    groups.forEach(g => g.steps.forEach(s => {
+      if (s.h1 !== null) h1 = s.h1;
+      if (s.h2 !== null) h2 = s.h2;
+      if (s.info !== null) info = s.info;
+      s.activeH1 = h1; s.activeH2 = h2; s.activeInfo = info;
+    }));
+
+    blockEls = groups.map(g => {
+      const div = document.createElement('div');
+      div.className = 'paragraph-block';
+      const ph = document.createElement('div'); ph.className = 'print-header';
+      ph.innerHTML = `<span class="print-h1">${parseMath(formatText(g.steps[0].activeH1 || ''))}</span><span class="print-h2">${parseMath(formatText(g.steps[0].activeH2 || ''))}</span>`;
+      div.appendChild(ph);
+      const pi = document.createElement('div'); pi.className = 'print-info'; div.appendChild(pi);
+      const pa = document.createElement('div'); pa.className = 'print-author'; pa.textContent = 'Camilo Tayac'; div.appendChild(pa);
+
+      if (isTableGroup(g)) {
+        const table = document.createElement('table');
+        const parsed = g.steps.map((s, i) => { s.stepIdx = i; return s.text.split('\n').map(parseRow).filter(r => r.length); });
+        const colMap = new Map(), colOrder = [];
+        parsed.forEach((p, si) => {
+          (p[0] || []).forEach((h, ci) => {
+            let c = colMap.get(h);
+            if (!c) { c = { headerText: h, cells: [] }; colMap.set(h, c); colOrder.push(c); }
+            for (let r = 1; r < p.length; r++) c.cells.push({ text: p[r][ci] || '', stepIdx: si });
+          });
+        });
+        const thead = document.createElement('thead');
+        const hr = document.createElement('tr');
+        colOrder.forEach(c => {
+          const th = document.createElement('th');
+          const w = document.createElement('div');
+          w.className = 'td-wrapper step-col-' + (c.cells[0] ? c.cells[0].stepIdx : 0);
+          w.innerHTML = parseMath(formatText(c.headerText));
+          th.appendChild(w); hr.appendChild(th);
+        });
+        thead.appendChild(hr); table.appendChild(thead);
+        const maxR = Math.max(...colOrder.map(c => c.cells.length));
+        const tbody = document.createElement('tbody');
+        for (let r = 0; r < maxR; r++) {
+          const tr = document.createElement('tr');
+          colOrder.forEach(c => {
+            const td = document.createElement('td');
+            const cell = c.cells[r];
+            if (cell) {
+              const w = document.createElement('div');
+              w.className = 'td-wrapper step-col-' + cell.stepIdx;
+              w.innerHTML = parseMath(formatText(cell.text));
+              td.appendChild(w);
+            } else td.innerHTML = '&nbsp;';
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        }
+        table.appendChild(tbody); div.appendChild(table);
+      } else {
+        g.slots.forEach(slot => {
+          const el = document.createElement('div');
+          el.className = 'sub-step';
+          el.innerHTML = parseMath(formatText(slot.blocks[0].text));
+          div.appendChild(el);
+        });
+      }
+      track.appendChild(div);
+      return div;
+    });
+
+    track.style.transition = 'none';
+    render();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      track.style.transition = 'transform var(--dur) var(--ease-calm)';
+    }));
+  }
+
+  /* ─────────────────────────────────────────────
+     Print / PDF export
+     ───────────────────────────────────────────── */
+  function prepareForPrint() {
+    isPrintMode = true;
+    const all = [];
+    groups.forEach(g => g.steps.forEach(s => all.push({ group: g, step: s })));
+    track.innerHTML = '';
+    blockEls = [];
+
+    all.forEach(({ group, step }) => {
+      const div = document.createElement('div');
+      div.className = 'paragraph-block active';
+      const ph = document.createElement('div'); ph.className = 'print-header';
+      ph.innerHTML = `<span class="print-h1">${parseMath(formatText(step.activeH1 || ''))}</span><span class="print-h2">${parseMath(formatText(step.activeH2 || ''))}</span>`;
+      div.appendChild(ph);
+      const pi = document.createElement('div'); pi.className = 'print-info';
+      pi.innerHTML = parseMath(formatText(step.activeInfo || '')); div.appendChild(pi);
+      const pa = document.createElement('div'); pa.className = 'print-author'; pa.textContent = 'Camilo Tayac'; div.appendChild(pa);
+
+      if (isTableGroup(group)) {
+        const table = document.createElement('table');
+        const parsed = group.steps.map((s, i) => { s.stepIdx = i; return s.text.split('\n').map(parseRow).filter(r => r.length); });
+        const colMap = new Map(), colOrder = [];
+        parsed.forEach((p, si) => {
+          (p[0] || []).forEach((h, ci) => {
+            let c = colMap.get(h);
+            if (!c) { c = { headerText: h, cells: [] }; colMap.set(h, c); colOrder.push(c); }
+            for (let r = 1; r < p.length; r++) c.cells.push({ text: p[r][ci] || '', stepIdx: si });
+          });
+        });
+        const thead = document.createElement('thead');
+        const hr = document.createElement('tr');
+        colOrder.forEach(c => {
+          const th = document.createElement('th');
+          const w = document.createElement('div'); w.className = 'td-wrapper';
+          w.innerHTML = parseMath(formatText(c.headerText));
+          if ((c.cells[0] ? c.cells[0].stepIdx : 0) <= step.stepIdx) {
+            w.classList.add('revealed');
+            if ((c.cells[0] ? c.cells[0].stepIdx : 0) === step.stepIdx) w.classList.add('latest');
+          }
+          th.appendChild(w); hr.appendChild(th);
+        });
+        thead.appendChild(hr); table.appendChild(thead);
+        const maxR = Math.max(...colOrder.map(c => c.cells.length));
+        const tbody = document.createElement('tbody');
+        for (let r = 0; r < maxR; r++) {
+          const tr = document.createElement('tr');
+          colOrder.forEach(c => {
+            const td = document.createElement('td');
+            const cell = c.cells[r];
+            if (cell) {
+              const w = document.createElement('div'); w.className = 'td-wrapper';
+              w.innerHTML = parseMath(formatText(cell.text));
+              if (cell.stepIdx <= step.stepIdx) {
+                w.classList.add('revealed');
+                if (cell.stepIdx === step.stepIdx) w.classList.add('latest');
+              }
+              td.appendChild(w);
+            } else td.innerHTML = '&nbsp;';
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        }
+        table.appendChild(tbody); div.appendChild(table);
+      } else {
+        group.slots.forEach(slot => {
+          const el = document.createElement('div'); el.className = 'sub-step';
+          const active = slot.blocks.filter(b => b.stepIdx <= step.stepIdx);
+          if (active.length) {
+            const last = active[active.length - 1];
+            el.innerHTML = parseMath(formatText(last.text));
+            el.classList.add('revealed');
+            if (last.stepIdx === step.stepIdx) el.classList.add('latest');
+          }
+          div.appendChild(el);
+        });
+      }
+      track.appendChild(div);
+      blockEls.push(div);
+    });
+    track.style.transition = 'none';
+    track.style.transform = 'none';
+  }
+
+  window.prepareForPrint = prepareForPrint;
+  await init();
+
+})();
+</script>
+
+</body>
+</html>

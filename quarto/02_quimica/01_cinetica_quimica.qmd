@@ -40,17 +40,15 @@ Al analizar la reacción química podemos determinar dos cosas: que los reactivo
 
 Para calcular la velocidad promedio de aparición, recordemos que para que haya velocidad se necesita un cambio. En una reacción química, ese cambio es la concentración, y lo representamos con la letra griega delta $\Delta$. Así, el cambio de concentración es $\Delta[B]$ y el cambio de tiempo es $\Delta t$. La velocidad promedio de aparición de B queda definida como:
 
-$$\text{Velocidad promedio de aparición de B} = \frac{\Delta[B]}{\Delta t} \tag{1}$$ [@brown2014]
+$$\substack{\text{Velocidad promedio de} \\ \text{aparición de B}} = \frac{\Delta[B]}{\Delta t}$$ {#eq-vel-ap-B}
 
 Donde $\Delta$ se lee como "cambio en" y siempre es igual a un valor final menos un valor inicial. Es decir, $\Delta[B] = [B]_{t_2} - [B]_{t_1}$ (donde $t_2$ es el tiempo final y $t_1$ es el tiempo inicial) y $\Delta t = t_2 - t_1$. Sustituyendo, la ecuación completa queda:
 
-$$\text{Velocidad promedio de aparición de B} = \frac{\Delta[B]}{\Delta t} = \frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1} \tag{2}$$ [@brown2014]
+$$\substack{\text{Velocidad promedio de} \\ \text{aparición de B}} = \frac{\Delta[B]}{\Delta t} = \frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1}$$ {#eq-vel-ap-B-completa}
 
-Por otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo ($-$). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la ecuación:
+Por otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo ($-$). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la @eq-vel-des-A:
 
-$$\text{Velocidad promedio de desaparición de A} = -\frac{\Delta[A]}{\Delta t} = -\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1} \tag{3}$$ [@brown2014]
+$$\substack{\text{Velocidad promedio de} \\ \text{desaparición de A}} = -\frac{\Delta[A]}{\Delta t} = -\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1}$$ {#eq-vel-des-A}
 
-El resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva [@brown2014].
-
-Cuando se habla de la velocidad sin decir si es de un reactivo o un producto, se entiende que es la velocidad de la reacción completa [@brown2014].
+El resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva. Si no especificamos si hablamos de un reactivo o un producto, la velocidad se refiere a la reacción completa [@brown2014].
 

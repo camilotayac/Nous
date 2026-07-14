@@ -40,5 +40,6 @@ format:
     biblio-style: authoryear
     include-in-header:
       - preamble.tex
-  epub: default
+  epub:
+    css: epub-styles.css
 bibliography: references.bib

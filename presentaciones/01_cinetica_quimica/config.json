@@ -1,0 +1,26 @@
+{
+  "title": "Cinética Química",
+  "source": "obsidian/02_quimica/01_cinetica_quimica.md",
+  "created": "2026-07-13",
+  "slide_count": 10,
+  "colors": {
+    "reactivos": "r",
+    "productos": "g",
+    "conceptos": "b",
+    "resultados": "y"
+  },
+  "sections": [
+    "vocabulario",
+    "hook",
+    "introduccion",
+    "teoria_colisiones",
+    "estado_fisico",
+    "concentracion",
+    "temperatura",
+    "catalizadores",
+    "velocidad_reaccion",
+    "unidades",
+    "velocidad_promedio",
+    "resumen"
+  ]
+}
