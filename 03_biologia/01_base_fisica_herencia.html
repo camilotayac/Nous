@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proposición y su negación – Nous</title>
+<title>La base física de la herencia – Nous</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -52,8 +52,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../02_quimica/01_cinetica_quimica.html" rel="next">
-<link href="../summary.html" rel="prev">
+<link href="../references.html" rel="next">
+<link href="../02_quimica/01_cinetica_quimica.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -96,35 +96,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -300,7 +271,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span id="sec-proposicion" class="quarto-section-identifier"><span class="chapter-title">Proposición y su negación</span></span></h1>
+          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">La base física de la herencia</span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -373,7 +344,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../01_conjuntos/00_proposicion_negacion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Proposición y su negación</span></a>
+  <a href="../01_conjuntos/00_proposicion_negacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proposición y su negación</span></a>
   </div>
 </li>
       </ul>
@@ -405,7 +376,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La base física de la herencia</span></a>
+  <a href="../03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">La base física de la herencia</span></a>
   </div>
 </li>
       </ul>
@@ -432,17 +403,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#definición-de-proposición" id="toc-definición-de-proposición" class="nav-link active" data-scroll-target="#definición-de-proposición">Definición de proposición</a></li>
-  <li><a href="#enunciados-que-no-son-proposiciones" id="toc-enunciados-que-no-son-proposiciones" class="nav-link" data-scroll-target="#enunciados-que-no-son-proposiciones">Enunciados que no son proposiciones</a></li>
-  <li><a href="#negación-de-una-proposición" id="toc-negación-de-una-proposición" class="nav-link" data-scroll-target="#negación-de-una-proposición">Negación de una proposición</a></li>
-  <li><a href="#tabla-de-verdad" id="toc-tabla-de-verdad" class="nav-link" data-scroll-target="#tabla-de-verdad">Tabla de verdad</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -450,7 +412,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span id="sec-proposicion" class="quarto-section-identifier"><span class="chapter-title">Proposición y su negación</span></span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">La base física de la herencia</span></h1>
 </div>
 
 
@@ -467,72 +429,17 @@ window.Quarto = {
 </header>
 
 
-<section id="definición-de-proposición" class="level2">
-<h2 class="anchored" data-anchor-id="definición-de-proposición">Definición de proposición</h2>
-<p>La unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a>.</p>
-<div id="exm-sol" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.1</strong></span> <em>El sol es una estrella.</em></p>
-</div>
-<p>Un enunciado es una <strong>proposición</strong> cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>. Usando la lógica, podemos determinar si un enunciado es V o F.</p>
-</section>
-<section id="enunciados-que-no-son-proposiciones" class="level2">
-<h2 class="anchored" data-anchor-id="enunciados-que-no-son-proposiciones">Enunciados que no son proposiciones</h2>
-<p>Hay enunciados que no son proposiciones, como se ve en el <a href="#exm-saludo" class="quarto-xref">Ejemplo&nbsp;<span>1.2</span></a>, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.</p>
-<div id="exm-saludo" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.2</strong></span> <em>Hola, ¿cómo estás?</em></p>
-</div>
-<p>Otro caso son los enunciados con variables sin valor asignado. En el <a href="#exm-variable" class="quarto-xref">Ejemplo&nbsp;<span>1.3</span></a>, no tiene sentido preguntar si es verdadero o falso porque <em>x</em> no representa nada concreto.</p>
-<div id="exm-variable" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.3</strong></span> <em>x</em> es blanco</p>
-</div>
-</section>
-<section id="negación-de-una-proposición" class="level2">
-<h2 class="anchored" data-anchor-id="negación-de-una-proposición">Negación de una proposición</h2>
-<p>La proposición del <a href="#exm-sol" class="quarto-xref">Ejemplo&nbsp;<span>1.1</span></a> puede etiquetarse con una letra; en esta ocasión será la letra <em>P</em>. La proposición <em>P</em> puede tener su negación, como se observa en el <a href="#exm-sol-negacion" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a>. La negación se representa con el signo <span class="math inline">\(\neg\)</span>; por tanto, la negación de <em>P</em> queda como <span class="math inline">\(\neg P\)</span>. <span class="math inline">\(\neg P\)</span> se lee como “no <em>P</em>” o “la negación de <em>P</em>” <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>.</p>
-<div id="exm-sol-negacion" class="theorem example">
-<p><span class="theorem-title"><strong>Ejemplo 1.4</strong></span> <em>El sol no es una estrella.</em></p>
-</div>
-</section>
-<section id="tabla-de-verdad" class="level2">
-<h2 class="anchored" data-anchor-id="tabla-de-verdad">Tabla de verdad</h2>
-<p>Las proposiciones <em>P</em> y <span class="math inline">\(\neg P\)</span> pueden valorarse como V o F. Si <em>P</em> es V, entonces <span class="math inline">\(\neg P\)</span> es F; y si <em>P</em> es F, entonces <span class="math inline">\(\neg P\)</span> es V. Esto se puede representar con una <strong>tabla de verdad</strong> <span class="citation" data-cites="munoz2001">(<a href="../references.html#ref-munoz2001" role="doc-biblioref">Muñoz 2001</a>)</span>, como se observa en la <a href="#tbl-verdad-negacion" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>.</p>
-<div id="tbl-verdad-negacion" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-verdad-negacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;1.1: Tabla de verdad para las proposiciones <span class="math inline">\(P\)</span> y <span class="math inline">\(\neg P\)</span>
-</figcaption>
-<div aria-describedby="tbl-verdad-negacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="table-responsive">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(P\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(\neg P\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</figure>
-</div>
+<p>La herencia es un proceso donde unos rasgos se transmiten a la descendencia de un organismo. Para que ocurra la herencia necesitamos genes. Los genes codifican información necesaria para producir diferentes estructuras celulares <span class="citation" data-cites="audesirk2013">(<a href="../references.html#ref-audesirk2013" role="doc-biblioref">Audesirk et&nbsp;al. 2013</a>)</span>.</p>
+<p>Los genes se encuentran en los cromosomas, que son estructuras de ADN empaquetadas por unas proteínas llamadas histonas. En esta cadena larga hay segmentos específicos de ADN con longitudes variables que se identifican como los genes <span class="citation" data-cites="audesirk2013">(<a href="../references.html#ref-audesirk2013" role="doc-biblioref">Audesirk et&nbsp;al. 2013</a>)</span>.</p>
+<p>Al evaluar la posición de un solo gen en la cadena larga de ADN empaquetada conocida como cromosoma, esa posición ya identificada se conoce como locus. Ahora bien, si me refiero a varias posiciones de varios genes en el cromosoma se dice loci <span class="citation" data-cites="audesirk2013">(<a href="../references.html#ref-audesirk2013" role="doc-biblioref">Audesirk et&nbsp;al. 2013</a>)</span>.</p>
+<p>Los cromosomas están en pares y se llaman cromosomas homólogos. Un par homólogo tiene los mismos genes en los mismos loci. Pero hay ocasiones en que en un homólogo su gen en determinado locus sea diferente al del otro cromosoma homólogo <span class="citation" data-cites="audesirk2013">(<a href="../references.html#ref-audesirk2013" role="doc-biblioref">Audesirk et&nbsp;al. 2013</a>)</span>. Es decir, el gen del cromosoma homólogo 1 es diferente al gen del cromosoma homólogo 2. A este gen que en determinado locus es diferente entre los cromosomas homólogos se le conoce como alelo <span class="citation" data-cites="audesirk2013">(<a href="../references.html#ref-audesirk2013" role="doc-biblioref">Audesirk et&nbsp;al. 2013</a>)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-munoz2001" class="csl-entry" role="listitem">
-Muñoz, Juan Manuel. 2001. <em>Introducción a la teoría de conjuntos</em>. Recuperado de <a href="https://repositorio.unal.edu.co/handle/unal/79986" class="uri">https://repositorio.unal.edu.co/handle/unal/79986</a>.
+<div id="ref-audesirk2013" class="csl-entry" role="listitem">
+Audesirk, Teresa, Gerald Audesirk, y Bruce E. Byers. 2013. <em>Biología: La vida en la Tierra con fisiología</em>. 9.ª ed. Pearson Educación.
 </div>
 </div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -950,13 +857,13 @@ Muñoz, Juan Manuel. 2001. <em>Introducción a la teoría de conjuntos</em>. Rec
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../summary.html" class="pagination-link" aria-label="Resumen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Resumen</span>
+      <a href="../02_quimica/01_cinetica_quimica.html" class="pagination-link" aria-label="Cinética química">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Cinética química</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../02_quimica/01_cinetica_quimica.html" class="pagination-link" aria-label="Cinética química">
-        <span class="nav-page-text"><span class="chapter-title">Cinética química</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -30,6 +30,16 @@
     ]
   },
   {
+    "objectID": "intro.html#cómo-escribir-ecuaciones",
+    "href": "intro.html#cómo-escribir-ecuaciones",
+    "title": "Introducción",
+    "section": "Cómo escribir ecuaciones",
+    "text": "Cómo escribir ecuaciones\n\nEcuación básica\n$$\\text{Descripción} = \\frac{a}{b}$$ {#eq-nombre}\n\n\nTexto largo — salto de línea\n$$\\substack{\\text{Línea 1} \\\\ \\text{Línea 2}} = \\frac{a}{b}$$ {#eq-nombre}\n\n\nReferenciar en texto\ncomo se observa en la @eq-nombre → renderiza como “Ecuación 2.1”.\n\n\nInline\n\nConcentración: $[B]$\nUnidades: $M$, $s$, $\\frac{M}{s}$\nSímbolo griego: $\\Delta$\n\n\n\nProhibiciones\n\nNo usar \\tag{N} — no funciona en epub. Siempre {#eq-label}.\nNo usar \\n en \\text{} — usar \\\\ dentro de \\substack{}.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "Resumen",
@@ -176,10 +186,21 @@
     "href": "02_quimica/01_cinetica_quimica.html#velocidad-promedio",
     "title": "Cinética química",
     "section": "Velocidad promedio",
-    "text": "Velocidad promedio\nAl analizar la reacción química podemos determinar dos cosas: que los reactivos desaparecen o se consumen y los productos aparecen o se forman. A partir de esto podemos organizar la velocidad en dos tipos: velocidad de desaparición y velocidad de aparición. Cuando tomamos un intervalo de tiempo en una reacción química para medir esa aparición o desaparición estamos hablando de velocidad promedio (Brown et al. 2014).\nPara calcular la velocidad promedio de aparición, recordemos que para que haya velocidad se necesita un cambio. En una reacción química, ese cambio es la concentración, y lo representamos con la letra griega delta \\(\\Delta\\). Así, el cambio de concentración es \\(\\Delta[B]\\) y el cambio de tiempo es \\(\\Delta t\\). La velocidad promedio de aparición de B queda definida como:\n\\[\\text{Velocidad promedio de aparición de B} = \\frac{\\Delta[B]}{\\Delta t} \\tag{1}\\] (Brown et al. 2014)\nDonde \\(\\Delta\\) se lee como “cambio en” y siempre es igual a un valor final menos un valor inicial. Es decir, \\(\\Delta[B] = [B]_{t_2} - [B]_{t_1}\\) (donde \\(t_2\\) es el tiempo final y \\(t_1\\) es el tiempo inicial) y \\(\\Delta t = t_2 - t_1\\). Sustituyendo, la ecuación completa queda:\n\\[\\text{Velocidad promedio de aparición de B} = \\frac{\\Delta[B]}{\\Delta t} = \\frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1} \\tag{2}\\] (Brown et al. 2014)\nPor otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo (\\(-\\)). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la ecuación:\n\\[\\text{Velocidad promedio de desaparición de A} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1} \\tag{3}\\] (Brown et al. 2014)\nEl resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva (Brown et al. 2014).\nCuando se habla de la velocidad sin decir si es de un reactivo o un producto, se entiende que es la velocidad de la reacción completa (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
+    "text": "Velocidad promedio\nAl analizar la reacción química podemos determinar dos cosas: que los reactivos desaparecen o se consumen y los productos aparecen o se forman. A partir de esto podemos organizar la velocidad en dos tipos: velocidad de desaparición y velocidad de aparición. Cuando tomamos un intervalo de tiempo en una reacción química para medir esa aparición o desaparición estamos hablando de velocidad promedio (Brown et al. 2014).\nPara calcular la velocidad promedio de aparición, recordemos que para que haya velocidad se necesita un cambio. En una reacción química, ese cambio es la concentración, y lo representamos con la letra griega delta \\(\\Delta\\). Así, el cambio de concentración es \\(\\Delta[B]\\) y el cambio de tiempo es \\(\\Delta t\\). La velocidad promedio de aparición de B queda definida como:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{aparición de B}} = \\frac{\\Delta[B]}{\\Delta t} \\tag{2.1}\\]\nDonde \\(\\Delta\\) se lee como “cambio en” y siempre es igual a un valor final menos un valor inicial. Es decir, \\(\\Delta[B] = [B]_{t_2} - [B]_{t_1}\\) (donde \\(t_2\\) es el tiempo final y \\(t_1\\) es el tiempo inicial) y \\(\\Delta t = t_2 - t_1\\). Sustituyendo, la ecuación completa queda:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{aparición de B}} = \\frac{\\Delta[B]}{\\Delta t} = \\frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1} \\tag{2.2}\\]\nPor otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo (\\(-\\)). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la Ecuación 2.3:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{desaparición de A}} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1} \\tag{2.3}\\]\nEl resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva. Si no especificamos si hablamos de un reactivo o un producto, la velocidad se refiere a la reacción completa (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
     "crumbs": [
       "Química",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html",
+    "href": "03_biologia/01_base_fisica_herencia.html",
+    "title": "La base física de la herencia",
+    "section": "",
+    "text": "La herencia es un proceso donde unos rasgos se transmiten a la descendencia de un organismo. Para que ocurra la herencia necesitamos genes. Los genes codifican información necesaria para producir diferentes estructuras celulares (Audesirk et al. 2013).\nLos genes se encuentran en los cromosomas, que son estructuras de ADN empaquetadas por unas proteínas llamadas histonas. En esta cadena larga hay segmentos específicos de ADN con longitudes variables que se identifican como los genes (Audesirk et al. 2013).\nAl evaluar la posición de un solo gen en la cadena larga de ADN empaquetada conocida como cromosoma, esa posición ya identificada se conoce como locus. Ahora bien, si me refiero a varias posiciones de varios genes en el cromosoma se dice loci (Audesirk et al. 2013).\nLos cromosomas están en pares y se llaman cromosomas homólogos. Un par homólogo tiene los mismos genes en los mismos loci. Pero hay ocasiones en que en un homólogo su gen en determinado locus sea diferente al del otro cromosoma homólogo (Audesirk et al. 2013). Es decir, el gen del cromosoma homólogo 1 es diferente al gen del cromosoma homólogo 2. A este gen que en determinado locus es diferente entre los cromosomas homólogos se le conoce como alelo (Audesirk et al. 2013).\n\n\n\n\nAudesirk, Teresa, Gerald Audesirk, y Bruce E. Byers. 2013. Biología: La vida en la Tierra con fisiología. 9.ª ed. Pearson Educación.",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -187,7 +208,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Brown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz, Juan Manuel. 2001. Introducción a La Teoría de\nConjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
+    "text": "Audesirk, Teresa, Gerald Audesirk, and Bruce E. Byers. 2013.\nBiología: La Vida En La Tierra Con Fisiología. 9th ed. Pearson\nEducación.\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz, Juan Manuel. 2001. Introducción a La Teoría de\nConjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
     "crumbs": [
       "Apéndices",
       "References"

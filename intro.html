@@ -349,12 +349,28 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Apéndices</span></a>
+ <span class="menu-text">Biología</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La base física de la herencia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
@@ -375,6 +391,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#cómo-leer-este-libro" id="toc-cómo-leer-este-libro" class="nav-link active" data-scroll-target="#cómo-leer-este-libro">Cómo leer este libro</a></li>
   <li><a href="#convenciones" id="toc-convenciones" class="nav-link" data-scroll-target="#convenciones">Convenciones</a></li>
+  <li><a href="#cómo-escribir-ecuaciones" id="toc-cómo-escribir-ecuaciones" class="nav-link" data-scroll-target="#cómo-escribir-ecuaciones">Cómo escribir ecuaciones</a>
+  <ul class="collapse">
+  <li><a href="#ecuación-básica" id="toc-ecuación-básica" class="nav-link" data-scroll-target="#ecuación-básica">Ecuación básica</a></li>
+  <li><a href="#texto-largo-salto-de-línea" id="toc-texto-largo-salto-de-línea" class="nav-link" data-scroll-target="#texto-largo-salto-de-línea">Texto largo — salto de línea</a></li>
+  <li><a href="#referenciar-en-texto" id="toc-referenciar-en-texto" class="nav-link" data-scroll-target="#referenciar-en-texto">Referenciar en texto</a></li>
+  <li><a href="#inline" id="toc-inline" class="nav-link" data-scroll-target="#inline">Inline</a></li>
+  <li><a href="#prohibiciones" id="toc-prohibiciones" class="nav-link" data-scroll-target="#prohibiciones">Prohibiciones</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -413,8 +437,38 @@ ul.task-list li input[type="checkbox"] {
 <li><code>@tbl-</code> son tablas</li>
 <li><code>@eq-</code> son ecuaciones</li>
 </ul>
+</section>
+<section id="cómo-escribir-ecuaciones" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-escribir-ecuaciones">Cómo escribir ecuaciones</h2>
+<section id="ecuación-básica" class="level3">
+<h3 class="anchored" data-anchor-id="ecuación-básica">Ecuación básica</h3>
+<pre><code>$$\text{Descripción} = \frac{a}{b}$$ {#eq-nombre}</code></pre>
+</section>
+<section id="texto-largo-salto-de-línea" class="level3">
+<h3 class="anchored" data-anchor-id="texto-largo-salto-de-línea">Texto largo — salto de línea</h3>
+<pre><code>$$\substack{\text{Línea 1} \\ \text{Línea 2}} = \frac{a}{b}$$ {#eq-nombre}</code></pre>
+</section>
+<section id="referenciar-en-texto" class="level3">
+<h3 class="anchored" data-anchor-id="referenciar-en-texto">Referenciar en texto</h3>
+<p><code>como se observa en la @eq-nombre</code> → renderiza como “Ecuación 2.1”.</p>
+</section>
+<section id="inline" class="level3">
+<h3 class="anchored" data-anchor-id="inline">Inline</h3>
+<ul>
+<li>Concentración: <code>$[B]$</code></li>
+<li>Unidades: <code>$M$</code>, <code>$s$</code>, <code>$\frac{M}{s}$</code></li>
+<li>Símbolo griego: <code>$\Delta$</code></li>
+</ul>
+</section>
+<section id="prohibiciones" class="level3">
+<h3 class="anchored" data-anchor-id="prohibiciones">Prohibiciones</h3>
+<ul>
+<li><strong>No usar</strong> <code>\tag{N}</code> — no funciona en epub. Siempre <code>{#eq-label}</code>.</li>
+<li><strong>No usar</strong> <code>\n</code> en <code>\text{}</code> — usar <code>\\</code> dentro de <code>\substack{}</code>.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
