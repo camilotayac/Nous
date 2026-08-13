@@ -9,6 +9,7 @@ book:
   title: Nous
   author: Camilo Tayac
   date: 2026-06-08
+  cover-image: cover.png
   chapters:
   - index.qmd
   - intro.qmd
@@ -19,6 +20,9 @@ book:
   - part: Química
     chapters:
     - 02_quimica/01_cinetica_quimica.qmd
+  - part: Biología
+    chapters:
+    - 03_biologia/01_base_fisica_herencia.qmd
   - part: Apéndices
     chapters:
     - references.qmd
@@ -39,7 +43,7 @@ format:
     cite-method: biblatex
     biblio-style: authoryear
     include-in-header:
-      - preamble.tex
+    - preamble.tex
   epub:
     css: epub-styles.css
 bibliography: references.bib
