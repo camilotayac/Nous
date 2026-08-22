@@ -1,0 +1,272 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nous",
+    "section": "",
+    "text": "Nous\nBienvenido a Nous, un cuaderno de apuntes sobre lógica, conjuntos, química y otros temas que voy estudiando. Cada nota nace en Obsidian y se publica como libro con Quarto.\nEste libro crece conmigo — los temas se agregan a medida que los estudio.",
+    "crumbs": [
+      "Nous"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introducción",
+    "section": "",
+    "text": "Cómo leer este libro\nLos capítulos están organizados por materia. Cada uno puede leerse de forma independiente. Al final hay referencias bibliográficas.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "intro.html#convenciones",
+    "href": "intro.html#convenciones",
+    "title": "Introducción",
+    "section": "Convenciones",
+    "text": "Convenciones\n\n## divide secciones dentro de un mismo tema\n@exm- son ejemplos\n@tbl- son tablas\n@eq- son ecuaciones",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "intro.html#cómo-escribir-ecuaciones",
+    "href": "intro.html#cómo-escribir-ecuaciones",
+    "title": "Introducción",
+    "section": "Cómo escribir ecuaciones",
+    "text": "Cómo escribir ecuaciones\n\nEcuación básica\n$$\\text{Descripción} = \\frac{a}{b}$$ {#eq-nombre}\n\n\nTexto largo — salto de línea\n$$\\substack{\\text{Línea 1} \\\\ \\text{Línea 2}} = \\frac{a}{b}$$ {#eq-nombre}\n\n\nReferenciar en texto\ncomo se observa en la @eq-nombre → renderiza como “Ecuación 2.1”.\n\n\nInline\n\nConcentración: $[B]$\nUnidades: $M$, $s$, $\\frac{M}{s}$\nSímbolo griego: $\\Delta$\n\n\n\nProhibiciones\n\nNo usar \\tag{N} — no funciona en epub. Siempre {#eq-label}.\nNo usar \\n en \\text{} — usar \\\\ dentro de \\substack{}.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Resumen",
+    "section": "",
+    "text": "(por definir — se actualizará cuando haya más contenido)",
+    "crumbs": [
+      "Resumen"
+    ]
+  },
+  {
+    "objectID": "01_conjuntos/00_proposicion_negacion.html",
+    "href": "01_conjuntos/00_proposicion_negacion.html",
+    "title": "Proposición y su negación",
+    "section": "",
+    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz 2001). Usando la lógica, podemos determinar si un enunciado es V o F.",
+    "crumbs": [
+      "Conjuntos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
+    ]
+  },
+  {
+    "objectID": "01_conjuntos/00_proposicion_negacion.html#definición-de-proposición",
+    "href": "01_conjuntos/00_proposicion_negacion.html#definición-de-proposición",
+    "title": "Proposición y su negación",
+    "section": "",
+    "text": "Ejemplo 1.1 El sol es una estrella.",
+    "crumbs": [
+      "Conjuntos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
+    ]
+  },
+  {
+    "objectID": "01_conjuntos/00_proposicion_negacion.html#enunciados-que-no-son-proposiciones",
+    "href": "01_conjuntos/00_proposicion_negacion.html#enunciados-que-no-son-proposiciones",
+    "title": "Proposición y su negación",
+    "section": "Enunciados que no son proposiciones",
+    "text": "Enunciados que no son proposiciones\nHay enunciados que no son proposiciones, como se ve en el Ejemplo 1.2, en el cual no podemos determinar si el enunciado es V o F, dado que se trata de una expresión de saludo.\n\nEjemplo 1.2 Hola, ¿cómo estás?\n\nOtro caso son los enunciados con variables sin valor asignado. En el Ejemplo 1.3, no tiene sentido preguntar si es verdadero o falso porque x no representa nada concreto.\n\nEjemplo 1.3 x es blanco",
+    "crumbs": [
+      "Conjuntos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
+    ]
+  },
+  {
+    "objectID": "01_conjuntos/00_proposicion_negacion.html#negación-de-una-proposición",
+    "href": "01_conjuntos/00_proposicion_negacion.html#negación-de-una-proposición",
+    "title": "Proposición y su negación",
+    "section": "Negación de una proposición",
+    "text": "Negación de una proposición\nLa proposición del Ejemplo 1.1 puede etiquetarse con una letra; en esta ocasión será la letra P. La proposición P puede tener su negación, como se observa en el Ejemplo 1.4. La negación se representa con el signo \\(\\neg\\); por tanto, la negación de P queda como \\(\\neg P\\). \\(\\neg P\\) se lee como “no P” o “la negación de P” (Muñoz 2001).\n\nEjemplo 1.4 El sol no es una estrella.",
+    "crumbs": [
+      "Conjuntos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
+    ]
+  },
+  {
+    "objectID": "01_conjuntos/00_proposicion_negacion.html#tabla-de-verdad",
+    "href": "01_conjuntos/00_proposicion_negacion.html#tabla-de-verdad",
+    "title": "Proposición y su negación",
+    "section": "Tabla de verdad",
+    "text": "Tabla de verdad\nLas proposiciones P y \\(\\neg P\\) pueden valorarse como V o F. Si P es V, entonces \\(\\neg P\\) es F; y si P es F, entonces \\(\\neg P\\) es V. Esto se puede representar con una tabla de verdad (Muñoz 2001), como se observa en la Tabla 1.1.\n\n\n\nTabla 1.1: Tabla de verdad para las proposiciones \\(P\\) y \\(\\neg P\\)\n\n\n\n\n\n\n\\(P\\)\n\\(\\neg P\\)\n\n\n\n\nV\nF\n\n\nF\nV\n\n\n\n\n\n\n\n\n\n\n\nMuñoz, Juan Manuel. 2001. Introducción a la teoría de conjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
+    "crumbs": [
+      "Conjuntos",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html",
+    "href": "02_quimica/01_cinetica_quimica.html",
+    "title": "Cinética química",
+    "section": "",
+    "text": "Introducción a la cinética química\nCuando hablamos de una reacción química es cuando los reactivos se convierten en productos. En esta ocasión solo nos enfocamos en el inicio y el final. Entre el inicio y el final hay etapas que determinan cómo ha cambiado el reactivo al producto, cómo cambia un enlace, cómo se transfiere un átomo, etc. Todo este proceso sucede en un tiempo determinado, y al medir cómo cambia la concentración con el tiempo puedo determinar la velocidad de reacción. La velocidad de reacción es la velocidad con la cual ocurre una reacción química, pasa de reactivo a producto y la rama de la química que estudia esto es la cinética química (Brown et al. 2014).",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#teoría-de-colisiones",
+    "href": "02_quimica/01_cinetica_quimica.html#teoría-de-colisiones",
+    "title": "Cinética química",
+    "section": "Teoría de colisiones",
+    "text": "Teoría de colisiones\nPara que ocurra una reacción química debe ocurrir colisiones o choques entre los reactivos para que haya una transferencia de atomos o una reorganización de enlaces formando el producto. Esto solo ocurre si el choque o colisión se da en la posición correcta y si tiene la suficiente energía (Brown et al. 2014).",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#efecto-del-estado-físico",
+    "href": "02_quimica/01_cinetica_quimica.html#efecto-del-estado-físico",
+    "title": "Cinética química",
+    "section": "Efecto del estado físico",
+    "text": "Efecto del estado físico\nHay varios factores que afectan la colisión entre partículas. El primero es el estado físico de los reactivos. Al estar los reactivos en una mezcla homogénea, la cantidad de colisiones es mayor y más rápida, permitiendo que los reactivos generen esa reorganización de átomos o enlaces. Pero si estamos en una mezcla heterogénea, como sólido y líquido, esto reduce los choques y la velocidad se reduce, lo que disminuye la cantidad de producto que se genera en el tiempo. Un ejemplo cotidiano que ayuda a comprender esto es el tipo de presentación de un medicamento: un medicamento sólido se va a demorar más en hacer efecto que el medicamento en presentación en polvo, dado que el sólido tiene menor área superficial comparado con el polvo (Brown et al. 2014).\nUna analogía para entender esto: imagina 10 mineros que van a picar una piedra gigante. Se van a demorar más porque tienen que ir picando de afuera hacia dentro y, al ser una sola piedra, el área que pueden picar es menor. Ahora, ¿qué pasa si esa misma piedra está partida en 10 piedras más pequeñas? Los mineros van a poder escoger cada uno una piedra, y se va a picar más rápido porque cada minero va a tener más área que picar en comparación con la piedra grande.",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#efecto-de-la-concentración",
+    "href": "02_quimica/01_cinetica_quimica.html#efecto-de-la-concentración",
+    "title": "Cinética química",
+    "section": "Efecto de la concentración",
+    "text": "Efecto de la concentración\nEl segundo factor que afecta la colisión es la concentración de los reactivos. A mayor concentración en un espacio determinado, aumentan las probabilidades de colisión, y si hay más colisiones o choques, hay mayor velocidad de reacción (Brown et al. 2014).\nImaginemos un espacio con dos partículas. Con el tiempo, estas partículas se moverán, pero como tienen tanto espacio, su probabilidad de que choquen es baja. Ahora imaginemos un espacio con un millón de partículas. Con el tiempo se moverán, pero como hay una gran cantidad de partículas, ellas van a chocar muy fácilmente con otra partícula, y ese choque aumenta la probabilidad de que se forme el producto, aumentando la velocidad de reacción.",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#efecto-de-la-temperatura",
+    "href": "02_quimica/01_cinetica_quimica.html#efecto-de-la-temperatura",
+    "title": "Cinética química",
+    "section": "Efecto de la temperatura",
+    "text": "Efecto de la temperatura\nEl tercer factor es la temperatura. La temperatura se relaciona con la energía cinética y la energía cinética se relaciona con el movimiento de las partículas. Si hay mayor movimiento de las partículas mayor va a ser la probabilidad de que choquen, y además estas colisiones tendrán mayor energía, lo que permite superar la barrera de energía necesaria para que la reacción ocurra. A temperatura baja el movimiento es menor, por ende los choques son menores y con menos energía. Si la temperatura es alta el movimiento de las partículas es mayor, por ende hay más choques y con mayor energía. Por lo tanto, la temperatura afecta la velocidad de reacción al modificar tanto la frecuencia como la energía de los choques entre partículas (Brown et al. 2014).",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#efecto-de-los-catalizadores",
+    "href": "02_quimica/01_cinetica_quimica.html#efecto-de-los-catalizadores",
+    "title": "Cinética química",
+    "section": "Efecto de los catalizadores",
+    "text": "Efecto de los catalizadores\nEl cuarto factor es la utilización de catalizador. Un catalizador es un compuesto que permite acelerar una reacción química afectando los tipos de colisiones y modificando los mecanismos de reacción, sin participar en la reacción química (Brown et al. 2014).",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#velocidad-de-reacción",
+    "href": "02_quimica/01_cinetica_quimica.html#velocidad-de-reacción",
+    "title": "Cinética química",
+    "section": "Velocidad de reacción",
+    "text": "Velocidad de reacción\nPara comenzar hablar sobre velocidad de reacción debemos entender que es la velocidad. La velocidad es cuánto cambia algo en cierto tiempo. Un ejemplo de esto, cuando un jugador de fútbol va a cobrar un penalti, al analizar conocemos la distancia desde el punto penal hasta la portería, y si contamos el tiempo que se demora el balón en cambiar la posición desde que el tirador patea hasta que el balón llega a la portería puedo saber la velocidad de disparo. Para saber la velocidad siempre va a estar involucrado el tiempo cuando ocurre un cambio. En el caso de las reacciones químicas, ese cambio es la concentración, no la distancia (Brown et al. 2014).\nAl observar una reacción química vemos como cambia la concentración del reactivo o del producto. La velocidad de reacción mide qué tan rápido cambia esa concentración con el tiempo. La concentración la representamos con \\([concentración]\\) que se mide en Molaridad \\(M\\) y el tiempo en segundos \\(s\\), por lo que la unidad de velocidad es \\(\\frac{M}{s}\\) (Brown et al. 2014).",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "02_quimica/01_cinetica_quimica.html#velocidad-promedio",
+    "href": "02_quimica/01_cinetica_quimica.html#velocidad-promedio",
+    "title": "Cinética química",
+    "section": "Velocidad promedio",
+    "text": "Velocidad promedio\nAl analizar la reacción química podemos determinar dos cosas: que los reactivos desaparecen o se consumen y los productos aparecen o se forman. A partir de esto podemos organizar la velocidad en dos tipos: velocidad de desaparición y velocidad de aparición. Cuando tomamos un intervalo de tiempo en una reacción química para medir esa aparición o desaparición estamos hablando de velocidad promedio (Brown et al. 2014).\nPara calcular la velocidad promedio de aparición, recordemos que para que haya velocidad se necesita un cambio. En una reacción química, ese cambio es la concentración, y lo representamos con la letra griega delta \\(\\Delta\\). Así, el cambio de concentración es \\(\\Delta[B]\\) y el cambio de tiempo es \\(\\Delta t\\). La velocidad promedio de aparición de B queda definida como:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{aparición de B}} = \\frac{\\Delta[B]}{\\Delta t} \\tag{2.1}\\]\nDonde \\(\\Delta\\) se lee como “cambio en” y siempre es igual a un valor final menos un valor inicial. Es decir, \\(\\Delta[B] = [B]_{t_2} - [B]_{t_1}\\) (donde \\(t_2\\) es el tiempo final y \\(t_1\\) es el tiempo inicial) y \\(\\Delta t = t_2 - t_1\\). Sustituyendo, la ecuación completa queda:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{aparición de B}} = \\frac{\\Delta[B]}{\\Delta t} = \\frac{[B]_{t_2}-[B]_{t_1}}{t_2-t_1} \\tag{2.2}\\]\nPor otro lado, cuando hablamos de velocidad promedio de desaparición debemos tener en cuenta el uso del signo (\\(-\\)). Este signo nos va a indicar en la ecuación que está desapareciendo un reactivo, como se observa en la Ecuación 2.3:\n\\[\\substack{\\text{Velocidad promedio de} \\\\ \\text{desaparición de A}} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2}-[A]_{t_1}}{t_2-t_1} \\tag{2.3}\\]\nEl resultado va a ser positivo, recordar que la velocidad siempre la vamos a expresar como una cantidad positiva. Si no especificamos si hablamos de un reactivo o un producto, la velocidad se refiere a la reacción completa (Brown et al. 2014).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cinética química</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html",
+    "href": "03_biologia/01_base_fisica_herencia.html",
+    "title": "La base física de la herencia",
+    "section": "",
+    "text": "La herencia y los genes\nLa herencia es un proceso donde unos rasgos se transmiten a la descendencia de un organismo. Para que ocurra la herencia necesitamos genes. Los genes codifican información necesaria para producir diferentes estructuras celulares (Audesirk et al. 2013).",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html#los-genes-y-su-ubicación-en-el-cromosoma",
+    "href": "03_biologia/01_base_fisica_herencia.html#los-genes-y-su-ubicación-en-el-cromosoma",
+    "title": "La base física de la herencia",
+    "section": "Los genes y su ubicación en el cromosoma",
+    "text": "Los genes y su ubicación en el cromosoma\nLos genes se encuentran en los cromosomas, que son estructuras de ADN empaquetadas por unas proteínas llamadas histonas. En esta cadena larga hay segmentos específicos de ADN con longitudes variables que se identifican como los genes (Audesirk et al. 2013).\nAl evaluar la posición de un solo gen en la cadena larga de ADN empaquetada conocida como cromosoma, esa posición ya identificada se conoce como locus. Ahora bien, si me refiero a varias posiciones de varios genes en el cromosoma se dice loci (Audesirk et al. 2013).",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html#cromosomas-homólogos-y-alelos",
+    "href": "03_biologia/01_base_fisica_herencia.html#cromosomas-homólogos-y-alelos",
+    "title": "La base física de la herencia",
+    "section": "Cromosomas homólogos y alelos",
+    "text": "Cromosomas homólogos y alelos\nLos cromosomas están en pares y se llaman cromosomas homólogos. Un par homólogo tiene los mismos genes en los mismos loci. Pero hay ocasiones en que en un homólogo su gen en determinado locus sea diferente al del otro cromosoma homólogo (Audesirk et al. 2013). Es decir, el gen del cromosoma homólogo 1 es diferente al gen del cromosoma homólogo 2. A este gen que en determinado locus es diferente entre los cromosomas homólogos se le conoce como alelo (Audesirk et al. 2013).",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html#las-mutaciones-como-fuente-de-alelos",
+    "href": "03_biologia/01_base_fisica_herencia.html#las-mutaciones-como-fuente-de-alelos",
+    "title": "La base física de la herencia",
+    "section": "Las mutaciones como fuente de alelos",
+    "text": "Las mutaciones como fuente de alelos\n¿Por qué un gen en determinado locus es un alelo? Esto ocurre por la mutación de ese gen. La mutación ocurre en el óvulo o espermatozoide de nuestros antecesores y esto pudo ocurrir hace cientos de años. Sin embargo, puede ocurrir en nuestros progenitores, pero esto es muy raro (Audesirk et al. 2013).",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html#homocigotos-y-heterocigotos",
+    "href": "03_biologia/01_base_fisica_herencia.html#homocigotos-y-heterocigotos",
+    "title": "La base física de la herencia",
+    "section": "Homocigotos y heterocigotos",
+    "text": "Homocigotos y heterocigotos\nCuando tenemos un gen o genes en el mismo locus o loci y son idénticos, indicamos que este gen es homocigoto, pero para los genes en un locus que son diferentes (es decir, cuando los alelos son diferentes) se conoce como heterocigoto (Audesirk et al. 2013). Donde homocigoto desde el griego se indica como mismo par y heterocigoto del griego es diferente par (Audesirk et al. 2013).",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "03_biologia/01_base_fisica_herencia.html#descubrimiento-de-los-principios-de-la-herencia",
+    "href": "03_biologia/01_base_fisica_herencia.html#descubrimiento-de-los-principios-de-la-herencia",
+    "title": "La base física de la herencia",
+    "section": "Descubrimiento de los principios de la herencia",
+    "text": "Descubrimiento de los principios de la herencia\nUno de los primeros en estudiar la herencia fue Mendel. Para cualquier experimento exitoso en biología hay tres pasos clave: elegir un sistema adecuado, diseñar y realizar el experimento de manera correcta, y analizar los datos en forma adecuada. Mendel fue el primer genetista en completar los tres pasos. Mendel eligió el guisante comestible para sus experimentos. Las estructuras reproductivas masculinas de una flor se llaman estambres y producen polen, cada grano de polen contiene espermatozoides. La estructura reproductiva femenina se llama carpelo, que tiene un ovario donde se ubican los óvulos. Los guisantes se autofecundan porque los pétalos encierran todas las estructuras reproductivas. Cuando el espermatozoide de un organismo fecunda sus propios óvulos, el proceso se llama autofecundación. Mendel hizo dos técnicas: la primera era aprovechar la autofecundación, y la segunda era quitarle a una flor sus estambres para que no se autofecundara, luego usar el polen de otra flor para fecundar la flor que se le quitó sus estambres. Cuando el espermatozoide de un organismo fecunda los óvulos de un organismo diferente, el proceso se llama fecundación cruzada. El diseño de Mendel era simple, pero brillante. Estudió rasgos con formas inequívocamente diferentes, como flores blancas frente a moradas. También comenzó por estudiar sólo un rasgo a la vez, a diferencia de los primeros investigadores que intentaban estudiar todas las características de organismos completos simultáneamente. Mendel hizo varias generaciones para ver qué sucedía y contó el número de descendientes con cada tipo de rasgo, usando análisis numérico e interpretación estadística, algo innovador en su época (Audesirk et al. 2013).\n\n\n\n\nAudesirk, Teresa, Gerald Audesirk, y Bruce E. Byers. 2013. Biología: La vida en la Tierra con fisiología. 9.ª ed. Pearson Educación.",
+    "crumbs": [
+      "Biología",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Audesirk, Teresa, Gerald Audesirk, and Bruce E. Byers. 2013.\nBiología: La Vida En La Tierra Con Fisiología. 9th ed. Pearson\nEducación.\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J.\nMurphy, and Patrick M. Woodward. 2014. Química, La Ciencia\nCentral. 12th ed. Pearson Educación.\n\n\nMuñoz, Juan Manuel. 2001. Introducción a La Teoría de\nConjuntos. Recuperado de https://repositorio.unal.edu.co/handle/unal/79986.",
+    "crumbs": [
+      "Apéndices",
+      "References"
+    ]
+  }
+]
