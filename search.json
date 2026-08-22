@@ -54,7 +54,7 @@
     "href": "01_conjuntos/00_proposicion_negacion.html",
     "title": "Proposición y su negación",
     "section": "",
-    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz 2001). Usando la lógica, podemos determinar si un enunciado es V o F.",
+    "text": "Definición de proposición\nLa unión de dos o más palabras nos permite crear una oración o enunciado, como se muestra en el Ejemplo 1.1.\nUn enunciado es una proposición cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es (Muñoz 2001), dado que un suceso puede ser o no ser. Usando la lógica, podemos determinar si un enunciado es V o F.",
     "crumbs": [
       "Conjuntos",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proposición y su negación</span>"
@@ -193,6 +193,17 @@
     ]
   },
   {
+    "objectID": "02_quimica/02_teoria_atomica.html",
+    "href": "02_quimica/02_teoria_atomica.html",
+    "title": "Teoría atómica",
+    "section": "",
+    "text": "En nuestra vida hay dos fenómenos que parecen cotidianos, pero tienen un trasfondo químico. En nuestro entorno observamos objetos que tienen un color determinado, por ejemplo, color café de la madera, las hojas verdes de un árbol, que indica una propiedad física. Ahora mira en nuestra cocina como se cocina un huevo, por otro lado, como el papel se quema y se convierte en cenizas, esto nos conlleva a identificar una propiedad química. Ambas cosas se explican desde las propiedades de los átomos que los conforman (Brown et al. 2014).\nAl conocer la historia, entre los años 460 y 370 antes de Cristo, Demócrito planteó que las cosas deben estar conformadas por algo muy pequeño, y las llamó átomo. Lo curioso es que la palabra átomo en griego significa indivisible, y no es raro dado que Demócrito indicó que estas partículas no se podían dividir (Brown et al. 2014).\nPero hubo una cuestión: Platón y Aristóteles indicaron que no podría existir una partícula que no se pueda dividir. Este pensamiento llevó a que la idea del átomo se perdiera en el tiempo.\nMuchos años después, en el siglo XVII se retomó el término átomo, esa idea. Pero en el año 1803 a 1807 Dalton la estableció al plantear los cuatro postulados atómicos.\nEl primer postulado que Dalton planteó es que los elementos que conforman la materia ordinaria están conformados por átomos. Ahora bien, el segundo postulado establece que los átomos de un mismo elemento son idénticos entre sí, pero diferentes a los de otro elemento: un átomo de carbono es igual a otro de carbono, pero distinto a uno de oxígeno. Entendido esto, el postulado tres habla de que los átomos de un elemento dado, por ejemplo el de hidrógeno, no se pueden convertir en átomos de otro elemento mediante una reacción química, dado que los átomos no se crean ni se destruyen. El cuarto postulado indica que al combinar dos o más elementos se forman compuestos, los cuales siempre estarán conformados por los mismos elementos y en la misma relación numérica de números enteros (Brown et al. 2014).\nA partir del postulado 3 fue un apoyo para la ley de la conservación de la masa, que indica que la masa inicial antes de una reacción, que sería la de los reactivos, es igual a la masa después de la reacción química, que sería la de los productos. Y el postulado cuarto ayuda a entender la ley de la composición constante (Brown et al. 2014).\nDalton propuso la ley de proporciones múltiples, que establece: si dos elementos \\(A\\) y \\(B\\) se combinan para formar más de un compuesto, las masas de \\(B\\) que se combinan con una masa fija de \\(A\\) están en razón de números enteros pequeños (Brown et al. 2014). Podemos imaginar un ejemplo: si mezclamos 10 g de \\(A\\) con 20 g de \\(B\\), obtendremos un compuesto \\(AB\\). Pero si duplicamos la masa de \\(B\\) a 40 g, la relación cambia y obtenemos \\(AB_2\\).\n\n\n\n\nBrown, Theodore L., H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2014. Química, la ciencia central. 12.ª ed. Pearson Educación.",
+    "crumbs": [
+      "Química",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Teoría atómica</span>"
+    ]
+  },
+  {
     "objectID": "03_biologia/01_base_fisica_herencia.html",
     "href": "03_biologia/01_base_fisica_herencia.html",
     "title": "La base física de la herencia",
@@ -200,7 +211,7 @@
     "text": "La herencia y los genes\nLa herencia es un proceso donde unos rasgos se transmiten a la descendencia de un organismo. Para que ocurra la herencia necesitamos genes. Los genes codifican información necesaria para producir diferentes estructuras celulares (Audesirk et al. 2013).",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -211,7 +222,7 @@
     "text": "Los genes y su ubicación en el cromosoma\nLos genes se encuentran en los cromosomas, que son estructuras de ADN empaquetadas por unas proteínas llamadas histonas. En esta cadena larga hay segmentos específicos de ADN con longitudes variables que se identifican como los genes (Audesirk et al. 2013).\nAl evaluar la posición de un solo gen en la cadena larga de ADN empaquetada conocida como cromosoma, esa posición ya identificada se conoce como locus. Ahora bien, si me refiero a varias posiciones de varios genes en el cromosoma se dice loci (Audesirk et al. 2013).",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -222,7 +233,7 @@
     "text": "Cromosomas homólogos y alelos\nLos cromosomas están en pares y se llaman cromosomas homólogos. Un par homólogo tiene los mismos genes en los mismos loci. Pero hay ocasiones en que en un homólogo su gen en determinado locus sea diferente al del otro cromosoma homólogo (Audesirk et al. 2013). Es decir, el gen del cromosoma homólogo 1 es diferente al gen del cromosoma homólogo 2. A este gen que en determinado locus es diferente entre los cromosomas homólogos se le conoce como alelo (Audesirk et al. 2013).",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -233,7 +244,7 @@
     "text": "Las mutaciones como fuente de alelos\n¿Por qué un gen en determinado locus es un alelo? Esto ocurre por la mutación de ese gen. La mutación ocurre en el óvulo o espermatozoide de nuestros antecesores y esto pudo ocurrir hace cientos de años. Sin embargo, puede ocurrir en nuestros progenitores, pero esto es muy raro (Audesirk et al. 2013).",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -244,7 +255,7 @@
     "text": "Homocigotos y heterocigotos\nCuando tenemos un gen o genes en el mismo locus o loci y son idénticos, indicamos que este gen es homocigoto, pero para los genes en un locus que son diferentes (es decir, cuando los alelos son diferentes) se conoce como heterocigoto (Audesirk et al. 2013). Donde homocigoto desde el griego se indica como mismo par y heterocigoto del griego es diferente par (Audesirk et al. 2013).",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
@@ -255,7 +266,7 @@
     "text": "Descubrimiento de los principios de la herencia\nUno de los primeros en estudiar la herencia fue Mendel. Para cualquier experimento exitoso en biología hay tres pasos clave: elegir un sistema adecuado, diseñar y realizar el experimento de manera correcta, y analizar los datos en forma adecuada. Mendel fue el primer genetista en completar los tres pasos. Mendel eligió el guisante comestible para sus experimentos. Las estructuras reproductivas masculinas de una flor se llaman estambres y producen polen, cada grano de polen contiene espermatozoides. La estructura reproductiva femenina se llama carpelo, que tiene un ovario donde se ubican los óvulos. Los guisantes se autofecundan porque los pétalos encierran todas las estructuras reproductivas. Cuando el espermatozoide de un organismo fecunda sus propios óvulos, el proceso se llama autofecundación. Mendel hizo dos técnicas: la primera era aprovechar la autofecundación, y la segunda era quitarle a una flor sus estambres para que no se autofecundara, luego usar el polen de otra flor para fecundar la flor que se le quitó sus estambres. Cuando el espermatozoide de un organismo fecunda los óvulos de un organismo diferente, el proceso se llama fecundación cruzada. El diseño de Mendel era simple, pero brillante. Estudió rasgos con formas inequívocamente diferentes, como flores blancas frente a moradas. También comenzó por estudiar sólo un rasgo a la vez, a diferencia de los primeros investigadores que intentaban estudiar todas las características de organismos completos simultáneamente. Mendel hizo varias generaciones para ver qué sucedía y contó el número de descendientes con cada tipo de rasgo, usando análisis numérico e interpretación estadística, algo innovador en su época (Audesirk et al. 2013).\n\n\n\n\nAudesirk, Teresa, Gerald Audesirk, y Bruce E. Byers. 2013. Biología: La vida en la Tierra con fisiología. 9.ª ed. Pearson Educación.",
     "crumbs": [
       "Biología",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>La base física de la herencia</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>La base física de la herencia</span>"
     ]
   },
   {
