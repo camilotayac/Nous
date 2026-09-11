@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 5 · Reacciones en disolución acuosa – Nous</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../02_quimica/06-estructura-electronica-del-atomo.html" rel="next">
+<link href="../02_quimica/04-estequiometria.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-53aca5cea238aca1de29c5a91d105b8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Capítulo 5 · Reacciones en disolución acuosa</span></h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Nous</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Descargar" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Descargar"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Descargar PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Descargar ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nous</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Conjuntos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_conjuntos/00_proposicion_negacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proposición y su negación</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Química</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/01-historia-de-la-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1 · La química en la historia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/02-materia-y-medicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2 · La materia y su medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/03-atomos-moleculas-e-iones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3 · Átomos, moléculas e iones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/04-estequiometria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4 · Estequiometría: moles, fórmulas y ecuaciones químicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/05-reacciones-en-disolucion-acuosa.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 5 · Reacciones en disolución acuosa</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6 · Estructura electrónica del átomo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/07-tabla-periodica-y-propiedades-periodicas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7 · Tabla periódica y propiedades periódicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8 · Enlace químico I: conceptos fundamentales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/10-gases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 10 · Gases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/11-termoquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11 · Termoquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 12 · Líquidos, fuerzas intermoleculares y sólidos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/13-disoluciones-y-propiedades-coligativas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 13 · Disoluciones y propiedades coligativas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/14-cinetica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 14 · Cinética química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/15-equilibrio-quimico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 15 · Equilibrio químico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/16-acidos-y-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 16 · Ácidos y bases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/17-equilibrios-acido-base-y-solubilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 17 · Equilibrios ácido-base y de solubilidad: aplicaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/18-termodinamica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 18 · Termodinámica química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/19-electroquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 19 · Electroquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/20-quimica-nuclear.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 20 · Química nuclear</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 21 · Química de los no metales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 22 · Química de los metales de transición y química de coordinación</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Biología</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La base física de la herencia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#disociación-y-solvatación" id="toc-disociación-y-solvatación" class="nav-link" data-scroll-target="#disociación-y-solvatación">Disociación y solvatación</a></li>
+  <li><a href="#electrolitos-fuertes-y-débiles" id="toc-electrolitos-fuertes-y-débiles" class="nav-link" data-scroll-target="#electrolitos-fuertes-y-débiles">Electrolitos fuertes y débiles</a></li>
+  <li><a href="#reacciones-de-precipitación" id="toc-reacciones-de-precipitación" class="nav-link" data-scroll-target="#reacciones-de-precipitación">Reacciones de precipitación</a></li>
+  <li><a href="#reacciones-de-metátesis-y-ecuaciones-iónicas" id="toc-reacciones-de-metátesis-y-ecuaciones-iónicas" class="nav-link" data-scroll-target="#reacciones-de-metátesis-y-ecuaciones-iónicas">Reacciones de metátesis y ecuaciones iónicas</a></li>
+  <li><a href="#ácidos-bases-y-neutralización" id="toc-ácidos-bases-y-neutralización" class="nav-link" data-scroll-target="#ácidos-bases-y-neutralización">Ácidos, bases y neutralización</a></li>
+  <li><a href="#oxidación-y-reducción" id="toc-oxidación-y-reducción" class="nav-link" data-scroll-target="#oxidación-y-reducción">Oxidación y reducción</a></li>
+  <li><a href="#la-serie-de-actividad" id="toc-la-serie-de-actividad" class="nav-link" data-scroll-target="#la-serie-de-actividad">La serie de actividad</a></li>
+  <li><a href="#concentración-molaridad" id="toc-concentración-molaridad" class="nav-link" data-scroll-target="#concentración-molaridad">Concentración: molaridad</a></li>
+  <li><a href="#dilución" id="toc-dilución" class="nav-link" data-scroll-target="#dilución">Dilución</a></li>
+  <li><a href="#estequiometría-de-disoluciones-y-valoraciones" id="toc-estequiometría-de-disoluciones-y-valoraciones" class="nav-link" data-scroll-target="#estequiometría-de-disoluciones-y-valoraciones">Estequiometría de disoluciones y valoraciones</a></li>
+  <li><a href="#ejemplo-resuelto-determinación-de-una-concentración-por-valoración" id="toc-ejemplo-resuelto-determinación-de-una-concentración-por-valoración" class="nav-link" data-scroll-target="#ejemplo-resuelto-determinación-de-una-concentración-por-valoración">Ejemplo resuelto: determinación de una concentración por valoración</a></li>
+  <li><a href="#preguntas-y-ejercicios" id="toc-preguntas-y-ejercicios" class="nav-link" data-scroll-target="#preguntas-y-ejercicios">Preguntas y ejercicios</a></li>
+  <li><a href="#solucionario" id="toc-solucionario" class="nav-link" data-scroll-target="#solucionario">Solucionario</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
+  <li><a href="#enlace-al-próximo-capítulo" id="toc-enlace-al-próximo-capítulo" class="nav-link" data-scroll-target="#enlace-al-próximo-capítulo">Enlace al próximo capítulo</a></li>
+  <li><a href="#glosario-acumulativo" id="toc-glosario-acumulativo" class="nav-link" data-scroll-target="#glosario-acumulativo">Glosario acumulativo</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Capítulo 5 · Reacciones en disolución acuosa</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>La mayoría de las reacciones del laboratorio ocurren en agua, y por eso este capítulo traslada las relaciones estequiométricas del capítulo anterior a las disoluciones acuosas, las mezclas homogéneas de dos o más sustancias en que el agua es el componente presente en mayor cantidad <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. En una disolución de sal común en agua, la sal es el <strong>soluto</strong>, la sustancia que se disuelve, y el agua es el <strong>solvente</strong>, la sustancia que disuelve, y ambos pueden identificarse por sus cantidades relativas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>La propiedad decisiva de una disolución acuosa es si conduce electricidad, y eso depende de las partículas disueltas y no del agua misma, que es muy mala conductora <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. Una disolución de cloruro de sodio enciende una bombilla en el circuito de la figura clásica, mientras que una de sacarosa no lo hace, y la diferencia se debe a que la sal se disocia en iones Na⁺ y Cl⁻ que transportan carga, en tanto la sacarosa se disuelve como moléculas neutras <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>Una sustancia cuyas disoluciones acuosas contienen iones se llama <strong>electrolito</strong>, y una que no forma iones al disolverse se llama <strong>no electrolito</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. El cloruro de sodio es un electrolito porque es iónico, y la sacarosa es un no electrolito porque es molecular, una clasificación que anticipa la conductividad de casi cualquier soluto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>Atkins organiza las reacciones en disolución por la partícula transferida: protones en las ácido-base, electrones en las oxidación-reducción, y radicales o pares de electrones en otras transformaciones, un esquema que este capítulo seguirá al clasificar los tres tipos mayores de reacción acuosa, que inician con la conductividad de las sales <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 4</a>)</span>.</p>
+</section>
+<section id="disociación-y-solvatación" class="level2">
+<h2 class="anchored" data-anchor-id="disociación-y-solvatación">Disociación y solvatación</h2>
+<p>Cuando un compuesto iónico como el cloruro de sodio se disuelve, cada ion se separa de la estructura sólida y se dispersa por toda la disolución; el sólido se <strong>disocia</strong> en sus iones componentes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. El agua es muy eficaz para disolverlos porque, aunque es neutra, su oxígeno es rico en electrones y lleva carga parcial negativa, y cada hidrógeno carga parcial positiva: los cationes son atraídos por el extremo negativo y los aniones por el positivo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>Conforme el compuesto iónico se disuelve, los iones quedan rodeados de moléculas de agua y se dice que están <strong>solvatados</strong>; en las ecuaciones químicas se escriben como Na⁺(aq) y Cl⁻(aq), donde aq abrevia acuoso, y la solvatación estabiliza los iones y evita que los cationes y los aniones se recombinen <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. La naturaleza de los iones de una disolución puede predecirse desde el nombre del compuesto: el sulfato de sodio, Na₂SO₄, se disocia en iones sodio y iones sulfato, SO₄²⁻ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>Cuando se disuelve un compuesto molecular, la disolución suele consistir en moléculas intactas dispersas, por lo que la mayoría de los compuestos moleculares son no electrolitos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. Algunas sustancias moleculares, sin embargo, producen disoluciones con iones, y las más importantes son los <strong>ácidos</strong>: el cloruro de hidrógeno gaseoso, HCl(g), al disolverse en agua forma ácido clorhídrico, HCl(aq), y se <strong>ioniza</strong>, esto es, se disocia en iones H⁺(aq) y Cl⁻(aq) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+</section>
+<section id="electrolitos-fuertes-y-débiles" class="level2">
+<h2 class="anchored" data-anchor-id="electrolitos-fuertes-y-débiles">Electrolitos fuertes y débiles</h2>
+<p>Los electrolitos difieren en el grado en que conducen electricidad: los <strong>electrolitos fuertes</strong> son los solutos que existen en disolución completa o casi completamente como iones, y casi todos los compuestos iónicos solubles en agua y algunos moleculares caen en esta clase <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. Los <strong>electrolitos débiles</strong> son los solutos que existen en disolución sobre todo como moléculas neutras, con solo una pequeña fracción en forma de iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>En una disolución de ácido acético, CH₃COOH, la mayor parte del soluto está como moléculas CH₃COOH(aq) y apenas alrededor del uno por ciento se ha disociado en iones H⁺(aq) y CH₃COO⁻(aq), lo que hace del vinagre un electrolito débil <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. El amoníaco, NH₃, es también un electrolito débil, pues al añadirlo al agua acepta un ion hidrógeno de una molécula de agua y produce iones amonio NH₄⁺ e hidróxido OH⁻, pero solo cerca del uno por ciento de las moléculas reacciona <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+<p>Las disoluciones concentradas de electrolitos débiles conducen poco, mientras las de electrolitos fuertes conducen mucho, y la lista de ácidos y bases fuertes comunes es breve: entre los ácidos están el clorhídrico, el nítrico y el sulfúrico, y entre las bases los hidróxidos de metales alcalinos solubles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. La brevedad de la lista revela que la mayoría de los ácidos son débiles, y que la base débil más común es el amoníaco <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+</section>
+<section id="reacciones-de-precipitación" class="level2">
+<h2 class="anchored" data-anchor-id="reacciones-de-precipitación">Reacciones de precipitación</h2>
+<p>Al mezclar dos disoluciones claras pueden formarse productos insolubles: la reacción entre yoduro de potasio y nitrato de plomo produce un sólido amarillo insoluble llamado yoduro de plomo, PbI₂, mientras el otro producto, el nitrato de potasio, permanece en disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Las reacciones que resultan en la formación de un producto insoluble se llaman <strong>reacciones de precipitación</strong>, y el <strong>precipitado</strong> es el sólido insoluble formado por una reacción en disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>Los pares de iones con cargas opuestas se atraen tan fuertemente que forman un sólido iónico insoluble, y para predecir qué combinaciones precipitan se recurre a la <strong>solubilidad</strong>, la cantidad de sustancia que puede disolverse en una cantidad dada de solvente a cierta temperatura <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Convencionalmente, cualquier sustancia con solubilidad menor de 0,01 mol por litro se considera insoluble, porque la atracción entre los iones del sólido es demasiado fuerte para que el agua los separe <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>Las guías de solubilidad proceden de la observación experimental, no de propiedades simples como la carga iónica: todos los compuestos iónicos comunes con el anión nitrato, NO₃⁻, son solubles en agua, y también lo son todos los compuestos comunes de los iones de metales alcalinos y del ion amonio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. La mayoría de los carbonatos son insolubles, con la excepción de los de metales alcalinos, y la mayoría de los sulfatos son solubles, con excepciones notables como el sulfato de plomo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>Para predecir si se forma un precipitado al mezclar dos disoluciones de electrolitos fuertes, se anotan los iones presentes en los reactivos, se consideran las posibles combinaciones catión-anión y se consultan las guías de solubilidad <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Al mezclar nitrato de magnesio con hidróxido de sodio, los iones presentes son Mg²⁺, NO₃⁻, Na⁺ y OH⁻; el hidróxido de magnesio es insoluble, de modo que precipita, mientras el nitrato de sodio permanece disuelto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+</section>
+<section id="reacciones-de-metátesis-y-ecuaciones-iónicas" class="level2">
+<h2 class="anchored" data-anchor-id="reacciones-de-metátesis-y-ecuaciones-iónicas">Reacciones de metátesis y ecuaciones iónicas</h2>
+<p>Las reacciones en que los cationes y aniones parecen intercambiar parejas siguen el patrón general en que dos compuestos reaccionan para dar dos productos nuevos, y por eso se llaman <strong>reacciones de intercambio</strong> o <strong>reacciones de metátesis</strong>, del griego “transponer” <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Las precipitaciones se ajustan a este patrón, y también muchas neutralizaciones entre ácidos y bases, como se verá en la siguiente sección <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>La ecuación que muestra las fórmulas químicas completas de reactivos y productos, sin indicar su carácter iónico, se llama <strong>ecuación molecular</strong>; al reescribirla mostrando cada electrolito fuerte soluble como los iones que forma en disolución se obtiene la <strong>ecuación iónica completa</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Los iones que aparecen en forma idéntica en ambos lados de la ecuación iónica completa, llamados <strong>iones espectadores</strong>, no juegan ningún papel directo en la reacción, y al omitirlos se obtiene la <strong>ecuación iónica neta</strong>, que incluye solo las especies directamente involucradas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>En la precipitación del yoduro de plomo, la ecuación molecular muestra el nitrato de plomo y el yoduro de potasio como fórmulas completas, la iónica completa los presenta como Pb²⁺, NO₃⁻, K⁺ e I⁻, y la neta reduce todo a Pb²⁺(aq) + I⁻(aq) → PbI₂(s) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. Como la carga se conserva, la suma de las cargas iónicas debe ser la misma en ambos lados de una ecuación neta balanceada: si todo ion de la ecuación completa es espectador, no hay reacción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>.</p>
+<p>En la reacción entre cloruro de calcio y carbonato de sodio, el intercambio de parejas produce carbonato de calcio, insoluble, y cloruro de sodio, soluble <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.4)</span>. La ecuación iónica neta queda Ca²⁺(aq) + CO₃²⁻(aq) → CaCO₃(s), con el calcio y el carbonato como únicos participantes y el sodio y el cloruro como iones espectadores <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.4)</span>.</p>
+</section>
+<section id="ácidos-bases-y-neutralización" class="level2">
+<h2 class="anchored" data-anchor-id="ácidos-bases-y-neutralización">Ácidos, bases y neutralización</h2>
+<p>Los <strong>ácidos</strong> se ionizan en disolución acuosa para formar iones hidrógeno H⁺(aq); como el átomo de hidrógeno consta de un protón y un electrón, el ion H⁺ es solo un protón, y por eso los ácidos se llaman donadores de protones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. Las moléculas de distintos ácidos ionizan para dar distinto número de H⁺: el clorhídrico y el nítrico son monopróticos, y el sulfúrico diprótico, con dos H⁺ por molécula, aunque solo su primera ionización es completa <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+<p>Las <strong>bases</strong> son sustancias que aceptan o reaccionan con iones H⁺, y producen iones hidróxido OH⁻ al disolverse en agua; los compuestos iónicos de hidróxido, como NaOH, KOH y Ca(OH)₂, se disocian e introducen OH⁻ en la disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. Los compuestos que no contienen OH⁻ también pueden ser bases, como el amoníaco, que acepta un H⁺ de una molécula de agua y produce un ion OH⁻ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+<p>Los ácidos y bases que son electrolitos fuertes, completamente ionizados en disolución, se llaman <strong>ácidos fuertes</strong> y <strong>bases fuertes</strong>; los que son electrolitos débiles, parcialmente ionizados, son <strong>ácidos débiles</strong> y <strong>bases débiles</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. Cuando la reactividad depende solo de la concentración de H⁺(aq), los ácidos fuertes son más reactivos que los débiles, aunque la reactividad puede depender también del anión: el ácido fluorhídrico es débil pero ataca el vidrio por la acción combinada de H⁺(aq) y F⁻(aq) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+<p>Al mezclar una disolución de un ácido con una de una base ocurre una <strong>reacción de neutralización</strong>, cuyos productos carecen de las propiedades características de ambas disoluciones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. La reacción entre ácido clorhídrico e hidróxido de sodio produce agua y cloruro de sodio; por analogía, el término <strong>sal</strong> designa todo compuesto iónico cuyo catión proviene de una base y cuyo anión proviene de un ácido, y en general la neutralización entre un ácido y un hidróxido de metal produce agua y una sal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+<p>La ecuación iónica neta de la neutralización entre un ácido fuerte y una base fuerte resume la esencia del proceso: los iones H⁺(aq) y OH⁻(aq) se combinan para formar H₂O <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. Cuando la base es insoluble, como el hidróxido de magnesio de la leche de magnesia, los iones OH⁻ del sólido reaccionan igualmente con los H⁺ y la reacción disuelve el sólido [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;4.3; fig.&nbsp;4.9].</p>
+<p>Muchas bases distintas del OH⁻ reaccionan con H⁺ para formar compuestos moleculares, y dos de ellas, los iones sulfuro y carbonato, forman gases poco solubles en agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. El sulfuro de hidrógeno, H₂S, el olor de los huevos podridos, se forma cuando un ácido reacciona con un sulfuro metálico, y los carbonatos y bicarbonatos reaccionan con ácidos para formar primero ácido carbónico, H₂CO₃, que es inestable y se descompone en agua y dióxido de carbono gaseoso <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>.</p>
+</section>
+<section id="oxidación-y-reducción" class="level2">
+<h2 class="anchored" data-anchor-id="oxidación-y-reducción">Oxidación y reducción</h2>
+<p>En las reacciones de precipitación los iones se unen en un compuesto insoluble, y en las de neutralización el H⁺ y el OH⁻ se combinan en agua; queda el tercer tipo, las <strong>reacciones de oxidación-reducción</strong> o <strong>reacciones redox</strong>, en las que se transfieren electrones de un reactivo a otro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. La corrosión es el ejemplo más familiar: cada átomo metálico pierde electrones y forma un catión, como el Cu²⁺ del recubrimiento verde de la Estatua de la Libertad o el Fe³⁺ de la herrumbre <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Cuando un átomo, ion o molécula se vuelve más positivo, es decir, pierde electrones, se dice que se ha oxidado; la <strong>oxidación</strong> es la pérdida de electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. Cuando una especie se vuelve más negativa, ganando electrones, se dice que se reduce, y la <strong>reducción</strong> es la ganancia de electrones; como la oxidación de una sustancia debe ir acompañada de la reducción de otra, ambas son procesos simultáneos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Pauling describe los mismos procesos con una terminología distinta pero equivalente: la oxidación es una <em>de-electronación</em>, la pérdida de electrones hacia un electrodo, y la reducción es una <em>electronación</em>, la ganancia de electrones desde el electrodo, y en las reacciones ordinarias los dos procesos ocurren simultáneamente, a veces por transferencia directa de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>. La equivalencia entre ambas nomenclaturas permite leer indistintamente los textos modernos y los clásicos <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>.</p>
+<p>Para llevar la cuenta de electrones, cada átomo de una sustancia neutra o de un ion recibe un <strong>número de oxidación</strong>, una carga hipotética asignada al repartir sus electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. El número es cero en un elemento en su forma elemental, igual a la carga en un ion monoatómico, de menos dos en el oxígeno y de más uno en el hidrógeno frente a no metales; la suma es cero en un compuesto neutro e igual a la carga en un ion poliatómico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>El azufre ilustra la dependencia del número de oxidación con el compuesto: vale menos dos en H₂S, cero en el azufre elemental S₈, más dos en SCl₂, más cuatro en Na₂SO₃ y más seis en el ion sulfato SO₄²⁻, un rango que va del extremo reducido al extremo oxidado del elemento <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.8)</span>. En toda reacción redox deben cambiar los números de oxidación de al menos dos átomos: el número aumenta para el átomo oxidado y disminuye para el reducido <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+</section>
+<section id="la-serie-de-actividad" class="level2">
+<h2 class="anchored" data-anchor-id="la-serie-de-actividad">La serie de actividad</h2>
+<p>La reacción entre un metal y un ácido o una sal metálica sigue el patrón general en que el ion en disolución es desplazado por la oxidación de un elemento, y por eso se llaman <strong>reacciones de desplazamiento</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. Diferentes metales varían en la facilidad con que se oxidan: el cinc es oxidado por disoluciones acuosas de Cu²⁺, pero la plata no, lo que indica que el cinc pierde electrones más fácilmente que la plata <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Una lista de metales ordenados según la facilidad decreciente de oxidación se llama <strong>serie de actividad</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. Los metales en la parte superior, como los alcalinos y alcalinotérreos, se oxidan con facilidad y se llaman metales activos; los de la parte inferior, como los elementos de transición que se usan en monedas y joyería, forman compuestos con menos facilidad y se llaman metales nobles por su baja reactividad <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Cualquier metal de la serie puede ser oxidado por los iones de los elementos situados debajo de él: como el cobre está por encima de la plata, el cobre es oxidado por los iones plata, que se reducen a plata metálica, mientras la disolución se tiñe de azul [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;4.4; fig.&nbsp;4.14]. Solo los metales por encima del hidrógeno reaccionan con ácidos formando H₂: el níquel reacciona con HCl(aq) pero el cobre no, aunque el cobre sí reacciona con ácido nítrico, pues el nitrato lo oxida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+</section>
+<section id="concentración-molaridad" class="level2">
+<h2 class="anchored" data-anchor-id="concentración-molaridad">Concentración: molaridad</h2>
+<p>Los químicos usan el término <strong>concentración</strong> para designar la cantidad de soluto disuelta en una cantidad dada de solvente o de disolución: cuanto mayor es la cantidad de soluto en una cierta cantidad de solvente, más concentrada es la disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. La <strong>molaridad</strong>, simbolizada M, expresa la concentración como el número de moles de soluto en un litro de disolución, y una disolución 1,00 molar contiene exactamente 1,00 mol de soluto en cada litro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>.</p>
+<p><span id="eq-molaridad"><span class="math display">\[M = \frac{n}{V} \tag{6.1}\]</span></span></p>
+<p>donde <span class="math inline">\(M\)</span> es la molaridad en moles por litro, <span class="math inline">\(n\)</span> la cantidad de soluto en moles y <span class="math inline">\(V\)</span> el volumen de la disolución en litros; la molaridad crece al añadir soluto a volumen constante y tiende a cero al diluir, uniendo así la estequiometría del capítulo anterior con los volúmenes del laboratorio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. Una disolución 0,278 molar de glucosa contiene 0,278 mol de C₆H₁₂O₆ en cada litro, y se prepara disolviendo 5,00 g en agua suficiente para formar exactamente 100 mL <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.11)</span>.</p>
+</section>
+<section id="dilución" class="level2">
+<h2 class="anchored" data-anchor-id="dilución">Dilución</h2>
+<p>Las disoluciones usadas de ordinario en el laboratorio se compran o preparan concentradas, como <em>disoluciones madre</em>, y las de menor concentración se obtienen añadiendo agua, un proceso llamado <strong>dilución</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. Para preparar 250,0 mL de disolución 0,100 M de sulfato de cobre a partir de una disolución madre 1,00 M, el punto clave es que al añadir solvente el número de moles de soluto permanece sin cambio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>.</p>
+<p>Los 0,0250 mol de sulfato de cobre de la disolución diluida deben provenir de la disolución madre, y como la madre contiene 1,00 mol por litro, se necesitan 25,0 mL de ella, que se diluyen hasta el volumen final <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. La relación general se obtiene igualando los moles de soluto de ambas disoluciones (ecuación <a href="#eq-dilucion" class="quarto-xref">Ecuación&nbsp;<span>6.2</span></a>),</p>
+<p><span id="eq-dilucion"><span class="math display">\[M_1 V_1 = M_2 V_2 \tag{6.2}\]</span></span></p>
+<p>donde <span class="math inline">\(M_1\)</span> y <span class="math inline">\(V_1\)</span> son la molaridad y el volumen de la disolución concentrada, y <span class="math inline">\(M_2\)</span> y <span class="math inline">\(V_2\)</span> los de la diluida; cualquier unidad de volumen sirve siempre que sea la misma en ambos lados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. Para obtener 450 mL de ácido sulfúrico 0,10 M desde una disolución madre 3,0 M se requieren 15 mL de la concentrada, que se diluyen hasta el volumen total <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.14)</span>.</p>
+</section>
+<section id="estequiometría-de-disoluciones-y-valoraciones" class="level2">
+<h2 class="anchored" data-anchor-id="estequiometría-de-disoluciones-y-valoraciones">Estequiometría de disoluciones y valoraciones</h2>
+<p>En el capítulo anterior las masas se convertían en moles con la masa molar, pero con una disolución esa conversión no es válida porque el solvente también contribuye a la masa total <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. Si se conoce la concentración, la <strong>molaridad</strong> y el <strong>volumen</strong> sí determinan los moles de soluto: según la ecuación <a href="#eq-molaridad" class="quarto-xref">Ecuación&nbsp;<span>6.1</span></a>, los moles son el producto <span class="math inline">\(M \times V\)</span>, y así la estequiometría del capítulo anterior se aplica a las reacciones en disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>.</p>
+<p>Para determinar la concentración de un soluto en una disolución, los químicos realizan con frecuencia una <strong>valoración</strong>, que combina la disolución de concentración desconocida con una disolución reactivo de concentración conocida, llamada <strong>disolución estándar</strong>, añadiendo justo la cantidad necesaria para que el soluto reaccione por completo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. El punto en que se combinan cantidades estequiométricamente equivalentes se llama <strong>punto de equivalencia</strong>, y las valoraciones pueden basarse en reacciones de neutralización, precipitación u oxidación-reducción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>.</p>
+<p>En una valoración de neutralización típica, se coloca un volumen conocido de la disolución de ácido desconocida en un matraz, se añaden unas gotas de un indicador ácido-base, un tinte que cambia de color al pasar el punto de equivalencia, y se agrega lentamente la disolución estándar desde una bureta hasta que el color cambia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. La fenolftaleína, por ejemplo, es incolora en disolución ácida y rosada en básica, y el cambio de color indica que la neutralización se completó <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>.</p>
+</section>
+<section id="ejemplo-resuelto-determinación-de-una-concentración-por-valoración" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-resuelto-determinación-de-una-concentración-por-valoración">Ejemplo resuelto: determinación de una concentración por valoración</h2>
+<p>Un método comercial para pelar papas consiste en sumergirlas brevemente en una disolución de hidróxido de sodio, cuya concentración normal oscila entre 3 y 6 M y debe analizarse periódicamente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>. En un análisis, se requieren 45,7 mL de ácido sulfúrico 0,500 M para neutralizar 20,0 mL de la disolución de hidróxido de sodio, y la pregunta es qué molaridad tiene esa disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>.</p>
+<p>La reacción de neutralización entre ácido sulfúrico e hidróxido de sodio produce agua y sulfato de sodio según la ecuación H₂SO₄(aq) más 2 NaOH(aq) que produce 2 H₂O(l) más Na₂SO₄(aq), de modo que un mol de ácido sulfúrico equivale a dos moles de hidróxido de sodio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>. Los moles de ácido sulfúrico se obtienen multiplicando su volumen por su molaridad: 0,0457 L por 0,500 mol por litro da 0,0229 mol, que por la relación uno a dos produce 0,0457 mol de hidróxido de sodio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>.</p>
+<p>Como esos 0,0457 mol de hidróxido están contenidos en 20,0 mL de disolución, la molaridad se obtiene dividiendo los moles entre 0,0200 L, lo que da 2,29 M <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>. El resultado ilustra todo el recorrido del capítulo: la molaridad convierte el volumen en moles, la ecuación balanceada conecta el ácido con la base y la molaridad calculada devuelve la concentración desconocida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.16)</span>.</p>
+</section>
+<section id="preguntas-y-ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-y-ejercicios">Preguntas y ejercicios</h2>
+<p>Los ejercicios que siguen están inspirados en la tipología de <span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span> (cap. 4), <span class="citation" data-cites="pauling1988">Pauling (<a href="../references.html#ref-pauling1988" role="doc-biblioref">1988</a>)</span> (cap. 15) y <span class="citation" data-cites="atkins2015">Atkins (<a href="../references.html#ref-atkins2015" role="doc-biblioref">2015</a>)</span> (cap. 4); los valores numéricos, los contextos y los escenarios planteados son originales de este libro, de modo que cada enunciado puede reescribirse, re-calcularse y verificarse sin recurrir al texto fuente, y todo solucionario explica el procedimiento paso a paso.</p>
+<p>Explique por qué una disolución acuosa de cloruro de potasio conduce la electricidad mientras una de etanol, C₂H₆O, no lo hace, y clasifique cada soluto como electrolito fuerte, débil o no electrolito razonando con su estructura <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.1-4.3)</span>. Clasifique como solubles o insolubles en agua el carbonato de sodio, el sulfato de plomo, el nitrato de bario y el fosfato de amonio, aplicando las guías de solubilidad de los compuestos iónicos comunes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.2)</span>.</p>
+<p>Cuando se mezclan disoluciones acuosas de cloruro de bario y sulfato de potasio se forma un precipitado blanco; escriba la ecuación molecular balanceada, la ecuación iónica completa y la ecuación iónica neta, e identifique los iones espectadores <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.3)</span>. Escriba la ecuación iónica neta de la reacción entre disoluciones acuosas de cloruro de calcio y carbonato de sodio, y explique por qué la carga eléctrica debe balancearse en ambos lados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.4)</span>.</p>
+<p>Determine el número de oxidación del azufre en el sulfuro de hidrógeno, en el azufre elemental S₈, en el dicloruro de azufre, en el sulfito de sodio y en el ion sulfato, y ordene las cinco especies de la más reducida a la más oxidada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.8)</span>. Determine si el cobre metálico reacciona con ácido clorhídrico acuoso y si el níquel lo hace, y explique qué criterio de la serie de actividad decide el resultado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Calcule la molaridad de una disolución preparada disolviendo 5,00 g de glucosa, C₆H₁₂O₆, en agua suficiente para formar exactamente 100 mL de disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.11)</span>. Determine cuántos mililitros de una disolución madre 5,0 M de dicromato de potasio deben diluirse para preparar 250 mL de disolución 0,10 M, y qué concentración resulta al diluir 10,0 mL de una disolución madre 10,0 M de hidróxido de sodio hasta 250 mL <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.14)</span>.</p>
+</section>
+<section id="solucionario" class="level2">
+<h2 class="anchored" data-anchor-id="solucionario">Solucionario</h2>
+<p>El primer ejercicio distingue la conductividad por la presencia de iones: el cloruro de potasio es un compuesto iónico que se disocia por completo en K⁺ y Cl⁻, por lo que es un electrolito fuerte, mientras el etanol es un compuesto molecular que se disuelve como moléculas intactas, un no electrolito que no transporta carga <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.1-4.3)</span>.</p>
+<p>El segundo ejercicio aplica las guías: el carbonato de sodio es soluble porque los carbonatos de metales alcalinos son la excepción a la insolubilidad general, el sulfato de plomo es insoluble como excepción a la solubilidad de los sulfatos, y el nitrato de bario y el fosfato de amonio son solubles porque todos los nitratos y todos los compuestos de amonio lo son <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.2)</span>.</p>
+<p>El tercer ejercicio intercambia parejas: el cloruro de bario y el sulfato de potasio producen sulfato de bario, insoluble, y cloruro de potasio, soluble, con la ecuación molecular BaCl₂(aq) + K₂SO₄(aq) → BaSO₄(s) + 2 KCl(aq) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.3)</span>. La ecuación iónica completa muestra Ba²⁺, Cl⁻, K⁺ y SO₄²⁻, y al cancelar los iones espectadores, el cloruro y el potasio, queda la neta Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.3)</span>.</p>
+<p>El cuarto ejercicio reduce la reacción entre cloruro de calcio y carbonato de sodio a su esencia: Ca²⁺(aq) + CO₃²⁻(aq) → CaCO₃(s), con el calcio y el carbonato como únicos participantes y el sodio y el cloruro como espectadores <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.4)</span>. La carga se balancea porque la reacción conserva la carga eléctrica total: el dos positivo del calcio y el dos negativo del carbonato suman cero, la carga del sólido neutro de carbonato de calcio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.4)</span>.</p>
+<p>El quinto ejercicio asigna los números de oxidación: el azufre vale menos dos en H₂S, cero en S₈, más dos en SCl₂, más cuatro en Na₂SO₃ y más seis en SO₄²⁻, desde la especie más reducida, el sulfuro, hasta la más oxidada, el sulfato, lo que ilustra el rango completo del elemento <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.8)</span>.</p>
+<p>El sexto ejercicio usa la serie de actividad: el cobre, situado por debajo del hidrógeno, no es oxidado por H⁺ ni reacciona con el ácido clorhídrico, mientras el níquel, por encima del hidrógeno, sí reacciona y libera H₂(g), pues solo los metales sobre el hidrógeno desplazan H₂ de los ácidos diluidos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>El séptimo ejercicio calcula la molaridad de la glucosa: 5,00 g divididos entre 180,16 g por mol dan 0,0278 mol, y divididos entre 0,100 L producen 0,278 M <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.11)</span>. El octavo ejercicio aplica la ecuación de dilución: para el dicromato, el volumen de la madre es 0,250 L por 0,10 M dividido entre 5,0 M, lo que da 5,0 mL; para el hidróxido de sodio, la concentración final es 10,0 mL por 10,0 M dividido entre 250 mL, lo que da 0,40 M <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 4.14)</span>.</p>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<p>Las reacciones en disolución acuosa se clasifican por el tipo de partícula que interviene: la precipitación une cationes y aniones en un sólido insoluble, la neutralización combina H⁺ y OH⁻ en agua, y la redox transfiere electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.1-4.4)</span>. Los electrolitos fuertes existen como iones en disolución, los débiles sobre todo como moléculas, y los no electrolitos nunca forman iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>.</p>
+<p>Las ecuaciones iónicas netas revelan la esencia de cada reacción al suprimir los iones espectadores, y los números de oxidación siguen la pista de los electrones transferidos en las redox <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.2-4.4)</span>. La molaridad conecta los moles con los volúmenes, la dilución conserva los moles de soluto y la valoración usa todo ese andamiaje para medir concentraciones desconocidas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.5-4.6)</span>.</p>
+</section>
+<section id="autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="autoevaluación">Autoevaluación</h2>
+<p>Antes de continuar, verifique que predice sin consultar el texto si un compuesto iónico es soluble, si una mezcla de dos disoluciones precipita y cuál es el precipitado, escribiendo luego la ecuación iónica neta correcta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.2-4.3)</span>. Confirme que asigna números de oxidación sin dudar y que distingue el agente oxidado del reducido en una reacción de desplazamiento, y que aplica la serie de actividad para decidir si un metal reacciona con un ácido <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>.</p>
+<p>Revise por último las dos ecuaciones del capítulo: si calcula la molaridad a partir de masa disuelta y volumen, y la dilución con la relación entre disoluciones concentrada y diluida, está listo para la valoración y para los problemas de concentraciones del capítulo siguiente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 4.5-4.6)</span>.</p>
+</section>
+<section id="enlace-al-próximo-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="enlace-al-próximo-capítulo">Enlace al próximo capítulo</h2>
+<p>Con las reacciones en disolución dominadas, la química del capítulo siguiente se aleja del laboratorio visible para entrar en el átomo: el capítulo 6 estudia la estructura electrónica del átomo, la radiación, los espectros y la mecánica cuántica <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>)</span>. Los electrones que este capítulo transfiere entre especies son los mismos que se organizarán en configuraciones electrónicas, y los números de oxidación dejarán paso a los números cuánticos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, caps. 4, 6)</span>.</p>
+</section>
+<section id="glosario-acumulativo" class="level2">
+<h2 class="anchored" data-anchor-id="glosario-acumulativo">Glosario acumulativo</h2>
+<p><strong>Ácido</strong>: sustancia que se ioniza en disolución acuosa para formar iones H⁺, por lo que se llama donador de protones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Ácido débil</strong>: ácido parcialmente ionizado en disolución, electrolito débil <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Ácido fuerte</strong>: ácido completamente ionizado en disolución, electrolito fuerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base</strong>: sustancia que acepta iones H⁺ y produce iones OH⁻ al disolverse en agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base débil</strong>: base parcialmente ionizada en disolución, electrolito débil <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base fuerte</strong>: base completamente ionizada en disolución, electrolito fuerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Concentración</strong>: cantidad de soluto disuelta en una cantidad dada de solvente o de disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>De-electronación</strong>: término de Pauling para la oxidación, la pérdida de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>. <strong>Dilución</strong>: proceso de añadir solvente a una disolución sin cambiar los moles de soluto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>Disociación</strong>: separación de un compuesto iónico en sus iones al disolverse <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Disolución estándar</strong>: disolución reactivo de concentración conocida usada en una valoración <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Disolución madre</strong>: disolución concentrada a partir de la cual se preparan otras más diluidas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>Ecuación iónica completa</strong>: ecuación que muestra todos los electrolitos fuertes solubles como sus iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Ecuación iónica neta</strong>: ecuación que incluye solo las especies directamente involucradas en la reacción, sin iones espectadores <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Ecuación molecular</strong>: ecuación que muestra las fórmulas químicas completas sin indicar el carácter iónico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Electronación</strong>: término de Pauling para la reducción, la ganancia de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>. <strong>Electrolito</strong>: sustancia cuyas disoluciones acuosas contienen iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Electrolito débil</strong>: soluto que existe en disolución sobre todo como moléculas neutras <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Electrolito fuerte</strong>: soluto que existe en disolución completa o casi completamente como iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Indicador ácido-base</strong>: tinte que cambia de color al pasar el punto de equivalencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Iones espectadores</strong>: iones que aparecen en forma idéntica en ambos lados de la ecuación iónica completa y no participan en la reacción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Molaridad</strong>: número de moles de soluto en un litro de disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>No electrolito</strong>: sustancia que no forma iones al disolverse en agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Número de oxidación</strong>: carga hipotética asignada a cada átomo al dividir artificialmente los electrones de un compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Oxidación</strong>: pérdida de electrones por una sustancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Precipitado</strong>: sólido insoluble formado por una reacción en disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Punto de equivalencia</strong>: punto de la valoración en que se combinan cantidades estequiométricamente equivalentes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Reacción de desplazamiento</strong>: reacción en que un elemento metálico desplaza al ion de una sal o un ácido mediante su oxidación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Reacción de metátesis</strong>: reacción en que los cationes y aniones intercambian parejas, también llamada de intercambio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Reacción de neutralización</strong>: reacción entre un ácido y una base que produce agua y una sal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Reacción de precipitación</strong>: reacción que produce un producto insoluble <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Reacción redox</strong>: reacción de oxidación-reducción en que se transfieren electrones entre reactivos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Reducción</strong>: ganancia de electrones por una sustancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Sal</strong>: compuesto iónico cuyo catión proviene de una base y cuyo anión proviene de un ácido <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Serie de actividad</strong>: lista de metales ordenados según la facilidad decreciente de oxidación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Solubilidad</strong>: cantidad de una sustancia que puede disolverse en una cantidad dada de solvente a cierta temperatura <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Soluto</strong>: sustancia que se disuelve en el solvente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Solvatación</strong>: rodeo de los iones disueltos por moléculas de solvente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Solvente</strong>: sustancia presente en mayor cantidad en una disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Valoración</strong>: procedimiento que combina una disolución de concentración desconocida con una estándar para determinar la concentración <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Análisis dimensional</strong>: método de resolución que multiplica, divide o cancela unidades para garantizar resultados con las unidades correctas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Análisis por combustión</strong>: método que quema un compuesto de carbono e hidrógeno y determina su fórmula empírica por las masas de CO₂ y H₂O retenidas en trampas <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, sec. 4.3</a>)</span>. <strong>Balanceo</strong>: determinación de los coeficientes que igualan el número de átomos de cada elemento en ambos lados de la ecuación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Cantidades estequiométricamente equivalentes</strong>: moles de reactivos y productos que se corresponden según los coeficientes de la ecuación balanceada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.6</a>)</span>. <strong>Coeficiente</strong>: número delante de una fórmula que indica las moléculas o moles relativos de esa sustancia en la reacción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Composición porcentual</strong>: masa de cada elemento en cien unidades de masa del compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.5</a>)</span>. <strong>Ecuación química</strong>: representación escrita de una reacción con reactivos, productos y coeficientes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Fórmula empírica</strong>: fórmula con los subíndices enteros más pequeños que dan la razón de átomos del compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.5</a>)</span>. <strong>Fórmula molecular</strong>: fórmula que da el número real de átomos de cada elemento en la molécula <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, sec. 4.4</a>)</span>. <strong>Masa fórmula</strong>: suma de las masas atómicas multiplicadas por los subíndices de la fórmula <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, cap. 2</a>)</span>. <strong>Masa molar</strong>: masa en gramos de un mol de sustancia, numéricamente igual a la masa fórmula en uma <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, cap. 3</a>)</span>. <strong>Mol</strong>: cantidad de sustancia que contiene el número de Avogadro de entidades <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.4</a>)</span>. <strong>Número de Avogadro</strong>: 6,02 × 10²³ mol⁻¹, el número de átomos en exactamente 12 g de carbono-12 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.4</a>)</span>. <strong>Reactivo en exceso</strong>: reactivo que sobra cuando la reacción se detiene por el reactivo limitante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Reactivo limitante</strong>: reactivo que se consume por completo y determina la cantidad de producto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento porcentual</strong>: cociente entre el rendimiento real y el teórico, multiplicado por cien <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento real</strong>: cantidad de producto efectivamente obtenida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento teórico</strong>: cantidad de producto calculada a partir del reactivo limitante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Alcano</strong>: hidrocarburo en que cada carbono se enlaza a cuatro átomos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Alcohol</strong>: compuesto en que un hidrógeno del alcano se reemplaza por un grupo OH <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Alotropía</strong>: existencia de un elemento en más de una forma estructural, como grafito, diamante y fullereno <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Anión</strong>: ion con carga negativa <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.7</a>)</span>. <strong>Átomo</strong>: partícula indivisible de la materia, con núcleo y nube de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Calor específico</strong>: capacidad de una sustancia para absorber calor por unidad de masa y grado <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Calor latente</strong>: calor requerido para fundir un sólido o hervir un líquido sin cambio de temperatura <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Cambio físico</strong>: alteración de la apariencia sin cambio de composición <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Cambio químico</strong>: transformación de una sustancia en otra químicamente distinta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Carga electrónica</strong>: magnitud de la carga del electrón, 1,602 × 10⁻¹⁹ C <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Catión</strong>: ion con carga positiva <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.7</a>)</span>. <strong>Celsius</strong>: escala que fija 0 °C y 100 °C en la congelación y ebullición del agua <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Cero absoluto</strong>: temperatura mínima posible, −273,15 °C o 0 K <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Cifras significativas</strong>: todas las cifras de una medición, incluida la incierta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Compuesto</strong>: sustancia formada por dos o más elementos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Compuesto iónico</strong>: compuesto eléctricamente neutro de cationes y aniones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Densidad</strong>: masa por unidad de volumen <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Elemento</strong>: sustancia que no puede descomponerse en otras más simples <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Entalpía</strong>: calor liberado o absorbido en una reacción a presión constante, simbolizado H <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Entropía</strong>: medida del desorden molecular de un sistema, simbolizada S <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Equivalente</strong>: peso fijo de una sustancia que reacciona con un peso fijo de otra <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 9</a>)</span>. <strong>Espectrómetro de masas</strong>: instrumento que separa los iones por masa y mide su abundancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.4</a>)</span>. <strong>Exactitud</strong>: cercanía de una medición al valor verdadero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Fase</strong>: parte homogénea de un sistema separada por límites físicos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Filtración</strong>: separación de un sólido y un líquido mediante papel de filtro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Fórmula estructural</strong>: fórmula que muestra qué átomos están unidos a cuáles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.6</a>)</span>. <strong>Gas</strong>: estado sin volumen ni forma fijos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Hidrocarburo</strong>: compuesto que solo contiene carbono e hidrógeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Ion</strong>: partícula que ha ganado o perdido electrones <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 20</a>)</span>. <strong>Isómero</strong>: compuesto con la misma fórmula molecular pero distinto arreglo atómico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Isótopos</strong>: átomos del mismo elemento con distinto número de neutrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Kelvin</strong>: escala termodinámica cuyo cero es el cero absoluto <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Ley de conservación de la masa</strong>: la masa total, incluida la de la energía radiante, se conserva <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Ley de la composición constante</strong>: los compuestos tienen composición elemental fija <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Ley de proporciones múltiples</strong>: los pesos de un elemento que reaccionan con un peso fijo de otro están en razón de números enteros pequeños <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Ley periódica</strong>: ordenación de los elementos según sus pesos atómicos que agrupa a los químicamente análogos <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 14</a>)</span>. <strong>Líquido</strong>: estado con volumen propio pero sin forma fija <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Materia</strong>: todo lo que tiene masa y ocupa espacio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Metaloide</strong>: elemento con propiedades entre metales y no metales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.5</a>)</span>. <strong>Mezcla</strong>: combinación de sustancias que conservan su identidad <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Molécula</strong>: agrupación de dos o más átomos unidos en formas específicas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Nanotecnología</strong>: manipulación de la materia a escala atómica o molecular <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Natrón</strong>: sal común impura extraída de lagos secos o aguas del Nilo <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 2</a>)</span>. <strong>Número atómico (Z)</strong>: número de protones del núcleo <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Número másico (A)</strong>: suma de protones y neutrones del núcleo <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 20</a>)</span>. <strong>Oxianión</strong>: anión poliatómico que contiene oxígeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.8</a>)</span>. <strong>Peso atómico</strong>: masa relativa de un átomo respecto de la escala acordada en Karlsruhe <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 14</a>)</span>; en su acepción moderna, masa atómica promedio ponderada por la abundancia isotópica <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 22</a>)</span>. <strong>Precisión</strong>: grado de acuerdo entre mediciones individuales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Propiedad intensiva</strong>: propiedad que no depende de la cantidad de muestra <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Radiactividad</strong>: emisión espontánea de radiación por los átomos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.2</a>)</span>. <strong>Retrosíntesis</strong>: descomposición de una molécula deseada en moléculas simples conocidas para planear su síntesis <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Sólido</strong>: estado con forma y volumen definidos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Solución</strong>: mezcla homogénea <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Sustancia pura</strong>: materia con composición que no varía de muestra a muestra <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Teoría atómica</strong>: doctrina de Dalton según la cual la materia es particulada y los compuestos se forman combinando átomos en proporciones fijas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.1</a>)</span>; y cada compuesto se forma con razones de números enteros pequeños <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Unidad de masa atómica (uma)</strong>: exactamente un doceavo de la masa del carbono-12 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.4</a>)</span>. <strong>Unidades SI</strong>: unidades métricas preferidas acordadas internacionalmente en 1960 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-atkins2015" class="csl-entry" role="listitem">
+Atkins, Peter. 2015. <em>Chemistry: A Very Short Introduction</em>. 1st ed. Oxford University Press. <a href="https://doi.org/10.1093/actrade/9780199683970.001.0001">https://doi.org/10.1093/actrade/9780199683970.001.0001</a>.
+</div>
+<div id="ref-brock2015" class="csl-entry" role="listitem">
+Brock, William H. 2015. <em>The History of Chemistry: A Very Short Introduction</em>. 1st ed. Oxford University Press.
+</div>
+<div id="ref-brown2012" class="csl-entry" role="listitem">
+Brown, Theodore L., H. Eugene LeMay, Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2012. <em>Chemistry: The Central Science</em>. 12th ed. Pearson Prentice Hall.
+</div>
+<div id="ref-oriakhi2021" class="csl-entry" role="listitem">
+Oriakhi, Christopher O. 2021. <em>Chemistry in Quantitative Language: Fundamentals of General Chemistry Calculations</em>. 2nd ed. Oxford University Press.
+</div>
+<div id="ref-pauling1988" class="csl-entry" role="listitem">
+Pauling, Linus. 1988. <em>General Chemistry</em>. 3rd (reprinted). Dover Publications.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../02_quimica/04-estequiometria.html" class="pagination-link" aria-label="Capítulo 4 · Estequiometría: moles, fórmulas y ecuaciones químicas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 4 · Estequiometría: moles, fórmulas y ecuaciones químicas</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="pagination-link" aria-label="Capítulo 6 · Estructura electrónica del átomo">
+        <span class="nav-page-text"><span class="chapter-title">Capítulo 6 · Estructura electrónica del átomo</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

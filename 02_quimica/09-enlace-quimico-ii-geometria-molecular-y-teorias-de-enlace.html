@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace – Nous</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../02_quimica/10-gases.html" rel="next">
+<link href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-53aca5cea238aca1de29c5a91d105b8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace</span></h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Nous</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Descargar" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Descargar"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Descargar PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Descargar ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nous</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Conjuntos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_conjuntos/00_proposicion_negacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proposición y su negación</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Química</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/01-historia-de-la-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1 · La química en la historia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/02-materia-y-medicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2 · La materia y su medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/03-atomos-moleculas-e-iones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3 · Átomos, moléculas e iones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/04-estequiometria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4 · Estequiometría: moles, fórmulas y ecuaciones químicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/05-reacciones-en-disolucion-acuosa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 5 · Reacciones en disolución acuosa</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6 · Estructura electrónica del átomo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/07-tabla-periodica-y-propiedades-periodicas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7 · Tabla periódica y propiedades periódicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8 · Enlace químico I: conceptos fundamentales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/10-gases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 10 · Gases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/11-termoquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11 · Termoquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 12 · Líquidos, fuerzas intermoleculares y sólidos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/13-disoluciones-y-propiedades-coligativas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 13 · Disoluciones y propiedades coligativas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/14-cinetica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 14 · Cinética química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/15-equilibrio-quimico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 15 · Equilibrio químico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/16-acidos-y-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 16 · Ácidos y bases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/17-equilibrios-acido-base-y-solubilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 17 · Equilibrios ácido-base y de solubilidad: aplicaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/18-termodinamica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 18 · Termodinámica química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/19-electroquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 19 · Electroquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/20-quimica-nuclear.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 20 · Química nuclear</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 21 · Química de los no metales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 22 · Química de los metales de transición y química de coordinación</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Biología</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La base física de la herencia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#el-modelo-vsepr-dominios-de-electrones" id="toc-el-modelo-vsepr-dominios-de-electrones" class="nav-link" data-scroll-target="#el-modelo-vsepr-dominios-de-electrones">El modelo VSEPR: dominios de electrones</a></li>
+  <li><a href="#efecto-de-los-pares-no-enlazantes-y-los-enlaces-múltiples-sobre-los-ángulos" id="toc-efecto-de-los-pares-no-enlazantes-y-los-enlaces-múltiples-sobre-los-ángulos" class="nav-link" data-scroll-target="#efecto-de-los-pares-no-enlazantes-y-los-enlaces-múltiples-sobre-los-ángulos">Efecto de los pares no enlazantes y los enlaces múltiples sobre los ángulos</a></li>
+  <li><a href="#capas-de-valencia-expandidas" id="toc-capas-de-valencia-expandidas" class="nav-link" data-scroll-target="#capas-de-valencia-expandidas">Capas de valencia expandidas</a></li>
+  <li><a href="#la-forma-de-las-moléculas-grandes" id="toc-la-forma-de-las-moléculas-grandes" class="nav-link" data-scroll-target="#la-forma-de-las-moléculas-grandes">La forma de las moléculas grandes</a></li>
+  <li><a href="#forma-molecular-y-polaridad" id="toc-forma-molecular-y-polaridad" class="nav-link" data-scroll-target="#forma-molecular-y-polaridad">Forma molecular y polaridad</a></li>
+  <li><a href="#enlace-covalente-solapamiento-de-orbitales-y-orbitales-híbridos" id="toc-enlace-covalente-solapamiento-de-orbitales-y-orbitales-híbridos" class="nav-link" data-scroll-target="#enlace-covalente-solapamiento-de-orbitales-y-orbitales-híbridos">Enlace covalente, solapamiento de orbitales y orbitales híbridos</a></li>
+  <li><a href="#enlaces-múltiples-enlaces-sigma-y-pi-y-deslocalización" id="toc-enlaces-múltiples-enlaces-sigma-y-pi-y-deslocalización" class="nav-link" data-scroll-target="#enlaces-múltiples-enlaces-sigma-y-pi-y-deslocalización">Enlaces múltiples: enlaces sigma y pi y deslocalización</a></li>
+  <li><a href="#teoría-de-orbitales-moleculares" id="toc-teoría-de-orbitales-moleculares" class="nav-link" data-scroll-target="#teoría-de-orbitales-moleculares">Teoría de orbitales moleculares</a></li>
+  <li><a href="#ejemplo-resuelto-el-azufre-elemental" id="toc-ejemplo-resuelto-el-azufre-elemental" class="nav-link" data-scroll-target="#ejemplo-resuelto-el-azufre-elemental">Ejemplo resuelto: el azufre elemental</a></li>
+  <li><a href="#preguntas-y-ejercicios" id="toc-preguntas-y-ejercicios" class="nav-link" data-scroll-target="#preguntas-y-ejercicios">Preguntas y ejercicios</a></li>
+  <li><a href="#solucionario" id="toc-solucionario" class="nav-link" data-scroll-target="#solucionario">Solucionario</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  <li><a href="#autoevaluación" id="toc-autoevaluación" class="nav-link" data-scroll-target="#autoevaluación">Autoevaluación</a></li>
+  <li><a href="#enlace-al-próximo-capítulo" id="toc-enlace-al-próximo-capítulo" class="nav-link" data-scroll-target="#enlace-al-próximo-capítulo">Enlace al próximo capítulo</a></li>
+  <li><a href="#glosario-acumulativo" id="toc-glosario-acumulativo" class="nav-link" data-scroll-target="#glosario-acumulativo">Glosario acumulativo</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Este capítulo responde a la pregunta de qué forma adoptan las moléculas, pues la <strong>arquitectura molecular</strong>, definida por los ángulos y las distancias entre los núcleos de los átomos que forman una molécula, determina junto con la fuerza y la polaridad de los enlaces buena parte de las propiedades de la sustancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>.</p>
+<p>El fármaco diazepam, conocido como Valium, lo demuestra: inventado por Leo Sternbach en Hoffmann-La Roche y autorizado por primera vez en 1960, fue el medicamento más vendido de Estados Unidos entre 1969 y 1982, con un pico de 2300 millones de tabletas en 1978, y su eficacia depende de la forma y el tamaño exactos de su molécula junto con las distribuciones de carga en su interior <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>.</p>
+<p>La forma de una molécula queda descrita por sus <strong>ángulos de enlace</strong>, los ángulos que forman las líneas que unen los núcleos, junto con las longitudes de enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. En el tetracloruro de carbono, CCl₄, los cuatro átomos de cloro ocupan los vértices de un tetraedro, un objeto de cuatro caras triangulares, y los seis ángulos Cl—C—Cl valen todos 109,5°, con los cuatro enlaces C—Cl de 1,78 Å <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>.</p>
+<p>Las moléculas con un átomo central rodeado de n átomos iguales, de fórmula general ABₙ, adoptan un repertorio limitado de formas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. Así, una molécula AB₂ debe ser lineal, con ángulo de 180°, o angular, mientras una AB₃ puede ser trigonal plana, piramidal trigonal cuando el átomo central sobresale del plano de la base, o con forma de T, como la ClF₃ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>.</p>
+<p>Las formas que maximizan la separación entre los átomos externos incluyen, además, la bipirámide trigonal, formada por dos pirámides trigonales unidas por su base, y el octaedro, comparable a dos pirámides cuadradas cara a cara <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. Las geometrías piramidal trigonal y angular no figuran entre esas formas básicas, pero se derivan de la tetraédrica al suprimir uno o dos átomos, y lo mismo ocurre con otras variantes, de modo que el conocimiento de las formas fundamentales basta para describir casi todas las moléculas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>.</p>
+</section>
+<section id="el-modelo-vsepr-dominios-de-electrones" class="level2">
+<h2 class="anchored" data-anchor-id="el-modelo-vsepr-dominios-de-electrones">El modelo VSEPR: dominios de electrones</h2>
+<p>El <strong>modelo de repulsión de pares de electrones de la capa de valencia (VSEPR)</strong> predice la forma de las moléculas de elementos representativos partiendo de sus estructuras de Lewis <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. Su analogía guía son los globos atados por sus extremos: dos globos se orientan en direcciones opuestas, tres apuntan a los vértices de un triángulo equilátero y cuatro adoptan una disposición tetraédrica, y los electrones se comportan de manera semejante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>Un par de electrones enlazante, el que forma un enlace covalente, define una región de electrones en la que es más probable hallar los electrones; esa región se llama <strong>dominio de electrones</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. De igual modo, un <strong>par no enlazante</strong>, también llamado par solitario, define un dominio situado principalmente sobre un átomo, y en el amoníaco, por ejemplo, hay cuatro dominios alrededor del nitrógeno central: tres pares enlazantes y uno solitario <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>Cada enlace múltiple constituye también un único dominio de electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. En el ozono, la estructura de resonancia muestra tres dominios alrededor del oxígeno central: un enlace sencillo, un doble enlace y un par no enlazante, y la regla general afirma que cada par no enlazante, enlace sencillo o enlace múltiple produce un solo dominio alrededor del átomo central <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>Como los dominios de electrones son regiones de carga negativa, se repelen entre sí y buscan mantenerse apartados, de manera que la mejor disposición de un número dado de dominios es la que minimiza esas repulsiones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. Dos dominios se orientan linealmente, tres en disposición trigonal plana, cuatro tetraédricamente, cinco hacia los vértices de una bipirámide trigonal y seis hacia los de un octaedro, tal como corresponde también a los globos de la analogía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Table 9.1)</span>.</p>
+<p>La <strong>geometría de dominios de electrones</strong> es la disposición de los dominios alrededor del átomo central, mientras la <strong>geometría molecular</strong> describe únicamente la disposición de los átomos, ignorando los pares no enlazantes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. Para predecir la forma se dibuja primero la estructura de Lewis y se cuentan los dominios, se determina después la geometría de dominios que minimiza las repulsiones y se lee por último la geometría molecular a partir de la disposición de los átomos enlazados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>En el amoníaco, los tres enlaces y el par solitario del nitrógeno dan cuatro dominios, cuya disposición tetraédrica deja un vértice ocupado por el par no enlazante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. La geometría molecular resulta entonces piramidal trigonal, y como la geometría de dominios es tetraédrica, los ángulos de enlace ideales valen 109,5° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>El dióxido de carbono ilustra el caso contrario: su estructura de Lewis revela dos dominios, cada uno un doble enlace, que se orientan linealmente, y como ninguno es un par no enlazante, la geometría molecular también es lineal con un ángulo O—C—O de 180° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. La tabla de geometrías para moléculas con cuatro dominios o menos resume los casos usuales de las moléculas que obedecen la regla del octeto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Table 9.2)</span>.</p>
+<p>El ozono, con tres dominios alrededor del oxígeno central en cualquiera de sus dos estructuras de resonancia, sirve de ejemplo del método <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.1)</span>. Tres dominios se disponen en trigonal plano, dos de ellos enlazantes y uno solitario, de modo que la molécula es angular con un ángulo ideal de 120°, y el comentario del ejemplo subraya que cualquier estructura de resonancia sirve para predecir la geometría <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.1)</span>.</p>
+<p>El ion SnCl₃⁻ muestra el mismo razonamiento con cuatro dominios: el estaño está enlazado a tres cloros y conserva un par no enlazante, lo que da una geometría de dominios tetraédrica y una geometría molecular piramidal trigonal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.1)</span>. Los ejercicios de comprobación de la misma fuente añaden el SeCl₂, angular con geometría de dominios tetraédrica, y el ion CO₃²⁻, trigonal plano en ambas geometrías <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.1)</span>.</p>
+</section>
+<section id="efecto-de-los-pares-no-enlazantes-y-los-enlaces-múltiples-sobre-los-ángulos" class="level2">
+<h2 class="anchored" data-anchor-id="efecto-de-los-pares-no-enlazantes-y-los-enlaces-múltiples-sobre-los-ángulos">Efecto de los pares no enlazantes y los enlaces múltiples sobre los ángulos</h2>
+<p>Los ángulos de enlace se desvían de los valores ideales cuando los dominios no son idénticos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. El metano, el amoníaco y el agua comparten una geometría de dominios tetraédrica, pero sus ángulos disminuyen a medida que crece el número de pares no enlazantes: la serie de iones y moléculas NH₂⁻, NH₃ y NH₄⁺ muestra ángulos H—N—H de 105°, 107° y 109° respectivamente <span class="citation" data-cites="brown2012 brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.34)</span>.</p>
+<p>La causa está en el tamaño de los dominios: un par enlazante es atraído por los dos núcleos del enlace, mientras un par no enlazante lo es sobre todo por uno solo, de modo que el dominio solitario se extiende más en el espacio y ejerce mayores repulsiones sobre los dominios vecinos, comprimiendo los ángulos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. Por la misma razón los enlaces múltiples forman dominios agrandados: el fosgeno comprime el ángulo Cl—C—Cl hasta 111,4° pese al ideal de 120° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>La observación de Pauling complementa la del modelo con datos experimentales: en el ozono, el ángulo medido entre el doble enlace y el sencillo es de 116,8°, algo menor que el valor de 125,3° de los orbitales tetraédricos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–6</a>)</span>. La cifra concuerda con la predicción ideal de 120° del VSEPR y con su principio de que los dominios de enlaces múltiples y pares solitarios comprimen los ángulos <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–6</a>)</span>.</p>
+<p>En el amoníaco, Pauling explica la contracción por el carácter de los orbitales de enlace: el par solitario tiene alrededor de 79 % de carácter 2s y los tres orbitales de enlace cerca de 93 % de carácter 2p, cuyos ángulos naturales rondan los 90° <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–5</a>)</span>. Al añadir carácter s, los ángulos crecen hasta los 109°28′ del tetraedro, con 25 % de carácter s, y ambas escuelas convergen: el par solitario reclama más espacio que los pares enlazantes <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–5</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>La compresión de los ángulos se convierte así en una regla práctica con dos matices de origen distinto que se refuerzan mutuamente <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–5</a>)</span>. El VSEPR la predice por la extensión espacial de los dominios, y la teoría de orbitales híbridos por la composición s y p de los orbitales de enlace, dos lenguajes que describen el mismo fenómeno observado <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–5</a>)</span>.</p>
+</section>
+<section id="capas-de-valencia-expandidas" class="level2">
+<h2 class="anchored" data-anchor-id="capas-de-valencia-expandidas">Capas de valencia expandidas</h2>
+<p>Los átomos del tercer periodo y siguientes pueden rodearse de más de cuatro pares, y las moléculas con cinco o seis dominios se basan en la bipirámide trigonal o el octaedro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. La bipirámide trigonal es la disposición más estable para cinco dominios y contiene dos tipos geométricamente distintos de posiciones: dos dominios apuntan a las posiciones axiales y tres a las ecuatoriales, de modo que cada dominio axial forma 90° con los ecuatoriales y cada ecuatorial 120° con los demás <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>La repulsión entre dos dominios es mucho mayor a 90° que a 120°, y como un dominio ecuatorial tiene solo dos vecinos a 90° mientras uno axial tiene tres, los pares no enlazantes, que repelen con más fuerza, ocupan siempre las posiciones ecuatoriales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. El tetrafluoruro de azufre lo confirma: con cinco dominios, cuatro enlazantes y uno solitario, adopta la forma de balancín, y los enlaces axiales y ecuatoriales se apartan del dominio solitario como exige su mayor repulsión <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.2)</span>.</p>
+<p>El octaedro, con seis vértices equivalentes y ángulos de 90°, da lugar a dos geometrías moleculares típicas cuando hay pares solitarios <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. El pentafluoruro de yodo, IF₅, con seis dominios de los cuales uno es no enlazante, es piramidal cuadrado, y el ángulo observado entre los cuatro flúores de la base y el flúor del ápice es de 82°, menor que el ideal de 90°, porque el dominio solitario empuja los enlaces de la base <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.2)</span>.</p>
+<p>Cuando hay dos pares no enlazantes en un octaedro, sus repulsiones se minimizan apuntando a lados opuestos, lo que produce la geometría molecular plana cuadrada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. La práctica del ejemplo añade el BrF₃, con cinco dominios y dos pares solitarios ecuatoriales, cuya forma es de T, y el ion ICl₄⁻, octaédrico con dos solitarios opuestos, que es plano cuadrado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.2)</span>.</p>
+<p>Otras aplicaciones del mismo repertorio cierran el panorama: el XeF₂ es lineal porque sus tres pares solitarios ocupan las posiciones ecuatoriales de la bipirámide, y el PF₆⁻ es octaédrico <span class="citation" data-cites="brown2012 brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.36; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.27)</span>. El caso del BrF₄⁻, plano cuadrado, frente al BF₄⁻, tetraédrico, resume la frontera: la geometría depende del número de dominios que rodean al átomo central, no de la identidad de sus átomos vecinos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.35)</span>.</p>
+</section>
+<section id="la-forma-de-las-moléculas-grandes" class="level2">
+<h2 class="anchored" data-anchor-id="la-forma-de-las-moléculas-grandes">La forma de las moléculas grandes</h2>
+<p>El modelo VSEPR se extiende a moléculas con varios centros aplicando el mismo análisis a cada átomo por separado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. En el ácido acético, CH₃COOH, el carbono de la izquierda tiene cuatro dominios enlazantes y es tetraédrico, el carbono central tiene tres dominios contando el doble enlace como uno y es trigonal plano, y el oxígeno de la derecha tiene cuatro dominios, dos enlazantes y dos solitarios, con geometría de dominios tetraédrica y geometría molecular angular <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>Los ángulos de cada centro se apartan levemente de los ideales por las exigencias espaciales de los enlaces múltiples y los pares solitarios <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. En el alcohol vinílico, el ángulo H—O—C, cuyo átomo central es un oxígeno con cuatro dominios, resulta algo menor que 109,5°, mientras el ángulo O—C—C, centrado en un carbono con tres dominios, resulta algo mayor que 120° porque el dominio del doble enlace C═C es más grande <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.3)</span>.</p>
+<p>El caso del propino refuerza la regla con dos valores nítidos: en torno al carbono saturado, el ángulo H—C—H vale 109,5°, y a lo largo del eje del triple enlace, el ángulo C—C—C vale 180° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.3)</span>. La estrategia para predecir un ángulo cualquiera consiste, pues, en identificar el átomo central del ángulo, contar sus dominios de electrones y ajustar el valor ideal por la presencia de pares solitarios y enlaces múltiples vecinos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.3)</span>.</p>
+</section>
+<section id="forma-molecular-y-polaridad" class="level2">
+<h2 class="anchored" data-anchor-id="forma-molecular-y-polaridad">Forma molecular y polaridad</h2>
+<p>La polaridad de un enlace crece con la diferencia de electronegatividad entre los dos átomos, y el momento dipolar de una molécula diatómica mide la separación de cargas resultante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. En una molécula poliatómica, en cambio, el momento dipolar depende de las polaridades de los enlaces individuales y de la geometría de la molécula, y para cada enlace se considera el <strong>dipolo de enlace</strong>, el momento dipolar debido solo a los dos átomos de ese enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>.</p>
+<p>Los dipolos de enlace y los momentos dipolares son vectores, con magnitud y dirección, y el momento dipolar de una molécula poliatómica es la suma vectorial de sus dipolos de enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. En el CO₂ lineal, los dos dipolos C═O son iguales en magnitud pero opuestos en dirección, y se cancelan como se cancelan 100 y −100 en una suma, de modo que la molécula es no polar pese a tener enlaces polares <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>.</p>
+<p>En el agua, en cambio, los dos dipolos O—H son iguales pero la molécula es angular, de modo que no se oponen directamente y no se cancelan <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. El agua tiene así un momento dipolar neto de 1,85 D y es polar, con el oxígeno parcialmente negativo y los hidrógenos parcialmente positivos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>.</p>
+<p>Las formas simétricas garantizan la cancelación cuando todos los sustituyentes son idénticos: son no polares la lineal AB₂, la trigonal plana AB₃, la tetraédrica y la plana cuadrada AB₄, la bipirámide trigonal AB₅ y el octaedro AB₆, como muestran el BF₃ y el CCl₄ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. El bromuro de cloro, BrCl, molécula diatómica con enlace polar, es polar, con el cloro parcialmente negativo y un momento de 0,57 D <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.4)</span>.</p>
+<p>El dióxido de azufre combina ambos ingredientes: sus enlaces son polares, sus tres estructuras de resonancia son angulares y, como los dipolos no se cancelan, la molécula es polar con un momento de 1,63 D <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.4)</span>. El hexafluoruro de azufre es el contraste simétrico: sus seis enlaces S—F son polares, pero la geometría octaédrica los cancela y su momento vale cero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.4)</span>. El criterio se completa con el NF₃, polar por su geometría piramidal, y el BCl₃, no polar por su geometría plana <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.4)</span>.</p>
+</section>
+<section id="enlace-covalente-solapamiento-de-orbitales-y-orbitales-híbridos" class="level2">
+<h2 class="anchored" data-anchor-id="enlace-covalente-solapamiento-de-orbitales-y-orbitales-híbridos">Enlace covalente, solapamiento de orbitales y orbitales híbridos</h2>
+<p>El modelo VSEPR predice las geometrías pero no explica por qué los átomos se enlazan <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>. La <strong>teoría del enlace de valencia</strong> une la noción de par de electrones de Lewis con los orbitales atómicos: los pares de enlace se concentran en las regiones entre los átomos y los pares solitarios ocupan regiones dirigidas del espacio, de modo que un enlace covalente se forma cuando un orbital de valencia de un átomo comparte espacio, o se solapa, con un orbital de valencia de otro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>.</p>
+<p>En el H₂, cada átomo aporta un electrón en un orbital 1s, y al solaparse los orbitales, la densidad electrónica se concentra entre los núcleos, donde ambos los atraen a la vez <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>. En el HCl, el cloro, de configuración [Ne]3s²3p⁵, tiene un orbital 3p con un solo electrón que se aparea con el 1s del hidrógeno, y en el Cl₂ se aparean los orbitales 3p semillenos de cada átomo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>.</p>
+<p>Existe una distancia óptima entre los núcleos de todo enlace covalente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>. La curva de energía potencial de dos átomos de hidrógeno cae desde cero al acercarse, porque el solapamiento creciente concentra densidad entre los núcleos, pero asciende bruscamente por debajo de 0,74 Å por la repulsión núcleo-núcleo, y el mínimo de la curva fija la longitud de enlace y su fuerza, el punto donde las atracciones entre cargas opuestas equilibran las repulsiones entre cargas iguales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>.</p>
+<p>Los orbitales atómicos no bastan, sin embargo, para explicar la geometría del metano, pues nada en los orbitales 2s y 2p sugiere a primera vista un tetraedro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. La <strong>hibridación</strong> resuelve la paradoja: los orbitales atómicos de un átomo, normalmente el central, se mezclan para formar <strong>orbitales híbridos</strong>, nuevos orbitales cuya forma difiere de la de los originales, y el número de híbridos es siempre igual al número de orbitales atómicos mezclados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>La molécula BeF₂ ilustra el proceso en su versión más simple: el berilio en su estado basal, 2s², no tiene electrones desapareados y no podría enlazarse, y si se promueve un electrón 2s a 2p formaría dos enlaces desiguales, de modo que la promoción simple no resuelve nada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>Al mezclar, en cambio, el 2s con un 2p se generan dos orbitales híbridos idénticos, cada uno con un lóbulo grande, y ambos lóbulos grandes apuntan en direcciones opuestas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. Por haberse hibridado un s y un p, cada uno se llama orbital híbrido sp, y según el modelo del enlace de valencia una disposición lineal de dominios implica hibridación sp <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>Con orbitales atómicos suficientes se obtienen otras geometrías: mezclar el 2s con dos 2p produce tres orbitales sp² equivalentes en un mismo plano, separados 120°, que forman los tres enlaces del BF₃ y dejan un orbital 2p sin hibridar que será decisivo en los enlaces dobles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. Mezclar el 2s con los tres 2p produce cuatro orbitales sp³ cuyos lóbulos grandes apuntan a los vértices de un tetraedro, y el metano resulta del solapamiento de esos híbridos con los orbitales 1s <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>La hibridación sirve también para moléculas con pares solitarios: en el agua y el amoníaco los cuatro pares ocupan orbitales sp³, y los pares no enlazantes residen en dos o uno de esos híbridos respectivamente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. Para asignar la hibridación del átomo central basta dibujar la estructura de Lewis y obtener la geometría de dominios con el VSEPR <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>El conjunto de híbridos que acomoda esa geometría es lineal para sp, trigonal plana para sp² y tetraédrica para sp³ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Table 9.4)</span>. El ion NH₂⁻, de cuatro dominios, es sp³ con dos híbridos ocupados por pares solitarios, y el ion SO₃²⁻, también tetraédrico, presenta la misma hibridación sp³ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.5)</span>.</p>
+<p>Los elementos del tercer periodo y siguientes rompen el esquema cuando superan el octeto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. Solo los orbitales s y p del átomo central permiten a lo sumo cuatro híbridos, y explicar el SF₆ exigiría incluir dos orbitales 3d del azufre, pero esos orbitales están mucho más altos en energía y los cálculos teóricos muestran que no participan de modo significativo en el enlace, de modo que el modelo de híbridos alcanza su límite justamente ahí <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>El VSEPR, sin explicar el origen del enlace, predice sin embargo la geometría de esas moléculas, de modo que las dos teorías se complementan y la discusión deja ver la frontera de validez del modelo de híbridos, una lección de método que se repetirá en los capítulos siguientes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>Pauling, sin embargo, construyó explícitamente los orbitales híbridos con orbitales d, y en su Apéndice VII deriva seis orbitales octaédricos d²sp³, formados por dos orbitales d, el s y los tres p, con una fuerza de enlace de 2,923, mayor que la de cualquier híbrido sp <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, App. VII)</span>. La postura de Brown no niega la existencia de tales combinaciones, sino su relevancia energética en compuestos como el SF₆, y la discrepancia refleja dos niveles de aproximación, uno histórico y uno basado en cálculos modernos <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, App. VII; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>.</p>
+<p>La fuerza de los híbridos sp aporta la razón cuantitativa de la preferencia geométrica: crece con el contenido de p desde 1 para el s puro hasta un máximo de 2 en el orbital tetraédrico, y desciende luego a 1,732 para el p puro <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, App. VII)</span>. Los enlaces puros de orbitales p forman ángulos de unos 90°, y al añadir carácter s los ángulos aumentan, lo que explica por qué el tetraedro, con 25 % de carácter s, es la disposición estable <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–5</a>)</span>.</p>
+</section>
+<section id="enlaces-múltiples-enlaces-sigma-y-pi-y-deslocalización" class="level2">
+<h2 class="anchored" data-anchor-id="enlaces-múltiples-enlaces-sigma-y-pi-y-deslocalización">Enlaces múltiples: enlaces sigma y pi y deslocalización</h2>
+<p>Los enlaces covalentes en los que la densidad electrónica se concentra a lo largo de la línea que une los núcleos se llaman <strong>enlaces sigma (σ)</strong> <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. Son enlaces σ el solapamiento de dos orbitales s en el H₂, de un s y un p en el HCl, de dos p en el Cl₂ y de un p con un híbrido sp en el BeF₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>El solapamiento lateral de dos orbitales p orientados perpendicularmente al eje internuclear produce un <strong>enlace pi (π)</strong>, cuyas regiones de solapamiento quedan por encima y por debajo del eje <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. Como ese solapamiento lateral es más débil que el frontal, los enlaces π son en general más débiles que los σ, y en casi todos los casos un enlace sencillo es σ, un enlace doble consta de un σ y un π, y un enlace triple de un σ y dos π <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>El etileno, C₂H₄, muestra el montaje completo de un enlace doble <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. Sus tres ángulos de unos 120° alrededor de cada carbono indican hibridación sp², y los cinco enlaces σ de la molécula, cuatro C—H y uno C—C, consumen diez de los doce electrones de valencia, mientras los dos restantes ocupan los orbitales 2p sin hibridar, uno en cada carbono, que se solapan lateralmente para formar el enlace π <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>Dos observaciones experimentales apoyan la existencia del π en el etileno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. La longitud C═C de 1,34 Å, mucho menor que los 1,54 Å de un enlace sencillo C—C, es la esperada para un doble enlace más fuerte, y los seis átomos de la molécula yacen en un mismo plano, lo que permite el solapamiento óptimo de los 2p <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. La exigencia de planaridad introduce rigidez: girar un grupo CH₂ destruye el solapamiento y rompe el π, proceso que cuesta energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>El acetileno, C₂H₂, aplica la misma lógica: su geometría lineal indica hibridación sp, cada carbono conserva dos orbitales 2p sin hibridar y perpendiculares al eje, que forman dos enlaces π, de modo que el triple enlace suma un σ y dos π <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. Los enlaces π solo se forman con orbitales p sin hibridar, lo que exige hibridación sp² o sp; abundan en los átomos pequeños del segundo periodo, carbono, nitrógeno y oxígeno, y escasean en los grandes, como el azufre o el fósforo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>El formaldehído, H₂CO, combina las piezas en una molécula con un doble enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.6)</span>. El carbono, con tres dominios, es sp² y usa sus híbridos para los dos enlaces C—H y el enlace σ C—O, mientras el oxígeno, también con tres dominios, es sp² y usa un híbrido para el σ C—O y dos para sus pares solitarios, de modo que los dos orbitales 2p sin hibridar, uno en cada átomo, forman el enlace π C—O <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.6)</span>.</p>
+<p>La teoría del enlace de valencia describe el benceno con un esqueleto de seis enlaces σ C—C y seis σ C—H formados por orbitales sp², y un orbital 2p con un electrón por carbono <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. Los seis electrones π podrían formar tres enlaces π localizados, uno por cada estructura de resonancia, pero la representación que refleja ambas estructuras los extiende entre los seis carbonos, fenómeno llamado <strong>deslocalización</strong>, de modo que la representación, con los enlaces deslocalizados, equivale al círculo dentro del hexágono <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>La deslocalización predice que todas las longitudes C—C del benceno serán idénticas e intermedias entre 1,54 Å del sencillo y 1,34 Å del doble, y la longitud observada de 1,40 Å lo confirma <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. La deslocalización confiere además una estabilidad especial a la molécula, es responsable del color de muchas moléculas orgánicas y exige que todos los átomos de la red π estén en el mismo plano, lo que impone rigidez <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>El ion nitrato, NO₃⁻, con tres estructuras de resonancia, es sp² en el nitrógeno, que forma tres enlaces σ N—O, mientras el orbital 2p sin hibridar genera un enlace π repartido entre los tres enlaces N—O, de modo que todos los enlaces del ion son idénticos e intermedios entre sencillo y doble, como en el benceno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.7)</span>.</p>
+<p>Cuatro conclusiones generales cierran el panorama de los enlaces múltiples: cada par de átomos enlazados comparte al menos un par en un enlace σ, los electrones σ se localizan entre los dos átomos enlazados, los pares adicionales forman enlaces π cuya densidad yace sobre y bajo el eje, y las moléculas con dos o más estructuras de resonancia pueden tener enlaces π extendidos sobre más de dos átomos, que se llaman deslocalizados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>La deslocalización del benceno explica además la rigidez de los compuestos con dobles enlaces, de la que depende la visión humana: el retinal, la molécula de la retina que desencadena la señal visual, es rígido por sus dobles enlaces, y bastan cinco fotones para estimular el ojo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>Recuérdese que Pauling describe el mismo fenómeno del benceno con el lenguaje de la resonancia, un híbrido de estructuras que no oscilan, mientras Brown prefiere el de los orbitales moleculares deslocalizados: dos vocabularios para un mismo hecho experimental que ambos explican con éxito el mismo dato observado <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–7</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>.</p>
+<p>La rigidez de los dobles enlaces se manifiesta también en las moléculas tensas que describió Pauling <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–4</a>)</span>. En el ciclopropano, C₃H₆, la geometría obliga a los tres enlaces a doblarse casi 50°, y la molécula es unos 100 kJ/mol menos estable que las correspondientes sin tensión, como las del ciclohexano, unos 33 kJ/mol por cada enlace doblado <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–4</a>)</span>.</p>
+</section>
+<section id="teoría-de-orbitales-moleculares" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-de-orbitales-moleculares">Teoría de orbitales moleculares</h2>
+<p>La teoría del enlace de valencia no explica los estados excitados de las moléculas, imprescindibles para comprender la absorción de luz y el color <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. La <strong>teoría de orbitales moleculares</strong> describe los electrones de las moléculas con <strong>orbitales moleculares (MO)</strong>, funciones de onda asociadas a la molécula entera y no a un solo átomo, que comparten con los orbitales atómicos la capacidad de alojar dos electrones con espines opuestos, una energía definida y una distribución de densidad representable por contornos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>.</p>
+<p>Cuando dos orbitales atómicos se solapan, se forman siempre dos orbitales moleculares <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. En el H₂, la combinación constructiva de las funciones de onda de los dos 1s concentra densidad entre los núcleos y produce el <strong>orbital molecular enlazante</strong>, de energía menor que la de los orbitales atómicos de partida, mientras la combinación destructiva los cancela en la región central y produce el <strong>orbital molecular antienlazante</strong>, de mayor energía, que excluye electrones del enlace y tiene un plano nodal entre los núcleos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>.</p>
+<p>Los MO del H₂ se denominan sigma, como los enlaces, y se etiquetan σ₁ₛ para el enlazante y σ*₁ₛ para el antienlazante, con el asterisco marcando el carácter antienlazante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. El <strong>diagrama de niveles de energía</strong> ordena los orbitales atómicos a los lados y los moleculares en el centro, y cada MO admite dos electrones con espines apareados, de modo que la configuración del H₂ es (σ₁ₛ)² y la molécula es más estable que los dos átomos separados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>.</p>
+<p>El helio pone a prueba el esquema: con cuatro electrones, la molécula He₂ llena tanto el σ₁ₛ como el σ*₁ₛ, y el descenso energético del enlazante queda compensado por la subida del antienlazante, de modo que la molécula no existe <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. La teoría predice así correctamente que el hidrógeno forma moléculas diatómicas y el helio no <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>.</p>
+<p>La teoría de orbitales moleculares compara la estabilidad de las moléculas con un único número, el <strong>orden de enlace</strong>, que sintetiza el balance entre los orbitales que estabilizan y los que desestabilizan y se define como la mitad de la diferencia entre el número de electrones enlazantes y el de antienlazantes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>:</p>
+<p><span id="eq-orden-enlace"><span class="math display">\[ \text{orden de enlace} = \dfrac{n_{\text{enlazantes}} - n_{\text{antienlazantes}}}{2}  \tag{10.1}\]</span></span></p>
+<p>El factor un medio refleja que los enlaces se conciben como pares de electrones: un orden de 1 es un enlace sencillo, 2 un doble y 3 un triple, y como la teoría trata también moléculas con número impar de electrones, son posibles órdenes fraccionarios como 1/2, 3/2 y 5/2 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. Con dos electrones enlazantes y ninguno antienlazante, el H₂ tiene orden 1, y el He₂, con dos de cada clase, orden 0, que significa que no existe enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>.</p>
+<p>El ion He₂⁺, con tres electrones, llena el σ₁ₛ y coloca el tercero en el σ*₁ₛ, de modo que su orden de enlace vale un medio, mayor que cero, y el ion es estable frente al He y el He⁺ separados, como se ha demostrado en fase gaseosa <span class="citation" data-cites="brown2012 brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.8; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. El ion H₂⁻, con dos electrones enlazantes y uno antienlazante, tiene también orden un medio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.8)</span>.</p>
+<p>En el litio, los 1s de cada átomo forman σ₁ₛ y σ<em>₁ₛ, y los 2s forman σ₂ₛ y σ</em>₂ₛ, pero como los primeros yacen más bajos en energía, los seis electrones del Li₂ llenan σ₁ₛ, σ<em>₁ₛ y σ₂ₛ, de modo que el orden de enlace es uno y se debe a los electrones de valencia 2s <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. La regla dice que los electrones de core no contribuyen al enlace, y el Be₂, que llenaría el σ</em>₂ₛ, tiene orden cero y no existe <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>Cinco reglas guían la construcción de los diagramas para las diatómicas del segundo periodo: el número de MO iguala al de orbitales atómicos combinados, los orbitales se combinan mejor con otros de energía similar, la eficacia de la combinación crece con el solapamiento, cada MO admite como máximo dos electrones con espines apareados y los orbitales degenerados se llenan uno a uno antes de aparearse <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>Los orbitales 2p cuyo eje coincide con el eje internuclear se combinan cabeza con cabeza en σ₂ₚ y σ<em>₂ₚ, mientras los otros dos pares se combinan lateralmente en los orbitales π₂ₚ y π</em>₂ₚ, que son doblemente degenerados, y los diagramas recogen esa doble degeneración con pares de niveles paralelos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>Dos efectos alteran la ordenación simple de energías <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. El solapamiento cabeza con cabeza es mayor que el lateral, lo que sitúa el σ₂ₚ por debajo de los π₂ₚ, pero la interacción entre un orbital 2s de un átomo y los 2p del otro eleva el σ₂ₚ y baja el σ₂ₛ, de modo que en el B₂, el C₂ y el N₂ el σ₂ₚ queda por encima de los π₂ₚ, mientras en el O₂, el F₂ y el Ne₂ vale la ordenación simple <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>Las configuraciones resultantes explican las propiedades de la serie: el B₂ coloca sus electrones quinto y sexto en los dos π₂ₚ con el mismo espín y alcanza un orden de enlace 1, el C₂ completa esos orbitales con orden 2, y el N₂, que añade el σ₂ₚ, alcanza el orden 3, con una distancia corta y una entalpía de enlace grande que lo vuelven especialmente inerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>El <strong>paramagnetismo</strong>, la atracción hacia un campo magnético que ejercen las especies con electrones desapareados, permite distinguir experimentalmente esas configuraciones, mientras el <strong>diamagnetismo</strong>, la repulsión débil de las especies sin electrones desapareados, completa el criterio, de modo que la respuesta a un imán revela si los electrones están apareados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>El oxígeno es la prueba reina de la teoría <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. Su longitud de 1,21 Å y su entalpía de enlace de 495 kJ/mol concuerdan con el doble enlace de la estructura de Lewis, pero la molécula contiene dos electrones desapareados en los orbitales π*₂ₚ, invisibles en esa estructura, que la hacen paramagnética, y la teoría de orbitales moleculares predice ambos hechos con un orden de enlace 2 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>Recuérdese que Pauling resolvió la misma anomalía en el capítulo anterior con enlaces de tres electrones en el lenguaje del enlace de valencia, otra convergencia de dos escuelas ante un mismo dato <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–6</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. El F₂, que llena los π*₂ₚ, es diamagnético con un enlace sencillo, y el Ne₂, que llenaría todos los orbitales, tiene orden cero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>El ion O₂⁺ muestra el poder cuantitativo del método: con once electrones de valencia, uno menos que el O₂, posee un electrón desapareado, ocho electrones enlazantes y tres antienlazantes, y su orden de enlace vale 5/2 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.9)</span>. El orden, intermedio entre los del O₂ y el N₂, lleva a predecir una entalpía de enlace de unos 700 kJ/mol y una longitud de unos 1,15 Å, mientras las medidas experimentales dan 625 kJ/mol y 1,123 Å <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.9)</span>.</p>
+<p>Las moléculas diatómicas heteronucleares extienden los mismos principios <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. El óxido nítrico, NO, molécula de once electrones de valencia que controla varias funciones fisiológicas humanas, desde relajar los músculos hasta reforzar la memoria, y que valió el premio Nobel de Fisiología o Medicina de 1998 a tres científicos, tiene dos estructuras de Lewis con doble enlace, pero su longitud experimental de 1,15 Å sugiere un orden mayor que 2 <span class="citation" data-cites="brown2012 brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">2012, sec. 9.8</a>)</span>.</p>
+<p>En un heteronuclear, los orbitales atómicos del elemento más electronegativo son de menor energía, y cada MO recibe mayor contribución del orbital más cercano en energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. El diagrama del NO se llena con once electrones: ocho enlazantes y tres antienlazantes dan orden 5/2, que concuerda mejor con el experimento que las estructuras de Lewis, y el electrón desapareado reside en un orbital π* con mayor peso sobre el nitrógeno, lo que respalda la estructura de Lewis con el electrón impar en ese átomo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>El lenguaje de los orbitales moleculares permite además explicar el color <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. La luz excita electrones desde el orbital molecular ocupado de mayor energía, el <strong>HOMO</strong>, hasta el orbital molecular desocupado de menor energía, el <strong>LUMO</strong>, y la diferencia entre ambos, el salto HOMO-LUMO, fija la energía mínima necesaria para la excitación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+<p>El nitrógeno, con un salto que corresponde a longitudes de onda inferiores a 200 nm, en el ultravioleta, no absorbe la luz visible y es incoloro, mientras las sustancias teñidas, como las moléculas de rutenio de las células solares que excitan electrones hacia el dióxido de titanio, poseen saltos en la región visible <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+</section>
+<section id="ejemplo-resuelto-el-azufre-elemental" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-resuelto-el-azufre-elemental">Ejemplo resuelto: el azufre elemental</h2>
+<p>El azufre elemental es un sólido amarillo de moléculas S₈ en anillos plegados de ocho miembros, y al calentarlo se generan moléculas gaseosas S₂ según la reacción S₈(s) → 4 S₂(g) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>. El ejemplo que sigue, tomado del capítulo de Brown, recorre con ese sistema todo el repertorio de este capítulo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+<p>La primera cuestión pide el elemento del segundo periodo más parecido al azufre: con configuración [Ne]3s²3p⁴, es el oxígeno, [He]2s²2p⁴, su vecino inmediato superior en la tabla periódica <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>. La segunda lleva el VSEPR al anillo: cada azufre está enlazado a dos vecinos y conserva dos pares no enlazantes, lo que da cuatro dominios, hibridación sp³ y ángulos S—S—S algo menores que 109,5°, y el valor experimental de 108° confirma la predicción, mientras un anillo plano habría exigido ángulos de 135° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+<p>La tercera cuestión aplica los orbitales moleculares al S₂, que por tener el mismo número de electrones de valencia que el O₂ comparte su diagrama: orden de enlace 2 y dos electrones desapareados en los orbitales π*, es decir, paramagnetismo, del mismo modo que el O₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+<p>La cuarta cierra con la termoquímica de enlaces: la reacción rompe ocho enlaces S—S sencillos y forma cuatro dobles S═S, y con las entalpías promedio de la tabla del capítulo anterior, 266 kJ/mol para el sencillo y 418 kJ/mol para el doble, el balance vale 8 × 266 − 4 × 418 = 456 kJ, una variación positiva que hace la reacción endotérmica y explica por qué exige temperaturas altas <span class="citation" data-cites="brown2012 brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Table 8.4)</span>.</p>
+<p>La moraleja del ejemplo es doble <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>. Un mismo sistema recorre los tres niveles de descripción de este capítulo, la forma por el VSEPR, los enlaces por la hibridación y los orbitales moleculares, y cada nivel aporta una pieza distinta del balance energético final <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+</section>
+<section id="preguntas-y-ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-y-ejercicios">Preguntas y ejercicios</h2>
+<p>Los ejercicios de este capítulo están inspirados en <span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span> (2012), cap. 9, y reproducen su tipología con enunciados propios: predicen geometrías por el VSEPR, comparan polaridades, asignan hibridaciones, cuentan enlaces σ y π, calculan órdenes de enlace y aplican el criterio de la resonancia a los enlaces π deslocalizados.</p>
+<p>Prediga las geometrías de dominios de electrones y moleculares del ion ClO₃⁻ y de la molécula XeF₂, dibujando primero sus estructuras de Lewis y contando los dominios alrededor del átomo central, y explique cómo la presencia de pares solitarios modifica la forma final en cada caso <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.28)</span>.</p>
+<p>Explique con el modelo VSEPR por qué los ángulos H—N—H de la serie NH₂⁻, NH₃ y NH₄⁺ valen 105°, 107° y 109° respectivamente, y relacione esa tendencia con la extensión espacial de los dominios de pares no enlazantes, y explique por qué el NH₄⁺ conserva el ángulo ideal mientras los otros dos lo comprimen <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.34)</span>.</p>
+<p>Decida si las moléculas CS₂, PCl₃, IF₅ y SF₆ son polares o no polares, justificando cada respuesta con la geometría y la cancelación o refuerzo de los dipolos de enlace, y prediga el valor relativo de sus momentos dipolares comparando la simetría de cada forma <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.43)</span>.</p>
+<p>Indique la hibridación del átomo central en GeH₄, SO₃ y TeCl₂, y explique el vínculo entre cada geometría de dominios y su conjunto de orbitales híbridos, señalando cuántos orbitales atómicos se mezclan en cada caso y cuántos híbridos resultan, siempre iguales en número a los orbitales de partida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.56)</span>.</p>
+<p>En el acetonitrilo, CH₃CN, determine los ángulos de enlace aproximados alrededor de cada carbono, la hibridación de ambos y el número total de enlaces σ y π de la molécula, justificando cada ángulo con su conteo de dominios y cada hibridación con la geometría de dominios correspondiente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.6)</span>.</p>
+<p>Entre las especies SO₃, SO₃²⁻, H₂CO, O₃ y NH₄⁺, señale cuáles presentan enlaces π deslocalizados y justifique la elección a partir de sus estructuras de resonancia, y distinga, por el contrario, los casos en que el enlace π queda confinado a un único par de átomos vecinos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.7)</span>.</p>
+<p>Calcule el orden de enlace del ion He₂⁺ con la ecuación <a href="#eq-orden-enlace" class="quarto-xref">Ecuación&nbsp;<span>10.1</span></a> y explique por qué el resultado mayor que cero predice su estabilidad frente al He y el He⁺ separados, comparando el número de electrones enlazantes y antienlazantes que aloja su diagrama de niveles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.8)</span>.</p>
+<p>Determine el orden de enlace y el comportamiento magnético de los iones O₂²⁻ y C₂²⁻, indicando cuántos electrones desapareados posee cada uno en su diagrama de orbitales moleculares, y compare ambas configuraciones con la del O₂ neutro para explicar el efecto de añadir o retirar electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.9)</span>.</p>
+<p>Justifique, con los datos del ejemplo del azufre, por qué el ángulo S—S—S medido en el anillo S₈ es de 108° y no de 135°, y por qué el S₂ debe ser paramagnético y tener orden de enlace 2, y explique el balance de entalpías que vuelve endotérmica la conversión del anillo en moléculas diatómicas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+</section>
+<section id="solucionario" class="level2">
+<h2 class="anchored" data-anchor-id="solucionario">Solucionario</h2>
+<p>El ion ClO₃⁻ tiene un átomo central de cloro con tres enlaces y un par solitario, de modo que sus cuatro dominios se disponen tetraédricamente y su geometría molecular es piramidal trigonal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.28)</span>. La molécula XeF₂ tiene cinco dominios, tres de ellos pares solitarios que ocupan las posiciones ecuatoriales de la bipirámide trigonal, y por eso su geometría molecular es lineal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.28)</span>.</p>
+<p>La serie de ángulos decrecientes se explica por el crecimiento del número de pares solitarios sobre el nitrógeno: el NH₄⁺, sin pares solitarios, conserva el ángulo tetraédrico ideal de 109°, y cada par no enlazante adicional, uno en el NH₃ y dos en el NH₂⁻, extiende más su dominio, que repele con más fuerza a los pares enlazantes y comprime los ángulos a 107° y 105° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.34)</span>. La causa es la extensión de los dominios solitarios, atraídos sobre todo por un solo núcleo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>El CS₂ es lineal y no polar, porque sus dos dipolos C═S se cancelan por ser iguales y opuestos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.43)</span>. El PCl₃ es piramidal trigonal y polar, porque sus dipolos no se cancelan, y el IF₅ es piramidal cuadrado y polar por la misma razón, mientras el SF₆, octaédrico y perfectamente simétrico, es no polar con momento cero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.43)</span>.</p>
+<p>El GeH₄ es tetraédrico y su hibridación es sp³, el SO₃ es trigonal plano con hibridación sp², y el TeCl₂, con dos enlaces y dos pares solitarios, tiene geometría de dominios tetraédrica e hibridación sp³ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Exercise 9.56)</span>. El vínculo entre ambas columnas es la tabla de conjuntos de híbridos: cada geometría de dominios corresponde a un conjunto, lineal para sp, trigonal plana para sp² y tetraédrica para sp³ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Table 9.4)</span>.</p>
+<p>En el acetonitrilo, el carbono del metilo tiene cuatro dominios enlazantes, ángulos de unos 109° e hibridación sp³, mientras el carbono del nitrilo es lineal, con ángulo de 180° e hibridación sp <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.6)</span>. La molécula contiene cinco enlaces σ: tres enlaces C—H, el enlace C—C y el enlace σ del triple C≡N, todos por solapamiento frontal, y el triple enlace añade además dos enlaces π, de modo que el recuento final es de cinco σ y dos π <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.6)</span>.</p>
+<p>El SO₃, con tres estructuras de resonancia que mueven el doble enlace, presenta π deslocalizado, y el O₃, con dos estructuras, también <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.7)</span>. El SO₃²⁻, el H₂CO y el NH₄⁺ tienen estructuras de resonancia que no extienden los enlaces π sobre más de dos átomos, y por eso su enlace π queda localizado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.7)</span>.</p>
+<p>El He₂⁺ aloja dos electrones en el orbital σ₁ₛ enlazante y uno en el σ*₁ₛ antienlazante, de modo que el orden de enlace vale (2 − 1)/2 = 1/2 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.8)</span>. Un orden mayor que cero significa que existe enlace, y el ion se ha observado en fase gaseosa <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.8)</span>.</p>
+<p>El O₂²⁻, con doce electrones de valencia más dos, llena por completo los orbitales π<em>₂ₚ con dos electrones apareados, tiene orden de enlace (8 − 6)/2 = 1 y es diamagnético <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.9)</span>. El C₂²⁻, con diez electrones de valencia, llena σ₂ₛ, σ</em>₂ₛ, π₂ₚ y σ₂ₚ, alcanza un orden (8 − 2)/2 = 3 y carece de electrones desapareados, por lo que también es diamagnético <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.9)</span>.</p>
+<p>El ángulo del anillo S₈ obedece a la hibridación sp³ de cada azufre: cuatro dominios, dos enlazantes y dos solitarios, piden ángulos menores que 109,5°, y la medida de 108° evidencia el plegado del anillo, mientras un anillo plano impondría 135° <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>. El S₂ comparte con el O₂ su número de electrones de valencia y, por tanto, su diagrama de orbitales: orden 2 y dos electrones desapareados en los π*, lo que lo hace paramagnético <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Integrative Exercise)</span>.</p>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<p>La forma de una molécula queda determinada por sus ángulos de enlace y sus longitudes, y el modelo VSEPR la predice contando los dominios de electrones alrededor del átomo central y disponiéndolos para minimizar las repulsiones [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;9.1; sec.&nbsp;9.2]. Los pares no enlazantes y los enlaces múltiples ocupan dominios más grandes, comprimen los ángulos y gobiernan la geometría molecular de las capas expandidas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>.</p>
+<p>La polaridad de una molécula poliatómica es la suma vectorial de sus dipolos de enlace, de modo que la simetría de la geometría decide si la molécula es polar o no polar <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. La teoría del enlace de valencia explica los enlaces por solapamiento de orbitales, y la hibridación, con conjuntos sp, sp² y sp³, reconcilia esa descripción con las geometrías del VSEPR, aunque alcanza su límite en los compuestos hipervalentes del tercer periodo [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;9.4; sec.&nbsp;9.5].</p>
+<p>Los enlaces dobles y triples combinan un enlace σ con uno o dos π, cuya rigidez y deslocalización explican la planaridad del etileno, la longitud del benceno y el color de muchas moléculas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. La teoría de orbitales moleculares completa el cuadro con orbitales enlazantes y antienlazantes, órdenes de enlace de medio paso y la predicción del paramagnetismo del O₂, y explica además el color por el salto HOMO-LUMO [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;9.7; sec.&nbsp;9.8].</p>
+</section>
+<section id="autoevaluación" class="level2">
+<h2 class="anchored" data-anchor-id="autoevaluación">Autoevaluación</h2>
+<p>Para comprobar el dominio del capítulo, verifique que predice la geometría molecular de una molécula con el VSEPR, que justifica la compresión de los ángulos por pares solitarios y enlaces múltiples, y que distingue los enlaces σ y π de un doble o triple enlace [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;9.2; sec.&nbsp;9.6]. Confirme también que calcula órdenes de enlace con los diagramas de orbitales moleculares y que predice polaridad y paramagnetismo [<span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span>, sec.&nbsp;9.7; sec.&nbsp;9.8]. Si algún paso le resulta esquivo, repase la sección correspondiente antes de avanzar <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+</section>
+<section id="enlace-al-próximo-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="enlace-al-próximo-capítulo">Enlace al próximo capítulo</h2>
+<p>La geometría molecular prepara el estudio de la materia en sus tres estados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. En el próximo capítulo, dedicado a los gases, la forma de las moléculas, sus tamaños y sus polaridades entrarán en juego al examinar la teoría cinética, la ecuación del gas ideal, las velocidades moleculares y las desviaciones del comportamiento ideal en los gases reales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. La arquitectura molecular aprendida aquí se convertirá en la lente con la que se leerán fenómenos como la presión, la temperatura y la condensación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>.</p>
+</section>
+<section id="glosario-acumulativo" class="level2">
+<h2 class="anchored" data-anchor-id="glosario-acumulativo">Glosario acumulativo</h2>
+<p><strong>Ácido</strong>: sustancia que se ioniza en disolución acuosa para formar iones H⁺, por lo que se llama donador de protones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Ácido débil</strong>: ácido parcialmente ionizado en disolución, electrolito débil <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Ácido fuerte</strong>: ácido completamente ionizado en disolución, electrolito fuerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base</strong>: sustancia que acepta iones H⁺ y produce iones OH⁻ al disolverse en agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base débil</strong>: base parcialmente ionizada en disolución, electrolito débil <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Base fuerte</strong>: base completamente ionizada en disolución, electrolito fuerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Concentración</strong>: cantidad de soluto disuelta en una cantidad dada de solvente o de disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>De-electronación</strong>: término de Pauling para la oxidación, la pérdida de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>. <strong>Dilución</strong>: proceso de añadir solvente a una disolución sin cambiar los moles de soluto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>Disociación</strong>: separación de un compuesto iónico en sus iones al disolverse <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Disolución estándar</strong>: disolución reactivo de concentración conocida usada en una valoración <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Disolución madre</strong>: disolución concentrada a partir de la cual se preparan otras más diluidas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>Ecuación iónica completa</strong>: ecuación que muestra todos los electrolitos fuertes solubles como sus iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Ecuación iónica neta</strong>: ecuación que incluye solo las especies directamente involucradas en la reacción, sin iones espectadores <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Ecuación molecular</strong>: ecuación que muestra las fórmulas químicas completas sin indicar el carácter iónico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Electronación</strong>: término de Pauling para la reducción, la ganancia de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 15–3</a>)</span>. <strong>Electrolito</strong>: sustancia cuyas disoluciones acuosas contienen iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Electrolito débil</strong>: soluto que existe en disolución sobre todo como moléculas neutras <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Electrolito fuerte</strong>: soluto que existe en disolución completa o casi completamente como iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Indicador ácido-base</strong>: tinte que cambia de color al pasar el punto de equivalencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Iones espectadores</strong>: iones que aparecen en forma idéntica en ambos lados de la ecuación iónica completa y no participan en la reacción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Molaridad</strong>: número de moles de soluto en un litro de disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.5</a>)</span>. <strong>No electrolito</strong>: sustancia que no forma iones al disolverse en agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Número de oxidación</strong>: carga hipotética asignada a cada átomo al dividir artificialmente los electrones de un compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Oxidación</strong>: pérdida de electrones por una sustancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Precipitado</strong>: sólido insoluble formado por una reacción en disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Punto de equivalencia</strong>: punto de la valoración en que se combinan cantidades estequiométricamente equivalentes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Reacción de desplazamiento</strong>: reacción en que un elemento metálico desplaza al ion de una sal o un ácido mediante su oxidación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Reacción de metátesis</strong>: reacción en que los cationes y aniones intercambian parejas, también llamada de intercambio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Reacción de neutralización</strong>: reacción entre un ácido y una base que produce agua y una sal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Reacción de precipitación</strong>: reacción que produce un producto insoluble <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Reacción redox</strong>: reacción de oxidación-reducción en que se transfieren electrones entre reactivos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Reducción</strong>: ganancia de electrones por una sustancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Sal</strong>: compuesto iónico cuyo catión proviene de una base y cuyo anión proviene de un ácido <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.3</a>)</span>. <strong>Serie de actividad</strong>: lista de metales ordenados según la facilidad decreciente de oxidación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.4</a>)</span>. <strong>Solubilidad</strong>: cantidad de una sustancia que puede disolverse en una cantidad dada de solvente a cierta temperatura <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.2</a>)</span>. <strong>Soluto</strong>: sustancia que se disuelve en el solvente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Solvatación</strong>: rodeo de los iones disueltos por moléculas de solvente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Solvente</strong>: sustancia presente en mayor cantidad en una disolución <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.1</a>)</span>. <strong>Valoración</strong>: procedimiento que combina una disolución de concentración desconocida con una estándar para determinar la concentración <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 4.6</a>)</span>. <strong>Análisis dimensional</strong>: método de resolución que multiplica, divide o cancela unidades para garantizar resultados con las unidades correctas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Análisis por combustión</strong>: método que quema un compuesto de carbono e hidrógeno y determina su fórmula empírica por las masas de CO₂ y H₂O retenidas en trampas <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, sec. 4.3</a>)</span>. <strong>Balanceo</strong>: determinación de los coeficientes que igualan el número de átomos de cada elemento en ambos lados de la ecuación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Cantidades estequiométricamente equivalentes</strong>: moles de reactivos y productos que se corresponden según los coeficientes de la ecuación balanceada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.6</a>)</span>. <strong>Coeficiente</strong>: número delante de una fórmula que indica las moléculas o moles relativos de esa sustancia en la reacción <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Composición porcentual</strong>: masa de cada elemento en cien unidades de masa del compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.5</a>)</span>. <strong>Ecuación química</strong>: representación escrita de una reacción con reactivos, productos y coeficientes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.1</a>)</span>. <strong>Fórmula empírica</strong>: fórmula con los subíndices enteros más pequeños que dan la razón de átomos del compuesto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.5</a>)</span>. <strong>Fórmula molecular</strong>: fórmula que da el número real de átomos de cada elemento en la molécula <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, sec. 4.4</a>)</span>. <strong>Masa fórmula</strong>: suma de las masas atómicas multiplicadas por los subíndices de la fórmula <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, cap. 2</a>)</span>. <strong>Masa molar</strong>: masa en gramos de un mol de sustancia, numéricamente igual a la masa fórmula en uma <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, cap. 3</a>)</span>. <strong>Mol</strong>: cantidad de sustancia que contiene el número de Avogadro de entidades <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.4</a>)</span>. <strong>Número de Avogadro</strong>: 6,02 × 10²³ mol⁻¹, el número de átomos en exactamente 12 g de carbono-12 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.4</a>)</span>. <strong>Reactivo en exceso</strong>: reactivo que sobra cuando la reacción se detiene por el reactivo limitante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Reactivo limitante</strong>: reactivo que se consume por completo y determina la cantidad de producto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento porcentual</strong>: cociente entre el rendimiento real y el teórico, multiplicado por cien <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento real</strong>: cantidad de producto efectivamente obtenida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Rendimiento teórico</strong>: cantidad de producto calculada a partir del reactivo limitante <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 3.7</a>)</span>. <strong>Alcano</strong>: hidrocarburo en que cada carbono se enlaza a cuatro átomos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Alcohol</strong>: compuesto en que un hidrógeno del alcano se reemplaza por un grupo OH <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Alotropía</strong>: existencia de un elemento en más de una forma estructural, como grafito, diamante y fullereno <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Anión</strong>: ion con carga negativa <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.7</a>)</span>. <strong>Átomo</strong>: partícula indivisible de la materia, con núcleo y nube de electrones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Calor específico</strong>: capacidad de una sustancia para absorber calor por unidad de masa y grado <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Calor latente</strong>: calor requerido para fundir un sólido o hervir un líquido sin cambio de temperatura <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Cambio físico</strong>: alteración de la apariencia sin cambio de composición <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Cambio químico</strong>: transformación de una sustancia en otra químicamente distinta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Carga electrónica</strong>: magnitud de la carga del electrón, 1,602 × 10⁻¹⁹ C <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Catión</strong>: ion con carga positiva <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.7</a>)</span>. <strong>Celsius</strong>: escala que fija 0 °C y 100 °C en la congelación y ebullición del agua <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Cero absoluto</strong>: temperatura mínima posible, −273,15 °C o 0 K <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Cifras significativas</strong>: todas las cifras de una medición, incluida la incierta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Compuesto</strong>: sustancia formada por dos o más elementos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Compuesto iónico</strong>: compuesto eléctricamente neutro de cationes y aniones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Densidad</strong>: masa por unidad de volumen <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Elemento</strong>: sustancia que no puede descomponerse en otras más simples <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Entalpía</strong>: calor liberado o absorbido en una reacción a presión constante, simbolizado H <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Entropía</strong>: medida del desorden molecular de un sistema, simbolizada S <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 17</a>)</span>. <strong>Equivalente</strong>: peso fijo de una sustancia que reacciona con un peso fijo de otra <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 9</a>)</span>. <strong>Espectrómetro de masas</strong>: instrumento que separa los iones por masa y mide su abundancia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.4</a>)</span>. <strong>Exactitud</strong>: cercanía de una medición al valor verdadero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Fase</strong>: parte homogénea de un sistema separada por límites físicos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Filtración</strong>: separación de un sólido y un líquido mediante papel de filtro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Fórmula estructural</strong>: fórmula que muestra qué átomos están unidos a cuáles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.6</a>)</span>. <strong>Gas</strong>: estado sin volumen ni forma fijos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Hidrocarburo</strong>: compuesto que solo contiene carbono e hidrógeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Ion</strong>: partícula que ha ganado o perdido electrones <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 20</a>)</span>. <strong>Isómero</strong>: compuesto con la misma fórmula molecular pero distinto arreglo atómico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.9</a>)</span>. <strong>Isótopos</strong>: átomos del mismo elemento con distinto número de neutrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.3</a>)</span>. <strong>Kelvin</strong>: escala termodinámica cuyo cero es el cero absoluto <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Ley de conservación de la masa</strong>: la masa total, incluida la de la energía radiante, se conserva <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 1</a>)</span>. <strong>Ley de la composición constante</strong>: los compuestos tienen composición elemental fija <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Ley de proporciones múltiples</strong>: los pesos de un elemento que reaccionan con un peso fijo de otro están en razón de números enteros pequeños <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Ley periódica</strong>: ordenación de los elementos según sus pesos atómicos que agrupa a los químicamente análogos <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 14</a>)</span>. <strong>Líquido</strong>: estado con volumen propio pero sin forma fija <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Materia</strong>: todo lo que tiene masa y ocupa espacio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Metaloide</strong>: elemento con propiedades entre metales y no metales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.5</a>)</span>. <strong>Mezcla</strong>: combinación de sustancias que conservan su identidad <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Molécula</strong>: agrupación de dos o más átomos unidos en formas específicas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Nanotecnología</strong>: manipulación de la materia a escala atómica o molecular <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Natrón</strong>: sal común impura extraída de lagos secos o aguas del Nilo <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 2</a>)</span>. <strong>Número atómico (Z)</strong>: número de protones del núcleo <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Número másico (A)</strong>: suma de protones y neutrones del núcleo <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 20</a>)</span>. <strong>Oxianión</strong>: anión poliatómico que contiene oxígeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.8</a>)</span>. <strong>Peso atómico</strong>: masa relativa de un átomo respecto de la escala acordada en Karlsruhe <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 14</a>)</span>; en su acepción moderna, masa atómica promedio ponderada por la abundancia isotópica <span class="citation" data-cites="oriakhi2021">(<a href="../references.html#ref-oriakhi2021" role="doc-biblioref">Oriakhi 2021, 22</a>)</span>. <strong>Precisión</strong>: grado de acuerdo entre mediciones individuales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Propiedad intensiva</strong>: propiedad que no depende de la cantidad de muestra <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Radiactividad</strong>: emisión espontánea de radiación por los átomos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.2</a>)</span>. <strong>Retrosíntesis</strong>: descomposición de una molécula deseada en moléculas simples conocidas para planear su síntesis <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 19</a>)</span>. <strong>Sólido</strong>: estado con forma y volumen definidos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Solución</strong>: mezcla homogénea <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Sustancia pura</strong>: materia con composición que no varía de muestra a muestra <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Teoría atómica</strong>: doctrina de Dalton según la cual la materia es particulada y los compuestos se forman combinando átomos en proporciones fijas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.1</a>)</span>; y cada compuesto se forma con razones de números enteros pequeños <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 2</a>)</span>. <strong>Unidad de masa atómica (uma)</strong>: exactamente un doceavo de la masa del carbono-12 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 2.4</a>)</span>. <strong>Unidades SI</strong>: unidades métricas preferidas acordadas internacionalmente en 1960 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 1</a>)</span>. <strong>Actínidos</strong>: serie de catorce elementos que siguen al actinio, cuyos núcleos son todos radiactivos y que ocupan la subcapa 5f <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Amplitud</strong>: altura de una onda, una de las tres propiedades que la caracterizan junto con la longitud de onda y la frecuencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.1</a>)</span>. <strong>Bloques de la tabla periódica</strong>: divisiones de la tabla según la subcapa que se está llenando, s, p, d o f, con 2, 6, 10 y 14 columnas respectivamente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.9</a>)</span>. <strong>Capa electrónica</strong>: conjunto de orbitales con el mismo número cuántico principal n, que contiene n² orbitales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Configuración electrónica</strong>: distribución de los electrones de un átomo entre los orbitales disponibles, escrita anotando la subcapa y su ocupación como superíndice <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Constante de Planck</strong>: constante de proporcionalidad h entre la energía de un cuanto y la frecuencia de la radiación, 6,626 × 10⁻³⁴ J·s <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.2</a>)</span>. <strong>Constante de Rydberg</strong>: constante R_H de la ecuación de Rydberg, 1,096776 × 10⁷ m⁻¹, que fija la escala de las líneas del espectro del hidrógeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Cuanto</strong>: paquete discreto de energía que los átomos solo pueden emitir o absorber, base de la cuantización de Planck <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.2</a>)</span>. <strong>Densidad de probabilidad</strong>: cuadrado de la función de onda, ψ², la probabilidad de hallar al electrón por unidad de volumen en cada punto del espacio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Difracción</strong>: desvío de las ondas de materia al atravesar un cristal, fenómeno que verificó experimentalmente el carácter ondulatorio del electrón <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 3–8</a>)</span>. <strong>Ecuación de Rydberg</strong>: fórmula que predice la longitud de onda de cada línea del espectro del hidrógeno a partir de dos números enteros n₁ y n₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Efecto fotoeléctrico</strong>: emisión de electrones por una superficie metálica iluminada, explicada por Einstein en 1905 con fotones de energía hν <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.2</a>)</span>. <strong>Electrones de core</strong>: electrones internos del átomo, los del gas noble precedente en la notación condensada, que no participan en el enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Electrones de valencia</strong>: electrones de la capa exterior del átomo, responsables de su comportamiento químico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Electronvoltio</strong>: energía que adquiere un electrón acelerado por una diferencia de potencial de un voltio, 1,602 × 10⁻¹⁹ J <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 3–6</a>)</span>. <strong>Elementos representativos</strong>: elementos de los bloques s y p, cuyos electrones de valencia se leen directamente del grupo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.9</a>)</span>. <strong>Energía de ionización</strong>: energía necesaria para llevar un electrón desde el estado fundamental hasta el estado libre, que en el hidrógeno vale 13,60 electronvoltios <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–1</a>)</span>. <strong>Espectro continuo</strong>: espectro con todas las longitudes de onda, producido por la luz blanca descompuesta en un espectroscopio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Espectro de líneas</strong>: conjunto de líneas aisladas de la luz emitida por un gas caliente, característico de cada elemento <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Espectro electromagnético</strong>: conjunto completo de longitudes de onda posibles de la radiación, ordenado de las ondas largas a las cortas: radio, microondas, infrarrojo, visible, ultravioleta, rayos X y rayos gamma <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.1</a>)</span>. <strong>Espín electrónico</strong>: momento angular intrínseco del electrón, parecido al de un trompo, con dos orientaciones posibles <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.7</a>)</span>. <strong>Estado excitado</strong>: estado del electrón con energía mayor que la del estado fundamental <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–1</a>)</span>. <strong>Estado estacionario</strong>: estado de energía fija en el que el electrón no irradia energía mientras permanece en él, postulado de Bohr <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Estado fundamental</strong>: estado del electrón con la menor energía posible <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–1</a>)</span>. <strong>Fotón</strong>: partícula de luz postulada por Einstein, cada una con energía hν <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.2</a>)</span>. <strong>Frecuencia</strong>: número de ciclos de una onda que pasan por un punto fijo cada segundo, medido en ciclos por segundo o hercios <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.1</a>)</span>. <strong>Función de onda</strong>: solución de la ecuación de Schrödinger para cada estado del electrón, simbolizada ψ, cuyo cuadrado posee significado físico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Función trabajo</strong>: energía umbral de un metal para arrancar un electrón en el efecto fotoeléctrico, la Eᵢ de la ecuación de Einstein <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.2</a>)</span>. <strong>Lantánidos</strong>: serie de catorce elementos que siguen al lantano, que ocupan la subcapa 4f y se colocan aparte en la tabla por sus propiedades muy similares <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Ley periódica moderna</strong>: las propiedades de los elementos son funciones periódicas de sus configuraciones electrónicas <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Longitud de onda</strong>: distancia entre picos sucesivos de una onda, simbolizada λ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.1</a>)</span>. <strong>Mecánica cuántica</strong>: mecánica fundada por Schrödinger y Heisenberg en 1926 que describe al electrón con funciones de onda y niveles discretos de energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Metales de transición</strong>: elementos que ocupan sucesivamente los orbitales d de cada periodo, del escandio al cinc en el cuarto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Nodo</strong>: superficie donde la densidad de probabilidad del electrón se anula, como el nodo esférico del orbital 2s <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.6</a>)</span>. <strong>Notación condensada</strong>: escritura abreviada de una configuración electrónica que usa el símbolo del gas noble precedente entre corchetes como núcleo inerte <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Nube electrónica</strong>: imagen estadística del electrón como distribución difusa de probabilidad que rodea al núcleo, cuya concentración máxima en el hidrógeno se halla a 0,53 Å <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–3</a>)</span>. <strong>Número cuántico azimutal</strong>: número l que fija la forma del orbital y toma valores de 0 hasta n − 1, representados por las letras s, p, d y f <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Número cuántico de espín</strong>: número mₛ que solo puede valer +½ o −½ y da las dos orientaciones posibles del espín <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.7</a>)</span>. <strong>Número cuántico magnético</strong>: número mₗ que fija la orientación de un orbital y toma valores desde −l hasta +l <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Número cuántico principal</strong>: número n que fija el tamaño y la energía del orbital y toma valores enteros desde 1 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Onda de materia</strong>: onda asociada a toda partícula en movimiento, cuya longitud de onda es la constante de Planck dividida entre el momentum, λ = h/mv <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.4</a>)</span>. <strong>Orbital</strong>: función de onda permitida, región del espacio donde el electrón pasa la mayor parte del tiempo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Orbitales degenerados</strong>: orbitales de la misma energía, como los 3s, 3p y 3d del hidrógeno, cuya degeneración rompe la repulsión en átomos con varios electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.7</a>)</span>. <strong>Penetración</strong>: capacidad de un orbital de adentrarse en la nube cercana al núcleo, donde el apantallamiento es menor, que hace más estables los orbitales s <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.7</a>)</span>. <strong>Principio de exclusión de Pauli</strong>: en un átomo no pueden existir dos electrones con los cuatro números cuánticos idénticos, de modo que cada orbital admite a lo sumo dos electrones de espines opuestos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.7</a>)</span>. <strong>Principio de incertidumbre</strong>: es imposible conocer simultáneamente con precisión arbitraria la posición y el momentum de una partícula, con Δx·Δ(mv) ≥ h/4π <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.4</a>)</span>. <strong>Radiación electromagnética</strong>: forma de energía que se propaga como ondas de campos eléctrico y magnético perpendiculares, e incluye la luz visible, los rayos ultravioleta y los rayos X <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 3–5</a>)</span>. <strong>Radio de Bohr</strong>: radio de la primera órbita del hidrógeno, 0,53 Å, conservado por la mecánica cuántica como la distancia más probable del electrón al núcleo <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 5-1, 5-3)</span>. <strong>Regla de frecuencia de Bohr</strong>: la energía del fotón emitido o absorbido en una transición es exactamente la diferencia entre las energías de los dos estados estacionarios <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–1</a>)</span>. <strong>Regla de Hund</strong>: la configuración de menor energía es la que maximiza el número de electrones desapareados de espín paralelo, ocupando cada orbital de una subcapa antes de aparear ninguno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.8</a>)</span>. <strong>Serie de Balmer</strong>: conjunto de líneas visibles del espectro del hidrógeno, con n₁ = 2 en la ecuación de Rydberg <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Serie de Lyman</strong>: serie del espectro del hidrógeno en el ultravioleta, con n₁ = 1 en la ecuación de Rydberg, descubierta por Lyman en 1915 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Subcapa</strong>: nivel definido por la combinación de n y l que contiene 2l + 1 orbitales, uno por cada orientación de mₗ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.5</a>)</span>. <strong>Transición electrónica</strong>: salto del electrón entre estados estacionarios, acompañado de emisión o absorción de un fotón <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.3</a>)</span>. <strong>Velocidad de la luz</strong>: constante c que liga longitud de onda y frecuencia de toda onda electromagnética, 3,00 × 10⁸ metros por segundo en el vacío <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 6.1</a>)</span>. <strong>Afinidad electrónica</strong>: variación de entalpía al añadir un electrón a un átomo gaseoso; negativa cuando libera energía, como en el cloro, con −349 kJ/mol <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.5</a>)</span>. <strong>Alótropo</strong>: forma alternativa del mismo elemento en el mismo estado físico, como el O₂ y el O₃ o como los anillos S₈ del azufre <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.8</a>)</span>. <strong>Carga nuclear efectiva</strong>: carga neta que percibe un electrón, Z − S, menor que la nuclear por el apantallamiento de los electrones internos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.2</a>)</span>. <strong>Carácter metálico</strong>: grado en que un elemento se comporta como metal; crece al bajar en el grupo y decrece hacia la derecha del periodo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.6</a>)</span>. <strong>Congéneres</strong>: elementos de un mismo grupo, con configuraciones exteriores parecidas y propiedades estrechamente relacionadas <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Constante de apantallamiento</strong>: fracción de la carga nuclear, en unidades electrónicas, que los electrones interiores ocultan al electrón de valencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.2</a>)</span>. <strong>Dopante</strong>: impureza deliberada que controla la conductividad de un semiconductor como el silicio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.6</a>)</span>. <strong>Energías de ionización sucesivas</strong>: I₁, I₂, I₃…, las energías para arrancar el primer, el segundo y el tercer electrón de un átomo gaseoso, siempre crecientes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.4</a>)</span>. <strong>Gases nobles</strong>: grupo 8A; monoatómicos, con subcapas s y p llenas y energías de ionización máximas; el xenón y el kriptón reaccionan con el flúor <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.8</a>)</span>. <strong>Grupo</strong>: columna vertical de la tabla periódica; sus miembros, los congéneres, comparten la configuración exterior <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Halógenos</strong>: grupo 7A; moléculas diatómicas X₂, con la afinidad electrónica más negativa de la tabla <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.8</a>)</span>. <strong>Hidruro</strong>: compuesto de un metal activo y el hidrógeno, en el que este actúa como ion H⁻ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Ion hidruro</strong>: ion mononegativo H⁻, con la configuración del helio; presente en los hidruros de los metales alcalinos y alcalinotérreos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Ley de las octavas</strong>: regularidad descrita por Newlands en 1863, según la cual cada octavo elemento de la lista por peso atómico repite el comportamiento químico <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–6</a>)</span>. <strong>Metales alcalinos</strong>: grupo 1A; blandos, de baja densidad, con la energía de ionización mínima de su periodo y estado de oxidación +1 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Metales alcalinotérreos</strong>: grupo 2A; más duros y densos que los alcalinos, con estado de oxidación +2 y reactividad moderada <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Octeto</strong>: configuración de ocho electrones exteriores ns²np⁶ propia de los gases nobles, salvo el helio; meta de la valencia iónica <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Óxido ácido</strong>: óxido de no metal que con el agua forma un ácido y con las bases una sal y agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.6</a>)</span>. <strong>Óxido básico</strong>: óxido de metal que con el agua forma un hidróxido y con los ácidos una sal y agua <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.6</a>)</span>. <strong>Ozono</strong>: alótropo O₃ del oxígeno; protector en la estratosfera y oxidante nocivo a ras de suelo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.8</a>)</span>. <strong>Período</strong>: fila horizontal de la tabla periódica; contiene 2, 8, 8, 18, 18 o 32 elementos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Peróxido</strong>: compuesto con el ion O₂²⁻, que el sodio y los alcalinos más pesados forman con el oxígeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Radio atómico de enlace</strong>: mitad de la distancia entre los núcleos de dos átomos enlazados; 1,33 Å para el yodo y 0,77 Å para el carbono <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.3</a>)</span>. <strong>Radio de van der Waals</strong>: mitad de la distancia mínima entre los núcleos de átomos no enlazados que colisionan <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.3</a>)</span>. <strong>Radio iónico</strong>: tamaño de un ion, estimado al repartir la distancia catión-anión en los cristales iónicos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.3</a>)</span>. <strong>Reglas de Slater</strong>: método para estimar la constante de apantallamiento: 0,35 por cada electrón del mismo nivel, 0,85 por los de la capa interior y 1,00 por los más profundos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.2</a>)</span>. <strong>Semiconductor</strong>: sólido de conductividad intermedia, creciente con la temperatura, como el silicio dopado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.6</a>)</span>. <strong>Serie isoelectrónica</strong>: grupo de iones con igual número de electrones y radios decrecientes al crecer el número atómico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.3</a>)</span>. <strong>Símbolos de punto de Lewis</strong>: representación del electrón de valencia como puntos alrededor del símbolo del elemento <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–4</a>)</span>. <strong>Superóxido</strong>: compuesto con el ion O₂⁻, que potasio, rubidio y cesio forman con el oxígeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 7.7</a>)</span>. <strong>Tríadas</strong>: tríos de elementos de propiedades semejantes que Döbereiner señaló en 1817 <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 5–6</a>)</span>. <strong>Atomicidad</strong>: número de átomos de un elemento capaces de combinarse con uno de hidrógeno; concepto introducido por Frankland en 1852 <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 4</a>)</span>. <strong>Valencia</strong>: capacidad de combinación de un átomo expresada en número de enlaces; Kekulé la fijó en cuatro para el carbono en 1858 <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 4</a>)</span>. <strong>Regla del octeto</strong>: tendencia de los átomos a ganar, perder o compartir electrones hasta adquirir la configuración del gas noble más cercano, con ocho electrones de valencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.1</a>)</span>. <strong>Enlace iónico</strong>: enlace formado por la atracción electrostática entre iones de carga opuesta, que en los compuestos forma una red tridimensional <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.2</a>)</span>. <strong>Energía reticular</strong>: energía necesaria para separar por completo un mol de compuesto iónico sólido en sus iones gaseosos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.2</a>)</span>. <strong>Ciclo de Born-Haber</strong>: ciclo termoquímico que relaciona la energía reticular de un compuesto iónico con la sublimación, la ionización, la disociación y la afinidad electrónica de sus elementos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.2</a>)</span>. <strong>Ligancia</strong>: número de átomos vecinos que rodean a un átomo dado en un cristal o molécula; vale seis para el sodio en el cloruro de sodio <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–8</a>)</span>. <strong>Enlace covalente</strong>: enlace formado por el compartimiento de un par de electrones entre dos átomos, propuesto por Lewis en 1916 <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–1</a>)</span>. <strong>Enlace de un electrón</strong>: enlace covalente en el que dos núcleos comparten un único electrón, como en el ion molecular H₂⁺ <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–1</a>)</span>. <strong>Enlace de tres electrones</strong>: enlace formado por tres electrones compartidos, que Pauling propuso para explicar el paramagnetismo del oxígeno <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–6</a>)</span>. <strong>Enlace metálico</strong>: enlace de los metales, descrito como un compartimiento deslocalizado de los electrones de valencia en un mar de electrones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.3</a>)</span>. <strong>Electronegatividad</strong>: capacidad de un átomo, en una molécula, de atraer hacia sí los electrones de un enlace; escala de Pauling de 0,7 (cesio) a 4,0 (flúor) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Enlace covalente no polar</strong>: enlace covalente en el que los electrones se comparten por igual, como en el F₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Enlace covalente polar</strong>: enlace covalente con los electrones compartidos de forma desigual, con extremos parcialmente positivo y negativo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Carácter iónico parcial</strong>: grado en que un enlace covalente se comporta como iónico, creciente con la diferencia de electronegatividad <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–10</a>)</span>. <strong>Momento dipolar</strong>: producto de la magnitud de la carga separada por la distancia entre los centros de carga, μ = Q·r, medido en debyes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Molécula polar</strong>: molécula con separación neta de sus centros de carga positiva y negativa, con un lado positivo y otro negativo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Carga parcial</strong>: fracción de carga electrónica acumulada en un extremo de un enlace polar, como el 0,178 positivo del hidrógeno en el HCl <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.4</a>)</span>. <strong>Estructura de Lewis</strong>: representación de la molécula que muestra qué átomos se conectan y cómo se distribuyen los electrones de valencia <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.5</a>)</span>. <strong>Carga formal</strong>: carga que tendría un átomo en una estructura de Lewis si todos compartieran los electrones por igual; herramienta de contabilidad, no carga real <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.5</a>)</span>. <strong>Estructuras de resonancia</strong>: dos o más estructuras de Lewis de la misma molécula que difieren solo en la distribución de los electrones; la molécula es un híbrido de ellas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.6</a>)</span>. <strong>Hipervalente</strong>: molécula en la que el átomo central aloja más de ocho electrones de valencia, como el PF₅ o el SF₄ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.7</a>)</span>. <strong>Estructura transargonónica</strong>: estructura de Lewis con diez electrones alrededor del átomo central, que Pauling admite para fósforo, azufre y cloro <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–12</a>)</span>. <strong>Principio de electroneutralidad</strong>: regla de Pauling según la cual las moléculas estables organizan sus enlaces de modo que ningún átomo acumule carga neta apreciable <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–12</a>)</span>. <strong>Entalpía de enlace</strong>: cambio de entalpía molar al romper un enlace dado de una sustancia gaseosa, usualmente reportado como promedio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.8</a>)</span>. <strong>Atomización</strong>: proceso de romper una sustancia en sus átomos gaseosos, base de las entalpías de enlace promedio <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.8</a>)</span>. <strong>Enlace sencillo</strong>: enlace covalente formado por un par de electrones compartido, como el del H₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 8.3</a>)</span>. <strong>Ángulo de enlace</strong>: ángulo formado por las líneas que unen los núcleos de los átomos de una molécula <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. <strong>Arquitectura molecular</strong>: forma y tamaño de una molécula, definidos por los ángulos y distancias entre sus núcleos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.1</a>)</span>. <strong>Modelo de repulsión de pares de electrones de la capa de valencia (VSEPR)</strong>: modelo que predice la geometría molecular a partir de las repulsiones entre los dominios de electrones alrededor del átomo central <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Dominio de electrones</strong>: región alrededor de un átomo en la que es más probable hallar los electrones de un par enlazante, un par no enlazante o un enlace múltiple <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Par enlazante</strong>: par de electrones que forma un enlace covalente <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Par no enlazante</strong>: par de electrones situado principalmente sobre un átomo, también llamado par solitario <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Geometría de dominios de electrones</strong>: disposición de los dominios de electrones alrededor del átomo central <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Geometría molecular</strong>: disposición de los átomos de una molécula o ion, sin considerar los pares no enlazantes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Bipirámide trigonal</strong>: disposición de cinco dominios con dos posiciones axiales y tres ecuatoriales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Octaedro</strong>: poliedro de seis vértices y ocho caras triangulares que describe la disposición de seis dominios <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Forma de balancín</strong>: geometría molecular de cinco dominios con un par no enlazante ecuatorial, como la del SF₄ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, Sample Exercise 9.2)</span>. <strong>Pirámide cuadrada</strong>: geometría molecular de seis dominios con un par no enlazante, como la del IF₅ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Plano cuadrado</strong>: geometría molecular de seis dominios con dos pares no enlazantes opuestos, como la del ICl₄⁻ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.2</a>)</span>. <strong>Dipolo de enlace</strong>: momento dipolar debido solo a los dos átomos de un enlace <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.3</a>)</span>. <strong>Teoría del enlace de valencia</strong>: modelo en el que los enlaces covalentes se forman por solapamiento de orbitales atómicos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.4</a>)</span>. <strong>Orbital híbrido</strong>: orbital formado por la mezcla de orbitales atómicos de un átomo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. <strong>Hibridación</strong>: proceso matemático de mezclar orbitales atómicos para formar orbitales híbridos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.5</a>)</span>. <strong>Enlace sigma</strong>: enlace covalente cuya densidad electrónica se concentra a lo largo del eje internuclear <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. <strong>Enlace pi</strong>: enlace covalente formado por el solapamiento lateral de orbitales p, con densidad por encima y por debajo del eje <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. <strong>Deslocalización</strong>: extensión de los electrones π de un enlace sobre más de dos átomos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.6</a>)</span>. <strong>Teoría de orbitales moleculares</strong>: modelo que describe los electrones de una molécula mediante orbitales moleculares <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Orbital molecular</strong>: función de onda asociada a una molécula entera que puede alojar dos electrones con espines opuestos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Orbital molecular enlazante</strong>: orbital molecular de energía menor que la de los orbitales atómicos de partida, que concentra densidad entre los núcleos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Orbital molecular antienlazante</strong>: orbital molecular de energía mayor que excluye electrones de la región entre los núcleos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Diagrama de niveles de energía</strong>: esquema que ordena los orbitales atómicos y moleculares por su energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Orden de enlace</strong>: mitad de la diferencia entre el número de electrones enlazantes y antienlazantes <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.7</a>)</span>. <strong>Paramagnetismo</strong>: atracción hacia un campo magnético debida a electrones desapareados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. <strong>Diamagnetismo</strong>: repulsión débil de un campo magnético que ejercen las especies sin electrones desapareados <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. <strong>HOMO</strong>: orbital molecular ocupado de mayor energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. <strong>LUMO</strong>: orbital molecular desocupado de menor energía <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 9.8</a>)</span>. <strong>Resonancia</strong>: descripción de una molécula como híbrido de varias estructuras de valencia razonables <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–7</a>)</span>. <strong>Radio covalente</strong>: radio atómico de enlace que se suma al de otro átomo para estimar longitudes de enlace <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 6–6</a>)</span>. <strong>Hibridación d²sp³</strong>: conjunto de seis orbitales híbridos octaédricos formados por dos orbitales d, el s y los tres p <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, App. VII)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-brock2015" class="csl-entry" role="listitem">
+Brock, William H. 2015. <em>The History of Chemistry: A Very Short Introduction</em>. 1st ed. Oxford University Press.
+</div>
+<div id="ref-brown2012" class="csl-entry" role="listitem">
+Brown, Theodore L., H. Eugene LeMay, Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2012. <em>Chemistry: The Central Science</em>. 12th ed. Pearson Prentice Hall.
+</div>
+<div id="ref-oriakhi2021" class="csl-entry" role="listitem">
+Oriakhi, Christopher O. 2021. <em>Chemistry in Quantitative Language: Fundamentals of General Chemistry Calculations</em>. 2nd ed. Oxford University Press.
+</div>
+<div id="ref-pauling1988" class="csl-entry" role="listitem">
+Pauling, Linus. 1988. <em>General Chemistry</em>. 3rd (reprinted). Dover Publications.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="pagination-link" aria-label="Capítulo 8 · Enlace químico I: conceptos fundamentales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 8 · Enlace químico I: conceptos fundamentales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../02_quimica/10-gases.html" class="pagination-link" aria-label="Capítulo 10 · Gases">
+        <span class="nav-page-text"><span class="chapter-title">Capítulo 10 · Gases</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
