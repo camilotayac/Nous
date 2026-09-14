@@ -13,4 +13,5 @@
 *.typ
 !typst-show.typ
 Nous.epub
+site_libs/
 
