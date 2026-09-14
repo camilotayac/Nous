@@ -1,3 +1,16 @@
 /.quarto/
 **/*.quarto_ipynb
 .luarc.json
+.cache_downloads/
+.cache_pdf/
+.trash/
+*.aux
+*.bcf
+*.log
+*.tex
+*.toc
+*.run.xml
+*.typ
+!typst-show.typ
+Nous.epub
+

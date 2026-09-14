@@ -8,7 +8,7 @@ La unión de dos o más palabras nos permite crear una oración o enunciado, com
 *El sol es una estrella.*
 :::
 
-Un enunciado es una **proposición** cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es [@munoz2001]. Usando la lógica, podemos determinar si un enunciado es V o F.
+Un enunciado es una **proposición** cuando tiene sentido asignarle un valor de verdad (verdadero o falso), aunque no sepamos cuál es [@munoz2001], dado que un suceso puede ser o no ser. Usando la lógica, podemos determinar si un enunciado es V o F.
 
 ## Enunciados que no son proposiciones
 

@@ -1,6 +1,8 @@
 project:
   type: book
+  output-dir: _book
   pre-render: python3 sync.py && python3 update_book.py
+  post-render: python3 post_render.py
 book:
   bread-crumbs: false
   downloads:
@@ -19,7 +21,32 @@ book:
     - 01_conjuntos/00_proposicion_negacion.qmd
   - part: Química
     chapters:
-    - 02_quimica/01_cinetica_quimica.qmd
+    - 02_quimica/01-historia-de-la-quimica.qmd
+    - 02_quimica/02-materia-y-medicion.qmd
+    - 02_quimica/03-atomos-moleculas-e-iones.qmd
+    - 02_quimica/04-estequiometria.qmd
+    - 02_quimica/05-reacciones-en-disolucion-acuosa.qmd
+    - 02_quimica/06-estructura-electronica-del-atomo.qmd
+    - 02_quimica/07-tabla-periodica-y-propiedades-periodicas.qmd
+    - 02_quimica/08-enlace-quimico-i-conceptos-fundamentales.qmd
+    - 02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.qmd
+    - 02_quimica/10-gases.qmd
+    - 02_quimica/11-termoquimica.qmd
+    - 02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.qmd
+    - 02_quimica/13-disoluciones-y-propiedades-coligativas.qmd
+    - 02_quimica/14-cinetica-quimica.qmd
+    - 02_quimica/15-equilibrio-quimico.qmd
+    - 02_quimica/16-acidos-y-bases.qmd
+    - 02_quimica/17-equilibrios-acido-base-y-solubilidad.qmd
+    - 02_quimica/18-termodinamica-quimica.qmd
+    - 02_quimica/19-electroquimica.qmd
+    - 02_quimica/20-quimica-nuclear.qmd
+    - 02_quimica/21-quimica-de-los-no-metales.qmd
+    - 02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.qmd
+    - 02_quimica/23-quimica-organica.qmd
+    - 02_quimica/24-bioquimica.qmd
+    - 02_quimica/25-quimica-del-ambiente.qmd
+    - 02_quimica/26-quimica-moderna-tecnicas-y-fronteras.qmd
   - part: Biología
     chapters:
     - 03_biologia/01_base_fisica_herencia.qmd
@@ -38,12 +65,18 @@ format:
       dark:
       - litera
       - theme-dark.scss
-  pdf:
-    toc-depth: 1
-    cite-method: biblatex
-    biblio-style: authoryear
-    include-in-header:
-    - preamble.tex
+  typst:
+    keep-typ: true
+    template-partials:
+      - typst-show.typ
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    section-numbering: "1.1"
+    mainfont: "Libertinus Serif"
+    margin:
+      x: 2.5cm
+      y: 2.5cm
   epub:
     css: epub-styles.css
 bibliography: references.bib
