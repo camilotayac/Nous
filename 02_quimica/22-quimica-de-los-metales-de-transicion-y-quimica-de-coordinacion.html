@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Capítulo 22 · Química de los metales de transición y química de coordinación – Nous</title>
+<title>Química de los metales de transición y química de coordinación – Nous</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -52,7 +52,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../03_biologia/01_base_fisica_herencia.html" rel="next">
+<link href="../02_quimica/23-quimica-organica.html" rel="next">
 <link href="../02_quimica/21-quimica-de-los-no-metales.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -96,6 +96,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -271,7 +300,7 @@ div.csl-indent {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Capítulo 22 · Química de los metales de transición y química de coordinación</span></h1>
+          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Química de los metales de transición y química de coordinación</span></h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -375,97 +404,117 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/04-estequiometria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 4 · Estequiometría: moles, fórmulas y ecuaciones químicas</span></a>
+  <a href="../02_quimica/04-estequiometria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Estequiometría: moles, fórmulas y ecuaciones químicas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/05-reacciones-en-disolucion-acuosa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 5 · Reacciones en disolución acuosa</span></a>
+  <a href="../02_quimica/05-reacciones-en-disolucion-acuosa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reacciones en disolución acuosa</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 6 · Estructura electrónica del átomo</span></a>
+  <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Estructura electrónica del átomo</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/07-tabla-periodica-y-propiedades-periodicas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 7 · Tabla periódica y propiedades periódicas</span></a>
+  <a href="../02_quimica/07-tabla-periodica-y-propiedades-periodicas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tabla periódica y propiedades periódicas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 8 · Enlace químico I: conceptos fundamentales</span></a>
+  <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Enlace químico I: conceptos fundamentales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 9 · Enlace químico II: geometría molecular y teorías de enlace</span></a>
+  <a href="../02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Enlace químico II: geometría molecular y teorías de enlace</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/10-gases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 10 · Gases</span></a>
+  <a href="../02_quimica/10-gases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Gases</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/11-termoquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 11 · Termoquímica</span></a>
+  <a href="../02_quimica/11-termoquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Termoquímica</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 12 · Líquidos, fuerzas intermoleculares y sólidos</span></a>
+  <a href="../02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Líquidos, fuerzas intermoleculares y sólidos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/13-disoluciones-y-propiedades-coligativas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 13 · Disoluciones y propiedades coligativas</span></a>
+  <a href="../02_quimica/13-disoluciones-y-propiedades-coligativas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disoluciones y propiedades coligativas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/14-cinetica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 14 · Cinética química</span></a>
+  <a href="../02_quimica/14-cinetica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cinética química</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/15-equilibrio-quimico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 15 · Equilibrio químico</span></a>
+  <a href="../02_quimica/15-equilibrio-quimico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Equilibrio químico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/16-acidos-y-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 16 · Ácidos y bases</span></a>
+  <a href="../02_quimica/16-acidos-y-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ácidos y bases</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/17-equilibrios-acido-base-y-solubilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 17 · Equilibrios ácido-base y de solubilidad: aplicaciones</span></a>
+  <a href="../02_quimica/17-equilibrios-acido-base-y-solubilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Equilibrios ácido-base y de solubilidad: aplicaciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/18-termodinamica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 18 · Termodinámica química</span></a>
+  <a href="../02_quimica/18-termodinamica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Termodinámica química</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/19-electroquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 19 · Electroquímica</span></a>
+  <a href="../02_quimica/19-electroquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Electroquímica</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/20-quimica-nuclear.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 20 · Química nuclear</span></a>
+  <a href="../02_quimica/20-quimica-nuclear.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química nuclear</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 21 · Química de los no metales</span></a>
+  <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química de los no metales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 22 · Química de los metales de transición y química de coordinación</span></a>
+  <a href="../02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Química de los metales de transición y química de coordinación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/23-quimica-organica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química orgánica: la química de los compuestos del carbono</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/24-bioquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bioquímica: la química de la vida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/25-quimica-del-ambiente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química del ambiente: atmósfera, agua y química verde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/26-quimica-moderna-tecnicas-y-fronteras.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La química moderna: técnicas, logros y fronteras</span></a>
   </div>
 </li>
       </ul>
@@ -521,6 +570,16 @@ div.csl-indent {
   <li><a href="#nomenclatura-de-los-compuestos-de-coordinación" id="toc-nomenclatura-de-los-compuestos-de-coordinación" class="nav-link" data-scroll-target="#nomenclatura-de-los-compuestos-de-coordinación">Nomenclatura de los compuestos de coordinación</a></li>
   <li><a href="#agentes-quelantes-y-el-efecto-quelato" id="toc-agentes-quelantes-y-el-efecto-quelato" class="nav-link" data-scroll-target="#agentes-quelantes-y-el-efecto-quelato">Agentes quelantes y el efecto quelato</a></li>
   <li><a href="#porfirinas-y-la-química-de-coordinación-en-los-seres-vivos" id="toc-porfirinas-y-la-química-de-coordinación-en-los-seres-vivos" class="nav-link" data-scroll-target="#porfirinas-y-la-química-de-coordinación-en-los-seres-vivos">Porfirinas y la química de coordinación en los seres vivos</a></li>
+  <li><a href="#isomería-en-los-compuestos-de-coordinación" id="toc-isomería-en-los-compuestos-de-coordinación" class="nav-link" data-scroll-target="#isomería-en-los-compuestos-de-coordinación">Isomería en los compuestos de coordinación</a></li>
+  <li><a href="#color-de-los-compuestos-de-coordinación" id="toc-color-de-los-compuestos-de-coordinación" class="nav-link" data-scroll-target="#color-de-los-compuestos-de-coordinación">Color de los compuestos de coordinación</a></li>
+  <li><a href="#magnetismo-de-los-compuestos-de-coordinación" id="toc-magnetismo-de-los-compuestos-de-coordinación" class="nav-link" data-scroll-target="#magnetismo-de-los-compuestos-de-coordinación">Magnetismo de los compuestos de coordinación</a></li>
+  <li><a href="#teoría-del-campo-cristalino" id="toc-teoría-del-campo-cristalino" class="nav-link" data-scroll-target="#teoría-del-campo-cristalino">Teoría del campo cristalino</a></li>
+  <li><a href="#transferencia-de-carga-y-límites-de-la-teoría" id="toc-transferencia-de-carga-y-límites-de-la-teoría" class="nav-link" data-scroll-target="#transferencia-de-carga-y-límites-de-la-teoría">Transferencia de carga y límites de la teoría</a></li>
+  <li><a href="#aplicaciones-de-los-complejos-en-la-disolución-el-análisis-y-la-industria" id="toc-aplicaciones-de-los-complejos-en-la-disolución-el-análisis-y-la-industria" class="nav-link" data-scroll-target="#aplicaciones-de-los-complejos-en-la-disolución-el-análisis-y-la-industria">Aplicaciones de los complejos en la disolución, el análisis y la industria</a></li>
+  <li><a href="#ejemplo-resuelto-el-magnetismo-del-hierroii-como-ventana-al-enlace" id="toc-ejemplo-resuelto-el-magnetismo-del-hierroii-como-ventana-al-enlace" class="nav-link" data-scroll-target="#ejemplo-resuelto-el-magnetismo-del-hierroii-como-ventana-al-enlace">Ejemplo resuelto: el magnetismo del hierro(II) como ventana al enlace</a></li>
+  <li><a href="#preguntas-y-ejercicios" id="toc-preguntas-y-ejercicios" class="nav-link" data-scroll-target="#preguntas-y-ejercicios">Preguntas y ejercicios</a></li>
+  <li><a href="#solucionario" id="toc-solucionario" class="nav-link" data-scroll-target="#solucionario">Solucionario</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
   </ul>
 </nav>
     </div>
@@ -530,7 +589,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Capítulo 22 · Química de los metales de transición y química de coordinación</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Química de los metales de transición y química de coordinación</span></h1>
 </div>
 
 
@@ -547,6 +606,9 @@ div.csl-indent {
 </header>
 
 
+<hr>
+<p>title: “Química de los metales de transición y química de coordinación”</p>
+<hr>
 <section id="introducción" class="level2">
 <h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Los metales de transición forman el bloque d de la tabla periódica, cuarenta elementos que se extienden del grupo 3 al grupo 12 y que se caracterizan por el llenado progresivo de la subcapa d, incompleta en sus átomos o iones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.1</a>)</span>. Esta configuración inacabada les confiere propiedades ausentes en los metales representativos: múltiples estados de oxidación, compuestos intensamente coloreados, magnetismo y una facilidad notable para formar complejos con moléculas y aniones que sostienen la química industrial y la biológica <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.1</a>)</span>.</p>
@@ -592,7 +654,7 @@ Figura&nbsp;23.2: Estados de oxidación observados para los metales de transici�
 </section>
 <section id="compuestos-de-coordinación-y-ligandos" class="level2">
 <h2 class="anchored" data-anchor-id="compuestos-de-coordinación-y-ligandos">Compuestos de coordinación y ligandos</h2>
-<p>Los <strong>compuestos de coordinación</strong> son sustancias que contienen <strong>complejos metálicos</strong>, especies en las que un ion metálico se rodea de varios aniones o moléculas neutras llamados <strong>ligandos</strong>, y Alfred Werner fundó su estudio a fines del siglo XIX al distinguir la valencia primaria, hoy llamada estado de oxidación, de la valencia secundaria, hoy llamada número de coordinación <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.1, 23.2)</span>. El ion metálico y sus ligandos forman la <strong>esfera de coordinación</strong>, y el número de átomos donadores unidos al metal recibe el nombre de <strong>número de coordinación</strong>, cuyos valores más comunes son cuatro y seis, con geometrías tetraédrica, plana cuadrada y octaédrica <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.2</a>)</span>.</p>
+<p>Los <span id="sec-compuestos-coordinacion"><strong>compuestos de coordinación</strong></span> son sustancias que contienen <strong>complejos metálicos</strong>, especies en las que un ion metálico se rodea de varios aniones o moléculas neutras llamados <strong>ligandos</strong>, y Alfred Werner fundó su estudio a fines del siglo XIX al distinguir la valencia primaria, hoy llamada estado de oxidación, de la valencia secundaria, hoy llamada número de coordinación <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.1, 23.2; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-1, 19-2)</span>. El ion metálico y sus ligandos forman la <strong>esfera de coordinación</strong>, y el número de átomos donadores unidos al metal recibe el nombre de <span id="sec-numero-coordinacion"><strong>número de coordinación</strong></span>, cuyos valores más comunes son cuatro y seis, con geometrías tetraédrica, plana cuadrada y octaédrica <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.2</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
 <p>Los ligandos aportan sus pares de electrones no compartidos para enlazarse al metal, por lo que pueden ser neutros, como el agua y el amoníaco, o aniones, como el cloruro, el cianuro y el hidróxido, mientras que los ligandos con carga positiva resultan raros porque un catión repele a otro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.2, ejercicio 23.22)</span>. La unión metal-ligando es una reacción ácido-base de Lewis: el ligando, base, dona un par de electrones a un orbital vacío del ion metálico, ácido, reforzada además por la atracción electrostática entre el catión y las cargas negativas de los ligandos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
 <div id="fig-iones-transicion-acuosos" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -604,7 +666,7 @@ Figura&nbsp;23.3: Disoluciones acuosas de iones de metales de transición, cuyos
 </figcaption>
 </figure>
 </div>
-<p>Los colores que exhibe <a href="#fig-iones-transicion-acuosos" class="quarto-xref">Figura&nbsp;<span>23.3</span></a> pertenecen en realidad a complejos acuosos: el ion [Ti(H₂O)₆]³⁺ es rojo violáceo, el [Co(H₂O)₆]²⁺ rosa y el [Cu(H₂O)₄]²⁺ azul, y cada matiz guarda información sobre la configuración electrónica del metal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.2</a>)</span>. El número de coordinación de dos aparece en especies lineales como el [Ag(CN)₂]⁻, el de cinco en el [Ni(CN)₅]³⁻, y el de seis domina en la mayoría de los complejos de los metales de la primera serie de transición <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.2, ejercicio 23.56)</span>.</p>
+<p>Los colores que exhibe <a href="#fig-iones-transicion-acuosos" class="quarto-xref">Figura&nbsp;<span>23.3</span></a> pertenecen en realidad a complejos acuosos: el ion [Ti(H₂O)₆]³⁺ es rojo violáceo, el [Co(H₂O)₆]²⁺ rosa y el [Cu(H₂O)₄]²⁺ azul, y cada matiz guarda información sobre la configuración electrónica del metal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.2</a>)</span>. El número de coordinación de dos aparece en especies lineales como el [Ag(CN)₂]⁻, el de cinco en el pentacarbonilo de hierro, Fe(CO)₅, que adopta una geometría bipiramidal trigonal, y el de seis domina en la mayoría de los complejos de los metales de la primera serie de transición <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.2, ejercicios 23.56, 23.76)</span>.</p>
 </section>
 <section id="nomenclatura-de-los-compuestos-de-coordinación" class="level2">
 <h2 class="anchored" data-anchor-id="nomenclatura-de-los-compuestos-de-coordinación">Nomenclatura de los compuestos de coordinación</h2>
@@ -614,7 +676,7 @@ Figura&nbsp;23.3: Disoluciones acuosas de iones de metales de transición, cuyos
 <section id="agentes-quelantes-y-el-efecto-quelato" class="level2">
 <h2 class="anchored" data-anchor-id="agentes-quelantes-y-el-efecto-quelato">Agentes quelantes y el efecto quelato</h2>
 <p>El <strong>átomo donador</strong> es el átomo del ligando que se enlaza directamente al metal, y según su número los ligandos se clasifican en <strong>monodentados</strong>, con un solo donador como el amoníaco, <strong>bidentados</strong>, con dos como la etilendiamina, la bipiridina o el oxalato, y <strong>polidentados</strong>, con tres o más como el anión EDTA⁴⁻, que ofrece seis <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>. Los ligandos bidentados y polidentados se llaman <strong>agentes quelantes</strong>, del griego «pinza», porque sujetan al metal por varios puntos a la vez <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>.</p>
-<p>En general, los agentes quelantes forman complejos más estables que los ligandos monodentados relacionados, observación conocida como <strong>efecto quelato</strong>: la constante de formación del [Ni(en)₃]²⁺ es más de diez mil millones de veces mayor que la del [Ni(NH₃)₆]²⁺ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>. El factor termodinámico responsable es la entropía, pues cada ligando polidentado que se coordina libera más moléculas de disolvente que un monodentado equivalente, aumentando el desorden del sistema <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>.</p>
+<p>En general, los agentes quelantes forman complejos más estables que los ligandos monodentados relacionados, observación conocida como <strong>efecto quelato</strong>: la constante de formación del [Ni(en)₃]²⁺ es más de cien millones de veces mayor que la del [Ni(NH₃)₆]²⁺ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>. El factor termodinámico responsable es la entropía, pues cada ligando polidentado que se coordina libera más moléculas de disolvente que un monodentado equivalente, aumentando el desorden del sistema <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>.</p>
 <div id="fig-edta-quelato" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-edta-quelato-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -641,7 +703,152 @@ Figura&nbsp;23.5: El anillo de porfina y sus derivados de coordinación: el hemo
 </figure>
 </div>
 <p>La <strong>hemoglobina</strong> y la mioglobina transportan y almacenan oxígeno gracias al hierro del grupo hemo, mientras las <strong>clorofilas</strong> atrapan la energía solar con magnesio en el centro del mismo macrociclo, y en la fotosíntesis esa energía convierte el dióxido de carbono y el agua en carbohidratos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.3, fig.&nbsp;23.13)</span>. Los <strong>sideróforos</strong> completan el cuadro biológico al secuestrar hierro del entorno para los microorganismos, y la anhidrasa carbónica ilustra la precisión del zinc tetraédrico, coordinado por tres nitrógenos de la proteína y un agua cuyo pKa de 7.5, muy inferior al del agua libre, explica su eficacia catalítica <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.3, ejercicio 23.90)</span>.</p>
-<!-- CONTINUAR -->
+</section>
+<section id="isomería-en-los-compuestos-de-coordinación" class="level2">
+<h2 class="anchored" data-anchor-id="isomería-en-los-compuestos-de-coordinación">Isomería en los compuestos de coordinación</h2>
+<p>Los <span id="sec-isomeria-complejos"><strong>isómeros</strong></span> son compuestos con la misma composición pero distinta disposición de los átomos, y en química de coordinación se dividen en <strong>isómeros estructurales</strong>, con enlaces diferentes, y <strong>estereoisómeros</strong>, con los mismos enlaces pero distinta ocupación del espacio alrededor del metal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. Entre los estructurales, la <strong>isomería de enlace</strong> surge cuando un ligando puede coordinarse por dos átomos donadores distintos: el nitrito NO₂⁻ se une por el nitrógeno en la forma nitro, de color amarillo, o por un oxígeno en la forma nitrito, de color rojo, y el tiocianato SCN⁻ ofrece tanto el nitrógeno como el azufre como puntos de anclaje <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>La <strong>isomería de esfera de coordinación</strong> aparece cuando las especies que actúan como ligandos y las que quedan fuera de la esfera se intercambian entre sí, como ilustran los tres compuestos de fórmula CrCl₃·6H₂O: el violáceo [Cr(H₂O)₆]Cl₃, el verde [Cr(H₂O)₅Cl]Cl₂·H₂O y el también verde [Cr(H₂O)₄Cl₂]Cl·2H₂O, en los que uno o dos cloruros han desplazado agua de la esfera y han pasado a la red cristalina como contraiones <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. La existencia de estas familias explica que la fórmula molecular de un complejo esconda, en realidad, varias sustancias distintas con propiedades físicas y químicas propias <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<div id="fig-isomeros-cis-trans" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-isomeros-cis-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/isomeros-cis-trans-cobalto.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-isomeros-cis-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.6: Los isómeros cis y trans del ion tetraaminadiclorocobalto(III), con los cloruros en posiciones adyacentes o enfrentadas del octaedro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.7</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>La <strong>isomería geométrica</strong> es la forma más común de estereoisomería y se da cuando ligandos iguales pueden ocupar posiciones adyacentes o enfrentadas: en el octaédrico [Co(NH₃)₄Cl₂]⁺ de <a href="#fig-isomeros-cis-trans" class="quarto-xref">Figura&nbsp;<span>23.6</span></a>, la variedad cis, de color violeta, tiene los cloruros juntos, y la trans, verde, los tiene opuestos, siendo identificadas por Werner al observar que solo la cis podía obtenerse del complejo carbonato Co(NH₃)₄CO₃⁺ <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>. En el plano cuadrado [Pt(NH₃)₂Cl₂], el isómero cis, llamado cisplatino, forma un quelato con dos nitrógenos del ADN desplazando los cloruros y trata ciertos cánceres, mientras el trans, con los cloruros demasiado separados, resulta ineficaz <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>La <strong>isomería óptica</strong> aparece cuando un complejo es <strong>quiral</strong>, es decir, su imagen especular no es superponible, como ocurre con las dos manos: el ion [Co(en)₃]³⁺ existe como dos <strong>enantiómeros</strong> que desvían el plano de la luz polarizada en sentidos opuestos, el dextrorrotatorio o d y el levorrotatorio o l <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. En ausencia de un entorno quiral, la síntesis produce cantidades iguales de ambos, una mezcla <strong>racémica</strong> que no rota la luz porque los efectos se cancelan, mientras que el cis-[Co(en)₂Cl₂]⁺ sí es quiral y su isómero trans no lo es, por ser superponible a su imagen <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+</section>
+<section id="color-de-los-compuestos-de-coordinación" class="level2">
+<h2 class="anchored" data-anchor-id="color-de-los-compuestos-de-coordinación">Color de los compuestos de coordinación</h2>
+<p>Para que una sustancia tenga color visible, debe absorber alguna porción del espectro de luz visible, y el color percibido es la suma de las porciones no absorbidas que llegan a nuestros ojos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>. Cuando un objeto absorbe solo una región del espectro, vemos el color <strong>complementario</strong> al absorbido, como explica la rueda de colores, como resume <a href="#fig-rueda-colores" class="quarto-xref">Figura&nbsp;<span>23.7</span></a>, y un complejo que absorbe la luz roja aparece verde, y uno que absorbe la amarilla parece violeta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>.</p>
+<div id="fig-rueda-colores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rueda-colores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/rueda-colores.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rueda-colores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.7: La rueda de colores del artista sitúa los colores complementarios en lados opuestos, de modo que la absorción de uno revela el otro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.25</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>La cantidad de luz absorbida en función de la longitud de onda es el <strong>espectro de absorción</strong>, y cada complejo muestra un máximo característico: el ion [Ti(H₂O)₆]³⁺ absorbe con máximo en 500 nm, de modo que la luz no absorbida del rojo y del violeta llega al ojo y la disolución se percibe rojo-violeta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>. El espectro del ion titanio de <a href="#fig-color-titanio-acuoso" class="quarto-xref">Figura&nbsp;<span>23.8</span></a> prueba además que el color depende del ion metálico, de su estado de oxidación y de los ligandos unidos, pues basta cambiar H₂O por NH₃ sobre el Cu(II) para pasar del azul pálido al azul profundo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.2, 23.5)</span>.</p>
+<div id="fig-color-titanio-acuoso" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-color-titanio-acuoso-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/color-titanio-acuoso.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-color-titanio-acuoso-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.8: El espectro de absorción del [Ti(H₂O)₆]³⁺ muestra el máximo en 500 nm y la transmisión de las porciones roja y violeta que originan su color <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.26</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="magnetismo-de-los-compuestos-de-coordinación" class="level2">
+<h2 class="anchored" data-anchor-id="magnetismo-de-los-compuestos-de-coordinación">Magnetismo de los compuestos de coordinación</h2>
+<p>Muchos complejos de metales de transición son <strong>paramagnéticos</strong>, porque sus iones conservan electrones desapareados cuyo espín responde al campo magnético, y la medición del grado de paramagnetismo permite contar esos electrones desapareados por ion metálico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>. La comparación entre [CoF₆]³⁻ y [Co(CN)₆]³⁻ es reveladora: ambos contienen Co(III) con configuración 3d⁶, pero los compuestos del primero tienen cuatro electrones desapareados y los del segundo ninguno, una diferencia que ninguna teoría de enlace puede ignorar <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>.</p>
+<p>Los complejos sin electrones desapareados son <strong>diamagnéticos</strong> y no interaccionan con el campo magnético, como el ferrocianuro Fe(CN)₆⁴⁻, mientras que el ion ferroso hidratado Fe(H₂O)₆²⁺ posee un momento magnético correspondiente a cuatro espines paralelos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>. Pauling convirtió esta observación en un criterio estructural: el estudio de las propiedades magnéticas permite en muchos casos decidir cuáles son los orbitales de enlace que usa el átomo metálico, distinguiendo los complejos esencialmente iónicos de los covalentes <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+</section>
+<section id="teoría-del-campo-cristalino" class="level2">
+<h2 class="anchored" data-anchor-id="teoría-del-campo-cristalino">Teoría del campo cristalino</h2>
+<p>La <span id="sec-teoria-enlace-coordinacion"><strong>teoría del campo cristalino</strong></span> modela la unión metal-ligando como una interacción ácido-base de Lewis reforzada por fuerzas electrostáticas: el ligando, base, dona un par de electrones a un orbital vacío del ion metálico, ácido, y la atracción catión-anión o ion-dipolo estabiliza el conjunto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. Sobre esa base electrostática, la teoría considera a los ligandos como cargas puntuales que repelen los electrones d: en un campo octaédrico, las cargas se aproximan por los ejes x, y y z, de modo que los orbitales dₓ₂₋y₂ y d_z₂ apuntan directamente a ellas y suben de energía, mientras que d_xy, d_xz y d_yz apuntan entre los ejes y quedan más bajos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<div id="fig-desdoblamiento-octaedrico" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-desdoblamiento-octaedrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/desdoblamiento-octaedrico.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-desdoblamiento-octaedrico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.9: Energías de los orbitales d en un ion metálico libre, en un campo esférico y en un campo cristalino octaédrico, que separa el conjunto t₂ del e <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.28</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>El desdoblamiento de <a href="#fig-desdoblamiento-octaedrico" class="quarto-xref">Figura&nbsp;<span>23.9</span></a> crea el conjunto inferior de tres orbitales degenerados, llamado t₂, y el superior de dos, llamado e, separados por la <strong>energía de desdoblamiento del campo cristalino</strong> Δ, del mismo orden de magnitud que la energía de un fotón de luz visible <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. Cuando un complejo absorbe luz visible que excita un electrón de un orbital t₂ a uno e, se produce una <strong>transición d-d</strong> (Ecuación <a href="#eq-foton-dd" class="quarto-xref">Ecuación&nbsp;<span>23.1</span></a>), que es la responsable del color, como en el [Ti(H₂O)₆]³⁺, cuyo electrón único d¹ pasa del conjunto t₂ al e al absorber la luz de 495 nm <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p><span id="eq-foton-dd"><span class="math display">\[ \Delta E = \frac{hc}{\lambda}  \tag{23.1}\]</span></span></p>
+<p>En la Ecuación <a href="#eq-foton-dd" class="quarto-xref">Ecuación&nbsp;<span>23.1</span></a>, ΔE es la energía del fotón absorbido y, en primera aproximación, el desdoblamiento del campo cristalino, h la constante de Planck, c la velocidad de la luz y λ la longitud de onda de la radiación, de modo que un Δ grande exige absorber luz corta y energética <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 6.1-6.2, 23.6)</span>.</p>
+<p>La <strong>serie espectroquímica</strong> ordena los ligandos según su capacidad de aumentar Δ: los de campo débil del extremo izquierdo, como el I⁻, el Br⁻ y el Cl⁻, producen desdoblamientos pequeños, mientras los de campo fuerte del derecho, como el CN⁻ y el CO, los producen grandes, casi el doble entre los extremos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>Cuando la adición del cuarto electrón d debe decidir entre ocupar un orbital e o emparejarse en un t₂, compiten la energía de desdoblamiento Δ y la <strong>energía de apareamiento de espines</strong>, que penaliza a los dos electrones obligados a compartir orbital <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. En los complejos de campo débil como [CoF₆]³⁻, Δ es pequeño y los electrones ocupan primero los orbitales e, resultando un <strong>complejo de espín alto</strong> con cuatro electrones desapareados; en los de campo fuerte como [Co(CN)₆]³⁻, Δ supera a la energía de apareamiento y los seis electrones se emparejan en t₂, formando un <strong>complejo de espín bajo</strong> diamagnético <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<div id="fig-alto-bajo-spin" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-alto-bajo-spin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/alto-bajo-spin.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alto-bajo-spin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.10: Complejos de espín alto y bajo del cobalto(III): el [CoF₆]³⁻ de campo débil conserva cuatro electrones desapareados y el [Co(CN)₆]³⁻ de campo fuerte los empareja en el conjunto t₂ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.32</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>La configuración electrónica de <a href="#fig-alto-bajo-spin" class="quarto-xref">Figura&nbsp;<span>23.10</span></a> explica la regla práctica de los electrones desapareados: los iones d¹, d² y d³ colocan sus electrones paralelos en t₂, mientras para los iones d⁴, d⁵, d⁶ y d⁷ la elección entre espín alto y bajo depende de la fuerza del campo, y para d⁸, d⁹ y d¹⁰ no hay alternativa posible <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. En los metales de los periodos quinto y sexto, cuyos orbitales d son más grandes e interaccionan más con los ligandos, el desdoblamiento es mayor y sus complejos octaédricos son siempre de espín bajo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>En los complejos tetraédricos, los orbitales se invierten respecto del octaedro, con el conjunto t₂ por encima del e, y el desdoblamiento es mucho menor, de modo que todos los complejos tetraédricos son de espín alto <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. Para el mismo ion y los mismos ligandos, el desdoblamiento tetraédrico alcanza solo cuatro novenos del octaédrico (Ecuación <a href="#eq-delta-tetraedrico" class="quarto-xref">Ecuación&nbsp;<span>23.2</span></a>), mientras que los complejos planos cuadrados, propios de los iones d⁸ como Pd²⁺, Pt²⁺ y Au³⁺, son casi siempre de espín bajo y diamagnéticos, con el orbital dₓ₂₋y₂ vacío <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p><span id="eq-delta-tetraedrico"><span class="math display">\[ \Delta_{\mathrm{tet}} = \frac{4}{9}\,\Delta_{\mathrm{oct}}  \tag{23.2}\]</span></span></p>
+<p>En la Ecuación <a href="#eq-delta-tetraedrico" class="quarto-xref">Ecuación&nbsp;<span>23.2</span></a>, Δ_tet es la energía de desdoblamiento del campo cristalino tetraédrico y Δ_oct la del octaédrico con el mismo metal y los mismos ligandos, relación que surge de tener cuatro ligandos en lugar de seis y de la peor orientación de sus cargas frente a los orbitales <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. La predicción de la geometría por el magnetismo se confirma con los complejos de Ni(II), un ion d⁸: el [NiCl₄]²⁻, paramagnético con dos electrones desapareados, es tetraédrico y de espín alto, mientras el [Ni(CN)₄]²⁻, diamagnético, es plano cuadrado y de espín bajo <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+</section>
+<section id="transferencia-de-carga-y-límites-de-la-teoría" class="level2">
+<h2 class="anchored" data-anchor-id="transferencia-de-carga-y-límites-de-la-teoría">Transferencia de carga y límites de la teoría</h2>
+<p>No todo color de los metales de transición nace de una transición d-d, como demuestra el permanganato MnO₄⁻, un complejo de manganeso(VII) con configuración d⁰ en la que no hay electrones d que excitar <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. La absorción intensa del permanganato se debe a una <strong>transición de transferencia de carga del ligando al metal</strong>, en la que un electrón de un par no enlazante de un oxígeno se excita hacia un orbital d vacío del manganeso, y algo análogo ocurre en el cromato CrO₄²⁻, también d⁰ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<div id="fig-transferencia-carga-permanganato" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-transferencia-carga-permanganato-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-22/transferencia-carga-permanganato.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transferencia-carga-permanganato-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;23.11: La transición de transferencia de carga del ligando al metal en el permanganato explica el color violeta del ion, ausente en el perclorato, cuyo átomo central sin orbitales d accesibles absorbe en el ultravioleta y aparece blanco <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, fig. 23.36</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>El contraste de <a href="#fig-transferencia-carga-permanganato" class="quarto-xref">Figura&nbsp;<span>23.11</span></a> delimita el rango de validez del campo cristalino: al basarse en interacciones electrostáticas, esencialmente enlaces iónicos, no captura el carácter covalente que evidencian muchas líneas de investigación, y la teoría de orbitales moleculares ofrece una descripción más completa, aunque su aplicación a los compuestos de coordinación rebase el alcance de este libro <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>Pauling, en cambio, describió los complejos como enlaces covalentes formados por orbitales híbridos, distintos para cada geometría: d²sp³ en el octaedro, sp³ en el tetraedro y dsp² en el plano cuadrado, y consideró el momento magnético la prueba experimental de cuáles orbitales intervienen en el enlace <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+<p>Ambas posturas conviven porque responden a preguntas distintas: el modelo electrostático predice color y magnetismo a partir de Δ, y el de orbitales explica por qué ligandos como el cianuro y el monóxido de carbono forman enlaces dobles que reparten la carga según el principio de electroneutralidad, impidiendo que el metal acumule la gran carga negativa formal que sugeriría una lectura ingenua de la fórmula <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-2, 19-10)</span>.</p>
+</section>
+<section id="aplicaciones-de-los-complejos-en-la-disolución-el-análisis-y-la-industria" class="level2">
+<h2 class="anchored" data-anchor-id="aplicaciones-de-los-complejos-en-la-disolución-el-análisis-y-la-industria">Aplicaciones de los complejos en la disolución, el análisis y la industria</h2>
+<p>La formación de complejos disuelve precipitados poco solubles al reducir la concentración del ion libre por debajo de su producto de solubilidad, como ocurre cuando el exceso de amoníaco disuelve el precipitado azul de hidróxido de cobre convirtiéndolo en el ion azul profundo Cu(NH₃)₄²⁺ <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–3</a>)</span>. Estos complejos amínicos son tan estables que el amoníaco disuelve también el cloruro de plata como Ag(NH₃)₂⁺ y desplaza el equilibrio del níquel a través de toda la sucesión Ni(H₂O)₆²⁺, Ni(NH₃)(H₂O)₅²⁺, Ni(NH₃)₂(H₂O)₄²⁺, Ni(NH₃)₃(H₂O)₃²⁺, Ni(NH₃)₄(H₂O)₂²⁺, Ni(NH₃)₅(H₂O)²⁺ y Ni(NH₃)₆²⁺, que se forman uno a uno al aumentar la concentración de amoníaco y cambian el color de la disolución del verde al azul-violeta <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–3</a>)</span>.</p>
+<p>La solubilización por complejación sostiene el análisis químico y la industria: el ion tiosulfato Ag(S₂O₃)₂³⁻ disuelve los haluros de plata no revelados de la emulsión fotográfica, los cianuros complejos permiten el electroplateado de oro, plata, zinc y cadmio con depósitos finos y uniformes, y el tetracloroaurato AuCl₄⁻ explica que el agua regia disuelva el oro, que no es significativamente soluble en ninguno de sus ácidos por separado <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-4, 19-5)</span>. Los agentes quelantes polidentados, llamados <strong>agentes secuestrantes</strong>, convierten en complejos inocuos los iones metálicos que interfieren en el teñido y en la fabricación de jabones y detergentes, y el EDTA valora la dureza del agua en el laboratorio <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–9</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>.</p>
+<p>La constante de formación cuantifica la estabilidad del complejo como constante de equilibrio de su formación a partir de los componentes, con valores mayores para los quelatos que para los monodentados análogos, y el efecto quelato tiene su origen en la entropía: cada ligando polidentado libera más moléculas de disolvente que el monodentado equivalente, aumentando el desorden del sistema <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–8</a>)</span>.</p>
+<p>Por eso la constante de formación del [Zn(tren)]²⁺, con su agente tetradentado, supera en más de cuatrocientas mil veces la del [Zn(NH₃)₄]²⁺, y el complejo de hierro con el cianuro soporta la acción de los ácidos fuertes mientras el ion ferroso solo se conserva en otros entornos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-4, 19-9)</span>.</p>
+</section>
+<section id="ejemplo-resuelto-el-magnetismo-del-hierroii-como-ventana-al-enlace" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-resuelto-el-magnetismo-del-hierroii-como-ventana-al-enlace">Ejemplo resuelto: el magnetismo del hierro(II) como ventana al enlace</h2>
+<p>Consideremos dos compuestos de hierro(II), que contiene seis electrones en la subcapa 3d por fuera del caparazón del argón: el cloruro ferroso hidratado y el ferrocianuro de potasio <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>. La primera parte del problema pide explicar por qué uno es paramagnético y el otro diamagnético a partir de la teoría del campo cristalino; la segunda, por qué el cianuro forma este complejo mientras el agua no; y la tercera, qué predicción diferente hace el modelo de orbitales híbridos de Pauling <span class="citation" data-cites="pauling1988 brown2012">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>El ion [Fe(H₂O)₆]²⁺ posee un momento magnético correspondiente a cuatro espines no apareados en orientación paralela, el máximo que admite la regla de Hund para el ion aislado <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>. En el lenguaje del campo cristalino, el agua es un ligando de campo débil y su desdoblamiento Δ es pequeño <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>Con un Δ pequeño, los seis electrones d del hierro(II) ocupan los orbitales con el máximo número de espines paralelos, cuatro desapareados y un par, de modo que el complejo resulta de espín alto y paramagnético <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. En el ferrocianuro, el cianuro es un ligando de campo fuerte, Δ es grande, y los seis electrones se emparejan en el conjunto t₂, produciendo un complejo de espín bajo sin electrones desapareados y, por tanto, diamagnético <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+<p>La segunda parte del problema apela a la estructura electrónica: el cianuro es especialmente eficaz porque forma dobles enlaces con el metal, de modo que la estructura de resonancia del ferrocianuro reparte la carga y deja sobre el hierro una carga formal mínima, compatible con el principio de electroneutralidad, mientras el agua solo ofrece enlaces sencillos iónicos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–10</a>)</span>.</p>
+<p>La tercera parte enfrenta los modelos: Pauling interpreta la misma evidencia magnética como la diferencia entre complejos iónicos, que usan únicamente los orbitales 4s y 4p, y complejos covalentes que emplean los orbitales híbridos d²sp³ del octaedro, y concluye que el ferrocianuro es covalente y el ferroso acuoso esencialmente iónico <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+<p>Ambas descripciones coinciden en el diamagnetismo del ferrocianuro y en el paramagnetismo del acuoso, y difieren solo en la causa última, electrostática en un caso y covalente en el otro, un contraste que las teorías más avanzadas de orbitales moleculares reconcilian reconociendo ambos caracteres <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+</section>
+<section id="preguntas-y-ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-y-ejercicios">Preguntas y ejercicios</h2>
+<p>Esta sección reúne problemas inspirados en la tipología de <span class="citation" data-cites="brown2012">Brown et&nbsp;al. (<a href="../references.html#ref-brown2012" role="doc-biblioref">2012</a>)</span> (capítulo 23), de <span class="citation" data-cites="pauling1988">Pauling (<a href="../references.html#ref-pauling1988" role="doc-biblioref">1988</a>)</span> (capítulos 17 y 19) y de <span class="citation" data-cites="brock2015">Brock (<a href="../references.html#ref-brock2015" role="doc-biblioref">2015</a>)</span> (capítulo 1), reformulados en enunciados propios y con contextos distintos de los originales, de modo que la resolución exija comprensión y no memoria. Cada pregunta admite una respuesta razonada que se desarrolla en el solucionario final del capítulo, al que puede acudirse después del intento propio.</p>
+<p>Nombre los compuestos [Cr(H₂O)₄Cl₂]Cl y K₄[Ni(CN)₄] siguiendo las reglas de la nomenclatura de coordinación, y justifique cada paso con el estado de oxidación del metal, el nombre y el orden de los ligandos y el sufijo del anión cuando el complejo sea negativo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>Escriba la fórmula del ion diaminodiaquadiciano-hierro(III) y explícela en sus partes: los números de cada ligando, el estado de oxidación del metal y la carga total del ion, indicando qué nombres reciben el agua, el amoníaco y el monóxido de carbono cuando actúan como ligandos <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>El ion nitrito puede coordinar al cobalto por el nitrógeno o por un oxígeno; explique qué tipo de isomería produce esta dualidad, qué nombres reciben las dos formas y por qué difieren en color, y diga si el amoníaco puede presentar el mismo comportamiento <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>Explique por qué el cisplatino [Pt(NH₃)₂Cl₂] trata ciertos tipos de cáncer mientras su isómero trans resulta ineficaz: describa la interacción de cada isómero con los dos nitrógenos de una hebra de ADN, la geometría que ambos comparten y la clase de estereoisomería a la que pertenece la pareja <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>Razone si el ion [Co(en)₃]³⁺ presenta isómeros ópticos y distíngalos de los geométricos: recuerde el significado de quiral, enantiómero y mezcla racémica, dibuje las dos imágenes especulares no superponibles y explique qué ocurre al hacer pasar luz polarizada por la disolución de cada enantiómero <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>Ordene según su capacidad de aumentar el desdoblamiento los complejos [Ti(H₂O)₆]³⁺, [Ti(en)₃]³⁺ y [TiCl₆]³⁻, prediga cuál absorbe la luz de longitud de onda más corta y justifique la respuesta con la serie espectroquímica y la relación entre Δ y la energía del fotón <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>Prediga el número de electrones desapareados en los complejos de espín alto y de espín bajo del ion Fe³⁺ con número de coordinación seis, indique qué ligando, el fluoruro o el cianuro, produce cada caso y relacione el resultado con las propiedades magnéticas observadas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>El ion [NiCl₄]²⁻ es paramagnético y el [Ni(CN)₄]²⁻ diamagnético; determine la configuración electrónica del Ni(II), asigne a cada complejo su geometría entre tetraédrica y plana cuadrada según la información magnética y explique la elección con los diagramas de desdoblamiento de ambas geometrías <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>Explique por qué el exceso de amoníaco disuelve el precipitado de hidróxido de cobre(II) mientras el hidróxido de sodio no lo hace, describa la especie azul profundo que se forma y razone el efecto de añadir cloruro de amonio a la disolución resultante <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-3, 19-8)</span>.</p>
+<p>Justifique con las estructuras electrónicas de los metales la afirmación de que el bloque d supera al bloque s en versatilidad química: mencione los múltiples estados de oxidación de hierro, manganeso y vanadio, la utilidad del oro solo en complejos covalentes como AuCl₄⁻ y el papel del níquel en el refinado del metal <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988</a>, secs. 19-5, 20-1, 20-6, 21-1, 22-3, 22-7)</span>.</p>
+</section>
+<section id="solucionario" class="level2">
+<h2 class="anchored" data-anchor-id="solucionario">Solucionario</h2>
+<p>En la primera pregunta, el [Cr(H₂O)₄Cl₂]Cl es el cloruro de tetraacuadiclorocromo(III): cuatro aguas se nombran tetraaqua, dos cloruros dichloro, el estado de oxidación del cromo se deduce como +3 al compensar las cargas negativas, y el cloruro exterior se nombra al final; el K₄[Ni(CN)₄] es el tetracianoniquelato(0) de potasio, porque los cuatro cianuros suman −4, el catión potasio aporta +4 y el níquel queda en estado 0, con el metal como niquelato al ser anión y el sufijo -ato del complejo negativo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>En la segunda pregunta, el ion diaminodiaquadiciano-hierro(III) se escribe [Fe(CN)₂(NH₃)₂(H₂O)₂]⁺, con dos cianuros, dos aminas y dos aguas alrededor del hierro(III) que suma las cargas para dar la carga total +1 <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. El agua se nombra aqua y el amoníaco ammine, con terminación especial compartida por el carbonilo CO, mientras los ligandos aniónicos terminan en o, como el ciano, y en la fórmula el metal se escribe primero aunque en el nombre los ligandos anteceden al metal <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>La doble posibilidad de coordinación del nitrito produce isomería de enlace: la forma nitro, unida por el nitrógeno, es amarilla, y la nitrito, unida por un oxígeno y escrita ONO⁻, es roja, siendo el tiocianato, que puede donar por N o por S, otro ejemplo del mismo fenómeno <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. El amoníaco no presenta isomería de enlace, pues solo tiene un átomo donador, el nitrógeno, y el dato de los colores distintos demuestra que los isómeros estructurales difieren en propiedades y no solo en el dibujo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>El cisplatino, isómero cis del [Pt(NH₃)₂Cl₂], tiene los cloruros adyacentes y al perderlos forma un quelato con dos nitrógenos del ADN, en tanto el isómero trans tiene los cloruros enfrentados y, demasiado separados para alcanzar ambos nitrógenos, no puede formar el quelato y carece de efecto terapéutico <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. La pareja es un ejemplo de isomería geométrica, la forma de estereoisomería en que los mismos enlaces se disponen de maneras espaciales distintas <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>El [Co(en)₃]³⁺ tiene isómeros ópticos, porque el ion es quiral y sus dos imágenes especulares no superponibles, los enantiómeros, rotan el plano de la luz polarizada en sentidos contrarios, uno dextrorrotatorio y otro levorrotatorio, mientras que una mezcla racémica, con cantidades iguales de ambos, no rota la luz porque los efectos se anulan <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. En el [Co(en)₂Cl₂]⁺, el isómero trans es superponible a su imagen y no tiene isómeros ópticos, mientras el cis sí los presenta <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>.</p>
+<p>De los tres complejos del Ti(III), todos iones d¹, la etilendiamina es el ligando más alto de la serie espectroquímica y produce el mayor desdoblamiento, seguida del agua y del cloruro, de modo que [Ti(en)₃]³⁺ absorbe la luz de longitud de onda más corta, porque un Δ grande exige un fotón energético según la Ecuación <a href="#eq-foton-dd" class="quarto-xref">Ecuación&nbsp;<span>23.1</span></a>. La serie ordena por tanto las capacidades de aumentar Δ, y la longitud de onda absorbida es inversamente proporcional a ese desdoblamiento <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>.</p>
+<p>El ion Fe³⁺ es un ion d⁵: en el complejo de espín alto, de campo débil como el fluoruro, los cinco electrones quedan desapareados con tres en t₂ y dos en e, mientras en el de espín bajo, de campo fuerte como el cianuro, los cinco se concentran en t₂ con un solo desapareado <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. La medición del paramagnetismo distingue con claridad ambas situaciones, y por eso el estudio magnético es una herramienta experimental de primera línea para decidir la configuración real <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.5</a>)</span>.</p>
+<p>El Ni(II) es un ion d⁸: en geometría tetraédrica, siempre de espín alto, quedan dos electrones desapareados y el complejo es paramagnético, mientras en la plana cuadrada, casi siempre de espín bajo, los ocho electrones se emparejan y la especie es diamagnética <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. Por tanto el [NiCl₄]²⁻, paramagnético, es tetraédrico, y el [Ni(CN)₄]²⁻, diamagnético, es plano cuadrado, en concordancia con la estructura cuadrada establecida por rayos X para niquel, paladio y platino <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–2</a>)</span>.</p>
+<p>El exceso de amoníaco disuelve el hidróxido de cobre porque forma el complejo Cu(NH₃)₄²⁺, mucho más estable que el ion hidratado, reduciendo la concentración de ion cúprico libre por debajo del producto de solubilidad del hidróxido, mientras el hidróxido de sodio no ofrece ningún ligando capaz de esa captura <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–3</a>)</span>. Añadir cloruro de amonio a la disolución reprime la ionización del hidróxido de amonio, desplazando el equilibrio hacia el amoníaco molecular y disminuyendo la concentración de hidróxido, y ambos efectos empujan el equilibrio de precipitación hacia la derecha y disuelven más precipitado <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–8</a>)</span>.</p>
+<p>Los metales de transición aprovechan los orbitales d para compartir electrones en estados de oxidación múltiples: el hierro alcanza +2, +3 y raramente +6, el manganeso desde +2 hasta +7 y el vanadio desde +2 hasta +5, mientras el oro solo se estabiliza en disolución dentro de complejos covalentes como AuCl₄⁻ o AuCl₂⁻ y el níquel refina su metal formando el carbonilo volátil Ni(CO)₄ <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 17</a>, secs. 19-5, 19-10, 20-1, 20-6, 21-1, 22-3, 22-7)</span>. Esta versatilidad, ausente en los metales del bloque s que se limitan a una valencia casi única, es la que convierte al bloque d en el escenario de la catálisis industrial y de la química de la vida <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.3</a>)</span>.</p>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<p>Los metales de transición, cuarenta elementos del bloque d con la subcapa d incompleta, combinan estados de oxidación múltiples, alta densidad, puntos de fusión elevados y la capacidad de formar compuestos de coordinación con ligandos monodentados, bidentados y polidentados, cuyo enlace es una reacción ácido-base de Lewis entre el metal ácido y el ligando base <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.1-23.2)</span>. Werner fundó la disciplina distinguiendo la valencia primaria del número de coordinación, y la nomenclatura moderna traduce sin ambigüedad nombre, fórmula y arreglo espacial <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.2, 23.4)</span>.</p>
+<p>La isomería estructural de enlace y de esfera de coordinación, junto con la estereoisomería geométrica cis-trans y la óptica de los enantiómeros, explica que fórmulas idénticas correspondan a sustancias de propiedades a veces opuestas, como el cisplatino eficaz y el trans ineficaz <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.4</a>)</span>. El color nace de las transiciones d-d cuando la energía del fotón visible coincide con el desdoblamiento del campo cristalino, y la serie espectroquímica ordena a los ligandos por su capacidad de abrir esa brecha Δ <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012</a>, secs. 23.5-23.6)</span>.</p>
+<p>El balance entre Δ y la energía de apareamiento decide si el complejo es de espín alto o bajo, con consecuencias magnéticas medibles que distinguen también las geometrías tetraédrica, siempre de espín alto, y plana cuadrada, casi siempre de espín bajo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>)</span>. El campo cristalino, modelo electrostático, y el enlace de valencia de Pauling, con orbitales híbridos y enlaces dobles del cianuro, constituyen dos posturas complementarias que la teoría de orbitales moleculares reconcilia, y sus aplicaciones, desde la disolución de precipitados hasta el refinado del níquel y la bioquímica de las porfirinas, hacen del bloque d el grupo más versátil de la tabla <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, sec. 23.6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 19–10</a>)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -1073,13 +1280,13 @@ Pauling, Linus. 1988. <em>General Chemistry</em>. 3rd (reprinted). Dover Publica
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="pagination-link" aria-label="Capítulo 21 · Química de los no metales">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Capítulo 21 · Química de los no metales</span></span>
+      <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="pagination-link" aria-label="Química de los no metales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Química de los no metales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../03_biologia/01_base_fisica_herencia.html" class="pagination-link" aria-label="La base física de la herencia">
-        <span class="nav-page-text"><span class="chapter-title">La base física de la herencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../02_quimica/23-quimica-organica.html" class="pagination-link" aria-label="Química orgánica: la química de los compuestos del carbono">
+        <span class="nav-page-text"><span class="chapter-title">Química orgánica: la química de los compuestos del carbono</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

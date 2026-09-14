@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>La química moderna: técnicas, logros y fronteras – Nous</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../03_biologia/01_base_fisica_herencia.html" rel="next">
+<link href="../02_quimica/25-quimica-del-ambiente.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-53aca5cea238aca1de29c5a91d105b8d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-28c86cf0d638d21149957566e6a88f2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title"><span class="chapter-title">La química moderna: técnicas, logros y fronteras</span></h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Nous</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Descargar" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Descargar"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Descargar PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../Nous.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Descargar ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nous</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Conjuntos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_conjuntos/00_proposicion_negacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proposición y su negación</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Química</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/01-historia-de-la-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 1 · La química en la historia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/02-materia-y-medicion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 2 · La materia y su medición</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/03-atomos-moleculas-e-iones.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Capítulo 3 · Átomos, moléculas e iones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/04-estequiometria.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Estequiometría: moles, fórmulas y ecuaciones químicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/05-reacciones-en-disolucion-acuosa.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reacciones en disolución acuosa</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/06-estructura-electronica-del-atomo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Estructura electrónica del átomo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/07-tabla-periodica-y-propiedades-periodicas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tabla periódica y propiedades periódicas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/08-enlace-quimico-i-conceptos-fundamentales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Enlace químico I: conceptos fundamentales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/09-enlace-quimico-ii-geometria-molecular-y-teorias-de-enlace.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Enlace químico II: geometría molecular y teorías de enlace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/10-gases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Gases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/11-termoquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Termoquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/12-liquidos-fuerzas-intermoleculares-y-solidos.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Líquidos, fuerzas intermoleculares y sólidos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/13-disoluciones-y-propiedades-coligativas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Disoluciones y propiedades coligativas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/14-cinetica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cinética química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/15-equilibrio-quimico.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Equilibrio químico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/16-acidos-y-bases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ácidos y bases</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/17-equilibrios-acido-base-y-solubilidad.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Equilibrios ácido-base y de solubilidad: aplicaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/18-termodinamica-quimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Termodinámica química</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/19-electroquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Electroquímica</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/20-quimica-nuclear.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química nuclear</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/21-quimica-de-los-no-metales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química de los no metales</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/22-quimica-de-los-metales-de-transicion-y-quimica-de-coordinacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química de los metales de transición y química de coordinación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/23-quimica-organica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química orgánica: la química de los compuestos del carbono</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/24-bioquimica.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Bioquímica: la química de la vida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/25-quimica-del-ambiente.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Química del ambiente: atmósfera, agua y química verde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_quimica/26-quimica-moderna-tecnicas-y-fronteras.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">La química moderna: técnicas, logros y fronteras</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Biología</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_biologia/01_base_fisica_herencia.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">La base física de la herencia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#la-revolución-instrumental-del-análisis-húmedo-al-instrumento-electrónico" id="toc-la-revolución-instrumental-del-análisis-húmedo-al-instrumento-electrónico" class="nav-link" data-scroll-target="#la-revolución-instrumental-del-análisis-húmedo-al-instrumento-electrónico">La revolución instrumental: del análisis húmedo al instrumento electrónico</a></li>
+  <li><a href="#espectroscopía-atómica-y-molecular" id="toc-espectroscopía-atómica-y-molecular" class="nav-link" data-scroll-target="#espectroscopía-atómica-y-molecular">Espectroscopía atómica y molecular</a></li>
+  <li><a href="#resonancia-magnética-nuclear-rmn" id="toc-resonancia-magnética-nuclear-rmn" class="nav-link" data-scroll-target="#resonancia-magnética-nuclear-rmn">Resonancia magnética nuclear (RMN)</a></li>
+  <li><a href="#espectrometría-de-masas" id="toc-espectrometría-de-masas" class="nav-link" data-scroll-target="#espectrometría-de-masas">Espectrometría de masas</a></li>
+  <li><a href="#difracción-de-rayos-x-y-cristalografía" id="toc-difracción-de-rayos-x-y-cristalografía" class="nav-link" data-scroll-target="#difracción-de-rayos-x-y-cristalografía">Difracción de rayos X y cristalografía</a></li>
+  <li><a href="#microscopías-de-superficie-stm-y-afm" id="toc-microscopías-de-superficie-stm-y-afm" class="nav-link" data-scroll-target="#microscopías-de-superficie-stm-y-afm">Microscopías de superficie: STM y AFM</a></li>
+  <li><a href="#química-computacional" id="toc-química-computacional" class="nav-link" data-scroll-target="#química-computacional">Química computacional</a></li>
+  <li><a href="#síntesis-combinatoria-y-librerías-de-compuestos" id="toc-síntesis-combinatoria-y-librerías-de-compuestos" class="nav-link" data-scroll-target="#síntesis-combinatoria-y-librerías-de-compuestos">Síntesis combinatoria y librerías de compuestos</a></li>
+  <li><a href="#logros-del-siglo-veinte-guerra-mujeres-y-la-química-como-ciencia-central" id="toc-logros-del-siglo-veinte-guerra-mujeres-y-la-química-como-ciencia-central" class="nav-link" data-scroll-target="#logros-del-siglo-veinte-guerra-mujeres-y-la-química-como-ciencia-central">Logros del siglo veinte: guerra, mujeres y la química como ciencia central</a></li>
+  <li><a href="#fronteras-elementos-nuevos-y-la-isla-de-estabilidad" id="toc-fronteras-elementos-nuevos-y-la-isla-de-estabilidad" class="nav-link" data-scroll-target="#fronteras-elementos-nuevos-y-la-isla-de-estabilidad">Fronteras: elementos nuevos y la isla de estabilidad</a></li>
+  <li><a href="#fronteras-escalas-de-tiempo-de-la-femtoquímica" id="toc-fronteras-escalas-de-tiempo-de-la-femtoquímica" class="nav-link" data-scroll-target="#fronteras-escalas-de-tiempo-de-la-femtoquímica">Fronteras: escalas de tiempo de la femtoquímica</a></li>
+  <li><a href="#fronteras-cúmulos-de-moléculas-y-la-nanociencia" id="toc-fronteras-cúmulos-de-moléculas-y-la-nanociencia" class="nav-link" data-scroll-target="#fronteras-cúmulos-de-moléculas-y-la-nanociencia">Fronteras: cúmulos de moléculas y la nanociencia</a></li>
+  <li><a href="#fronteras-el-grafeno-y-los-materiales-bidimensionales" id="toc-fronteras-el-grafeno-y-los-materiales-bidimensionales" class="nav-link" data-scroll-target="#fronteras-el-grafeno-y-los-materiales-bidimensionales">Fronteras: el grafeno y los materiales bidimensionales</a></li>
+  <li><a href="#fronteras-aplicaciones-y-nuevos-descubrimientos" id="toc-fronteras-aplicaciones-y-nuevos-descubrimientos" class="nav-link" data-scroll-target="#fronteras-aplicaciones-y-nuevos-descubrimientos">Fronteras: aplicaciones y nuevos descubrimientos</a></li>
+  <li><a href="#las-partículas-fundamentales-la-química-de-lo-más-pequeño" id="toc-las-partículas-fundamentales-la-química-de-lo-más-pequeño" class="nav-link" data-scroll-target="#las-partículas-fundamentales-la-química-de-lo-más-pequeño">Las partículas fundamentales: la química de lo más pequeño</a></li>
+  <li><a href="#dialéctica-del-capítulo" id="toc-dialéctica-del-capítulo" class="nav-link" data-scroll-target="#dialéctica-del-capítulo">Dialéctica del capítulo</a></li>
+  <li><a href="#ejemplo-resuelto-integrador" id="toc-ejemplo-resuelto-integrador" class="nav-link" data-scroll-target="#ejemplo-resuelto-integrador">Ejemplo resuelto integrador</a></li>
+  <li><a href="#preguntas-y-ejercicios" id="toc-preguntas-y-ejercicios" class="nav-link" data-scroll-target="#preguntas-y-ejercicios">Preguntas y ejercicios</a></li>
+  <li><a href="#solucionario" id="toc-solucionario" class="nav-link" data-scroll-target="#solucionario">Solucionario</a></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen">Resumen</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-title">La química moderna: técnicas, logros y fronteras</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Este capítulo último del libro reúne la doble mirada que ha guiado toda la obra: la de la química como práctica material e histórica y la de la química como ciencia que se define por sus instrumentos y sus fronteras. Los capítulos anteriores recorrieron los conceptos centrales desde la medición hasta el ambiente; aquí se examinan las técnicas que los hicieron posibles, los logros del siglo veinte y las incógnitas que abren el camino hacia el futuro.</p>
+<p>La síntesis combina tres voces complementarias: la historia de la disciplina narrada por William Brock, la crónica de las técnicas y de los avances recientes escrita por Peter Atkins y el tratado sobre las partículas fundamentales de Linus Pauling, cuya edición de 1988 conserva intacta la claridad expositiva del original de 1970 <span class="citation" data-cites="brock2015 atkins2015 pauling1988">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>; <a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015</a>, caps. 5 y 7; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>El laboratorio químico moderno es un lugar híbrido en el que conviven la vasija tradicional con el espectrómetro electrónico; un alquimista reconocería los recipientes, pero no los instrumentos que los acompañan <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La química comprende dos grandes operaciones: el análisis, que identifica sustancias y determina sus cantidades y concentraciones, y la síntesis, que crea formas deseadas de materia a partir de componentes más simples; las técnicas instrumentales que este capítulo describe pertenecen a ambos dominios {#sec-tecnicas-instrumentales}<span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La exposición avanza desde el análisis hacia la síntesis, y desde los logros del siglo pasado hacia las fronteras actuales, para terminar en la escala más pequeña que la química puede alcanzar: la de las partículas fundamentales que constituyen la materia <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. En ese recorrido, cada técnica se presentará con su fundamento físico, su historia y su aplicación, retomando de manera explícita los conceptos de los capítulos anteriores cuando sea necesario <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015</a>, caps. 5 y 7)</span>.</p>
+</section>
+<section id="la-revolución-instrumental-del-análisis-húmedo-al-instrumento-electrónico" class="level2">
+<h2 class="anchored" data-anchor-id="la-revolución-instrumental-del-análisis-húmedo-al-instrumento-electrónico">La revolución instrumental: del análisis húmedo al instrumento electrónico</h2>
+<p>La química del siglo veinte experimentó transformaciones que cambiaron su rostro público y su práctica cotidiana: dos guerras mundiales, el desplazamiento del carbón al petróleo como materia prima, la adopción de la instrumentación física, la mecánica cuántica y las teorías electrónicas del enlace, y el surgimiento de la gran ciencia financiada por los Estados <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>El liderazgo europeo en la disciplina fue cediendo terreno: los Estados Unidos tomaron la delantera y, desde los años sesenta, la Unión Soviética, Japón y China se incorporaron a una ciencia cada vez más globalizada <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. La guerra fría convirtió a los gobiernos y a los ejércitos en patronos de la química, y las mujeres se incorporaron a la profesión en número creciente <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La revolución instrumental (<span class="quarto-unresolved-ref">?sec-revolucion-instrumental</span>) propiamente dicha llegó después de 1950 y tuvo un efecto drástico sobre el análisis: los métodos húmedos y secos, basados en la manipulación de disoluciones y en el ensayo manual, desaparecieron prácticamente del laboratorio, reemplazados por maquinaria electrónica que registraba los resultados sin intervención humana <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La enseñanza y los libros de texto se transformaron a la par: ya no se formaba al estudiante en la destreza manual del análisis clásico, sino en la interpretación de los nuevos registros instrumentales <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. El punto de inflexión simbólico fue el pH metro portátil de Arnold Beckman, un instrumento de caja negra que eliminó la valoración volumétrica (<span class="quarto-unresolved-ref">?sec-valoraciones</span>) para medir la acidez <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>Beckman, hijo de un herrero estadounidense, fundó su empresa de instrumentos cuando aún era estudiante; la necesidad nació de la industria del naranjo de California, cuyos suelos ácidos exigían medidas de pH rápidas y fiables <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. La escala logarítmica de pH (<span class="quarto-unresolved-ref">?sec-ph</span>) había sido introducida en 1909 por Søren Sørensen, que definió el potencial de iones hidrógeno desde la acidez extrema hasta la basicidad extrema; hasta 1934 su medida requería un análisis volumétrico elaborado, que Beckman empaquetó en un medidor electrónico portátil patentado ese mismo año <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>El instrumento de Beckman abrió la era de la caja negra química, en la que el químico ya no ve los pasos intermedios del análisis sino solo su resultado; la figura del pH metro de Brock ya apareció en el capítulo uno de este libro, donde se usó para ilustrar la revolución instrumental, y aquí se retoma solo como hito conceptual <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La espectroscopía infrarroja (<span class="quarto-unresolved-ref">?sec-espectroscopia-infrarroja</span>) tuvo un origen paralelo: comenzó a finales del siglo diecinueve cuando dos antiguos oficiales del ejército británico, empleados del departamento gubernamental de educación, correlacionaron los espectros infrarrojos con los grupos funcionales de las moléculas <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. A comienzos del siglo veinte, William Coblentz publicó los espectros de más de un centenar de moléculas orgánicas, aunque sus hallazgos no condujeron todavía a determinaciones estructurales <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. La técnica esperó varias décadas para convertirse en rutina, pero su lógica ya era clara: cada grupo de átomos vibra a frecuencias características que pueden leerse como una identidad molecular <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="espectroscopía-atómica-y-molecular" class="level2">
+<h2 class="anchored" data-anchor-id="espectroscopía-atómica-y-molecular">Espectroscopía atómica y molecular</h2>
+<p>La espectroscopía atómica es una técnica de emisión que encierra la lógica del análisis elemental: se vaporiza el elemento y se lo calienta intensamente para que sus electrones salten a estados excitados (<span class="quarto-unresolved-ref">?sec-estados-excitados</span>), y cuando estos electrones vuelven a su estado normal emiten fotones (<span class="quarto-unresolved-ref">?sec-foton</span>) de colores característicos {#sec-espectroscopia}<span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Registrar el espectro de emisión equivale a identificar el elemento, pues cada especie atómica posee su propio conjunto de líneas de colores; el amarillo del alumbrado público es sodio, y el rojo de los letreros luminosos es neón <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. El fundamento de estas líneas es el mismo que se desarrolló en el capítulo seis de este libro: la energía de los fotones emitidos coincide con la diferencia entre los niveles electrónicos del átomo <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>)</span>.</p>
+<p>La espectroscopía molecular complementa a la atómica mediante la absorción: un haz de fotones atraviesa la muestra y algunos fotones se extraen del haz cuando excitan a la molécula a un estado de energía que le es propio, lo que produce un espectro de absorción único para cada molécula <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Muchos espectros moleculares se observan en el ultravioleta y la región visible, donde la radiación es suficientemente energética para modificar la distribución electrónica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. En el infrarrojo, en cambio, los fotones de menor energía estimulan las vibraciones de los enlaces: los grupos de átomos metilo y carbonilo vibran con energías diferentes, de modo que la espectroscopía infrarroja identifica los grupos característicos de una molécula compleja <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La energía de un fotón se relaciona con su frecuencia o su longitud de onda mediante la ecuación de Planck (<span class="quarto-unresolved-ref">?sec-constante-planck</span>), que este libro introdujo en el capítulo seis al estudiar la radiación y la cuantización (<span class="quarto-unresolved-ref">?sec-cuantizacion</span>) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>)</span>. La relación vale para toda la escala electromagnética, desde la radiofrecuencia hasta los rayos gamma, y por eso las técnicas que se describen a continuación difieren solo en la energía de los fotones que emplean como sonda.</p>
+<p><span id="eq-foton-energia"><span class="math display">\[ E = h\nu = \frac{hc}{\lambda}  \tag{27.1}\]</span></span></p>
+<p>En la ecuación <a href="#eq-foton-energia" class="quarto-xref">Ecuación&nbsp;<span>27.1</span></a>, <span class="math inline">\(E\)</span> es la energía del fotón, expresada en julios y entendida como la cantidad mínima de energía que la radiación puede transferir a la materia; <span class="math inline">\(h\)</span> es la constante de Planck, de valor <span class="math inline">\(6{,}626\times10^{-34}\ \mathrm{J\,s}\)</span>, que fija la escala de la cuantización; <span class="math inline">\(\nu\)</span> es la frecuencia de la radiación, en hercios o s⁻¹; <span class="math inline">\(c\)</span> es la velocidad de la luz, <span class="math inline">\(2{,}998\times10^8\ \mathrm{m\,s^{-1}}\)</span>; y <span class="math inline">\(\lambda\)</span> es la longitud de onda, en metros <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>)</span>. Como <span class="math inline">\(c\)</span> es constante, frecuencia y longitud de onda son equivalentes entre sí: a mayor frecuencia corresponde menor longitud de onda y mayor energía transportada por cada fotón <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>)</span>.</p>
+</section>
+<section id="resonancia-magnética-nuclear-rmn" class="level2">
+<h2 class="anchored" data-anchor-id="resonancia-magnética-nuclear-rmn">Resonancia magnética nuclear (RMN)</h2>
+<p>La resonancia magnética nuclear (<span class="quarto-unresolved-ref">?sec-resonancia-magnetica-nuclear</span>), conocida por sus siglas RMN, explota el hecho de que algunos núcleos atómicos se comportan como imanes diminutos: el protón, núcleo del átomo de hidrógeno, gira sobre sí mismo con un espín (<span class="quarto-unresolved-ref">?sec-espin</span>) que lo convierte en una pequeña barra imantada con un polo norte y un polo sur <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Al aplicar un campo magnético externo, los protones pueden orientar su espín de dos maneras, con el polo norte hacia arriba o hacia abajo, y las dos orientaciones poseen energías ligeramente distintas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Un fotón de la frecuencia adecuada, llamada frecuencia de resonancia, puede invertir la orientación del protón, y esa inversión se detecta como señal <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Lo notable de la RMN es que la frecuencia de resonancia depende del entorno químico del núcleo: un protón vecino a un átomo de carbono, de oxígeno o de nitrógeno resuena a una frecuencia ligeramente distinta que un protón en otro entorno, porque los electrones circundantes protegen al núcleo del campo externo de maneras diferentes <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Los campos magnéticos de los instrumentos modernos se generan con bobinas superconductoras, y la radiación empleada es de radiofrecuencia: unos 100 MHz, una frecuencia apenas superior al extremo de alta frecuencia de la banda de radiodifusión de frecuencia modulada <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. El espectro de RMN de una molécula orgánica muestra tantas señales como entornos químicamente distintos ocupen los núcleos de hidrógeno, y la posición de cada señal revela la naturaleza de los grupos vecinos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La técnica tiene además una variante médica de enorme importancia: la imagen por resonancia magnética, o IRM, en la que la palabra nuclear se eliminó del nombre por razones no técnicas, aunque el fenómeno es el mismo <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. En la IRM se cartografían los protones del agua de los tejidos para reconstruir imágenes del interior del cuerpo, y el espín nuclear se convierte así en una sonda diagnóstica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>El contraste entre una señal de RMN y otra no está en la energía, sino en la frecuencia finísima que distingue cada entorno: por eso la técnica discrimina entre grupos metilo, carbonilo y demás, y por eso identifica moléculas completas como huellas digitales <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. El mismo principio rige la imagen médica: el agua de los tejidos resuena en frecuencias que dependen de su entorno, y esa variación fina es la que produce el contraste diagnóstico en la IRM <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="espectrometría-de-masas" class="level2">
+<h2 class="anchored" data-anchor-id="espectrometría-de-masas">Espectrometría de masas</h2>
+<p>La espectrometría de masas (<span class="quarto-unresolved-ref">?sec-espectrometria-masas</span>) abandona la luz como sonda y recurre a la materia misma: la molécula se destruye deliberadamente, se pesan sus fragmentos y de ese registro se reconstruye la identidad del compuesto original <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. En el espectrómetro de masas se dispara un haz de electrones contra la molécula, que queda despedazada en fragmentos cargados; esos fragmentos se aceleran mediante un campo eléctrico y después pasan entre los polos de un potente imán, donde su trayectoria se curva de manera proporcional a su masa <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Un detector situado al final del recorrido registra cada fragmento según su masa, y el conjunto de picos constituye el espectro de masas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La metáfora del jarrón roto explica el procedimiento de interpretación: si a alguien se le rompe una vasija, puede identificar de qué vasija se trataba examinando los fragmentos, y el espectrómetro de masas hace lo mismo con las moléculas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Cada tipo de molécula se rompe de maneras características, de modo que el patrón de fragmentos es una identidad tan fiable como el espectro de absorción <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La técnica determina con precisión la masa molar del compuesto y, combinada con la química computacional {#sec-quimica-computacional} y la espectroscopía, permite asignar estructuras a compuestos nuevos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="difracción-de-rayos-x-y-cristalografía" class="level2">
+<h2 class="anchored" data-anchor-id="difracción-de-rayos-x-y-cristalografía">Difracción de rayos X y cristalografía</h2>
+<p>La difracción de rayos X es la técnica que revela la estructura tridimensional de la materia cristalina y que cambió para siempre la biología y la química de los compuestos complejos {#sec-difraccion-rayos-x}<span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Los rayos X son radiación de longitud de onda muy corta, del orden de 100 pm, comparable al diámetro de un átomo; cuando esta radiación incide sobre un cristal, las ondas dispersadas por los planos atómicos interfieren entre sí, reforzándose en unas direcciones y anulándose en otras <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La pauta de interferencia resultante, el patrón de difracción, codifica la disposición de los átomos en la red cristalina; con muestras pulverulentas, como los minerales, el patrón permite identificar la sustancia por comparación <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. El método es análogo al reconocimiento de una huella digital: cada sustancia cristalina produce un patrón propio, y la coincidencia del patrón observado con el de una referencia confirma la identidad de la muestra <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La historia de la técnica es una sucesión de reconocimientos científicos: Röntgen recibió el primer premio Nobel de física en 1901 por el descubrimiento de los rayos X, los Bragg compartieron el de física en 1915 por el análisis de la difracción en cristales, Debye obtuvo el de química en 1936 y Hodgkin el de química en 1964 por las estructuras de la penicilina y la vitamina B12 <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Wilkins compartió el de medicina en 1962 por la difracción del ADN, base experimental de la doble hélice; la técnica mereció premios Nobel en las tres categorías científicas, síntoma de su ubicuidad <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Conviene señalar, con la fuente, que la contribución de Rosalind Franklin no fue reconocida en ese premio de 1962 <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="microscopías-de-superficie-stm-y-afm" class="level2">
+<h2 class="anchored" data-anchor-id="microscopías-de-superficie-stm-y-afm">Microscopías de superficie: STM y AFM</h2>
+<p>Las microscopías de superficie nacieron de la catálisis, pues conocer la topografía de un catalizador sólido (<span class="quarto-unresolved-ref">?sec-catalizador</span>), donde los reactivos se anclan y reaccionan, exige verse sobre átomos individuales {#sec-microscopias-superficie}<span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Para lograrlo, la STM y la AFM no emplean lentes sino puntas físicas que recorren la muestra a una distancia atómica, y esa proximidad entre punta y superficie es justamente la que hace posible la imagen <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La microscopía de túnel de barrido, STM por sus siglas en inglés, recorre la superficie con una punta sumamente fina mantenida a la distancia de unos pocos diámetros atómicos; entre la punta y la superficie salta una corriente de electrones por efecto túnel, un fenómeno cuántico que la física clásica consideraría prohibido <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La corriente de túnel es tan sensible al ancho del hueco que las pequeñas protuberancias que forman los átomos individuales la aumentan visiblemente, y el registro de esas variaciones dibuja la superficie átomo por átomo <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La afirmación de que los átomos son demasiado pequeños para verse quedó refutada por estas imágenes, que los muestran como picos y valles de la corriente de túnel <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La microscopía de fuerza atómica, AFM, fue más lejos: su punta no solo observa, sino que actúa, empujando átomos de un lugar a otro sobre la superficie <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Con la AFM se han escrito patrones de letras atómicas y se ha jugado al fútbol en miniatura moviendo una buckybola de C₆₀ (<span class="quarto-unresolved-ref">?sec-fullereno-grafeno</span>) sobre una superficie, un nanofútbol que demuestra el control total de la posición atómica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="química-computacional" class="level2">
+<h2 class="anchored" data-anchor-id="química-computacional">Química computacional</h2>
+<p>La química computacional aplica la potencia de las computadoras al cálculo y a la representación gráfica de las estructuras moleculares, y ha hecho visible lo que las ecuaciones de la mecánica cuántica solo insinuaban: las nubes de densidad electrónica que forman enlaces y orbitales <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Los cálculos se basan en las ecuaciones de la mecánica cuántica (<span class="quarto-unresolved-ref">?sec-mecanica-cuantica</span>) que este libro presentó en el capítulo seis, resueltas con aproximaciones que las hacen tratables numéricamente, y el resultado se plasma en imágenes que muestran cómo se distribuyen los electrones alrededor de los núcleos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Las aplicaciones de la química computacional van desde la farmacia hasta la biología: en la industria farmacéutica se evalúa la actividad potencial de moléculas candidatas antes de sintetizarlas, y en la biología se estudia el plegamiento de las proteínas, ese proceso por el cual una cadena de aminoácidos adopta su forma funcional <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. También se simulan colisiones moleculares, siguiendo la dinámica de los reactivos mientras chocan, forman complejos y se separan en productos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La química computacional no reemplaza al laboratorio, pero lo guía: propone estructuras plausibles, filtra candidatos costosos y convierte las imágenes en hipótesis contrastables <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="síntesis-combinatoria-y-librerías-de-compuestos" class="level2">
+<h2 class="anchored" data-anchor-id="síntesis-combinatoria-y-librerías-de-compuestos">Síntesis combinatoria y librerías de compuestos</h2>
+<p>La síntesis tradicional prepara un compuesto cada vez, siguiendo un plan racional que conduce de reactivos conocidos a un producto deseado; la síntesis combinatoria (<span class="quarto-unresolved-ref">?sec-quimica-combinatoria</span>) invirtió esa estrategia y prepara miles de compuestos simultáneamente para que los farmacéuticos examinen la mezcla en busca de actividad <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>El método se originó con los péptidos, cadenas cortas de aminoácidos, y sigue un esquema de mezclar y dividir: se mezclan los materiales y después se divide la mezcla en partes, cada una de las cuales reacciona con un aminoácido distinto <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Los químicos combinatorios no siempre saben exactamente qué es lo que han hecho, pero saben qué conjunto de compuestos contienen sus recipientes, y eso basta para el cribado farmacológico <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Un ejemplo con tres aminoácidos, A, B y C, ilumina el poder del método: en la primera ronda se obtienen AA, AB y AC; al mezclar los tres y dividirlos en tres recipientes que reaccionan con A, B y C, la segunda ronda produce AAA, ABA y ACA, junto con AAB, ABB y ACB y con AAC, ABC y ACC <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Con los veinte aminoácidos naturales del laboratorio, el número de compuestos crece como las potencias de veinte: la primera ronda da 20, la segunda 400, la tercera 8 000 y la cuarta 160 000 compuestos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. El proceso se automatiza con robots que llevan la contabilidad de cada recipiente, y las librerías resultantes se examinan con métodos de alto rendimiento en busca de actividad biológica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La aritmética del ejemplo merece un señalamiento dialéctico: la fuente reporta que cuatro rondas sucesivas dan 400, 8 000, 160 000 y 5 200 000 compuestos, pero el producto directo de las potencias de veinte da 20² = 400, 20³ = 8 000, 20⁴ = 160 000 y 20⁵ = 3 200 000 <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La cifra impresa de 5 200 000 no coincide con el cálculo 20⁵, y este libro no la propaga como si fuera correcta; se la menciona aquí para que el lector advierta que las fuentes impresas pueden contener erratas aritméticas, y se adopta el cálculo verificado como valor de referencia en los ejercicios <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="logros-del-siglo-veinte-guerra-mujeres-y-la-química-como-ciencia-central" class="level2">
+<h2 class="anchored" data-anchor-id="logros-del-siglo-veinte-guerra-mujeres-y-la-química-como-ciencia-central">Logros del siglo veinte: guerra, mujeres y la química como ciencia central</h2>
+<p>La primera guerra mundial fue descrita como la guerra de los químicos, aunque menos del uno por ciento de las bajas se debió directamente a la guerra química; el apelativo expresaba la movilización de la química para poner a Gran Bretaña en pie de guerra {#sec-logros-futuro-quimica}<span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La segunda guerra mundial fue llamada la guerra de los físicos por la bomba atómica, aunque los químicos participaron de manera decisiva en la empresa <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. En el plano humano, la guerra costó la vida a Henry Moseley en 1915 y a 83 químicos británicos, y agitó a la Chemical Society, que expulsó en 1916 a sus miembros honorarios alemanes Baeyer, Fischer, Nernst y Ostwald, reintegrados en 1929 <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>Las guerras abrieron a las mujeres las puertas del laboratorio: Martha Whiteley, una de las veintiuna primeras mujeres elegidas en 1920 para la Chemical Society, dirigió en el Imperial College de Londres un equipo que fabricaba el anestésico local beta-eucaína, un derivado de la cocaína, y las mujeres fueron reclutadas en masa para la industria de explosivos <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. Tras la guerra, la industria química se fusionó en gigantes: IG Farben en 1925, con cerca de 100 000 empleados, el gran Du Pont estadounidense e ICI en Gran Bretaña en 1926, y las graduadas en química comenzaron a combinar el empleo con el matrimonio y la familia <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La posición de la química en el sistema de las ciencias se redefinió: para unos comentaristas la disciplina se había convertido en una ciencia de servicio, subordinada a la física y a la biología; para otros, su papel central en el círculo de las ciencias (<span class="quarto-unresolved-ref">?sec-ciencia-central</span>) era más prominente que nunca <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>El historiador de la ciencia John Agar propuso interpretar el siglo como gobernado por la guerra y la salud, con las universidades dejando de ser torres de marfil para entrar en un mundo posacadémico, interdisciplinario y utilitario en el que deben generar ingresos <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. El historiador japonés de la ciencia de polímeros Yasu Furakawa describió la biología molecular como una fusión de química orgánica, química de polímeros, bioquímica, química física, cristalografía de rayos X, genética y bacteriología, mientras los materiales sintéticos y la tecnología dominan el mundo computarizado hecho por el hombre <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+</section>
+<section id="fronteras-elementos-nuevos-y-la-isla-de-estabilidad" class="level2">
+<h2 class="anchored" data-anchor-id="fronteras-elementos-nuevos-y-la-isla-de-estabilidad">Fronteras: elementos nuevos y la isla de estabilidad</h2>
+<p>La tabla periódica (<span class="quarto-unresolved-ref">?sec-tabla-periodica</span>), que este libro recorrió desde el capítulo siete, sigue creciendo: se descubre aproximadamente un elemento nuevo por año, y los más recientes son radiactivos y desaparecen en fracciones de segundo tras producirse solo unos pocos átomos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La búsqueda avanza hacia una hipotética isla de estabilidad {#sec-isla-estabilidad}, una región de la tabla, alrededor del elemento 126, en la que los núcleos sobrevivirían significativamente más tiempo que sus vecinos; los elementos de esa isla serían un banco de pruebas para las teorías de la estructura nuclear, aunque probablemente no tengan usos prácticos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. Hacia 2013 la tabla llegaba al elemento 116, el livermorio, sintetizado en cantidades mínimas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La sensibilidad de las técnicas de detección es a la vez una bendición y una maldición: permite detectar cantidades diminutas de materia, pero dificulta distinguir la señal verdadera del ruido de fondo <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La química de los elementos superpesados avanza así en el límite de lo detectable, donde producir unos pocos átomos basta para confirmar la existencia de un elemento <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+</section>
+<section id="fronteras-escalas-de-tiempo-de-la-femtoquímica" class="level2">
+<h2 class="anchored" data-anchor-id="fronteras-escalas-de-tiempo-de-la-femtoquímica">Fronteras: escalas de tiempo de la femtoquímica</h2>
+<p>La química moderna también conquistó el tiempo: hoy es posible observar cómo evoluciona una molécula mientras reacciona, con enlaces que se aflojan, átomos que se liberan y caen en nuevos arreglos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La escala de tiempo de estos procesos es el femtosegundo, igual a 10⁻¹⁵ s, y la femtoquímica {#sec-femtoquimica} estudia las reacciones en ese lapso; el desarrollo exigió pulsos de láser lo bastante breves para congelar el movimiento molecular <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La escala aún más corta del attosegundo, 10⁻¹⁸ s, mil veces más breve, deja ver incluso a los electrones congelados en su movimiento, y en esa frontera la química finalmente se vuelve física <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+</section>
+<section id="fronteras-cúmulos-de-moléculas-y-la-nanociencia" class="level2">
+<h2 class="anchored" data-anchor-id="fronteras-cúmulos-de-moléculas-y-la-nanociencia">Fronteras: cúmulos de moléculas y la nanociencia</h2>
+<p>La materia entre lo molecular y lo macroscópico es el territorio de la nanociencia {#sec-nanociencia}, donde los objetos miden unos cien nanómetros y los efectos cuánticos se vuelven relevantes <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. Un ejemplo de la escala nanoscópica son los cúmulos de moléculas de agua: se necesitan al menos 275 moléculas de agua para que el cúmulo muestre propiedades de hielo, y unas 475 para que sea hielo de verdad, un cubo de unas ocho moléculas de agua por arista <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. El hallazgo importa para entender la formación de nubes y la congelación, procesos que dependen de los primeros agregados moleculares <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La baja temperatura revela además la rareza cuántica: en las proximidades del cero absoluto la materia se comporta de maneras que desafían la intuición clásica, y las técnicas de los últimos decenios permiten explorar esa región sin precedentes <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La nanociencia reúne top-down, el tallado de materiales macroscópicos hasta tamaños nanométricos, y bottom-up, la construcción de estructuras por autoensamblaje molecular, y sus aplicaciones van de las celdas solares mejoradas a los sensores de glucosa y a los materiales con propiedades mecánicas y eléctricas nuevas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+</section>
+<section id="fronteras-el-grafeno-y-los-materiales-bidimensionales" class="level2">
+<h2 class="anchored" data-anchor-id="fronteras-el-grafeno-y-los-materiales-bidimensionales">Fronteras: el grafeno y los materiales bidimensionales</h2>
+<p>Entre los materiales nuevos {#sec-materiales-nuevos} destaca el grafeno (<span class="quarto-unresolved-ref">?sec-grafeno</span>), una lámina plana de átomos de carbono con estructura de tela de gallinero, obtenida al desprender del grafito capas de un solo átomo de espesor <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. El grafeno es uno de los materiales más fuertes conocidos, con un punto de ruptura doscientas veces mayor que el del acero y menos de un gramo por metro cuadrado; la cita del Nobel de 2010 concedido a Geim y Novoselov proponía que una hamaca de grafeno de un metro cuadrado podría sostener a un gato de cuatro kilogramos pesando lo que un bigote de gato <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La lista de aplicaciones posibles es larga: altavoces sin partes móviles, destilación de vodka a temperatura ambiente, tamices que separan moléculas para biocombustibles y la desalinización del agua de mar <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. El grafeno apenas adsorbe gases, pero su superficie puede modificarse químicamente para detectarlos, y su óxido forma el papel de grafeno, láminas agregadas de óxido de grafeno que inauguran una nueva clase de materiales con propiedades térmicas, ópticas y mecánicas versátiles; otras láminas bidimensionales, como MoS₂, WS₂ y TiC, forman capas de un átomo de espesor con propiedades electrónicas distintas de sus formas tridimensionales <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+</section>
+<section id="fronteras-aplicaciones-y-nuevos-descubrimientos" class="level2">
+<h2 class="anchored" data-anchor-id="fronteras-aplicaciones-y-nuevos-descubrimientos">Fronteras: aplicaciones y nuevos descubrimientos</h2>
+<p>Las aplicaciones cotidianas de la nueva química ilustran su alcance: el vidrio autolimpiante lleva una capa fina y transparente de dióxido de titanio que, activada por la luz solar, descompone químicamente la suciedad, mientras su superficie hidrofóbica hace que la lluvia la arrastre sin dejar marcas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. Las fibras inteligentes cambian de color según el ambiente y resisten la lavandería; la catálisis es vital para eliminar la contaminación, como en el convertidor catalítico de los automóviles, que debe entrar en funcionamiento rápidamente para reducir los óxidos de nitrógeno, oxidar el monóxido de carbono y completar la oxidación del combustible sin quemar <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La genómica identifica los genes y el modo en que interactúan para gobernar la producción de proteínas, y de ella deriva la farmacogenómica, que busca fármacos adaptados al genoma de cada individuo; la proteómica estudia el conjunto de proteínas de un organismo, las entidades sobre las que actúan la mayoría de los fármacos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. El descubrimiento de que las moléculas pueden anudarse a sí mismas, formando espontáneamente nudos de trébol, muestra que la investigación fundamental sigue deparando sorpresas: como dijo Fraser Stoddart, la química orgánica sintética y la física orgánica pueden trabajar juntas en la estereoquímica más elegante <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+</section>
+<section id="las-partículas-fundamentales-la-química-de-lo-más-pequeño" class="level2">
+<h2 class="anchored" data-anchor-id="las-partículas-fundamentales-la-química-de-lo-más-pequeño">Las partículas fundamentales: la química de lo más pequeño</h2>
+<p>La frontera final lleva la química hasta sus componentes últimos: los átomos están formados por electrones y núcleos, y los núcleos por protones y neutrones, pero el estudio acelerado de las partículas fundamentales ha descubierto muchas más entidades, algunas de las cuales viven solo fracciones de segundo {#sec-particulas-fundamentales}<span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Pauling definió esa empresa como la química de las partículas fundamentales, pues las reacciones entre partículas se describen con las mismas ideas que las reacciones entre moléculas: se forman, se transforman y se aniquilan siguiendo principios de conservación <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Hacia 1970 se conocían 34 partículas fundamentales: seis con masa en reposo nula que se mueven a la velocidad de la luz, entre ellas el fotón y el gravitón, y 28 con masa en reposo finita que se mueven más lentamente <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Las partículas se clasifican, según su espín, en fermiones y bosones {#sec-fermiones-bosones}<span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Los fermiones, con espín semientero como el electrón, obedecen el principio de exclusión de Pauli (<span class="quarto-unresolved-ref">?sec-principio-exclusion-pauli</span>): dos fermiones no pueden ocupar exactamente el mismo estado cuántico, como ya se estableció en el capítulo seis para los electrones de un orbital <span class="citation" data-cites="brown2012 pauling1988">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Los bosones, con espín entero, no están sujetos a esa restricción y pueden compartir un mismo estado cuántico; el fotón, el gravitón y los mesones son bosones <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>La materia y la antimateria {#sec-antimateria} constituyen otro eje de la clasificación: la existencia de la antimateria fue predicha en 1928 por Dirac sobre la base de la mecánica cuántica relativista, y cada partícula cargada tiene una contraparte, la antipartícula, con la misma masa y espín pero carga opuesta; cuando una partícula y su antipartícula se encuentran, se aniquilan convirtiendo su masa en energía según la ecuación de Einstein (<span class="quarto-unresolved-ref">?sec-ecuacion-einstein</span>) (E = mc^2) <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>El positrón, antielectrón, fue el primer ejemplo conocido de antipartícula, detectado por Anderson en 1934 en los pares que muestra la figura <a href="#fig-camara-niebla" class="quarto-xref">Figura&nbsp;<span>27.1</span></a>. El antiprotón se verificó en 1955 con el sincrotrón de Berkeley, que aceleraba partículas hasta 6 GeV, energía suficiente para crear el par protón-antiprotón, cuya masa combinada es 1836 veces la del par electrón-positrón <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p><span id="eq-einstein-cap26"><span class="math display">\[ E = mc^2  \tag{27.2}\]</span></span></p>
+<p>En la ecuación <a href="#eq-einstein-cap26" class="quarto-xref">Ecuación&nbsp;<span>27.2</span></a>, <span class="math inline">\(E\)</span> es la energía liberada en la aniquilación, en julios; <span class="math inline">\(m\)</span> es la masa total aniquilada, en kilogramos; y <span class="math inline">\(c\)</span> es la velocidad de la luz, <span class="math inline">\(2{,}998\times10^8\ \mathrm{m\,s^{-1}}\)</span> <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Como <span class="math inline">\(c^2\)</span> es enorme, la aniquilación de masas diminutas libera energías comparables a las de las reacciones nucleares del capítulo veinte (<span class="quarto-unresolved-ref">?sec-fision-fusion</span>) y muchísimo mayores que las de las reacciones químicas ordinarias <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>El electrón y el positrón tienen cada uno una masa en reposo de 0,510976 MeV, de modo que la aniquilación del par libera 1,022 MeV, repartidos entre los dos fotones que se emiten en direcciones opuestas para conservar el momento <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. La constante de Planck relaciona la energía de esos fotones con su frecuencia: la energía de 1,022 MeV corresponde a fotones de longitud de onda extremadamente corta, del orden de la milésima de ángstrom, una escala que ilustra por qué los pares electrón-positrón se detectan mejor con las cámaras de partículas que con los espectrómetros ordinarios <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Una cámara de niebla, inventada por Wilson en 1911, contiene aire saturado de vapor de agua: al expandirse bruscamente el aire se enfría y se sobresatura, y las gotas de agua que se forman alrededor de los iones producidos por las partículas cargadas definen las trayectorias de estas <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. La cámara de burbujas, inventada por Glaser en 1952, emplea un líquido ligeramente por encima de su punto de ebullición y registra burbujas diminutas alrededor de los iones; en la fotografía de Anderson de 1934 se ven los pares electrón-positrón curvando sus trayectorias en direcciones opuestas dentro de un campo magnético, lo que permitió identificar al positrón <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<div id="fig-camara-niebla" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camara-niebla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-26/camara-niebla-pares.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camara-niebla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;27.1: Cámara de niebla de posiciones con pares electrón-positrón creados por un fotón cósmico en una lámina de plomo; la fotografía, tomada hacia 1934 por Carl D. Anderson, muestra las trayectorias curvándose en direcciones opuestas bajo la acción del campo magnético <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, fig. 25–2</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>La figura <a href="#fig-camara-niebla" class="quarto-xref">Figura&nbsp;<span>27.1</span></a> condensa toda la lógica de la detección de partículas: la cámara no ve las partículas, sino las huellas de iones que dejan al atravesar el vapor; la curvatura de cada huella revela la carga y la masa de la partícula <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Los aceleradores {#sec-aceleradores-particulas} generan las partículas que las cámaras registran: el ciclotrón, inventado por Lawrence en 1929, acelera iones positivos en trayectorias circulares mediante campos eléctricos y magnéticos alternados, alcanzando energías de unos 100 MeV, y el sincrotrón, propuesto en 1945 por Veksler y McMillan, ajusta la frecuencia del campo para compensar el cambio relativista de masa y ha llevado las partículas hasta unos 100 GeV <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<div id="fig-ciclotron" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ciclotron-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/images/cap-26/ciclotron.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ciclotron-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;27.2: Ciclotrón de Lawrence, el acelerador que permitió producir partículas de alta energía en trayectorias circulares; el dispositivo combina un campo magnético que curva la trayectoria con aceleraciones eléctricas sucesivas <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, fig. 25–1</a>)</span>
+</figcaption>
+</figure>
+</div>
+<p>La figura <a href="#fig-ciclotron" class="quarto-xref">Figura&nbsp;<span>27.2</span></a> muestra el primer acelerador de uso general, cuyo principio se extendió después a los sincrotrones y a los grandes colisionadores internacionales <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Los leptones son los fermiones ligeros: el electrón, el muón y el neutrino, estables, salvo el muón inestable con su masa de 206,77 veces la del electrón; los neutrinos interactúan tan débilmente que su existencia, propuesta por Pauli en 1927 y nombrada por Fermi, solo se verificó en 1956 cuando Reines y Cowan los detectaron en un reactor nuclear {#sec-leptones}<span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Los mesones, con masa intermedia entre el electrón y el nucleón, fueron propuestos por Yukawa en 1935 como mensajeros de la fuerza entre nucleones: a partir del alcance de esa fuerza, 1,4 fm, calculó que su masa debía ser unas 274 veces la electrónica, y en 1947 Powell descubrió los piones, con masas de 273,3 y 264,3 veces la electrónica según su carga {#sec-mesones}<span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Los bariones son los fermiones pesados, como el protón y el neutrón, y los hiperones, descubiertos entre 1950 y 1960, son los bariones más pesados, con masas entre 1115 y 1318 MeV {#sec-bariones}<span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Toda reacción conserva el número bariónico y el número leptónico: los bariones y antibariones se forman siempre en pares, y las transformaciones entre leptones respetan la suma algebraica de sus números <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Algunas partículas viven mucho más de lo que las interacciones fuertes predecirían, y por eso se las llamó extrañas: Gell-Mann y Nishijima introdujeron en 1953 la propiedad llamada extrañeza {#sec-extraneza} o xenicidad, que se conserva en las interacciones fuertes pero se viola en las débiles <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Las resonancias son partículas efímeras descubiertas desde 1952, como la eta con su vida media de 10⁻²⁰ s o los mesones rho, omega y phi con vidas medias del orden de 10⁻²³ s, lo que las hace apenas más duraderas que la escala de tiempo nuclear <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>La pregunta final es estructural: Gell-Mann y Zweig propusieron en 1964 que los mesones y bariones están formados por quarks {#sec-quarks}, cada mesón por un par quark-antiquark y cada barión por tres quarks, unidos por una interacción tan fuerte que los quarks no se han observado libres jamás <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Pauling trató los quarks en la sección 25-11 con la cautela de su tiempo: señaló que su masa predicha, de varios miles de MeV, no estaba determinada, y que nunca se había observado un quark libre <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. La teoría de Gell-Mann y Zweig asignaba a los quarks carga fraccionaria —p con +2/3, n y λ con −1/3—, espín ½ y número bariónico +1/3, y predecía que cada mesón es un diquark y cada barión un triquark <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, sec. 25–11</a>)</span>.</p>
+<p>Los pseudoátomos {#sec-pseudoatomos} cierran el capítulo con elegancia: el positronio es un átomo formado por un positrón y un electrón que giran alrededor de su centro de masa, con dos formas según sus espines, parapositronio que se aniquila en dos fotones con una vida media de 0,9 × 10⁻¹⁰ s y ortopositronio que lo hace en tres fotones con una vida media de 1,0 × 10⁻⁷ s <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. El muonio es el pseudoátomo formado por un muón negativo alrededor de un protón, y los átomos mesónicos reemplazan un electrón por un muón u otro mesón, como el neón muónico <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+</section>
+<section id="dialéctica-del-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="dialéctica-del-capítulo">Dialéctica del capítulo</h2>
+<p>Las tres fuentes de este capítulo discrepan en el énfasis, y el contraste enriquece la síntesis. Brock describe la revolución instrumental desde la historia institucional: la desaparición del análisis húmedo, la transformación de la enseñanza y el papel de la guerra y la industria <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. Atkins describe las mismas técnicas desde la práctica didáctica, presentando el laboratorio como un espacio híbrido en el que conviven lo antiguo y lo nuevo <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Ambas posturas son compatibles: la primera explica cómo se llegó a la instrumentación, la segunda explica cómo se usa. La discrepancia aparente sobre el valor de la química, ciencia de servicio para unos y ciencia central para otros, se resuelve delimitando el alcance de cada término: la química de servicio presta instrumentalidad a la física y la biología, mientras la química como ciencia central mantiene su papel estructurante en el conjunto del saber <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>La discrepancia aritmética de la síntesis combinatoria ya se señaló; la fuente imprime 5 200 000 donde el cálculo de 20⁵ da 3 200 000, y la síntesis muestra ambas cifras sin ocultar el conflicto <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La política de este libro es conservar la cita textual y el cálculo verificado lado a lado, de modo que el lector pueda juzgar por sí mismo y advierta que toda cifra impresa merece comprobación <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>En la frontera de las partículas, la cautela de Pauling sobre los quarks, con su masa incierta y su confinamiento, refleja el estado del conocimiento en 1970; la física posterior confirmó la idea quark y precisó sus masas, pero la síntesis conserva aquí la formulación histórica para no falsear la fuente <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Sobre el premio Nobel de la difracción del ADN, la fuente registra el reconocimiento a Wilkins y silencia a Franklin; la síntesis conserva el dato tal como está y señala la omisión, sin tomar partido anacrónico <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+</section>
+<section id="ejemplo-resuelto-integrador" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-resuelto-integrador">Ejemplo resuelto integrador</h2>
+<p>Este ejemplo une la ecuación de Planck del capítulo seis con las técnicas del capítulo presente: calcular la energía de un fotón de RMN de 100 MHz, la de un fotón de rayos X de 100 pm y la liberada en la aniquilación de un par electrón-positrón, y comparar las tres escalas <span class="citation" data-cites="atkins2015 pauling1988">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015</a>, caps. 5 y 7; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Se comienza con el fotón de RMN de 100 MHz, la frecuencia de radio de los espectrómetros modernos; la ecuación <a href="#eq-foton-energia" class="quarto-xref">Ecuación&nbsp;<span>27.1</span></a> da (E = h= 6{,}626^{-34} ^8 = 6{,}626^{-26}&nbsp;) por fotón, y la longitud de onda asociada es (= c/= 2{,}998^8 / 10^8 = 3{,}00&nbsp;), una onda de radio <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Un fotón de rayos X de 100 pm aplica la misma ecuación con la longitud de onda: (E = hc/= 6{,}626^{-34} 998^8 / 10^{-10} = 1{,}99^{-15}&nbsp;), y su frecuencia es (3{,}00^{18}&nbsp;) <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La aniquilación del par electrón-positrón libera 1,022 MeV: con la equivalencia (1&nbsp; = 1{,}602^{-19}&nbsp;), eso son (1{,}64^{-13}&nbsp;) por par <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. La razón entre la energía de la aniquilación y la del fotón de rayos X es (1{,}64<sup>{-13}/1{,}99</sup>{-15} ), y la razón entre la del fotón de rayos X y la del fotón de RMN es (1{,}99<sup>{-15}/6{,}63</sup>{-26} 0^{10}) <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La comparación explica por qué cada técnica ve un aspecto de la materia: los fotones de RMN son tan poco energéticos que solo invierten espines nucleares, los rayos X de 100 pm son comparables a los enlaces que se quieren medir y los fotones de la aniquilación son los más energéticos que producen laboratorios terrestres <span class="citation" data-cites="atkins2015 pauling1988">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>En la escala temporal, la femtoquímica se sitúa en 10⁻¹⁵ s, mientras el período de una onda de 100 MHz es 10⁻⁸ s; entre ambas escalas median siete órdenes de magnitud, la misma distancia que separa un nanosegundo de un segundo, y aun así la femtoquímica es lenta comparada con la escala nuclear de 10⁻²³ s de las resonancias <span class="citation" data-cites="atkins2015 pauling1988">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+</section>
+<section id="preguntas-y-ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-y-ejercicios">Preguntas y ejercicios</h2>
+<p>Los ejercicios que siguen están inspirados en la tipología y los datos de las fuentes de este capítulo: el análisis de escalas de energía de <span class="citation" data-cites="atkins2015">Atkins (<a href="../references.html#ref-atkins2015" role="doc-biblioref">2015</a>)</span> (2015) en sus caps. 5 y 7, la historia instrumental de <span class="citation" data-cites="brock2015">Brock (<a href="../references.html#ref-brock2015" role="doc-biblioref">2015</a>)</span> (2015) en su cap. 6 y la física de partículas de <span class="citation" data-cites="pauling1988">Pauling (<a href="../references.html#ref-pauling1988" role="doc-biblioref">1988</a>)</span> (1988) en su cap. 25 <span class="citation" data-cites="atkins2015 brock2015 pauling1988">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015</a>, caps. 5 y 7; <a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>; <a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Un espectrómetro de RMN opera a una frecuencia de 100 MHz. Calcule la energía de un fotón de esa radiación y la longitud de onda asociada, y explique por qué esa energía, multiplicada por el número de Avogadro, es despreciable frente a la energía típica de un enlace químico de unos 350 kJ/mol <span class="citation" data-cites="atkins2015 brown2012">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 8</a>)</span>.</p>
+<p>Un fotón de rayos X empleado en cristalografía tiene una longitud de onda de 100 pm, comparable al diámetro de un átomo. Calcule su frecuencia y su energía con la ecuación <a href="#eq-foton-energia" class="quarto-xref">Ecuación&nbsp;<span>27.1</span></a>, y compare esta última con la energía de 6,63 × 10⁻²⁶ J del fotón de RMN del ejercicio anterior; interprete la razón en términos de la capacidad de cada radiación para sondear la materia <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>La aniquilación de un par electrón-positrón libera 1,022 MeV, según la ecuación <a href="#eq-einstein-cap26" class="quarto-xref">Ecuación&nbsp;<span>27.2</span></a>. Convierta esa energía a julios por par y a kilojulios por mol de pares, con la equivalencia 1 eV = 1,602 × 10⁻¹⁹ J; explique por qué supera en muchos órdenes de magnitud las energías de reacción de la química ordinaria <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>Con los veinte aminoácidos naturales y el esquema de mezclar y dividir, ¿cuántos compuestos produce la tercera ronda de una síntesis combinatoria y cuántos la cuarta? Escriba la regla general que da el número de compuestos tras <span class="math inline">\(n\)</span> rondas y aplíquela a una quinta ronda, comparando su resultado con la cifra de 5 200 000 que imprime la fuente <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Un femtosegundo es 10⁻¹⁵ s y un attosegundo es 10⁻¹⁸ s. ¿Cuántos femtosegundos contiene un nanosegundo, y cuánto recorre la luz en un femtosegundo, dado que la velocidad de la luz es de unos (3<sup>8&nbsp;\mathrm{m,s</sup>{-1}})? Interprete el resultado en la escala de la femtoquímica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>Se necesitan al menos 275 moléculas de agua para que un cúmulo presente propiedades de hielo y unas 475 para que sea hielo de verdad. Calcule la masa de un cúmulo de 275 moléculas de agua, con masa molar 18,02 g/mol, y compare la arista del cubo correspondiente a 475 moléculas con las ocho moléculas por arista que menciona la fuente <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>Una hoja de grafeno de un metro cuadrado pesa menos de un gramo. Si pesara exactamente 0,50 g, ¿cuántos moles y cuántos átomos de carbono contendría? Compare el resultado con la afirmación de que una hamaca de grafeno podría sostener a un gato de cuatro kilogramos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>El grafeno apenas adsorbe gases, pero su superficie puede modificarse químicamente, y sus láminas admiten también la agregación en papel de grafeno. Explique por qué la modificación química convierte al grafeno en un sensor de gases y por qué la desalinización del agua de mar es una aplicación plausible de estas láminas; relacione su respuesta con el tamaño nanométrico de los poros <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La revolución instrumental posterior a 1950 hizo desaparecer del laboratorio el análisis húmedo y seco. Explique, a partir de la historia de Brock, qué consecuencias tuvo ese cambio sobre la enseñanza de la química y qué papel jugó el pH metro de Beckman en ese proceso <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>Clasifique las siguientes partículas como fermión o bosón y justifique su respuesta con el espín: el electrón, el fotón, el protón, el pión y el neutrino. Indique además si cada una es materia, antimateria o su propia antipartícula, y asigne a cada una su número bariónico y leptónico <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+</section>
+<section id="solucionario" class="level2">
+<h2 class="anchored" data-anchor-id="solucionario">Solucionario</h2>
+<p>En el primer ejercicio, la energía del fotón de RMN se obtiene con la ecuación <a href="#eq-foton-energia" class="quarto-xref">Ecuación&nbsp;<span>27.1</span></a>: (E = 6{,}626^{-34}&nbsp; <sup>8&nbsp;\mathrm{s</sup>{-1}} = 6{,}63^{-26}&nbsp;) por fotón, y la longitud de onda es (= c/= 3{,}00&nbsp;), una onda de radio como las de la banda de frecuencia modulada <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. Por mol de fotones, la energía es (6{,}63^{-26} 022^{23} = 4{,}0^{-2}&nbsp;), es decir unos 0,00004 kJ/mol, un valor millones de veces menor que los 350 kJ/mol de un enlace químico típico; de ahí que la RMN pueda estudiar los núcleos sin destruir las moléculas <span class="citation" data-cites="atkins2015 brown2012">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>; <a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 8</a>)</span>.</p>
+<p>El segundo ejercicio aplica la misma ecuación en su forma con la longitud de onda: (= c/= 2{,}998^8 / 10^{-10} = 3{,}00^{18}&nbsp;), y (E = h= 1{,}99^{-15}&nbsp;) <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La razón con el fotón de RMN es (1{,}99<sup>{-15}/6{,}63</sup>{-26} = 3{,}0^{10}): cada fotón de rayos X transporta treinta mil millones de veces más energía que cada fotón de RMN, lo que explica que los rayos X penetren la materia y la dañen mientras la radiofrecuencia la atraviesa sin efectos <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>En el tercer ejercicio, la conversión usa la equivalencia de 1 eV con 1,602 × 10⁻¹⁹ J: (1{,}022&nbsp; = 1{,}022^6 602^{-19} = 1{,}64^{-13}&nbsp;) por par <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. Por mol, (1{,}64^{-13} 022^{23} = 9{,}9^{10}&nbsp; = 9{,}9^7&nbsp;), unos cien millones de veces la energía de un enlace químico; la ecuación <a href="#eq-einstein-cap26" class="quarto-xref">Ecuación&nbsp;<span>27.2</span></a> convierte toda la masa en energía y ninguna reacción química puede igualar esa escala <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+<p>El cuarto ejercicio usa las potencias de veinte: la tercera ronda produce (20^3 = 8,000) compuestos y la cuarta (20^4 = 160,000), según la regla general (N = 20^n) compuestos tras <span class="math inline">\(n\)</span> rondas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La fuente imprime para la quinta ronda la cifra 5 200 000, pero el cálculo directo da (20^5 = 3,200,000), y el solucionario adopta el valor verificado señalando la discrepancia ya discutida en la dialéctica del capítulo <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>El quinto ejercicio convierte unidades de tiempo: un nanosegundo, 10⁻⁹ s, contiene (10<sup>{-9}/10</sup>{-15} = 10^6) femtosegundos, es decir un millón <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La luz recorre en un femtosegundo (d = ct = 3^8 ^{-15} = 3^{-7}&nbsp; = 300&nbsp;), una distancia comparable a una longitud de onda de la luz visible; en el tiempo en que una molécula vibra una vez, la luz apenas avanza unas decenas de longitudes de onda, lo que muestra por qué la femtoquímica exige pulsos láser de duración extremadamente breve <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>El sexto ejercicio calcula la masa de un cúmulo: 275 moléculas de agua equivalen a (275/6{,}022^{23} = 4{,}57^{-22}&nbsp;), cuya masa es (4{,}57^{-22} 02 = 8{,}2^{-21}&nbsp;), una masa nanoscópica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. Para 475 moléculas, la raíz cúbica de 475 es (475^{1/3} = 7{,}8), muy próxima a las ocho moléculas por arista que menciona la fuente; el cúmulo de 275 moléculas tiene una arista de (275^{1/3} = 6{,}5) moléculas <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>El séptimo ejercicio repasa la estequiometría del capítulo cuatro: con 0,50 g de carbono, los moles son (0{,}50/12{,}01 = 4{,}16^{-2}&nbsp;), y los átomos (4{,}16^{-2} 022^{23} = 2{,}5^{22}) <span class="citation" data-cites="brown2012">(<a href="../references.html#ref-brown2012" role="doc-biblioref">Brown et&nbsp;al. 2012, cap. 3</a>)</span>. Esa masa minúscula, medio gramo en un metro cuadrado, sustentaría por su resistencia un objeto de cuatro kilogramos: el grafeno combina una densidad superficial casi nula con una resistencia estructural enorme, la paradoja que celebra la cita de la hamaca <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>El octavo ejercicio se responde con la química de superficie: como el grafeno apenas adsorbe gases, su superficie químicamente modificada se satura de manera sensible a la presencia de especies gaseosas, y el cambio resultante en sus propiedades electrónicas se lee como señal <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>. La desalinización es plausible porque las láminas de grafeno o sus derivados oxidados forman tamices moleculares que dejan pasar las moléculas de agua pero retienen los iones de la sal, un efecto de tamaño de poro en la escala nanométrica <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>El noveno ejercicio exige el relato de Brock: la revolución instrumental eliminó la destreza manual del análisis clásico y la sustituyó por la interpretación de registros electrónicos, cambiando planes de estudio y libros de texto <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. El pH metro de Beckman de 1934 fue el arquetipo de la caja negra: convertía una medida que exigía valoraciones elaboradas en una lectura directa, y demostró que la industria de los instrumentos podía transformar la práctica química, como luego hicieron los espectrómetros y los ordenadores <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>El décimo ejercicio clasifica por espín: el electrón y el protón son fermiones de espín ½, el neutrino también es un fermión de espín ½, el fotón es un bosón de espín 1 y el pión es un bosón de espín 0 <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. El electrón pertenece a la materia y el positrón a la antimateria, el protón es materia, el pión neutro y el fotón son sus propias antipartículas, y el neutrino tiene su antineutrino; el número bariónico distingue a los bariones como el protón, con valor +1, y el número leptónico a los leptones como el electrón y el neutrino, con valor +1 <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>.</p>
+</section>
+<section id="resumen" class="level2">
+<h2 class="anchored" data-anchor-id="resumen">Resumen</h2>
+<p>Este capítulo recorrió las técnicas, los logros y las fronteras de la química moderna. La revolución instrumental posterior a 1950 sustituyó el análisis húmedo por instrumentos electrónicos de caja negra, de los que el pH metro de Beckman fue el arquetipo, y transformó la enseñanza de la disciplina <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>. La espectroscopía atómica y molecular, la resonancia magnética nuclear, la espectrometría de masas y la difracción de rayos X permiten identificar elementos, moléculas, masas y estructuras con una precisión que los métodos clásicos no soñaron, y todas comparten la ecuación de Planck que liga la energía del fotón con su frecuencia y su longitud de onda <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>.</p>
+<p>Las microscopías de superficie hicieron visibles los átomos individuales, la química computacional hizo calculable la estructura electrónica y la síntesis combinatoria hizo posible preparar cientos de miles de compuestos para el cribado farmacéutico <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>)</span>. La historia del siglo veinte mostró el papel de la guerra, el ascenso de la gran industria y la incorporación de las mujeres, y el debate entre la química como ciencia de servicio y como ciencia central <span class="citation" data-cites="brock2015">(<a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+<p>Las fronteras se abren en varias direcciones: los elementos superpesados hacia la isla de estabilidad, el tiempo hacia los femtosegundos y attosegundos, el tamaño hacia los cúmulos moleculares y la nanociencia, los materiales hacia el grafeno y las láminas bidimensionales, y la escala más pequeña hacia las partículas fundamentales clasificadas en fermiones y bosones, materia y antimateria <span class="citation" data-cites="atkins2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 7</a>)</span>.</p>
+<p>La física de partículas aportó el cierre conceptual: fermiones y bosones, leptones, mesones y bariones, números de conservación, extrañeza y quarks resumen el orden que la naturaleza impone a sus constituyentes últimos <span class="citation" data-cites="pauling1988">(<a href="../references.html#ref-pauling1988" role="doc-biblioref">Pauling 1988, cap. 25</a>)</span>. El capítulo mostró además que la síntesis de fuentes exige vigilancia dialéctica: las potencias de la síntesis combinatoria aparecen con una errata aritmética en la fuente, la ciencia de servicio y la ciencia central conviven delimitando sus alcances, y las omisiones históricas, como la de Franklin en el premio del ADN, se conservan señaladas <span class="citation" data-cites="atkins2015 brock2015">(<a href="../references.html#ref-atkins2015" role="doc-biblioref">Atkins 2015, cap. 5</a>; <a href="../references.html#ref-brock2015" role="doc-biblioref">Brock 2015, cap. 6</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-atkins2015" class="csl-entry" role="listitem">
+Atkins, Peter. 2015. <em>Chemistry: A Very Short Introduction</em>. 1st ed. Oxford University Press. <a href="https://doi.org/10.1093/actrade/9780199683970.001.0001">https://doi.org/10.1093/actrade/9780199683970.001.0001</a>.
+</div>
+<div id="ref-brock2015" class="csl-entry" role="listitem">
+Brock, William H. 2015. <em>The History of Chemistry: A Very Short Introduction</em>. 1st ed. Oxford University Press.
+</div>
+<div id="ref-brown2012" class="csl-entry" role="listitem">
+Brown, Theodore L., H. Eugene LeMay, Bruce E. Bursten, Catherine J. Murphy, y Patrick M. Woodward. 2012. <em>Chemistry: The Central Science</em>. 12th ed. Pearson Prentice Hall.
+</div>
+<div id="ref-pauling1988" class="csl-entry" role="listitem">
+Pauling, Linus. 1988. <em>General Chemistry</em>. 3rd (reprinted). Dover Publications.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../02_quimica/25-quimica-del-ambiente.html" class="pagination-link" aria-label="Química del ambiente: atmósfera, agua y química verde">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Química del ambiente: atmósfera, agua y química verde</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../03_biologia/01_base_fisica_herencia.html" class="pagination-link" aria-label="La base física de la herencia">
+        <span class="nav-page-text"><span class="chapter-title">La base física de la herencia</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
